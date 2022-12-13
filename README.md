@@ -1,6 +1,6 @@
 # THIS REPO CREATED TO COMPLETE TASK 4 FROM [TESTNET INERY](https://testnet.inery.io/dashboard/)
 
-## TUTORIAL(English)
+## TUTORIAL (English)
 
 ### 1. Clone repository git from official inery
 
