@@ -6,7 +6,7 @@
   "scripts": {
     "doc": "jsdoc -c jsdoc.json",
     "build-web": "webpack --config webpack.config.js",
-    "rpc-example": "node ./example/json-rpcup.mjs"
+    "rpc-example": "node ./example/json-rpc.mjs"
   },
   "author": "Inery",
   "license": "MIT",
