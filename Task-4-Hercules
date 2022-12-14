@@ -20,3 +20,19 @@ https://user-images.githubusercontent.com/101635385/205462705-21a45a65-86a8-46a3
 
 
 https://github.com/herculessx/ineryjs/edit/master/example/readme.md
+
+
+transaction_id: 'a3fe3188655612cead323479e52b529aa1ec8e283ce440622c763546f511181b',
+  processed: {
+    id: 'a3fe3188655612cead323479e52b529aa1ec8e283ce440622c763546f511181b',
+    block_num: 1141133,
+    block_time: '2022-12-03T13:02:53.000',
+    receipt: { status: 'executed', cpu_usage_us: 409, net_usage_words: 18 },
+    elapsed: 409,
+    net_usage: 144,
+    scheduled: false,
+    action_traces: [ [Object] ],
+    failed_dtrx_trace: null
+  }
+}
+
