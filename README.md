@@ -2,7 +2,7 @@
 
 ## Tutorial RPC API push transaction
 
-Before you can run your code and call the valued contract function, you need to finish Task 3 in your Account.
+Before you can run the code and call the valued contract function, you need to finish Task 3 in your Account.
 To check if you have your CRUD Smart Contract on your account.
 
 ```
@@ -52,11 +52,9 @@ cp .env-sample .env
 
 ![](https://i.imgur.com/oA2OXr9.png)
 
-```
 your inery account 
 your private key
 your node url (your ip vps) ex: http://192.168.1.1:8888/
-```
 
 ### 2. Testing 
 
@@ -84,7 +82,7 @@ nano ./inery-node/inery.setup/master.node/blockchain/config/config.ini
 
 #### Error : connect ECONNREFUSED NODE_IP_ADDRESS:8888
 
-Make sure to open your port setting on your VPS provider dashboard and make sure your VPS port **8888** is open, try to check it on [portchecker.co](https://portchecker.co/).
+Make sure to open your port setting on your VPS provider dashboard and make sure your VPS port **8888** is open, try to check it on [portchecker.co](https://portchecker.co/)
 
 ```
 sudo ufw allow 8888
