@@ -94,3 +94,8 @@ Run RPC Example
 ```
 npm run rpc-example
 ```
+Run RPC Transfer Example
+
+```
+node example/transfer.mjs
+```
