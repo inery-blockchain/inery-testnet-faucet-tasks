@@ -9,9 +9,9 @@ npm install
 cp .env-sample .env
 nano .env
 
-INERY_ACCOUNT="HESAP ADINIZ"
-PRIVATE_KEY="KEYİNİZ"
-NODE_URL="http://NODEİPADRESİ:8888"
+INERY_ACCOUNT="hercules"
+PRIVATE_KEY="KEY"
+NODE_URL="http://167.86.97.74:8888"
 
 npm run rpc-example
 
