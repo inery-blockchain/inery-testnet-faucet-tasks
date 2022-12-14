@@ -18,11 +18,6 @@ cline get abi your_inery_account
 ![](https://i.imgur.com/xgTuHhp.png)
 
 ```
-git clone https://github.com/inery-blockchain/ineryjs.git
-```
- or
-
-```
 git clone https://github.com/dhamenz/ineryjs.git
 ```
 
