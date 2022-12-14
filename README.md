@@ -18,7 +18,7 @@ cline get abi your_inery_account
 ![](https://i.imgur.com/xgTuHhp.png)
 
 ```
-git clone https://github.com/dhamenz/ineryjs.git
+git clone https://github.com/mazhud/ineryjs.git
 ```
 
 #### Change directory to cloned repository
