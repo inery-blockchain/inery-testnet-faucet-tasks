@@ -47,9 +47,13 @@ cp .env-sample .env
 
 ![](https://i.imgur.com/oA2OXr9.png)
 
-your inery account 
-your private key
-your node url (your ip vps) ex: http://192.168.1.1:8888/
+Example:
+
+```
+INERY_ACCOUNT="dhamenz" 
+PRIVATE_KEY="QWERTYASDFGH12345"
+NODE_URL="http://192.168.1.1:8888/"
+```
 
 ### 2. Testing 
 
