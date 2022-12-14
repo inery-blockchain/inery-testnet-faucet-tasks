@@ -82,7 +82,6 @@ JSON RPC Sample code are available at [example](https://github.com/alteregogi/in
 ## Usage
 
 Run RPC Example
-1. Create data via api (node example/create.mjs ID Data)
 
 ```
 npm run rpc-example
