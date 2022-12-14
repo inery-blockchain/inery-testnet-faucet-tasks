@@ -1,3 +1,5 @@
+https://github.com/herculessx/ineryjs/edit/master/example/readme.md
+
 sudo apt-get remove nodejs
 sudo apt-get install curl
 curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\ 
@@ -19,7 +21,6 @@ https://raw.githubusercontent.com/herculessx/Q-Network-Testnet/main/inery-okey.P
 https://user-images.githubusercontent.com/101635385/205462705-21a45a65-86a8-46a3-9257-ebedc56e1dc6.png
 
 
-https://github.com/herculessx/ineryjs/edit/master/example/readme.md
 
 
 transaction_id: 'a3fe3188655612cead323479e52b529aa1ec8e283ce440622c763546f511181b',
