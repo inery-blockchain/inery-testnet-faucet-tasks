@@ -10,14 +10,14 @@ To check if you have your CRUD Smart Contract on your account.
 cline get abi your_inery_account
 ```
 
-![](https://imgur.com/a/uNJl0PL.png)
+![](https://i.imgur.com/RCv272L.png)
 
 
 ### Installation
 
 #### Clone the repository
 
-![](https://imgur.com/a/u8aaf2O.png)
+![](https://i.imgur.com/xgTuHhp.png)
 
 ```
 git clone https://github.com/inery-blockchain/ineryjs.git
@@ -36,7 +36,7 @@ cd ineryjs
 
 #### Install NPM packages
 
-![](https://imgur.com/a/pPstUzJ.png)
+![](https://i.imgur.com/aSuvjzE.png)
 
 ```
 npm install
@@ -44,7 +44,7 @@ npm install
 
 #### Copy .env-sample and rename it to .env
 
-![](https://imgur.com/a/r1NLTQW.png)
+![](https://i.imgur.com/j3oKCu7.png)
 
 ```
 cp .env-sample .env
@@ -52,7 +52,7 @@ cp .env-sample .env
 
 #### Edit .env file with your information
 
-![](https://imgur.com/a/7tHwnvj.png)
+![](https://i.imgur.com/oA2OXr9.png)
 
 ```
 your inery account 
@@ -70,7 +70,7 @@ npm run rpc-example
 
 if the message like this after running npm run rpc-example, your transaction has been executed on blockchain.
 
-![](https://imgur.com/a/UDUjs2j.png)
+![](https://i.imgur.com/wgzd9eD.png)
 
 ### Fixing Error
 
