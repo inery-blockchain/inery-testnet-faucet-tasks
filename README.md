@@ -28,7 +28,7 @@ cd ineryjs
 
 #### Install NPM packages
 
-![](https://i.imgur.com/aSuvjzE.png)
+
 
 ```
 npm install
@@ -44,7 +44,7 @@ cp .env-sample .env
 
 #### Edit .env file with your information
 
-![](https://i.imgur.com/oA2OXr9.png)
+
 
 Example:
 
@@ -64,7 +64,7 @@ npm run rpc-example
 
 if the message like this after running, your transaction has been executed on blockchain.
 
-![](https://i.imgur.com/wgzd9eD.png)
+
 
 ### 3. Fixing
 
