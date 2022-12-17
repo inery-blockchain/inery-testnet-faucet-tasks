@@ -42,6 +42,7 @@ nano .env
 ```
 #### Edit .env file with your information
 Example:
+[![AE935-EF7-97-E2-4-CBA-8-C55-CF597-B1-AF529.jpg](https://i.postimg.cc/gJnpZkky/AE935-EF7-97-E2-4-CBA-8-C55-CF597-B1-AF529.jpg)](https://postimg.cc/hzWNFnmh)
 
 ```
 
