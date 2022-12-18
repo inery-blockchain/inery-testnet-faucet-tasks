@@ -186,18 +186,18 @@ git push -u origin main
 ### 8.  Kembali lagi ke Github
 1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
 <p align="center">
-  <img src="https://github.com/SaujanaOK/Images/blob/main/merge1.png">
+  <img src="https://github.com/xnode9/Images/blob/main/merge1.png">
 </p>
 
 2. Lanjutkan Create pull request
 <p align="center">
-  <img src="https://github.com/SaujanaOK/Images/blob/main/merge2.png">
-  <img src="https://github.com/SaujanaOK/Images/blob/main/merge3.png">
+  <img src="https://github.com/xnode9/Images/blob/main/merge2.png">
+  <img src="https://github.com/xnode9/Images/blob/main/merge3.png">
 </p>
 
 3. Check hasilnya di https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 <p align="center">
-  <img src="https://github.com/SaujanaOK/Images/blob/main/check.png">
+  <img src="https://github.com/xnode9/Images/blob/main/check.png">
 </p>
 
 ### Done
