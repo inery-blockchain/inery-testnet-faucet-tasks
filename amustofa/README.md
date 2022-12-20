@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to ```Nama_Akun_Inery```
 
 ```shell
-cd ./alteregogi
+cd ./Nama_Akun_Inery
 ```
 
 
@@ -28,4 +28,3 @@ Run the script
 ```
 npm run solution
 ```
-
