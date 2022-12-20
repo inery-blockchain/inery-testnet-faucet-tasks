@@ -1,36 +1,3 @@
-# DOC
-
-## How to run
-- Copy .env.example and set environment
-- set TOKEN symbol with new uniqe symbol for your token
-- Run npm install
-- Command to run TOKEN
-  **For Create token**
-  > `npm run create-token`
-
-  **For Issue token**
-  > `npm run issue`
-
-  **For Transfer token**
-  > `npm run transfer`
-
-  **For Retire token**
-  > `npm run retire`
-
-- Command to run CRUD
-  **For Create data**
-  > `npm run write-data`
-
-  **For delete data**
-  > `npm run delete-data`
-
-  **For update data**
-  > `npm run update-data`
-
-  **For read data**
-  > `npm run read-data`
-
-# FROM INERY
 # ineryjs
 Javascript API for integration with Inery-based blockchains using Inery RPC API.  
 Documentation can be found in docs folder.  
