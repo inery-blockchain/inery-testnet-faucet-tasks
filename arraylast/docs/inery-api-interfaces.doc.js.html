@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: inery-api-interfaces.doc.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: inery-api-interfaces.doc.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @typedef {Object} Action
+ * @property {string} account
+ * @property {string} name
+ * @property {Array&lt;Authorization>} authorization
+ * @property {any} data
+ * @property {string} [hex_data]
+ */
+/**
+ * @typedef {SerializedAction}
+ * @property {string} account
+ * @property {string} name
+ * @property {Array&lt;Authorization>} authorization
+ * @property {any} data
+ */
+/** Arguments to `getRequiredKeys` 
+ * @typedef {Object} AuthorityProviderArgs
+ * *Transaction that needs to be signed
+ * @property {any} transaction
+ * *Public keys associated with the private keys that the `SignatureProvider` holds
+ * @property {Array&lt;string>} availableKeys
+*/
+/**
+ * @typedef {Object} BinaryAbi
+ * @property {string} accountName
+ * @property {Uint8Array} abi
+ */
+/**
+ * @typedef {Object} SignArgs
+ * @property {string} chainId
+ * @property {Array&lt;string>} requiredKeys
+ * @property {Uint8Array} serializedTransaction
+ * @property {Uint8Array} [serializedContextFreeData]
+ * @property {Array&lt;BinaryAbi>} abis
+ */
+/**
+ * @typedef {Object} SignResult
+ * @property {Array&lt;string>} signatures
+ * @property {Uint8Array} serializedTransaction
+* @property {Uint8Array} serializedContextFreeData
+ */
+/**
+ * @typedef {Object} ResourcePayer
+ * @property {string} payer
+ * @property {number} max_net_bytes
+ * @property {number} max_cpu_us
+ * @property {number} max_memory_bytes
+ */
+/**
+ * @typedef {Object} Transaction
+ * @property {string} [expiration]
+ * @property {number} [ref_block_num]
+ * @property {number} [ref_block_prefix]
+ * @property {number} [max_net_usage_words]
+ * @property {number} [max_cpu_usage_ms]
+ * @property {number} [delay_sec]
+ * @property {Array&lt;Action>} [context_free_actions]
+ * @property {Array&lt;Uint8Array>} [context_free_data]
+ * @property {Array&lt;Action>} actions
+ * @property {Array&lt;any>} [transaction_extensions]
+ * @property {ResourcePayer} [resource_payer]
+ */
+
+ /**
+  * @summary Optional transact configuration object 
+  * @typedef {Object} TransactConfig
+  * @property {boolean} [broadcast]
+  * @property {boolean} [sign]
+  * @property {boolean} [readOnlyTrx]
+  * @property {boolean} [returnFailureTraces]
+  * @property {Array&lt;string>} [requiredKeys]
+  * @property {boolean} [compression]
+  * @property {number} [blocksBehind]
+  * @property {boolean} [useLastIrreversible]
+  * @property {number} [expireSeconds]
+  */
+ /**
+ * @typedef {Object} TransactionHeader
+ * @property {string} expiration
+ * @property {number} ref_block_num
+ * @property {number} ref_block_prefix
+ */
+/**
+ * @typedef {Object} AccountDelta
+ * @property {string} account
+ * @property {number} delta
+ */
+/**
+ * @typedef {Object} AuthSequence
+ * @property {string} account
+ * @property {number} sequence
+ */
+/**
+ * @typedef {Object} ActionReceipt
+ * @property {string} receiver
+ * @property {string}  act_digest
+ * @property {number} global_sequence
+ * @property {number} recv_sequence
+ * @property {Array&lt;any>} auth_sequence
+ * @property {number} code_sequence
+ * @property {number}  abi_sequence
+ */
+/**
+ * @typedef {Object} ActionTrace
+ * @property {number}   action_ordinal
+ * @property {number}   creator_action_ordinal
+ * @property {number}   closest_unnotified_ancestor_action_ordinal
+ * @property {ActionReceipt}   receipt
+ * @property {string}   receiver
+ * @property {ProcessedAction}   act
+ * @property {boolean}   context_free
+ * @property {number}   elapsed
+ * @property {string}   console
+ * @property {string}   trx_id
+ * @property {number}   block_num
+ * @property {string}   block_time
+ * @property {string | null}   producer_block_id
+ * @property {Array&lt;AccountDelta>}   account_ram_deltas
+ * @property {Array&lt;AccountDelta>}   account_disk_deltas
+ * @property {any}   except
+ * @property {number | null}   error_code
+ * @property {any}   [return_value]
+ * @property {string}   [return_value_hex_data]
+ * @property {any}   [return_value_data]
+ * @property {Array&lt;ActionTrace>}   [inline_traces]
+ */
+/**
+ * @typedef {Object} TransactResult
+ * @property {string} transaction_id
+ * @property {TransactionTrace} processed
+ */
+ /** 
+  * @summary Optional query configuration object 
+  * @typedef {Object} QueryConfig
+  * @property {boolean} [sign]
+  * @property {Array&lt;string>} requiredKeys
+  * @property {Array&lt;Authorization>}
+ */
+ </code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ActionBuilder.html">ActionBuilder</a></li><li><a href="ActionSerializer.html">ActionSerializer</a></li><li><a href="Api.html">Api</a></li><li><a href="JsonRpc.html">JsonRpc</a></li><li><a href="JsSignatureProvider.html">JsSignatureProvider</a></li><li><a href="TransactionBuilder.html">TransactionBuilder</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-Angular.html">Using module with Angular</a></li><li><a href="tutorial-React.html">Using module with React</a></li><li><a href="tutorial-Vue.html">Using module with Vue</a></li><li><a href="tutorial-module-in-browser.html">Module in browser</a></li><li><a href="tutorial-push-transaction.html">Push transaction</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<!--
+<br class="clear">
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Mon Aug 01 2022 13:23:22 GMT+0200 (Central European Summer Time)
+</footer>
+-->
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
