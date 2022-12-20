@@ -1,15 +1,30 @@
-Prerequisite
-NodeJS
+### Prerequisite
 
-NPM
+- [NodeJS](https://nodejs.org/en/)
 
-How to run
-Change directory to alteregogi
+- NPM
 
+
+
+### How to run
+
+Change directory to ```nocturnalll```
+
+```shell
 cd ./nocturnalll
+```
+
+
 Install dependencies
 
+```shell
 npm install
+```
+
+
+
 Run the script
 
+```
 npm run solution
+```
