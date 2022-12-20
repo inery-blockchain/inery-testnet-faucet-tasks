@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to ```asabigbos```
 
 ```shell
-cd ./alteregogi
+cd ./asabigbos
 ```
 
 
