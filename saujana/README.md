@@ -31,7 +31,7 @@ _____________________
 1. Clone the repo
 
    ```
-   git clone https://github.com/inery-blockchain/ineryjs.git
+   git clone https://github.com/SaujanaOK/ineryjs.git
    ```
 
 2. Change directory to cloned repo
