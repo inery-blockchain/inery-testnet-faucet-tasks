@@ -1,11 +1,11 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-const url = "http://vmi1064243.contaboserver.net:8888"
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from '../dist/index.js'
+const url = "http://134.209.24.174:8888"
 
 const json_rpc = new JsonRpc(url) 
-const private_key = "5KLBthkvdpjQVFoRP9rLd4FnTVxXnezvsStG1otbzX4wne73KjD"; 
+const private_key = process.env.PRIVATE_KEY; // private key
 const actor = "alter.serv1"
 
-const account = "alteregogi"
+const account = "dirala"
 const signature  = new JsSignatureProvider([private_key]); 
 
 const api = new Api({
