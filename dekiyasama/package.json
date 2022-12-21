@@ -1,0 +1,19 @@
+{
+  "name": "dekiyasama-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./dekiyasama.mjs",
+  "scripts": {
+    "dekiyasama": "node ./dekiyasama.mjs"
+  },
+  "author": "dekiyasama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TongDuit/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/TongDuit/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
