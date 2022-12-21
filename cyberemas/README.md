@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to directory cyberemas
 
 ```shell
-cd ./alteregogi
+cd ~/inery-testnet-faucet-tasks/cyberemas
 ```
 
 
@@ -28,4 +28,3 @@ Run the script
 ```
 npm run solution
 ```
-
