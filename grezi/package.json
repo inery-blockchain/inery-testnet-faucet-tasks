@@ -1,0 +1,19 @@
+{
+  "name": "grezi-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./grezi.mjs",
+  "scripts": {
+    "grezi": "node ./grezi.mjs"
+  },
+  "author": "grezi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreziSuzaku/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/GreziSuzaku/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
