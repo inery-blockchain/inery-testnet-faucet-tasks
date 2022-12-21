@@ -9,7 +9,7 @@ const private_key = process.env.PRIVATE_KEY; // get private key from env
 
 const account = process.env.INERY_ACCOUNT
 const actor = process.env.INERY_ACCOUNT
-const token = process.env.TOKEN_TRANSFER
+const token = "1.0000 BIG"
 const signature  = new JsSignatureProvider([private_key]);
 
 // calling API inery
