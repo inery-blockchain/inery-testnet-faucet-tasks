@@ -1,0 +1,3 @@
+node_modules
+samhan/.env
+*package-lock.json
