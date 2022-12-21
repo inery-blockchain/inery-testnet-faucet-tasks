@@ -1,12 +1,6 @@
 ## Görev 4: RPC API push transaction
 **RPC API gönderme işlemi**
 
-## Bilgi
-
-JSON RPC Örnek kodu [örnek](https://github.com/herculessx/ineryjs/blob/master/example/) dizinde mevcuttur, değiştirmeyi deneyebilir ve nasıl çalıştığını anlayabilirsiniz, ayrıca kodunuzu çalıştırabilmek ve akıllı sözleşme işlevini çağırabilmek için Hesabınızda Akıllı Sözleşmeye ([Görev 3](https://github.com/koltigin/Inery-Node-Kurulum-Rehberi/blob/main/G%C3%B6rev-3.md)) sahip olmanız gerekir.
-
-Başlamdan önce [IneryJS](https://github.com/inery-blockchain/ineryjs) reposunu forklayın. Dosya içerisine example dosyası açın ve benim repomdaki gibi dosyaları oluşturun. Daha sonra ana dizinde yine örnek `.env` dosyasını oluşturun. Böylece kurulumu kendi reponuz ile yapabilirsiniz.
-
 ## Eski Nodejs Kaldırma
 
 ```shell
