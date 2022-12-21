@@ -1,0 +1,3 @@
+node_modules
+humai/.env
+*package-lock.json
