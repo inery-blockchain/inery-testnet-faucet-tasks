@@ -1,0 +1,39 @@
+{
+  "name": "ineryjs",
+  "version": "1.0.0",
+  "description": "Inery API",
+  "main": "dist/index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json",
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose",
+    "build-web": "webpack --config webpack.config.js"
+  },
+  "author": "Inery",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inery-blockchain/ineryjs"
+  },
+  "homepage": "https://github.com/inery-blockchain/ineryjs",
+  "dependencies": {
+    "bn.js": "^5.2.0",
+    "elliptic": "^6.5.4",
+    "hash.js": "^1.1.7",
+    "node-fetch": "^2.6.7",
+    "pako": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-fs-access": "^0.31.0",
+    "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
+    "clean-jsdoc-theme": "^4.1.7",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "jsdoc": "^3.5.5",
+    "node-util": "^0.0.1",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
