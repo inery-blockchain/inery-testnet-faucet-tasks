@@ -1,0 +1,19 @@
+{
+  "name": "betali-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./betali.mjs",
+  "scripts": {
+    "betali": "node ./betali.mjs"
+  },
+  "author": "betali",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlistaBianka/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/AlistaBianka/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
