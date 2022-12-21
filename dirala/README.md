@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to directory dirala
 
 ```shell
-cd ./alteregogi
+cd ~/inery-testnet-faucet-tasks/dirala
 ```
 
 
@@ -28,4 +28,3 @@ Run the script
 ```
 npm run solution
 ```
-
