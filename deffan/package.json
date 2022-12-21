@@ -2,17 +2,17 @@
   "name": "deffan-rpc-transaction",
   "version": "1.0.0",
   "description": "A sample rpc transaction for inery blockchain",
-  "main": "./solution.mjs",
+  "main": "./deffan.mjs",
   "scripts": {
-    "solution": "node ./solution.mjs"
+    "solution": "node ./deffan.mjs"
   },
   "author": "deffan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deffan/inery-testnet-faucet-tasks"
+    "url": "https://github.com/deffanpro/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://github.com/deffan/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/deffanpro/inery-testnet-faucet-tasks",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
