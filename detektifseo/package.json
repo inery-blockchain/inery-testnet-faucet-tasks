@@ -1,18 +1,18 @@
 {
-  "name": "alteregogi-rpc-transaction",
+  "name": "detektifseo-rpc-transaction",
   "version": "1.0.0",
   "description": "A sample rpc transaction for inery blockchain",
   "main": "./solution.mjs",
   "scripts": {
     "solution": "node ./solution.mjs"
   },
-  "author": "alteregogi",
+  "author": "detektifseo",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alteregogi/inery-testnet-faucet-tasks"
+    "url": "https://github.com/detektifseo/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://github.com/alteregogi/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/detektifseo/inery-testnet-faucet-tasks",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
