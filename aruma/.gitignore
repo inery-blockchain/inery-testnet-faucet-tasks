@@ -1,0 +1,3 @@
+node_modules
+aruma/.env
+*package-lock.json
