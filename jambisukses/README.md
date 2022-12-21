@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to directory jambisukses
 
 ```shell
-cd ./alteregogi
+cd ~/inery-testnet-faucet-tasks/jambisukses
 ```
 
 
@@ -28,4 +28,3 @@ Run the script
 ```
 npm run solution
 ```
-
