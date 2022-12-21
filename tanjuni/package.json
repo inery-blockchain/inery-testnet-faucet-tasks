@@ -1,0 +1,19 @@
+{
+  "name": "tanjuni-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./tanjuni.mjs",
+  "scripts": {
+    "tanjuni": "node ./tanjuni.mjs"
+  },
+  "author": "tanjuni",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tumijut/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Tumijut/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
