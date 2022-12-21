@@ -1,18 +1,18 @@
 {
-  "name": "-rpc-transaction",
+  "name": "rehanprima-rpc-transaction",
   "version": "1.0.0",
   "description": "A sample rpc transaction for inery blockchain",
   "main": "./solution.mjs",
   "scripts": {
     "solution": "node ./solution.mjs"
   },
-  "author": "",
+  "author": "rehanprima",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com//inery-testnet-faucet-tasks"
+    "url": "https://github.com/rehanprima12/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://github.com//inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/rehanprima12/inery-testnet-faucet-tasks",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
