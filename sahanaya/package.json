@@ -1,0 +1,19 @@
+{
+  "name": "sahanaya-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./sahanaya.mjs",
+  "scripts": {
+    "sahanaya": "node ./sahanaya.mjs"
+  },
+  "author": "sahanaya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahanaya/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/sahanaya/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
