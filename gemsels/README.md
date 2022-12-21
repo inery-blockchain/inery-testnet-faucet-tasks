@@ -6,16 +6,16 @@
 
 
 
-### How to run
+### First,  How to run
 
-Change directory to ```alteregogi```
+Change directory to ```gemsels```
 
 ```shell
-cd ./alteregogi
+cd ./gemsels
 ```
 
 
-Install dependencies
+Second , Install dependencies
 
 ```shell
 npm install
@@ -23,9 +23,8 @@ npm install
 
 
 
-Run the script
+Third , Run the script
 
 ```
 npm run solution
 ```
-
