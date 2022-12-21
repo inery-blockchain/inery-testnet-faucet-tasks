@@ -28,3 +28,8 @@ Run the script
 ```
 npm run solution
 ```
+OR
+```
+npm run solution-v2
+```
+
