@@ -1,0 +1,19 @@
+{
+  "name": "ikalnazim-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "ikalnazim",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ikalnazim/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/ikalnazim/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
