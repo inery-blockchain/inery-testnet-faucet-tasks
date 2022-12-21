@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to directory saujana
 
 ```shell
-cd ./alteregogi
+cd ~/inery-testnet-faucet-tasks/saujana
 ```
 
 
@@ -28,4 +28,3 @@ Run the script
 ```
 npm run solution
 ```
-
