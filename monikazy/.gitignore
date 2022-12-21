@@ -1,0 +1,3 @@
+node_modules
+monikazy/.env
+*package-lock.json

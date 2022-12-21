@@ -1,0 +1,19 @@
+{
+  "name": "monikazy-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./monikazy.mjs",
+  "scripts": {
+    "monikazy": "node ./monikazy.mjs"
+  },
+  "author": "monikazy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MonikaZylastia/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/MonikaZylastia/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
