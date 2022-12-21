@@ -1,0 +1,3 @@
+node_modules
+ardin/.env
+*package-lock.json
