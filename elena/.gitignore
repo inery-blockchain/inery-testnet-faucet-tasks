@@ -1,0 +1,3 @@
+node_modules
+elena/.env
+*package-lock.json
