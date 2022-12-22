@@ -1,0 +1,3 @@
+node_modules
+.asfi/.env
+*package-lock.json
