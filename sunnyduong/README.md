@@ -10,5 +10,5 @@ node create.mjs 12 "Test api created by api rpc"
 2. Read data ( node read.mjs ID)
 
 ```
-node read.mjs 12"
+node read.mjs 12
 ```
