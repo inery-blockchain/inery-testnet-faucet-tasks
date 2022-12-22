@@ -5,3 +5,34 @@
 - NPM
 
 ### How to run
+
+Change directory to dhamenz
+```shell
+cd inery-testnet-faucet-tasks/dhamenz
+```
+
+Copy .env-example
+
+```
+cp .env-example .env
+```
+
+Edit .env file with your information
+
+```
+nano .env
+```
+
+Install dependencies
+
+```shell
+npm install
+```
+
+
+
+Run the script
+
+```
+npm run solution
+```
