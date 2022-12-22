@@ -1,0 +1,3 @@
+node_modules
+arraylast/.env
+*package-lock.json
