@@ -1,0 +1,20 @@
+{
+  "name": "mantap12",
+  "version": "1.0.0",
+  "description": "completing task 4",
+  "main": "solution.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "solution": "node solution.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chopin44/mantap12.git"
+  },
+  "author": "Chopin44",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chopin44/mantap12/issues"
+  },
+  "homepage": "https://github.com/Chopin44/mantap12#readme"
+}
