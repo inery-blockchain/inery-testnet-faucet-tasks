@@ -1,0 +1,3 @@
+node_modules
+gogon/.env
+*package-lock.json
