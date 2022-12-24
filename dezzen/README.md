@@ -6,9 +6,9 @@
 
 ### How to run
 
-Change directory to dhamenz
+Change directory to dezzen
 ```shell
-cd inery-testnet-faucet-tasks/dhamenz
+cd inery-testnet-faucet-tasks/dezzen
 ```
 
 Copy .env-example
