@@ -1,8 +1,8 @@
 ## Prerequisite
 
-###NodeJS & NPM
-    - [Windows](https://nodejs.org/en/download/) Included NPM packages
-    - Linux:
+### NodeJS & NPM
+- [Windows](https://nodejs.org/en/download/) Included NPM packages
+- Linux:
 ```
 apt install nodejs
 ```
