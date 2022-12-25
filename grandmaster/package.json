@@ -4,17 +4,29 @@
   "description": "A sample rpc transaction for inery blockchain",
   "main": "./solution.mjs",
   "scripts": {
-    "solution": "node ./solution.mjs"
+    "solution": "node ./solution.mjs",
+    "create": "node ./create.mjs",
+    "read": "node ./read.mjs",
+    "update": "node ./update.mjs",
+    "delete": "node ./delete.mjs"
   },
   "author": "grandmaster",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/grandmaster/inery-testnet-faucet-tasks"
+    "url": "git+https://github.com/grandmaster/inery-testnet-faucet-tasks.git"
   },
   "homepage": "https://github.com/grandmaster/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/grandmaster/inery-testnet-faucet-tasks/issues"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "grandmaster",
+    "solution"
+  ]
 }
