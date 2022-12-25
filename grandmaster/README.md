@@ -15,7 +15,7 @@ cd ~/inery-testnet-faucet-tasks/grandmaster
 ```
 
 
-Install dependencies
+## Install dependencies
 
 ```shell
 npm install
@@ -23,8 +23,30 @@ npm install
 
 
 
-Run the script
+## Run the script :
 
+Solution :
 ```
 npm run solution
 ```
+
+Create :
+```
+npm run create
+```
+
+Update :
+```
+npm run update
+```
+
+Delete :
+```
+npm run delete
+```
+
+
+
+
+
+
