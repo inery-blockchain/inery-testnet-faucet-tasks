@@ -29,6 +29,10 @@ Solution :
 ```
 npm run solution
 ```
+Read :
+```
+npm run read
+```
 
 Create :
 ```
