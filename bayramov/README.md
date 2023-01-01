@@ -49,7 +49,7 @@ sudo apt-get install -y nodejs
 1. Clone the repo
 
    ```
-   git clone https://github.com/alteregogi/ineryjs.git
+   git clone https://github.com/aslanbayramov/ineryjs.git
    ```
 
 2. Change directory to cloned repo
