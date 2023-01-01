@@ -17,8 +17,12 @@ JSON RPC Sample code are available at [example](https://github.com/alteregogi/in
 
 Remove Previous Nodejs
 
-```sudo apt-get remove nodejs```
+```
+sudo apt-get remove nodejs
+```
 
 Install Curl
 
-```sudo apt-get install curl```
+```
+sudo apt-get install curl
+```
