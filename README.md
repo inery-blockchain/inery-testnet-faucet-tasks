@@ -1,7 +1,98 @@
-# Inery testnet faucet tasks
+## Görev 4: RPC API push transaction
 
-This is the base branch for tasks related to the Inery faucet. For each task that requires revision using GitHub, we will create a new branch named with the number of that task, such as 'task4', 'task5', etc.
+## Eski Nodejs Kaldırma
 
-## Getting Started
+```shell
+apt-get remove nodejs
+```
 
-To verify the quality of your code, you will need to clone the specific branch of the project and submit the required changes for that task. After making the necessary changes, you can create a pull request to submit your work for review. If the work is satisfactory, it will be approved. If there are any issues with the work, it may be labeled with specific comments indicating what needs to be improved or modified. It is important to carefully review and address any feedback provided in order to improve the quality of your work.
+## Curl Kütüphanesi Yükleme
+
+```shell
+apt-get install curl
+```
+
+## Nodejs Yükleme
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+apt-get install -y nodejs
+```
+     
+## NPM Kurulumu
+
+```shell
+apt install npm
+```
+
+## Kurulum
+
+### Repoyu Klonlama
+
+```
+git clone https://github.com/koltigin/ineryjs.git
+```
+
+### Dizine Geçme
+
+```
+cd ineryjs
+```
+
+### NPM Paket Kurulumu
+
+```
+npm install
+```
+
+### `.env-sample` Dosyasını Kopyalama
+
+```
+cp .env-sample .env
+```
+
+### `.env` Bilgilerini Düzenleme
+```
+nano .env
+```
+
+```
+INERY_ACCOUNT="koltigin"
+PRIVATE_KEY="$KEY"
+NODE_URL="http://194.163.159.100:8888"
+```
+
+## 8888 Port Açma 
+
+```
+sudo ufw allow 8888
+```
+
+## RPC Örneği Çalıştırma
+
+```
+npm run rpc-example
+```
+
+🔴 **İşlem çıktısı aşağıdaki gibi olmalıdır;***
+```
+> ineryjs@1.0.0 rpc-example
+> node ./example/json-rpc.mjs
+
+{
+  transaction_id: 'c59d3b67482f6551b9b11b24ce7b6f2da59aad91c0f79617af338e9da83f80e8',
+  processed: {
+    id: 'c59d3b67482f6551b9b11b24ce7b6f2da59aad91c0f79617af338e9da83f80e8',
+    block_num: 1147209,
+    block_time: '2022-12-03T13:56:37.000',
+    receipt: { status: 'executed', cpu_usage_us: 2147, net_usage_words: 18 },
+    elapsed: 2147,
+    net_usage: 144,
+    scheduled: false,
+    action_traces: [ [Object] ],
+    failed_dtrx_trace: null
+  }
+}
+```
+
+🔴 **İşlemleri gerçekleştirdikten sonra kullanıcı paneline giderek `RPC API push transaction` başlıklı dördüncü görevi onaylayınız.**
