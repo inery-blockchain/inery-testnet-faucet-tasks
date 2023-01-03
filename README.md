@@ -1,7 +1,143 @@
-# Inery testnet faucet tasks
+# Inery Json RPC 4.Görev
+Inery Blockchain'de JSON RPC'yi çağırmak için örnek kod
 
-This is the base branch for tasks related to the Inery faucet. For each task that requires revision using GitHub, we will create a new branch named with the number of that task, such as 'task4', 'task5', etc.
+## 🟢Bilgiler
 
-## Getting Started
+JSON RPC Örnek kodu örnek dizinde mevcuttur, değiştirmeyi deneyebilir ve nasıl çalıştığını anlayabilirsiniz, ayrıca kodunuzu çalıştırabilmek ve değerli sözleşme işlevini çağırabilmek için Hesabınızda Değerli Akıllı Sözleşmeye (Görev 3) sahip olmanız gerekir.
 
-To verify the quality of your code, you will need to clone the specific branch of the project and submit the required changes for that task. After making the necessary changes, you can create a pull request to submit your work for review. If the work is satisfactory, it will be approved. If there are any issues with the work, it may be labeled with specific comments indicating what needs to be improved or modified. It is important to carefully review and address any feedback provided in order to improve the quality of your work.
+
+## 🟢 Başlayın
+Eski Nodejs kaldırın
+<br>
+
+```shell
+sudo apt-get remove nodejs
+```
+
+Curl'ü yükleyin
+
+```shell
+sudo apt-get install curl
+```
+
+Curl'ü yükleyin
+
+```shell
+    curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+    sudo apt-get install -y nodejs
+```
+
+     
+## 🟢 NPM kurulumu
+
+```shell
+sudo apt install npm
+```
+
+
+
+## 🟢 Kurulum
+
+* Repoyu klonlayın
+
+   ```
+   git clone https://github.com/hesapname/ineryjs.git
+   ```
+
+* Dizine Girin
+
+   ```
+   cd ineryjs
+   ```
+
+* NPM Paket kurun
+
+   ```
+   npm install
+   ```
+
+* Aşağıdaki Kod ile env-sample dosyasının ismini .env yapın 
+
+   ```
+   cp .env-sample .env
+   ```
+
+*  ```.env``` bilgileriniz düzenleyin
+
+  ```
+   nano .env
+   ```
+
+Burada açılan pencerede <br><br>
+
+Aşağıdaki Bilgileri inery testnet Dashboard kısmında bulabilirsiniz.<br><br>
+
+INERY_ACCOUNT="HESAP ADINIZ" <br>
+PRIVATE_KEY="KEYİNİZ"<br>
+NODE_URL="http://NODEİPADRESİ:8888" 
+<br><br>
+
+ctrl +X  Yes diyip çıkıyoruz.
+
+
+
+## 🟢 8888 port açma 
+
+RPC Örneği Çalıştır
+
+```
+sudo ufw allow 8888
+```
+
+<br>
+
+## 🟢 Çalıştırma
+
+```
+npm run rpc-example
+```
+
+
+
+
+<br><br>
+## 🟢 Hata Çözümleri
+
+Serialization time limit 15000us exceeded<br>
+
+
+* config.ini dosyanda max-transaction-time değerini 15000 olarak değiştir<br>
+
+```
+nano ./inery-node/inery.setup/master.node/blockchain/config/config.ini
+```
+
+<img src="https://camo.githubusercontent.com/6036fa176fe713bfa7e8151aef13b77710b589c33dff2f7ae459d2b8785e0efc/68747470733a2f2f736e6970626f6172642e696f2f61306472474e2e6a7067" width="550">
+
+<br><br>
+
+* connect ECONNREFUSED<br>
+
+
+```
+sudo ufw allow 8888
+```
+
+<img src="https://camo.githubusercontent.com/d7bfd0c198035faa303e9a8b5714668384dd1d00a681b444718757b7a4872365/68747470733a2f2f736e6970626f6172642e696f2f5567534d48322e6a7067" width="550">
+
+
+<br><br>
+
+* missing create.issuer ( type=name )<br>
+* Bu, hesabınızda Görev 3'te oluşturduğunuz Değerli Akıllı Sözleşme olmadığı anlamına gelir.
+* Hesabınızda CRUD Akıllı Sözleşmenizin olup olmadığını kontrol etmek için
+
+```
+cline get abi ineryi-hesap-isminiz
+```
+
+<img src="https://camo.githubusercontent.com/35161f3c497c316d89925c7d1300ddaa78354daed4b783f615bd1561fd2bdba7/68747470733a2f2f736e6970626f6172642e696f2f615442484c332e6a7067" width="550">
+
+* bu çıktıya sahip olduğunuzdan emin olun<br><br>
+
+<img src="https://camo.githubusercontent.com/107661c26d281a09dcc3495a03f04ab90e90148f506479ad54f2d5df26e82150/68747470733a2f2f736e6970626f6172642e696f2f3076736e4f712e6a7067" width="550">
