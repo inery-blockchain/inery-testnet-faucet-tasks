@@ -141,5 +141,3 @@ cline get abi ineryi-hesap-isminiz
 * bu çıktıya sahip olduğunuzdan emin olun<br><br>
 
 <img src="https://camo.githubusercontent.com/107661c26d281a09dcc3495a03f04ab90e90148f506479ad54f2d5df26e82150/68747470733a2f2f736e6970626f6172642e696f2f3076736e4f712e6a7067" width="550">
-
-
