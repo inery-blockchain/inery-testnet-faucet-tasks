@@ -6,9 +6,9 @@
 
 ### How to run
 
-Change directory to dhamenz
+Change directory to directory dhamenz
 ```shell
-cd inery-testnet-faucet-tasks/dhamenz
+cd ~/inery-testnet-faucet-tasks/dhamenz
 ```
 
 Copy .env-example
@@ -17,7 +17,7 @@ Copy .env-example
 cp .env-example .env
 ```
 
-Edit .env file with your information
+Edit .env file with your Inery account
 
 ```
 nano .env
