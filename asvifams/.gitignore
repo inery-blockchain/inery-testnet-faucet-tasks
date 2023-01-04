@@ -1,0 +1,3 @@
+node_modules
+asvifams/.env
+*package-lock.json
