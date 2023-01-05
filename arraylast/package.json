@@ -2,9 +2,9 @@
     "name": "arraylast-rpc-transaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "main": "./arraylast.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "solution": "node ./arraylast.mjs"
     },
     "author": "arraylast",
     "license": "MIT",
