@@ -14,11 +14,12 @@ Change directory to ```arraylast```
 cd ./arraylast
 ```
 
-Create .env and edit the variable
+Edit example.env & Rename
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
 
 ```shell
+cp example.env .env
 nano .env
 ```
 
