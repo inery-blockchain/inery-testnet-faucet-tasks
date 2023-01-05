@@ -28,13 +28,7 @@ npm install
 
 Run the script
 
-Create
-
 ```
-node create.mjs 6 "Data 6 via api rpc"
+npm run solution
 ```
 
-Read
-```
-node read.mjs 6
-```
