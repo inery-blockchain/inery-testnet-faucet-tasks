@@ -1,0 +1,3 @@
+node_modules
+busaeri/.env
+*package-lock.json
