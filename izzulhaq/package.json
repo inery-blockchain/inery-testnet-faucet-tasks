@@ -1,0 +1,20 @@
+{
+    "name": "izzulhaq-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain | By: izzulhaq",
+    "main": "./solution.mjs",
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+    "author": "izzulhaq",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/izzulcrypt/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/izzulcrypt/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
