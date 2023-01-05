@@ -4,7 +4,7 @@
   "description": "Inery API",
   "main": "./solution.mjs",
   "scripts": {
-    "solution": "node ./solution.mjs"
+    "solution": "node ./solution.mjs 6 'Test record 6'"
   },
   "author": "ttlnnt",
   "license": "MIT",
