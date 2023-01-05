@@ -1,20 +1,18 @@
 {
-  "name": "ineryjs",
+  "name": "ttlnnt",
   "version": "1.0.0",
   "description": "Inery API",
-  "main": "dist/index.js",
+  "main": "./solution.mjs",
   "scripts": {
-    "doc": "jsdoc -c jsdoc.json",
-    "build-web": "webpack --config webpack.config.js",
-    "rpc-example": "node ./example/json-rpc.mjs"
+    "solution": "node ./solution.mjs"
   },
-  "author": "Inery",
+  "author": "ttlnnt",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://git.webservice-host.net/ljubomirm/inery_module"
+    "url": "https://github.com/ttlnnt/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
+  "homepage": "https://github.com/ttlnnt/inery-testnet-faucet-tasks",
   "dependencies": {
     "bn.js": "^5.2.0",
     "dotenv": "^16.0.3",
