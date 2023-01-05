@@ -1,15 +1,21 @@
 ### For Run this Code You must install this.
 
 -[NodeJS](https://nodejs.org/en/)
+```
 sudo apt-get install curl
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+```
+```
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
 -NPM
-sudo apt install npm
+```
+sudo npm install
+```
 
 ### For running
 
-Change directory to ```arraylast```
+Change the directory to the ```arraylast```
 
 ```shell
 cd ./arraylast
