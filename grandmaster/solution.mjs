@@ -9,7 +9,7 @@ const json_rpc = new JsonRpc(url) // create new JsonRPC using our node url
 const private_key = process.env.PRIVATE_KEY
 const actor = process.env.INERY_ACCOUNT
 
-const account = "xyndos"
+const account = "grandmaster"
 const signature  = new JsSignatureProvider([private_key]); 
 
 const api = new Api({
