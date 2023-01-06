@@ -1,3 +1,4 @@
+//mr9868 property
 import { Api, JsonRpc, JsSignatureProvider } from './dist/index.js'
 import * as dotenv from 'dotenv' 
 dotenv.config()
