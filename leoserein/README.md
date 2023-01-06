@@ -21,8 +21,7 @@ Change directory to directory leoserein
 cd ~/inery-testnet-faucet-tasks/leoserein
 ```
 
-Create .env and edit the variable PRIVATE_KEY=<YOUR PRIVATE KEY>
-INERY_ACCOUNT=<YOUR INERY ACCOUNT> and NODE_URL="http://<YOUR_SERVER_IP>:8888 based on your Inery Dashboard
+Create .env and edit the variable PRIVATE_KEY=<YOUR PRIVATE KEY> INERY_ACCOUNT=<YOUR INERY ACCOUNT> and NODE_URL="http://<YOUR_SERVER_IP>:8888 based on your Inery Dashboard
 
 ```shell
 nano .env
