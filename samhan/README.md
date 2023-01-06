@@ -1,29 +1,26 @@
-### Prerequisite
+# Tutorial-Example-Inery-Task-4
+
+# THIS REPO CREATED TO COMPLETE TASK 4 FROM [TESTNET INERY](https://testnet.inery.io/dashboard/)
+
+## TUTORIAL (English)
+
+
+### Pre-install
 
 - [NodeJS](https://nodejs.org/en/)
 
 - NPM
 
-##### Install Curl
 
-```
-sudo apt-get install curl
-```
 
-##### Install NodeJS
+### How to run
 
-```
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+Change directory to directory li4r
+
+```shell
+cd ~/inery-testnet-faucet-tasks/samhan
 ```
 
-##### Install npm
-```
-sudo apt install npm
-```
-_____________________
-
-## to run
 
 Install dependencies
 
@@ -38,4 +35,5 @@ Run the script
 ```
 npm run solution
 ```
+
 
