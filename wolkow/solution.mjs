@@ -2,7 +2,7 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const url = "http://46.164.131.166:8888"
+const url = "http://185.33.86.233:8888"
 
 const json_rpc = new JsonRpc(url) 
 const private_key = process.env.PRIVATE_KEY
