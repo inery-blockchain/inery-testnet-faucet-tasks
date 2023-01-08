@@ -74,6 +74,7 @@ npm run rpc-example
 
 ___________________________________________________
 
+### Once it feels successful we proceed to the actual task
 ### Before running in order to prepare
 
 - [NodeJS](https://nodejs.org/en/)
