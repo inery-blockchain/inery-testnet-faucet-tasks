@@ -6,7 +6,7 @@
 
 
 
-### How to run
+### Stages to run
 
 Change directory to ```arfiyan```
 
@@ -14,6 +14,7 @@ Change directory to ```arfiyan```
 cd ./arfiyan
 ```
 
+### Next you need to replace
 Create .env and edit the variable
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
