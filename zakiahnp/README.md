@@ -1,22 +1,15 @@
-### Prerequisite
+## Prerequisite
 
 - [NodeJS](https://nodejs.org/en/)
 
 - NPM
 
+### Run RPC Solution
 
-### How to run?
-
-Change directory to zakiahnp
+Change directory to directory zakiahnp
 
 ```shell
 cd ~/inery-testnet-faucet-tasks/zakiahnp
-```
-
-Create .env and edit .env file with your information
-
-```shell
-nano .env
 ```
 
 Install dependencies
@@ -25,7 +18,7 @@ Install dependencies
 npm install
 ```
 
-Run the script
+Run the RPC Solution
 
 ```
 npm run solution
