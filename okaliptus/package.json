@@ -1,0 +1,19 @@
+{
+  "name": "okaliptus-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample RPC API push transaction on Inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "okaliptus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oxumare/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Oxumare/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
