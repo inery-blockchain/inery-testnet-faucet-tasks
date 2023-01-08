@@ -1,4 +1,4 @@
-### Prerequisite
+### Before running in order to prepare
 
 - [NodeJS](https://nodejs.org/en/)
 
