@@ -1,9 +1,17 @@
-### Prerequisite
+## Setup 
 
-- [NodeJS](https://nodejs.org/en/)
+### Instal curl
+```
+sudo apt-get install curl
+```
 
-- NPM
-
+### NodeJS & NPM
+- [Windows](https://nodejs.org/en/download/) Included NPM packages
+- Linux:
+```
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
 
 
 ### How to run
