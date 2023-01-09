@@ -11,7 +11,7 @@
 Change directory to ```gianluigi```
 
 ```shell
-cd ./gianluigi
+cd ~/inery-testnet-faucet-tasks/gianluigi
 ```
 
 Create .env and edit the variable
