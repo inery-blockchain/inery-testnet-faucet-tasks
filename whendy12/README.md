@@ -68,41 +68,47 @@ _____________________
 
 
 ### 2. Create Task Project
-
 Go To :
+```
 https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 ```
-Create a new fork and next create frok 
+
+## Create a new fork and next create frok
+
 ```
 cd
 git clone <link_clone_your>
-
 ```
-#### create directory project
+
+### create directory 
+
 ```
 cd ~/inery-testnet-faucet-tasks
 mkdir <YourIneryName>
 ```
 
-### 3. Run Command Build-Web:
+## 3. Run Command Build-Web:
 
 ```
 cd ~/ineryjs
 npm run build-web
 ```
 
-### 4. mengcopy Folder disit-web ke Project
+## 4. mengcopy Folder disit-web ke Project
+
 ```
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
-### 5. Masuk Ke Directory Project dan membuat file html
+## 5. Masuk Ke Directory Project dan membuat file html
+
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
-##### Input this script and change with your IP 
+### 6. Input this script and change with your IP 
+
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
