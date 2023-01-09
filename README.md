@@ -1,7 +1,12 @@
-# Inery testnet faucet tasks
+# Task 4 Inery Testnet
+To finish this task you need to do this following instructions :
 
-This is the base branch for tasks related to the Inery faucet. For each task that requires revision using GitHub, we will create a new branch named with the number of that task, such as 'task4', 'task5', etc.
+1. Clone this Git Repository
+2. Add new directory and name it with your inery testnet account name
+3. Add your software solution for task 4, which should be a solution for pushing transactions with the RPC API on the Inery testnet blockchain and put it inside the directory
+4. submit your work by creating the a merge request so the team can review it
+5. you will see the status "Done" on your dashboard testnet page if your solution is succesful.
 
-## Getting Started
+Remember to check every detail of all the instructions above, and make sure to check that your solution is meet the requirements for doing the task 4. and the last thing to do before submit your work, you need to test your code first.
 
-To verify the quality of your code, you will need to clone the specific branch of the project and submit the required changes for that task. After making the necessary changes, you can create a pull request to submit your work for review. If the work is satisfactory, it will be approved. If there are any issues with the work, it may be labeled with specific comments indicating what needs to be improved or modified. It is important to carefully review and address any feedback provided in order to improve the quality of your work.
+# Good luck!
