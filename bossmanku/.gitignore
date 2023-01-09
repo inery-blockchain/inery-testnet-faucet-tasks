@@ -1,0 +1,3 @@
+node_modules
+bossmanku/.env
+*package-lock.json
