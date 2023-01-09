@@ -1,4 +1,5 @@
-### Prerequisite
+
+## Prerequisite
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -8,10 +9,10 @@
 
 ### How to run
 
-Change directory to ```xyndos```
+Change directory to directory agustina
 
 ```shell
-cd ./xyndos
+cd ~/inery-testnet-faucet-tasks/agustina
 ```
 
 Create .env and edit the variable
@@ -27,6 +28,8 @@ Install dependencies
 ```shell
 npm install
 ```
+
+
 
 Run the script
 
