@@ -14,9 +14,7 @@ Change directory to ```gianluigi```
 cd ~/inery-testnet-faucet-tasks/gianluigi
 ```
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+Copy .env-sample and rename it to .env
 
 ```shell
 nano .env
