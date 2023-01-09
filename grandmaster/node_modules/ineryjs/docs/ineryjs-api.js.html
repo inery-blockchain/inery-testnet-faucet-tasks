@@ -1,0 +1,941 @@
+<!DOCTYPE html><html lang="en" style="font-size:16px"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ineryjs-api.js</title><!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--><script src="scripts/third-party/hljs.js" defer="defer"></script><script src="scripts/third-party/hljs-line-num.js" defer="defer"></script><script src="scripts/third-party/popper.js" defer="defer"></script><script src="scripts/third-party/tippy.js" defer="defer"></script><script src="scripts/third-party/tocbot.js"></script><script>var baseURL="/",locationPathname="",baseURL=(locationPathname=document.location.pathname).substr(0,locationPathname.lastIndexOf("/")+1)</script><link rel="stylesheet" href="styles/clean-jsdoc-theme.min.css"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><defs><symbol id="copy-icon" viewbox="0 0 488.3 488.3"><g><path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/><path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/></g></symbol><symbol id="search-icon" viewBox="0 0 512 512"><g><g><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g></symbol><symbol id="font-size-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="add-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></symbol><symbol id="minus-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h14v2H5z"/></symbol><symbol id="dark-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol><symbol id="light-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol><symbol id="reset-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.537 19.567A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 1 0-2.46 5.772l.997 1.795z"/></symbol><symbol id="down-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"></path></symbol><symbol id="codepen-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.5 13.202L13 15.535v3.596L19.197 15 16.5 13.202zM14.697 12L12 10.202 9.303 12 12 13.798 14.697 12zM20 10.869L18.303 12 20 13.131V10.87zM19.197 9L13 4.869v3.596l3.5 2.333L19.197 9zM7.5 10.798L11 8.465V4.869L4.803 9 7.5 10.798zM4.803 15L11 19.131v-3.596l-3.5-2.333L4.803 15zM4 13.131L5.697 12 4 10.869v2.262zM2 9a1 1 0 0 1 .445-.832l9-6a1 1 0 0 1 1.11 0l9 6A1 1 0 0 1 22 9v6a1 1 0 0 1-.445.832l-9 6a1 1 0 0 1-1.11 0l-9-6A1 1 0 0 1 2 15V9z"/></symbol><symbol id="close-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></symbol><symbol id="menu-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></symbol></defs></svg></head><body class="dark" data-theme="dark"><div class="sidebar-container"><div class="sidebar" id="sidebar"><a href="/" class="sidebar-title sidebar-title-anchor">Home</a><div class="sidebar-items-container"><div class="sidebar-section-title with-arrow" data-isopen="false" id="24bpMttOEFSSkojuQVCUM"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="ActionBuilder.html">ActionBuilder</a></div><div class="sidebar-section-children"><a href="ActionSerializer.html">ActionSerializer</a></div><div class="sidebar-section-children"><a href="Api.html">Api</a></div><div class="sidebar-section-children"><a href="JsonRpc.html">JsonRpc</a></div><div class="sidebar-section-children"><a href="JsSignatureProvider.html">JsSignatureProvider</a></div><div class="sidebar-section-children"><a href="TransactionBuilder.html">TransactionBuilder</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="iLfHZ_fmleXVf6w-jiVkx"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Angular.html">Using module with Angular</a></div><div class="sidebar-section-children"><a href="tutorial-React.html">Using module with React</a></div><div class="sidebar-section-children"><a href="tutorial-Vue.html">Using module with Vue</a></div><div class="sidebar-section-children"><a href="tutorial-module-in-browser.html">Module in browser</a></div><div class="sidebar-section-children"><a href="tutorial-push-transaction.html">Push transaction</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="EGeXvFLlXsM2jENSWk8hj"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#Abi">Abi</a></div><div class="sidebar-section-children"><a href="global.html#Abi_action">Abi_action</a></div><div class="sidebar-section-children"><a href="global.html#Abi_action_result">Abi_action_result</a></div><div class="sidebar-section-children"><a href="global.html#Abi_error_message">Abi_error_message</a></div><div class="sidebar-section-children"><a href="global.html#Abi_extension">Abi_extension</a></div><div class="sidebar-section-children"><a href="global.html#Abi_field">Abi_field</a></div><div class="sidebar-section-children"><a href="global.html#Abi_ricardian_clause">Abi_ricardian_clause</a></div><div class="sidebar-section-children"><a href="global.html#Abi_struct">Abi_struct</a></div><div class="sidebar-section-children"><a href="global.html#Abi_table">Abi_table</a></div><div class="sidebar-section-children"><a href="global.html#Abi_type">Abi_type</a></div><div class="sidebar-section-children"><a href="global.html#Abi_variant">Abi_variant</a></div><div class="sidebar-section-children"><a href="global.html#AbiJsonToBinResult">AbiJsonToBinResult</a></div><div class="sidebar-section-children"><a href="global.html#AccountDelta">AccountDelta</a></div><div class="sidebar-section-children"><a href="global.html#AccountResourceInfo">AccountResourceInfo</a></div><div class="sidebar-section-children"><a href="global.html#AccountResult">AccountResult</a></div><div class="sidebar-section-children"><a href="global.html#Action">Action</a></div><div class="sidebar-section-children"><a href="global.html#ActionReceipt">ActionReceipt</a></div><div class="sidebar-section-children"><a href="global.html#ActionTrace">ActionTrace</a></div><div class="sidebar-section-children"><a href="global.html#ActivatedProtocolFeature">ActivatedProtocolFeature</a></div><div class="sidebar-section-children"><a href="global.html#ActivatedProtocolFeature_specification">ActivatedProtocolFeature_specification</a></div><div class="sidebar-section-children"><a href="global.html#Authority">Authority</a></div><div class="sidebar-section-children"><a href="global.html#AuthorityProviderArgs">AuthorityProviderArgs</a></div><div class="sidebar-section-children"><a href="global.html#Authorization">Authorization</a></div><div class="sidebar-section-children"><a href="global.html#AuthSequence">AuthSequence</a></div><div class="sidebar-section-children"><a href="global.html#BinaryAbi">BinaryAbi</a></div><div class="sidebar-section-children"><a href="global.html#BlockHeader">BlockHeader</a></div><div class="sidebar-section-children"><a href="global.html#BlockHeaderStateTaposInfo">BlockHeaderStateTaposInfo</a></div><div class="sidebar-section-children"><a href="global.html#BlockTaposInfo">BlockTaposInfo</a></div><div class="sidebar-section-children"><a href="global.html#DBSizeGetResult">DBSizeGetResult</a></div><div class="sidebar-section-children"><a href="global.html#DBSizeIndexCount">DBSizeIndexCount</a></div><div class="sidebar-section-children"><a href="global.html#DefferedTransaction">DefferedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#DefferedTransaction_generation">DefferedTransaction_generation</a></div><div class="sidebar-section-children"><a href="global.html#GeneratedTransaction">GeneratedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#GetAbiResult">GetAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetAccountResult">GetAccountResult</a></div><div class="sidebar-section-children"><a href="global.html#GetAccountsByAuthorizersResult">GetAccountsByAuthorizersResult</a></div><div class="sidebar-section-children"><a href="global.html#GetActionsResult">GetActionsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetActivatedProtocolFeaturesParams">GetActivatedProtocolFeaturesParams</a></div><div class="sidebar-section-children"><a href="global.html#GetActivatedProtocolFeaturesResult">GetActivatedProtocolFeaturesResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockHeaderStateResult">GetBlockHeaderStateResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockInfoResult">GetBlockInfoResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockResult">GetBlockResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCodeHashResult">GetCodeHashResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCodeResult">GetCodeResult</a></div><div class="sidebar-section-children"><a href="global.html#GetControlledAccountsResult">GetControlledAccountsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCurrencyStatsResult">GetCurrencyStatsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetInfoResult">GetInfoResult</a></div><div class="sidebar-section-children"><a href="global.html#GetKeyAccountsResult">GetKeyAccountsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetProducerScheduleResult">GetProducerScheduleResult</a></div><div class="sidebar-section-children"><a href="global.html#GetProducersResult">GetProducersResult</a></div><div class="sidebar-section-children"><a href="global.html#GetRawAbiResult">GetRawAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetRawCodeAndAbiResult">GetRawCodeAndAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetScheduledTransactionsResult">GetScheduledTransactionsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeArgs">GetTableByScopeArgs</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeResult">GetTableByScopeResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeResultRow">GetTableByScopeResultRow</a></div><div class="sidebar-section-children"><a href="global.html#GetTableRowsArgs">GetTableRowsArgs</a></div><div class="sidebar-section-children"><a href="global.html#GetTableRowsResult">GetTableRowsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTransactionResult">GetTransactionResult</a></div><div class="sidebar-section-children"><a href="global.html#IncrementalMerkle">IncrementalMerkle</a></div><div class="sidebar-section-children"><a href="global.html#KeyWeight">KeyWeight</a></div><div class="sidebar-section-children"><a href="global.html#OrderedActionResult">OrderedActionResult</a></div><div class="sidebar-section-children"><a href="global.html#PackedTransaction">PackedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#PackedTrx">PackedTrx</a></div><div class="sidebar-section-children"><a href="global.html#Permission">Permission</a></div><div class="sidebar-section-children"><a href="global.html#PermissionLevel">PermissionLevel</a></div><div class="sidebar-section-children"><a href="global.html#PermissionLevelWeight">PermissionLevelWeight</a></div><div class="sidebar-section-children"><a href="global.html#ProcessedAction">ProcessedAction</a></div><div class="sidebar-section-children"><a href="global.html#ProcessedTransaction">ProcessedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#ProducerAuthority">ProducerAuthority</a></div><div class="sidebar-section-children"><a href="global.html#ProducerAuthoritySchedule">ProducerAuthoritySchedule</a></div><div class="sidebar-section-children"><a href="global.html#ProducerDetails">ProducerDetails</a></div><div class="sidebar-section-children"><a href="global.html#ProducerKey">ProducerKey</a></div><div class="sidebar-section-children"><a href="global.html#ProducerScheduleType">ProducerScheduleType</a></div><div class="sidebar-section-children"><a href="global.html#ProtocolFeatureActivationSet">ProtocolFeatureActivationSet</a></div><div class="sidebar-section-children"><a href="global.html#PushTransactionArgs">PushTransactionArgs</a></div><div class="sidebar-section-children"><a href="global.html#QueryConfig">QueryConfig</a></div><div class="sidebar-section-children"><a href="global.html#ReadOnlyTransactResult">ReadOnlyTransactResult</a></div><div class="sidebar-section-children"><a href="global.html#RefundRequest">RefundRequest</a></div><div class="sidebar-section-children"><a href="global.html#ResourceDelegation">ResourceDelegation</a></div><div class="sidebar-section-children"><a href="global.html#ResourceOverview">ResourceOverview</a></div><div class="sidebar-section-children"><a href="global.html#ResourcePayer">ResourcePayer</a></div><div class="sidebar-section-children"><a href="global.html#ScheduleInfo">ScheduleInfo</a></div><div class="sidebar-section-children"><a href="global.html#SecurityGroupInfo">SecurityGroupInfo</a></div><div class="sidebar-section-children"><a href="global.html#SignArgs">SignArgs</a></div><div class="sidebar-section-children"><a href="global.html#SignedHeader">SignedHeader</a></div><div class="sidebar-section-children"><a href="global.html#SignResult">SignResult</a></div><div class="sidebar-section-children"><a href="global.html#StateExtension">StateExtension</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiAction">TraceApiAction</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiGetBlockResult">TraceApiGetBlockResult</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiTransaction">TraceApiTransaction</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiTransactionHeader">TraceApiTransactionHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactConfig">TransactConfig</a></div><div class="sidebar-section-children"><a href="global.html#Transaction">Transaction</a></div><div class="sidebar-section-children"><a href="global.html#TransactionHeader">TransactionHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactionReceipt">TransactionReceipt</a></div><div class="sidebar-section-children"><a href="global.html#TransactionReceiptHeader">TransactionReceiptHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactionTrace">TransactionTrace</a></div><div class="sidebar-section-children"><a href="global.html#TransactResult">TransactResult</a></div><div class="sidebar-section-children"><a href="global.html#WaitWeight">WaitWeight</a></div></div></div></div></div><div class="navbar-container" id="VuAckcnZhf"><nav class="navbar"><div class="navbar-left-items"></div><div class="navbar-right-items"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div><nav></nav></nav></div><div class="toc-container"><div class="toc-content"><span class="bold">On this page</span><div id="eed4d2a0bfd64539bb9df78095dec881"></div></div></div><div class="body-wrapper"><div class="main-content"><div class="main-wrapper"><section id="source-page" class="source-page"><header><h1 id="title" class="has-anchor">ineryjs-api.js</h1></header><article><pre class="prettyprint source lang-js"><code>"use strict";
+var __assign = (this &amp;&amp; this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i &lt; n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = op[0] &amp; 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) &amp;&amp; t.call(y), 0) : y.next) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] &amp; 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __read = (this &amp;&amp; this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" &amp;&amp; o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) &amp;&amp; !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r &amp;&amp; !r.done &amp;&amp; (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this &amp;&amp; this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i &lt; il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+var __values = (this &amp;&amp; this.__values) || function(o) {
+    var s = typeof Symbol === "function" &amp;&amp; Symbol.iterator, m = s &amp;&amp; o[s], i = 0;
+    if (m) return m.call(o);
+    if (o &amp;&amp; typeof o.length === "number") return {
+        next: function () {
+            if (o &amp;&amp; i >= o.length) o = void 0;
+            return { value: o &amp;&amp; o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionBuilder = exports.TransactionBuilder = exports.Api = void 0;
+var pako_1 = require("pako");
+var ser = require("./ineryjs-serialize");
+class Api{
+    /**
+     * @param args
+     * `rpc`: Issues RPC calls
+     * `authorityProvider`: Get public keys needed to meet authorities in a transaction
+     * `abiProvider`: Supplies ABIs in raw form (binary)
+     * `signatureProvider`: Signs transactions
+     * `chainId`: Identifies chain
+     * `textEncoder`: `TextEncoder` instance to use. Pass in `null` if running in a browser
+     * `textDecoder`: `TextDecoder` instance to use. Pass in `null` if running in a browser
+     */
+    constructor(args) {
+        this.contracts = new Map();
+        this.cachedAbis = new Map();
+        this.transactionExtensions = [
+            { id: 1, type: 'resource_payer', keys: ['payer', 'max_net_bytes', 'max_cpu_us', 'max_memory_bytes'] },
+        ];
+        this.rpc = args.rpc;
+        this.authorityProvider = args.authorityProvider || args.rpc;
+        this.abiProvider = args.abiProvider || args.rpc;
+        this.signatureProvider = args.signatureProvider;
+        this.chainId = args.chainId;
+        if(!globalThis.window)
+        {
+            let util=require("util");
+            this.textEncoder = args.textEncoder || new util.TextEncoder();
+            this.textDecoder = args.textDecoder || new util.TextDecoder();
+        }
+        else {
+            this.textEncoder = args.textEncoder;
+            this.textDecoder = args.textDecoder;
+        }
+        this.abiTypes = ser.getTypesFromAbi(ser.createAbiTypes());
+        this.transactionTypes = ser.getTypesFromAbi(ser.createTransactionTypes());
+    }
+    /** @ignore Decodes an abi as Uint8Array into json. */
+    rawAbiToJson(rawAbi) {
+        var buffer = new ser.SerialBuffer({
+            textEncoder: this.textEncoder,
+            textDecoder: this.textDecoder,
+            array: rawAbi,
+        });
+        if (!ser.supportedAbiVersion(buffer.getString())) {
+            throw new Error('Unsupported abi version');
+        }
+        buffer.restartRead();
+        return this.abiTypes.get('abi_def').deserialize(buffer);
+    }
+    /** @ignore Encodes a json abi as Uint8Array. */
+    jsonToRawAbi(jsonAbi) {
+        var buffer = new ser.SerialBuffer({
+            textEncoder: this.textEncoder,
+            textDecoder: this.textDecoder,
+        });
+        this.abiTypes.get('abi_def').serialize(buffer, jsonAbi);
+        if (!ser.supportedAbiVersion(buffer.getString())) {
+            throw new Error('Unsupported abi version');
+        }
+        return buffer.asUint8Array();
+    }
+    /** @ignore Get abi in both binary and structured forms. Fetch when needed. */
+    getCachedAbi(accountName, reload) {
+        if (reload === void 0) { reload = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            var cachedAbi, rawAbi, abi, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!reload &amp;&amp; this.cachedAbis.get(accountName)) {
+                            return [2 /*return*/, this.cachedAbis.get(accountName)];
+                        }
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.abiProvider.getRawAbi(accountName)];
+                    case 2:
+                        rawAbi = (_a.sent()).abi;
+                        abi = this.rawAbiToJson(rawAbi);
+                        cachedAbi = { rawAbi: rawAbi, abi: abi }
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        e_1.message = "fetching abi for " + accountName + ": " + e_1.message;
+                        throw e_1;
+                    case 4:
+                        if (!cachedAbi) {
+                            throw new Error("Missing abi for " + accountName);
+                        }
+                        this.cachedAbis.set(accountName, cachedAbi);
+                        return [2 /*return*/, cachedAbi];
+                }
+            });
+        });
+    }
+    /** 
+     * @summary Get abi in structured form. Fetch when needed. 
+     * @param {string} accountName
+     * @param {boolean} reload
+     * @returns {Abi}
+    */
+    getAbi(accountName, reload) {
+        if (reload === void 0) { reload = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getCachedAbi(accountName, reload)];
+                    case 1: return [2 /*return*/, (_a.sent()).abi];
+                }
+            });
+        });
+    }
+    /** 
+     * @summary Get abis needed by a transaction 
+     * @param {Transaction} transaction
+     * @param {boolean} reload
+     * @returns {Promise&lt;Array&lt;BinaryAbi>>}
+    */
+    getTransactionAbis(transaction, reload) {
+        if (reload === void 0) { reload = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            var actions, accounts, uniqueAccounts, actionPromises;
+            var _this = this;
+            return __generator(this, function (_a) {
+                actions = (transaction.context_free_actions || []).concat(transaction.actions);
+                accounts = actions.map(function (action) { return action.account; });
+                uniqueAccounts = new Set(accounts);
+                actionPromises = __spreadArray([], __read(uniqueAccounts)).map(function (account) { return __awaiter(_this, void 0, void 0, function () {
+                    var _a;
+                    return __generator(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                _a = {
+                                    accountName: account
+                                }
+                                return [4 /*yield*/, this.getCachedAbi(account, reload)];
+                            case 1: return [2 /*return*/, (_a.abi = (_b.sent()).rawAbi,
+                                    _a)];
+                        }
+                    });
+                }); });
+                return [2 /*return*/, Promise.all(actionPromises)];
+            });
+        });
+    }
+    /** @summary Get data needed to serialize actions in a contract 
+     * @param {string} accountName
+     * @param {boolean} reload
+     * @returns {Promise&lt;object>}
+    */
+    getContract(accountName, reload) {
+        if (reload === void 0) { reload = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            var abi, types, actions, _a, _b, _c, name_1, type, result;
+            var e_2, _d;
+            return __generator(this, function (_e) {
+                switch (_e.label) {
+                    case 0:
+                        if (!reload &amp;&amp; this.contracts.get(accountName)) {
+                            return [2 /*return*/, this.contracts.get(accountName)];
+                        }
+                        return [4 /*yield*/, this.getAbi(accountName, reload)];
+                    case 1:
+                        abi = _e.sent();
+                        types = ser.getTypesFromAbi(ser.createInitialTypes(), abi);
+                        actions = new Map();
+                        try {
+                            for (_a = __values(abi.actions), _b = _a.next(); !_b.done; _b = _a.next()) {
+                                _c = _b.value, name_1 = _c.name, type = _c.type;
+                                actions.set(name_1, ser.getType(types, type));
+                            }
+                        }
+                        catch (e_2_1) { e_2 = { error: e_2_1 } }
+                        finally {
+                            try {
+                                if (_b &amp;&amp; !_b.done &amp;&amp; (_d = _a.return)) _d.call(_a);
+                            }
+                            finally { if (e_2) throw e_2.error; }
+                        }
+                        result = { types: types, actions: actions }
+                        this.contracts.set(accountName, result);
+                        return [2 /*return*/, result];
+                }
+            });
+        });
+    }
+    /** @ignore Convert `value` to binary form. `type` must be a built-in abi type or in `transaction.abi.json`. */
+    serialize(buffer, type, value) {
+        this.transactionTypes.get(type).serialize(buffer, value);
+    }
+    /** @ignore Convert data in `buffer` to structured form. `type` must be a built-in abi type or in `transaction.abi.json`. */
+    deserialize(buffer, type) {
+        return this.transactionTypes.get(type).deserialize(buffer);
+    }
+    /** @ignore Convert a transaction to binary */
+    serializeTransaction(transaction) {
+        var buffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
+        this.serialize(buffer, 'transaction', __assign({ max_net_usage_words: 0, max_cpu_usage_ms: 0, delay_sec: 0, context_free_actions: [], actions: [], transaction_extensions: [] }, transaction));
+        return buffer.asUint8Array();
+    }
+    /** @ignore Serialize context-free data */
+    serializeContextFreeData(contextFreeData) {
+        var e_3, _a;
+        if (!contextFreeData || !contextFreeData.length) {
+            return null;
+        }
+        var buffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
+        buffer.pushVaruint32(contextFreeData.length);
+        try {
+            for (var contextFreeData_1 = __values(contextFreeData), contextFreeData_1_1 = contextFreeData_1.next(); !contextFreeData_1_1.done; contextFreeData_1_1 = contextFreeData_1.next()) {
+                var data = contextFreeData_1_1.value;
+                buffer.pushBytes(data);
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 } }
+        finally {
+            try {
+                if (contextFreeData_1_1 &amp;&amp; !contextFreeData_1_1.done &amp;&amp; (_a = contextFreeData_1.return)) _a.call(contextFreeData_1);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return buffer.asUint8Array();
+    }
+    /** @ignore Convert a transaction from binary. Leaves actions in hex. */
+    deserializeTransaction(transaction) {
+        var buffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
+        buffer.pushArray(transaction);
+        return this.deserialize(buffer, 'transaction');
+    }
+    /**  @ignore Order of adding to transaction_extension is transaction_extension id ascending */
+    serializeTransactionExtensions(transaction) {
+        var transaction_extensions = [];
+        if (transaction.resource_payer) {
+            var extensionBuffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
+            var types = ser.getTypesFromAbi(ser.createTransactionExtensionTypes());
+            types.get('resource_payer').serialize(extensionBuffer, transaction.resource_payer);
+            transaction_extensions = __spreadArray(__spreadArray([], __read(transaction_extensions)), [[1, ser.arrayToHex(extensionBuffer.asUint8Array())]]);
+        }
+        return transaction_extensions;
+    }
+    /** @ignore Usage: transaction = {...transaction, ...this.deserializeTransactionExtensions(transaction.transaction_extensions)} */
+    deserializeTransactionExtensions(data) {
+        var _this = this;
+        var transaction = {}
+        data.forEach(function (extensionData) {
+            var transactionExtension = _this.transactionExtensions.find(function (extension) { return extension.id === extensionData[0]; });
+            if (transactionExtension === undefined) {
+                throw new Error("Transaction Extension could not be determined: " + extensionData);
+            }
+            var types = ser.getTypesFromAbi(ser.createTransactionExtensionTypes());
+            var extensionBuffer = new ser.SerialBuffer({ textEncoder: _this.textEncoder, textDecoder: _this.textDecoder });
+            extensionBuffer.pushArray(ser.hexToUint8Array(extensionData[1]));
+            var deserializedObj = types.get(transactionExtension.type).deserialize(extensionBuffer);
+            if (extensionData[0] === 1) {
+                deserializedObj.max_net_bytes = Number(deserializedObj.max_net_bytes);
+                deserializedObj.max_cpu_us = Number(deserializedObj.max_cpu_us);
+                deserializedObj.max_memory_bytes = Number(deserializedObj.max_memory_bytes);
+                transaction.resource_payer = deserializedObj;
+            }
+        });
+        return transaction;
+    }
+    /**  @ignore Transaction extensions are serialized and moved to `transaction_extensions`, deserialized objects are not needed on the transaction */
+    deleteTransactionExtensionObjects(transaction) {
+        delete transaction.resource_payer;
+        return transaction;
+    }
+    /** @ignore Convert actions to hex */
+    serializeActions(actions) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, Promise.all(actions.map(function (action) { return __awaiter(_this, void 0, void 0, function () {
+                            var account, name, authorization, data, contract;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        account = action.account, name = action.name, authorization = action.authorization, data = action.data;
+                                        return [4 /*yield*/, this.getContract(account)];
+                                    case 1:
+                                        contract = _a.sent();
+                                        if (typeof data !== 'object') {
+                                            return [2 /*return*/, action];
+                                        }
+                                        return [2 /*return*/, ser.serializeAction(contract, account, name, authorization, data, this.textEncoder, this.textDecoder)];
+                                }
+                            });
+                        }); }))];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    }
+    /** @ignore Convert actions from hex */
+    deserializeActions(actions) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, Promise.all(actions.map(function (_a) {
+                            var account = _a.account, name = _a.name, authorization = _a.authorization, data = _a.data;
+                            return __awaiter(_this, void 0, void 0, function () {
+                                var contract;
+                                return __generator(this, function (_b) {
+                                    switch (_b.label) {
+                                        case 0: return [4 /*yield*/, this.getContract(account)];
+                                        case 1:
+                                            contract = _b.sent();
+                                            return [2 /*return*/, ser.deserializeAction(contract, account, name, authorization, data, this.textEncoder, this.textDecoder)];
+                                    }
+                                });
+                            });
+                        }))];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    }
+    /** @ignore Convert a transaction from binary. Also deserializes actions. */
+    deserializeTransactionWithActions(transaction) {
+        return __awaiter(this, void 0, void 0, function () {
+            var deserializedTransaction, deserializedCFActions, deserializedActions;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (typeof transaction === 'string') {
+                            transaction = ser.hexToUint8Array(transaction);
+                        }
+                        deserializedTransaction = this.deserializeTransaction(transaction);
+                        return [4 /*yield*/, this.deserializeActions(deserializedTransaction.context_free_actions)];
+                    case 1:
+                        deserializedCFActions = _a.sent();
+                        return [4 /*yield*/, this.deserializeActions(deserializedTransaction.actions)];
+                    case 2:
+                        deserializedActions = _a.sent();
+                        return [2 /*return*/, __assign(__assign({}, deserializedTransaction), { context_free_actions: deserializedCFActions, actions: deserializedActions })];
+                }
+            });
+        });
+    }
+    /** @ignore Deflate a serialized object */
+    deflateSerializedArray(serializedArray) {
+        return pako_1.deflate(serializedArray, { level: 9 });
+    }
+    /** @ignore Inflate a compressed serialized object */
+    inflateSerializedArray(compressedSerializedArray) {
+        return pako_1.inflate(compressedSerializedArray);
+    }
+    /**
+     * @summary Push transaction
+     * @description Create and optionally broadcast a transaction.
+     *
+     * Named Parameters:
+     * `broadcast`: broadcast this transaction?
+     * `sign`: sign this transaction?
+     * `compression`: compress this transaction?
+     * `readOnlyTrx`: read only transaction?
+     * `returnFailureTraces`: return failure traces? (only available for read only transactions currently)
+     *
+     * If both `blocksBehind` and `expireSeconds` are present,
+     * then fetch the block which is `blocksBehind` behind head block,
+     * use it as a reference for TAPoS, and expire the transaction `expireSeconds` after that block's time.
+     *
+     * If both `useLastIrreversible` and `expireSeconds` are present,
+     * then fetch the last irreversible block, use it as a reference for TAPoS,
+     * and expire the transaction `expireSeconds` after that block's time.
+     *  @param {Transaction} transaction
+     * @param {TransactConfig} options
+     * @returns {Promise&lt;TransactResult|ReadOnlyTransactResult|PushTransactionArgs>} node response if `broadcast`, `{signatures, serializedTransaction}` if `!broadcast`
+     */
+    async transact(transaction, _a) {
+        let expire=60*60;
+        if(_a &amp;&amp; _a.expireSeconds)
+            expire=_a.expireSeconds;
+        let transactionHeader=ser.transactionHeader(await this.rpc.get_block((await this.rpc.get_info()).head_block_num),expire);
+        transaction.expiration=transaction.expiration || transactionHeader.expiration;
+        transaction.ref_block_num=transaction.ref_block_num || transactionHeader.ref_block_num;
+        transaction.ref_block_prefix=transaction.ref_block_prefix || transactionHeader.ref_block_prefix;
+        var _b = _a === void 0 ? {} : _a, _c = _b.broadcast, broadcast = _c === void 0 ? true : _c, _d = _b.sign, sign = _d === void 0 ? true : _d, readOnlyTrx = _b.readOnlyTrx, returnFailureTraces = _b.returnFailureTraces, requiredKeys = _b.requiredKeys, compression = _b.compression, blocksBehind = _b.blocksBehind, useLastIrreversible = _b.useLastIrreversible, expireSeconds = _b.expireSeconds;
+        return __awaiter(this, void 0, void 0, function () {
+            var info, abis, _e, serializedTransaction, serializedContextFreeData, pushTransactionArgs, availableKeys;
+            var _f;
+            return __generator(this, function (_g) {
+                switch (_g.label) {
+                    case 0:
+                        if (typeof blocksBehind === 'number' &amp;&amp; useLastIrreversible) {
+                            throw new Error('Use either blocksBehind or useLastIrreversible');
+                        }
+                        if (!!this.chainId) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.rpc.get_info()];
+                    case 1:
+                        info = _g.sent();
+                        this.chainId = info.chain_id;
+                        _g.label = 2;
+                    case 2:
+                        if (!((typeof blocksBehind === 'number' || useLastIrreversible) &amp;&amp; expireSeconds)) return [3 /*break*/, 4];
+                        return [4 /*yield*/, this.generateTapos(info, transaction, blocksBehind, useLastIrreversible, expireSeconds)];
+                    case 3:
+                        transaction = _g.sent();
+                        _g.label = 4;
+                    case 4:
+                        if (!this.hasRequiredTaposFields(transaction)) {
+                            throw new Error('Required configuration or TAPOS fields are not present');
+                        }
+                        return [4 /*yield*/, this.getTransactionAbis(transaction)];
+                    case 5:
+                        abis = _g.sent();
+                        _e = [__assign({}, transaction)];
+                        _f = {}
+                        return [4 /*yield*/, this.serializeTransactionExtensions(transaction)];
+                    case 6:
+                        _f.transaction_extensions = _g.sent();
+                        return [4 /*yield*/, this.serializeActions(transaction.context_free_actions || [])];
+                    case 7:
+                        _f.context_free_actions = _g.sent();
+                        return [4 /*yield*/, this.serializeActions(transaction.actions)];
+                    case 8:
+                        transaction = __assign.apply(void 0, _e.concat([(_f.actions = _g.sent(), _f)]));
+                        transaction = this.deleteTransactionExtensionObjects(transaction);
+                        serializedTransaction = this.serializeTransaction(transaction);
+                        serializedContextFreeData = this.serializeContextFreeData(transaction.context_free_data);
+                        pushTransactionArgs = {
+                            serializedTransaction: serializedTransaction,
+                            serializedContextFreeData: serializedContextFreeData,
+                            signatures: []
+                        }
+                        if (!sign) return [3 /*break*/, 13];
+                        if (!!requiredKeys) return [3 /*break*/, 11];
+                        return [4 /*yield*/, this.signatureProvider.getAvailableKeys()];
+                    case 9:
+                        availableKeys = _g.sent();
+                        return [4 /*yield*/, this.authorityProvider.getRequiredKeys({ transaction: transaction, availableKeys: availableKeys })];
+                    case 10:
+                        requiredKeys = _g.sent();
+                        _g.label = 11;
+                    case 11: return [4 /*yield*/, this.signatureProvider.sign({
+                            chainId: this.chainId,
+                            requiredKeys: requiredKeys,
+                            serializedTransaction: serializedTransaction,
+                            serializedContextFreeData: serializedContextFreeData,
+                            abis: abis,
+                        })];
+                    case 12:
+                        pushTransactionArgs = _g.sent();
+                        _g.label = 13;
+                    case 13:
+                        if (broadcast) {
+                            if (compression) {
+                                return [2 /*return*/, this.pushCompressedSignedTransaction(pushTransactionArgs, readOnlyTrx, returnFailureTraces)];
+                            }
+                            return [2 /*return*/, this.pushSignedTransaction(pushTransactionArgs, readOnlyTrx, returnFailureTraces)];
+                        }
+                        return [2 /*return*/, pushTransactionArgs];
+                }
+            });
+        });
+    }
+    query(account, short, query, _a) {
+        var sign = _a.sign, requiredKeys = _a.requiredKeys, _b = _a.authorization, authorization = _b === void 0 ? [] : _b;
+        return __awaiter(this, void 0, void 0, function () {
+            var info, refBlock, queryBuffer, transaction, serializedTransaction, signatures, abis, availableKeys, signResponse, response, returnBuffer;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0: return [4 /*yield*/, this.rpc.get_info()];
+                    case 1:
+                        info = _c.sent();
+                        return [4 /*yield*/, this.tryRefBlockFromGetInfo(info)];
+                    case 2:
+                        refBlock = _c.sent();
+                        queryBuffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
+                        ser.serializeQuery(queryBuffer, query);
+                        transaction = __assign(__assign({}, ser.transactionHeader(refBlock, 60 * 30)), { context_free_actions: [], actions: [{
+                                    account: account,
+                                    name: 'queryit',
+                                    authorization: authorization,
+                                    data: ser.arrayToHex(queryBuffer.asUint8Array()),
+                                }] });
+                        serializedTransaction = this.serializeTransaction(transaction);
+                        signatures = [];
+                        if (!sign) return [3 /*break*/, 8];
+                        return [4 /*yield*/, this.getTransactionAbis(transaction)];
+                    case 3:
+                        abis = _c.sent();
+                        if (!!requiredKeys) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.signatureProvider.getAvailableKeys()];
+                    case 4:
+                        availableKeys = _c.sent();
+                        return [4 /*yield*/, this.authorityProvider.getRequiredKeys({ transaction: transaction, availableKeys: availableKeys })];
+                    case 5:
+                        requiredKeys = _c.sent();
+                        _c.label = 6;
+                    case 6: return [4 /*yield*/, this.signatureProvider.sign({
+                            chainId: this.chainId,
+                            requiredKeys: requiredKeys,
+                            serializedTransaction: serializedTransaction,
+                            serializedContextFreeData: null,
+                            abis: abis,
+                        })];
+                    case 7:
+                        signResponse = _c.sent();
+                        signatures = signResponse.signatures;
+                        _c.label = 8;
+                    case 8: return [4 /*yield*/, this.rpc.send_transaction({
+                            signatures: signatures,
+                            compression: 0,
+                            serializedTransaction: serializedTransaction
+                        })];
+                    case 9:
+                        response = _c.sent();
+                        returnBuffer = new ser.SerialBuffer({
+                            textEncoder: this.textEncoder,
+                            textDecoder: this.textDecoder,
+                            array: ser.hexToUint8Array(response.processed.action_traces[0][1].return_value)
+                        });
+                        if (short) {
+                            return [2 /*return*/, ser.deserializeAnyvarShort(returnBuffer)];
+                        }
+                        else {
+                            return [2 /*return*/, ser.deserializeAnyvar(returnBuffer)];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    }
+    /** @ignore Broadcast a signed transaction */
+    pushSignedTransaction(_a, readOnlyTrx, returnFailureTraces) {
+        var signatures = _a.signatures, serializedTransaction = _a.serializedTransaction, serializedContextFreeData = _a.serializedContextFreeData;
+        if (readOnlyTrx === void 0) { readOnlyTrx = false; }
+        if (returnFailureTraces === void 0) { returnFailureTraces = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_b) {
+                if (readOnlyTrx) {
+                    return [2 /*return*/, this.rpc.push_ro_transaction({
+                            signatures: signatures,
+                            serializedTransaction: serializedTransaction,
+                            serializedContextFreeData: serializedContextFreeData,
+                        }, returnFailureTraces)];
+                }
+                return [2 /*return*/, this.rpc.push_transaction({
+                        signatures: signatures,
+                        serializedTransaction: serializedTransaction,
+                        serializedContextFreeData: serializedContextFreeData
+                    })];
+            });
+        });
+    }
+    pushCompressedSignedTransaction(_a, readOnlyTrx, returnFailureTraces) {
+        var signatures = _a.signatures, serializedTransaction = _a.serializedTransaction, serializedContextFreeData = _a.serializedContextFreeData;
+        if (readOnlyTrx === void 0) { readOnlyTrx = false; }
+        if (returnFailureTraces === void 0) { returnFailureTraces = false; }
+        return __awaiter(this, void 0, void 0, function () {
+            var compressedSerializedTransaction, compressedSerializedContextFreeData;
+            return __generator(this, function (_b) {
+                compressedSerializedTransaction = this.deflateSerializedArray(serializedTransaction);
+                compressedSerializedContextFreeData = this.deflateSerializedArray(serializedContextFreeData || new Uint8Array(0));
+                if (readOnlyTrx) {
+                    return [2 /*return*/, this.rpc.push_ro_transaction({
+                            signatures: signatures,
+                            compression: 1,
+                            serializedTransaction: compressedSerializedTransaction,
+                            serializedContextFreeData: compressedSerializedContextFreeData
+                        }, returnFailureTraces)];
+                }
+                return [2 /*return*/, this.rpc.push_transaction({
+                        signatures: signatures,
+                        compression: 1,
+                        serializedTransaction: compressedSerializedTransaction,
+                        serializedContextFreeData: compressedSerializedContextFreeData
+                    })];
+            });
+        });
+    }
+    generateTapos(info, transaction, blocksBehind, useLastIrreversible, expireSeconds) {
+        return __awaiter(this, void 0, void 0, function () {
+            var block, taposBlockNumber, refBlock, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!!info) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.rpc.get_info()];
+                    case 1:
+                        info = _b.sent();
+                        _b.label = 2;
+                    case 2:
+                        if (!useLastIrreversible) return [3 /*break*/, 4];
+                        return [4 /*yield*/, this.tryRefBlockFromGetInfo(info)];
+                    case 3:
+                        block = _b.sent();
+                        return [2 /*return*/, __assign(__assign({}, ser.transactionHeader(block, expireSeconds)), transaction)];
+                    case 4:
+                        taposBlockNumber = info.head_block_num - blocksBehind;
+                        if (!(taposBlockNumber &lt;= info.last_irreversible_block_num)) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.tryGetBlockInfo(taposBlockNumber)];
+                    case 5:
+                        _a = _b.sent();
+                        return [3 /*break*/, 8];
+                    case 6: return [4 /*yield*/, this.tryGetBlockHeaderState(taposBlockNumber)];
+                    case 7:
+                        _a = _b.sent();
+                        _b.label = 8;
+                    case 8:
+                        refBlock = _a;
+                        return [2 /*return*/, __assign(__assign({}, ser.transactionHeader(refBlock, expireSeconds)), transaction)];
+                }
+            });
+        });
+    }
+    hasRequiredTaposFields(_a) {
+        var expiration = _a.expiration, ref_block_num = _a.ref_block_num, ref_block_prefix = _a.ref_block_prefix;
+        return !!(expiration &amp;&amp; typeof (ref_block_num) === 'number' &amp;&amp; typeof (ref_block_prefix) === 'number');
+    }
+    tryGetBlockHeaderState(taposBlockNumber) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 4]);
+                        return [4 /*yield*/, this.rpc.get_block_header_state(taposBlockNumber)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        error_1 = _a.sent();
+                        return [4 /*yield*/, this.tryGetBlockInfo(taposBlockNumber)];
+                    case 3: return [2 /*return*/, _a.sent()];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    }
+    tryGetBlockInfo(blockNumber) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 4]);
+                        return [4 /*yield*/, this.rpc.get_block_info(blockNumber)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        error_2 = _a.sent();
+                        return [4 /*yield*/, this.rpc.get_block(blockNumber)];
+                    case 3: return [2 /*return*/, _a.sent()];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    }
+    tryRefBlockFromGetInfo(info) {
+        return __awaiter(this, void 0, void 0, function () {
+            var block;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!(info.hasOwnProperty('last_irreversible_block_id') &amp;&amp;
+                            info.hasOwnProperty('last_irreversible_block_num') &amp;&amp;
+                            info.hasOwnProperty('last_irreversible_block_time'))) return [3 /*break*/, 1];
+                        return [2 /*return*/, {
+                                block_num: info.last_irreversible_block_num,
+                                id: info.last_irreversible_block_id,
+                                timestamp: info.last_irreversible_block_time,
+                            }];
+                    case 1: return [4 /*yield*/, this.tryGetBlockInfo(info.last_irreversible_block_num)];
+                    case 2:
+                        block = _a.sent();
+                        return [2 /*return*/, {
+                                block_num: block.block_num,
+                                id: block.id,
+                                timestamp: block.timestamp,
+                            }];
+                }
+            });
+        });
+    }
+    /**
+     * @summary Generate ActionBuilder with account name
+     * @param {string} accountName 
+     * @returns {ActionBuilder}
+     */
+    with(accountName) {
+        return new ActionBuilder(this, accountName);
+    }
+    /**
+     * @summary Generate transaction
+     * @param {function} cb callback
+     * @returns {TransactionBuilder}
+     */
+    buildTransaction(cb) {
+        var tx = new TransactionBuilder(this);
+        if (cb) {
+            return cb(tx);
+        }
+        return tx;
+    }
+}// Api
+exports.Api = Api;
+/**
+ * @class
+ */
+class TransactionBuilder{
+    constructor(api) {
+        /** @type {Array&lt;Action>} */
+        this.actions = [];
+        this.contextFreeGroups = [];
+        this.api = api;
+    }
+    /**
+     * Set account name and create action builder
+     * @param {string} accountName 
+     * @returns {ActionBuilder}
+     */
+    with(accountName) {
+        var actionBuilder = new ActionBuilder(this.api, accountName);
+        this.actions.push(actionBuilder);
+        return actionBuilder;
+    }
+    /**
+     * @param {any} contextFreeGroup 
+     * @returns {this}
+     */
+    associateContextFree(contextFreeGroup) {
+        this.contextFreeGroups.push(contextFreeGroup);
+        return this;
+    }
+    /**
+     * 
+     * @param {TransactConfig} config 
+     * @returns {TransactResult}
+     */
+    send(config){
+        return __awaiter(this, void 0, void 0, function () {
+            var contextFreeDataSet, contextFreeActions, actions;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        contextFreeDataSet = [];
+                        contextFreeActions = [];
+                        actions = this.actions.map(function (actionBuilder) { return actionBuilder.serializedData; });
+                        return [4 /*yield*/, Promise.all(this.contextFreeGroups.map(function (contextFreeCallback) { return __awaiter(_this, void 0, void 0, function () {
+                                var _a, action, contextFreeAction, contextFreeData;
+                                return __generator(this, function (_b) {
+                                    _a = contextFreeCallback({
+                                        cfd: contextFreeDataSet.length,
+                                        cfa: contextFreeActions.length
+                                    }), action = _a.action, contextFreeAction = _a.contextFreeAction, contextFreeData = _a.contextFreeData;
+                                    if (action) {
+                                        actions.push(action);
+                                    }
+                                    if (contextFreeAction) {
+                                        contextFreeActions.push(contextFreeAction);
+                                    }
+                                    if (contextFreeData) {
+                                        contextFreeDataSet.push(contextFreeData);
+                                    }
+                                    return [2 /*return*/];
+                                });
+                            }); }))];
+                    case 1:
+                        _a.sent();
+                        this.contextFreeGroups = [];
+                        this.actions = [];
+                        return [4 /*yield*/, this.api.transact({
+                                context_free_data: contextFreeDataSet,
+                                context_free_actions: contextFreeActions,
+                                actions: actions
+                            }, config)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    }
+}
+exports.TransactionBuilder = TransactionBuilder;
+
+/**
+ * @class
+ */
+class ActionBuilder{
+    constructor(api, accountName) {
+        /**
+         * @type {Api}
+         */
+        this.api = api;
+        /**
+         * @type {string}
+         */
+        this.accountName = accountName;
+    }
+    /**
+     * @summary Set actor name
+     * @param {string} actorName 
+     * @returns {ActionSerializer}
+     */
+    as(actorName) {
+        if (actorName === void 0) { actorName = []; }
+        var authorization = [];
+        if (actorName &amp;&amp; typeof actorName === 'string') {
+            authorization = [{ actor: actorName, permission: 'active' }];
+        }
+        else {
+            authorization = actorName;
+        }
+        return new ActionSerializer(this, this.api, this.accountName, authorization);
+    };
+}
+exports.ActionBuilder = ActionBuilder;
+/**
+ * @class
+ * @summary Allows to use object.actionName(...actionArgs) and automatically generate action methods
+ */
+class ActionSerializer{
+    constructor(parent, api, accountName, authorization) {
+        var e_4, _a;
+        var _this = this;
+        var jsonAbi = api.cachedAbis.get(accountName);
+        if (!jsonAbi) {
+            throw new Error('ABI must be cached before using ActionBuilder, run api.getAbi()');
+        }
+        var types = ser.getTypesFromAbi(ser.createInitialTypes(), jsonAbi.abi);
+        var actions = new Map();
+        try {
+            for (var _b = __values(jsonAbi.abi.actions), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var _d = _c.value, name_2 = _d.name, type = _d.type;
+                actions.set(name_2, ser.getType(types, type));
+            }
+        }
+        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+        finally {
+            try {
+                if (_c &amp;&amp; !_c.done &amp;&amp; (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_4) throw e_4.error; }
+        }
+        actions.forEach(function (type, name) {
+            var _a;
+            Object.assign(_this, (_a = {},
+                _a[name] = function () {
+                    var args = [];
+                    for (var _i = 0; _i &lt; arguments.length; _i++) {
+                        args[_i] = arguments[_i];
+                    }
+                    var data = {};
+                    args.forEach(function (arg, index) {
+                        var field = type.fields[index];
+                        data[field.name] = arg;
+                    });
+                    var serializedData = ser.serializeAction({ types: types, actions: actions }, accountName, name, authorization, data, api.textEncoder, api.textDecoder);
+                    parent.serializedData = serializedData;
+                    return serializedData;
+                },
+                _a));
+        });
+    }
+}</code></pre></article></section></div></div></div><div class="search-container" id="PkfLWpAbet" style="display:none"><div class="wrapper" id="iCxFxjkHbP"><button class="icon-button search-close-button" id="VjLlGakifb" aria-label="close search"><svg><use xlink:href="#close-icon"></use></svg></button><div class="search-box-c"><svg><use xlink:href="#search-icon"></use></svg> <input type="text" id="vpcKVYIppa" class="search-input" placeholder="Search..." autofocus></div><div class="search-result-c" id="fWwVHRuDuN"><span class="search-result-c-text">Type anything to view search result</span></div></div></div><div class="mobile-menu-icon-container"><button class="icon-button" id="mobile-menu" data-isopen="false" aria-label="menu"><svg><use xlink:href="#menu-icon"></use></svg></button></div><div id="mobile-sidebar" class="mobile-sidebar-container"><div class="mobile-sidebar-wrapper"><a href="/" class="sidebar-title sidebar-title-anchor">Home</a><div class="mobile-nav-links"></div><div class="mobile-sidebar-items-c"><div class="sidebar-section-title with-arrow" data-isopen="false" id="24bpMttOEFSSkojuQVCUM"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="ActionBuilder.html">ActionBuilder</a></div><div class="sidebar-section-children"><a href="ActionSerializer.html">ActionSerializer</a></div><div class="sidebar-section-children"><a href="Api.html">Api</a></div><div class="sidebar-section-children"><a href="JsonRpc.html">JsonRpc</a></div><div class="sidebar-section-children"><a href="JsSignatureProvider.html">JsSignatureProvider</a></div><div class="sidebar-section-children"><a href="TransactionBuilder.html">TransactionBuilder</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="iLfHZ_fmleXVf6w-jiVkx"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Angular.html">Using module with Angular</a></div><div class="sidebar-section-children"><a href="tutorial-React.html">Using module with React</a></div><div class="sidebar-section-children"><a href="tutorial-Vue.html">Using module with Vue</a></div><div class="sidebar-section-children"><a href="tutorial-module-in-browser.html">Module in browser</a></div><div class="sidebar-section-children"><a href="tutorial-push-transaction.html">Push transaction</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="EGeXvFLlXsM2jENSWk8hj"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#Abi">Abi</a></div><div class="sidebar-section-children"><a href="global.html#Abi_action">Abi_action</a></div><div class="sidebar-section-children"><a href="global.html#Abi_action_result">Abi_action_result</a></div><div class="sidebar-section-children"><a href="global.html#Abi_error_message">Abi_error_message</a></div><div class="sidebar-section-children"><a href="global.html#Abi_extension">Abi_extension</a></div><div class="sidebar-section-children"><a href="global.html#Abi_field">Abi_field</a></div><div class="sidebar-section-children"><a href="global.html#Abi_ricardian_clause">Abi_ricardian_clause</a></div><div class="sidebar-section-children"><a href="global.html#Abi_struct">Abi_struct</a></div><div class="sidebar-section-children"><a href="global.html#Abi_table">Abi_table</a></div><div class="sidebar-section-children"><a href="global.html#Abi_type">Abi_type</a></div><div class="sidebar-section-children"><a href="global.html#Abi_variant">Abi_variant</a></div><div class="sidebar-section-children"><a href="global.html#AbiJsonToBinResult">AbiJsonToBinResult</a></div><div class="sidebar-section-children"><a href="global.html#AccountDelta">AccountDelta</a></div><div class="sidebar-section-children"><a href="global.html#AccountResourceInfo">AccountResourceInfo</a></div><div class="sidebar-section-children"><a href="global.html#AccountResult">AccountResult</a></div><div class="sidebar-section-children"><a href="global.html#Action">Action</a></div><div class="sidebar-section-children"><a href="global.html#ActionReceipt">ActionReceipt</a></div><div class="sidebar-section-children"><a href="global.html#ActionTrace">ActionTrace</a></div><div class="sidebar-section-children"><a href="global.html#ActivatedProtocolFeature">ActivatedProtocolFeature</a></div><div class="sidebar-section-children"><a href="global.html#ActivatedProtocolFeature_specification">ActivatedProtocolFeature_specification</a></div><div class="sidebar-section-children"><a href="global.html#Authority">Authority</a></div><div class="sidebar-section-children"><a href="global.html#AuthorityProviderArgs">AuthorityProviderArgs</a></div><div class="sidebar-section-children"><a href="global.html#Authorization">Authorization</a></div><div class="sidebar-section-children"><a href="global.html#AuthSequence">AuthSequence</a></div><div class="sidebar-section-children"><a href="global.html#BinaryAbi">BinaryAbi</a></div><div class="sidebar-section-children"><a href="global.html#BlockHeader">BlockHeader</a></div><div class="sidebar-section-children"><a href="global.html#BlockHeaderStateTaposInfo">BlockHeaderStateTaposInfo</a></div><div class="sidebar-section-children"><a href="global.html#BlockTaposInfo">BlockTaposInfo</a></div><div class="sidebar-section-children"><a href="global.html#DBSizeGetResult">DBSizeGetResult</a></div><div class="sidebar-section-children"><a href="global.html#DBSizeIndexCount">DBSizeIndexCount</a></div><div class="sidebar-section-children"><a href="global.html#DefferedTransaction">DefferedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#DefferedTransaction_generation">DefferedTransaction_generation</a></div><div class="sidebar-section-children"><a href="global.html#GeneratedTransaction">GeneratedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#GetAbiResult">GetAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetAccountResult">GetAccountResult</a></div><div class="sidebar-section-children"><a href="global.html#GetAccountsByAuthorizersResult">GetAccountsByAuthorizersResult</a></div><div class="sidebar-section-children"><a href="global.html#GetActionsResult">GetActionsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetActivatedProtocolFeaturesParams">GetActivatedProtocolFeaturesParams</a></div><div class="sidebar-section-children"><a href="global.html#GetActivatedProtocolFeaturesResult">GetActivatedProtocolFeaturesResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockHeaderStateResult">GetBlockHeaderStateResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockInfoResult">GetBlockInfoResult</a></div><div class="sidebar-section-children"><a href="global.html#GetBlockResult">GetBlockResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCodeHashResult">GetCodeHashResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCodeResult">GetCodeResult</a></div><div class="sidebar-section-children"><a href="global.html#GetControlledAccountsResult">GetControlledAccountsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetCurrencyStatsResult">GetCurrencyStatsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetInfoResult">GetInfoResult</a></div><div class="sidebar-section-children"><a href="global.html#GetKeyAccountsResult">GetKeyAccountsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetProducerScheduleResult">GetProducerScheduleResult</a></div><div class="sidebar-section-children"><a href="global.html#GetProducersResult">GetProducersResult</a></div><div class="sidebar-section-children"><a href="global.html#GetRawAbiResult">GetRawAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetRawCodeAndAbiResult">GetRawCodeAndAbiResult</a></div><div class="sidebar-section-children"><a href="global.html#GetScheduledTransactionsResult">GetScheduledTransactionsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeArgs">GetTableByScopeArgs</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeResult">GetTableByScopeResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTableByScopeResultRow">GetTableByScopeResultRow</a></div><div class="sidebar-section-children"><a href="global.html#GetTableRowsArgs">GetTableRowsArgs</a></div><div class="sidebar-section-children"><a href="global.html#GetTableRowsResult">GetTableRowsResult</a></div><div class="sidebar-section-children"><a href="global.html#GetTransactionResult">GetTransactionResult</a></div><div class="sidebar-section-children"><a href="global.html#IncrementalMerkle">IncrementalMerkle</a></div><div class="sidebar-section-children"><a href="global.html#KeyWeight">KeyWeight</a></div><div class="sidebar-section-children"><a href="global.html#OrderedActionResult">OrderedActionResult</a></div><div class="sidebar-section-children"><a href="global.html#PackedTransaction">PackedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#PackedTrx">PackedTrx</a></div><div class="sidebar-section-children"><a href="global.html#Permission">Permission</a></div><div class="sidebar-section-children"><a href="global.html#PermissionLevel">PermissionLevel</a></div><div class="sidebar-section-children"><a href="global.html#PermissionLevelWeight">PermissionLevelWeight</a></div><div class="sidebar-section-children"><a href="global.html#ProcessedAction">ProcessedAction</a></div><div class="sidebar-section-children"><a href="global.html#ProcessedTransaction">ProcessedTransaction</a></div><div class="sidebar-section-children"><a href="global.html#ProducerAuthority">ProducerAuthority</a></div><div class="sidebar-section-children"><a href="global.html#ProducerAuthoritySchedule">ProducerAuthoritySchedule</a></div><div class="sidebar-section-children"><a href="global.html#ProducerDetails">ProducerDetails</a></div><div class="sidebar-section-children"><a href="global.html#ProducerKey">ProducerKey</a></div><div class="sidebar-section-children"><a href="global.html#ProducerScheduleType">ProducerScheduleType</a></div><div class="sidebar-section-children"><a href="global.html#ProtocolFeatureActivationSet">ProtocolFeatureActivationSet</a></div><div class="sidebar-section-children"><a href="global.html#PushTransactionArgs">PushTransactionArgs</a></div><div class="sidebar-section-children"><a href="global.html#QueryConfig">QueryConfig</a></div><div class="sidebar-section-children"><a href="global.html#ReadOnlyTransactResult">ReadOnlyTransactResult</a></div><div class="sidebar-section-children"><a href="global.html#RefundRequest">RefundRequest</a></div><div class="sidebar-section-children"><a href="global.html#ResourceDelegation">ResourceDelegation</a></div><div class="sidebar-section-children"><a href="global.html#ResourceOverview">ResourceOverview</a></div><div class="sidebar-section-children"><a href="global.html#ResourcePayer">ResourcePayer</a></div><div class="sidebar-section-children"><a href="global.html#ScheduleInfo">ScheduleInfo</a></div><div class="sidebar-section-children"><a href="global.html#SecurityGroupInfo">SecurityGroupInfo</a></div><div class="sidebar-section-children"><a href="global.html#SignArgs">SignArgs</a></div><div class="sidebar-section-children"><a href="global.html#SignedHeader">SignedHeader</a></div><div class="sidebar-section-children"><a href="global.html#SignResult">SignResult</a></div><div class="sidebar-section-children"><a href="global.html#StateExtension">StateExtension</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiAction">TraceApiAction</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiGetBlockResult">TraceApiGetBlockResult</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiTransaction">TraceApiTransaction</a></div><div class="sidebar-section-children"><a href="global.html#TraceApiTransactionHeader">TraceApiTransactionHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactConfig">TransactConfig</a></div><div class="sidebar-section-children"><a href="global.html#Transaction">Transaction</a></div><div class="sidebar-section-children"><a href="global.html#TransactionHeader">TransactionHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactionReceipt">TransactionReceipt</a></div><div class="sidebar-section-children"><a href="global.html#TransactionReceiptHeader">TransactionReceiptHeader</a></div><div class="sidebar-section-children"><a href="global.html#TransactionTrace">TransactionTrace</a></div><div class="sidebar-section-children"><a href="global.html#TransactResult">TransactResult</a></div><div class="sidebar-section-children"><a href="global.html#WaitWeight">WaitWeight</a></div></div></div><div class="mobile-navbar-actions"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div></div></div><script type="text/javascript" src="scripts/core.min.js"></script><script src="scripts/search.min.js" defer="defer"></script><script src="scripts/third-party/fuse.js" defer="defer"></script><script type="text/javascript">tocbot.init({tocSelector:"#eed4d2a0bfd64539bb9df78095dec881",contentSelector:".main-content",headingSelector:"h1, h2, h3",hasInnerContainers:!0,scrollContainer:".main-content",headingsOffset:130,onClick:bringLinkToView})</script></body></html>
