@@ -48,6 +48,38 @@ async function create(id, user, data){
     }
 }
 
+async function read(id){
+    try{
+        const tx = await api.transact({
+            actions:[
+                {
+                    account,
+                    name:"read",
+                    authorization:[
+                        {
+                            actor,
+                            permission:"active"
+                        }
+                    ],
+                    data:{
+                        id
+                    }
+                }
+            ]
+        },{broadcast:true,sign:true})
+        
+        console.log("=======================================================================")
+        console.log("===================== READ transaction details ========================")
+        console.log("=======================================================================")
+        console.log(tx, "\n")
+        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("\n")
+    }catch(error){
+        console.log(error)
+    }
+}
+
+
 async function destroy(id){
     try{
         const tx = await api.transact({
@@ -83,6 +115,7 @@ async function destroy(id){
 
 async function main(id, user, data){
     await create(id, user, data)
+    await read(id)
     await destroy(id)
 }
 
