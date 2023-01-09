@@ -16,7 +16,7 @@ cd ./ainulhakkih
 
 Create .env and edit the variable
 PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+INERY_ACCOUNT=ainulhakkih
 
 ```shell
 nano .env
