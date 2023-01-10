@@ -8,13 +8,13 @@
 
 ### Guide
 
-Change directory to ```dantecrz```
+please change the directory to YOURNAMEACCOUNT in node ```dantecrz```
 
 ```shell
 cd ./dantecrz
 ```
 
-Create the .env file and dont forget to edit the variable
+Dont forget to create the .env file and also edit the variable
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
 
@@ -22,13 +22,13 @@ INERY_ACCOUNT=YOUR INERY ACCOUNT
 nano .env
 ```
 
-Install dependencies
+Install the dependencies
 
 ```shell
 npm install
 ```
 
-Run the script
+Now its time to run the script
 
 ```
 npm run solution
