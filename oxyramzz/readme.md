@@ -1,7 +1,6 @@
-### Prerequisite
+### required conditions
 
-- [NodeJS](https://nodejs.org/en/)
-
+- NodeJs
 - NPM
 
 
@@ -15,9 +14,10 @@ cd ./oxyramzz
 ```
 
 Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+PRIVATE_KEY=CHANGE_UR_PRIVATEKEY_HERE
+INERY_ACCOUNT=CHANGE_YOUR_INERY_ACCOUNT_HERE
 
+Edit Your Envoirement
 ```shell
 nano .env
 ```
