@@ -1,4 +1,5 @@
 ### Prerequisite
+### Prerequisite for the tas
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -15,6 +16,7 @@ cd ./bimbimantoro
 ```
 
 Create .env and edit the variable
+Create the .env file and dont forget to edit the variable
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
 
