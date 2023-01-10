@@ -4,8 +4,6 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## Change directory to alteregogi and install dependency
 
-If you're seeing this, you've probably already done this step. Congrats!
-
 ```bash
 cd alteregogi/
 ```
