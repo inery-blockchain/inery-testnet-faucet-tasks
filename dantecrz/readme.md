@@ -1,4 +1,4 @@
-### Prerequisite for the task
+### Prepare the requirements
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -6,7 +6,7 @@
 
 
 
-### How to run
+### Guide
 
 Change directory to ```dantecrz```
 
