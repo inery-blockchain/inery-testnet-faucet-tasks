@@ -72,6 +72,6 @@ npm install
 Run the script
 
 ```
-npm run solution
+npm run task4inery
 ```
 🚀GOOD LUCK🚀
