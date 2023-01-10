@@ -1,2 +1,128 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+    import Modal from "$lib/components/Modal.svelte";
+    let api_result: {} = {res: "Please click button above to run Inery CRUD function"}
+
+    let create_id: number
+    let create_data: string
+
+    let read_id: number
+
+    let update_id: number
+    let update_data: string
+
+    let destroy_id: number
+
+    async function create(){
+        const response = await fetch("/api/create", {
+            method: "POST",
+            body: JSON.stringify({
+                id: create_id,
+                user: "alteregogi",
+                data: create_data
+            }),
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
+
+        const json = await response.json()
+        api_result = json
+    }
+
+    async function read(){
+        const response = await fetch("/api/read", {
+            method: "POST",
+            body: JSON.stringify({
+                id: read_id,
+            }),
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
+
+        const json = await response.json()
+        api_result = json
+    }
+
+    async function update(){
+        const response = await fetch("/api/update", {
+            method: "POST",
+            body: JSON.stringify({
+                id: update_id,
+                data: update_data
+            }),
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
+
+        const json = await response.json()
+        api_result = json
+    }
+
+    async function destroy(){
+        const response = await fetch("/api/destroy", {
+            method: "POST",
+            body: JSON.stringify({
+                id: destroy_id,
+            }),
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
+
+        const json = await response.json()
+        api_result = json
+    }
+
+</script>
+
+
+
+<div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
+    <div class="mb-10 text-center">
+        <div class="text-4xl font-bold ">Inery Simple CRUD DAPP</div>
+        <div class="mt-4">Please click one of button below to run the blockchain transaction <br> after the transaction executed you will see a blockchain log in the bottom</div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4">
+        <label for="modal-create" class="btn btn-primary">CREATE</label>
+        <label for="modal-read" class="btn btn-info">READ</label>
+        <label for="modal-update" class="btn btn-success">UPDATE</label>
+        <label for="modal-destroy" class="btn btn-error">DESTROY</label>
+    </div>
+    
+    <div class="divider"></div>
+
+    <!-- detailed -->
+    <div class="mockup-code">
+        <pre data-prefix="$"><code>{JSON.stringify(api_result, null, 4)}</code></pre>
+    </div>
+</div>
+
+<Modal modal_id="modal-create" modal_title="Create New Record on IneryDB" on:click={() => create()}>
+    <div slot="body" class="flex flex-col gap-4">
+        <input bind:value={create_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+        <input type="text" placeholder="alteregogi" class="input input-bordered w-full max-w-xs" disabled />
+        <textarea bind:value={create_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
+    </div>
+</Modal>
+
+<Modal modal_id="modal-read" modal_title="Read Record on IneryDB by its ID" on:click={() => read()}>
+    <div slot="body" class="flex flex-col gap-4">
+        <input bind:value={read_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+    </div>
+</Modal>
+
+<Modal modal_id="modal-update" modal_title="Update Record on IneryDB by its ID" on:click={() => update()}>
+    <div slot="body" class="flex flex-col gap-4">
+        <input bind:value={update_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+        <textarea bind:value={update_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
+    </div>
+</Modal>
+
+<Modal modal_id="modal-destroy" modal_title="Destroy Record on IneryDB by its ID" on:click={() => destroy()}>
+    <div slot="body" class="flex flex-col gap-4">
+        <input bind:value={destroy_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+    </div>
+</Modal>
