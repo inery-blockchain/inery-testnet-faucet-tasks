@@ -75,7 +75,9 @@
 
 </script>
 
-
+<svelte:head>
+    <title>Alteregogi - Inery Task 5</title>
+</svelte:head>
 
 <div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
     <div class="flex justify-center">
