@@ -1,12 +1,32 @@
-### Pra Install
+## Pra Install
 
-- [NodeJS](https://nodejs.org/en/)
+### Update & upgrade
+```shell
+sudo apt update && sudo apt upgrade -y
+```
+
+### Instal curl
+```shell
+sudo apt-get install curl
+```
+
+### Install NodeJS & NPM
+
+
+- Linux [NodeJS](https://nodejs.org/en/) <- you can check NodeJS version
+
+this is NodeJS version 19
+```shell
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
 
 - NPM
 
 
 
-Install Git
+### Install Git
 
 ```shell
 apt install git-all -y
@@ -21,7 +41,9 @@ git config --global user.name "your name"
 ```
 
 
-### How to run
+
+
+## How to run ?
 
 Change directory to directory `bebanfak`
 
