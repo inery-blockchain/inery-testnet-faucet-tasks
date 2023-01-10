@@ -1,7 +1,7 @@
 {
     "name": "dantecrz-rpc-transaction",
     "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
+    "description": "Rpc transcation sample by dantecrz",
     "main": "./solution.mjs",
     "scripts": {
       "solution": "node ./solution.mjs"
