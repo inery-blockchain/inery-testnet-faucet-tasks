@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
     import Modal from "$lib/components/Modal.svelte";
     import { api_store } from "$lib/store";
     let api_result: {} = {res: "Please click button above to run Inery CRUD function"}
@@ -77,6 +78,16 @@
 
 
 <div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
+    <div class="flex justify-center">
+        <div on:click={() => goto("https://github.com/alteregogi/inery-testnet-faucet-tasks/tree/task5/alteregogi")} class="avatar relative cursor-pointer mb-4">
+            <div class="w-8 h-8 rounded-full absolute z-20 bottom-0 right-0">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
+            </div>
+            <div class="w-24 mask mask-hexagon">
+              <img src="https://avatars.githubusercontent.com/u/6134029?v=4" />
+            </div>
+          </div>
+    </div>
     <div class="mb-10 text-center">
         <div class="text-4xl font-bold ">Inery Simple CRUD DAPP</div>
         <div class="mt-4">Please click one of button below to run the blockchain transaction <br> after the transaction executed you will see a blockchain log in the bottom</div>
