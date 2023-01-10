@@ -8,13 +8,26 @@ sudo apt install nodejs
 ```
 sudo apt install npm
 ```
+- Dotenv
+```
+npm i dotenv
+```
 
 ### How to run
+
+
+Clone the repository and checkout task4
+```
+git clone https://github.com/ttlnnt/inery-testnet-faucet-tasks
+cd inery-testnet-faucet-tasks && git checkout task4
+```
+
 
 Change directory to directory ttlnnt
 
 ```
-cd ~/inery-testnet-faucet-tasks/ttlnnt
+cd ttlnnt
+
 ```
 
 
@@ -31,4 +44,3 @@ Run the script
 ```
 npm run solution
 ```
-
