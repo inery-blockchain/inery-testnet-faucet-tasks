@@ -2,9 +2,9 @@
     "name": "bebanfak-rpc-transaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "main": "./task4inery.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "solution": "node ./task4inery.mjs"
     },
     "author": "bebanfak",
     "license": "MIT",
