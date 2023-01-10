@@ -15,7 +15,7 @@
 
 ### How to run
 
-Change directory to directory li4r
+Change directory to your directory 
 
 ```shell
 cd ~/inery-testnet-faucet-tasks/samhan
