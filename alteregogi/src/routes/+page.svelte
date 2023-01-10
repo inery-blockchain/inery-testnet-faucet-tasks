@@ -1,5 +1,6 @@
 <script lang="ts">
     import Modal from "$lib/components/Modal.svelte";
+    import { api_store } from "$lib/store";
     let api_result: {} = {res: "Please click button above to run Inery CRUD function"}
 
     let create_id: number
@@ -24,9 +25,8 @@
                 'content-type': 'application/json'
             }
         })
-
-        const json = await response.json()
-        api_result = json
+        
+        api_store.set(response.json())
     }
 
     async function read(){
@@ -40,8 +40,7 @@
             }
         })
 
-        const json = await response.json()
-        api_result = json
+        api_store.set(response.json())
     }
 
     async function update(){
@@ -56,8 +55,7 @@
             }
         })
 
-        const json = await response.json()
-        api_result = json
+        api_store.set(response.json())
     }
 
     async function destroy(){
@@ -71,8 +69,7 @@
             }
         })
 
-        const json = await response.json()
-        api_result = json
+        api_store.set(response.json())
     }
 
 </script>
@@ -96,7 +93,11 @@
 
     <!-- detailed -->
     <div class="mockup-code">
-        <pre data-prefix="$"><code>{JSON.stringify(api_result, null, 4)}</code></pre>
+        {#await $api_store}
+            <pre data-prefix="$"><code>Waiting your transaction to proceed on the blockchain..</code></pre>    
+        {:then api} 
+            <pre data-prefix="$"><code>{JSON.stringify(api, null, 4)}</code></pre>    
+        {/await}
     </div>
 </div>
 
