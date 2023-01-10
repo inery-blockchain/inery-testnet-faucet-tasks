@@ -1,5 +1,5 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-import * as dotenv from 'dotenv'
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config()
 
 // Check on your node, the /inery-node/inery.setup/tools/config.json key HTTP_ADDRESS
@@ -13,6 +13,7 @@ const actor = process.env.INERY_ACCOUNT
 const account = "arfiyan"
 const signature  = new JsSignatureProvider([private_key]); 
 
+// call API
 const api = new Api({
     rpc: json_rpc,
     signatureProvider: signature
