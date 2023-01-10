@@ -2,6 +2,8 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+// Check on your node, the /inery-node/inery.setup/tools/config.json key HTTP_ADDRESS
+// Our Node URL, when we first set up the node, inery had set up our RPC at port:8888
 const url = "http://154.26.139.63:8888"
 
 const json_rpc = new JsonRpc(url) 
