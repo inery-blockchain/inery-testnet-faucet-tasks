@@ -16,6 +16,7 @@ const api = new Api({
     signatureProvider: signature
 })
 
+// A Function to create new data in our Valued Smart Contract, and call "create" function on our Smart contract
 async function create(id, user, data){
     try{
         const tx = await api.transact({
@@ -48,6 +49,7 @@ async function create(id, user, data){
     }
 }
 
+// A Function to read new data in our Valued Smart Contract, and call "read" function on our Smart contract
 async function read(id){
     try{
         const tx = await api.transact({
@@ -79,7 +81,7 @@ async function read(id){
     }
 }
 
-
+// A Function to destroy new data in our Valued Smart Contract, and call "destroy" function on our Smart contract
 async function destroy(id){
     try{
         const tx = await api.transact({
