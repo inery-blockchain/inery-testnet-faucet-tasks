@@ -14,6 +14,7 @@ sudo apt-get install curl
 ### Install NodeJS & NPM
 
 - Linux [NodeJS](https://nodejs.org/en/) <- you can check NodeJS version
+
 this is NodeJS version 19
 ```shell
 curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
