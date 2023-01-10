@@ -1,10 +1,7 @@
 ## Pra Install
 
-
-- Catatan :
-Jika sudah ada, Anda dapat mengabaikan penginstalan.
-
-
+- Note :
+If it already exists, you can ignore the installation
 
 ### Instal curl
 ```shell
@@ -25,7 +22,7 @@ sudo apt-get install -y nodejs
 ```shell
 apt install npm
 ```
-
+_______________________________________
 
 ## Usage
 
@@ -35,7 +32,7 @@ Change directory to directory `bebanfak`
 cd ~/inery-testnet-faucet-tasks/bebanfak
 ```
 
-Create .env and edit the variable
+Create `.env` and edit the variable
 
 PRIVATE_KEY=YOUR PRIVATE KEY
 
@@ -59,6 +56,11 @@ Run the script
 npm run task4inery
 ```
 🚀GOOD LUCK🚀
+
+
+
+
+
 
 
 
