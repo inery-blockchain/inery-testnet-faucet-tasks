@@ -1,9 +1,9 @@
 ## Pra Install
 
-### Update & upgrade
-```shell
-sudo apt update && sudo apt upgrade -y
-```
+
+
+
+
 
 ### Instal curl
 ```shell
@@ -21,29 +21,11 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 ```
 
-
 - NPM
 
 
 
-### Install Git
-
-```shell
-apt install git-all -y
-```
-
-Set your account's default identity Git
-```shell
-git config --global user.email "you@example.com"
-```
-```shell
-git config --global user.name "your name"
-```
-
-
-
-
-## How to run ?
+## Usage
 
 Change directory to directory `bebanfak`
 
@@ -75,3 +57,52 @@ Run the script
 npm run task4inery
 ```
 🚀GOOD LUCK🚀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
