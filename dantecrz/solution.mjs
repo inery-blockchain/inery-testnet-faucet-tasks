@@ -38,7 +38,7 @@ async function create(id, user, data){
 
         
         console.log("=======================================================================")
-        console.log("===================== CREATE transaction details ======================")
+        console.log("===================== create the transaction ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -70,7 +70,7 @@ async function destroy(id){
 
         
         console.log("=======================================================================")
-        console.log("===================== DESTROY transaction details =====================")
+        console.log("===================== destroy the transaction =====================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
