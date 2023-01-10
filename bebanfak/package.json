@@ -1,7 +1,7 @@
 {
     "name": "bebanfak-rpc-transaction",
     "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
+    "description": "RPC API transaction for inery blockchain",
     "main": "./task4inery.mjs",
     "scripts": {
       "task4inery": "node ./task4inery.mjs"
