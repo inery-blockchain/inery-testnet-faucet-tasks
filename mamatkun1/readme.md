@@ -8,12 +8,19 @@
 
 ### How to run
 
-Change directory to ```alteregogi```
+Change directory to ```mamatkun1```
 
 ```shell
-cd ./alteregogi
+cd ./mamatkun1
 ```
 
+Create .env and edit the variable
+PRIVATE_KEY=YOUR PRIVATE KEY
+INERY_ACCOUNT=YOUR INERY ACCOUNT
+
+```shell
+nano .env
+```
 
 Install dependencies
 
@@ -21,11 +28,8 @@ Install dependencies
 npm install
 ```
 
-
-
 Run the script
 
 ```
 npm run solution
 ```
-
