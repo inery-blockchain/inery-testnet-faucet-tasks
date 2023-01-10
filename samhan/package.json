@@ -1,18 +1,18 @@
 {
-  "name": "detektifseo-rpc-transaction",
+  "name": "samhan-rpc-transaction",
   "version": "1.0.0",
   "description": "A sample rpc transaction for inery blockchain",
   "main": "./solution.mjs",
   "scripts": {
     "solution": "node ./solution.mjs"
   },
-  "author": "detektifseo",
+  "author": "samhan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/detektifseo/inery-testnet-faucet-tasks"
+    "url": "https://github.com/majumapan5758-cell/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://github.com/detektifseo/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/majumapan5758-cell/inery-testnet-faucet-tasks",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
