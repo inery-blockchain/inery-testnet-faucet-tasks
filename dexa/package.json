@@ -1,0 +1,20 @@
+{
+    "name": "dexa-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./solution.mjs",
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+    "author": "dexa",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/nadi555/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/nadi555/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
