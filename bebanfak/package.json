@@ -4,7 +4,7 @@
     "description": "A sample rpc transaction for inery blockchain",
     "main": "./task4inery.mjs",
     "scripts": {
-      "solution": "node ./task4inery.mjs"
+      "task4inery": "node ./task4inery.mjs"
     },
     "author": "bebanfak",
     "license": "MIT",
