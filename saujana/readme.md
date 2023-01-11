@@ -7,6 +7,7 @@
  > `nano .env`
 
 - Command to run TOKEN
+
   **For Create token**
   > `npm run token_create`
 
@@ -21,6 +22,7 @@
 
 
 - Command to run CONTRACT
+
   **For Create data**
   > `npm run contract_create`
 
