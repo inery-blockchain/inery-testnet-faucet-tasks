@@ -1,10 +1,10 @@
 {
-    "name": "bayramov-rpc-transaction",
+    "name": "bayramov-rpc-pushtransaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "main": "./push.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "solution": "node ./push.mjs"
     },
     "author": "bayramov",
     "license": "MIT",
