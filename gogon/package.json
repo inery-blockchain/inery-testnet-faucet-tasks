@@ -2,9 +2,9 @@
     "name": "gogon-rpc-transaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "main": "./gogon.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "solution": "node ./gogon.mjs"
     },
     "author": "gogon",
     "license": "MIT",
