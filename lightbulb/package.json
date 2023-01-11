@@ -1,7 +1,7 @@
 {
-    "name": "lightbulb-rpc-transaction",
+    "name": "lightbulb",
     "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
+    "description": "Sample RPC Transaction",
     "main": "./solution.mjs",
     "scripts": {
       "solution": "node ./solution.mjs"
