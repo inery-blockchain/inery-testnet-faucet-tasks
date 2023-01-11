@@ -66,6 +66,7 @@ const api = new Api({ rpc, signatureProvider });
 
 ### Sending a transaction
 
+
 `transact()` is used to sign and push transactions onto the blockchain with an optional configuration object parameter. Given no configuration options, transactions are expected to be unpacked with TAPOS fields (`expiration`, `ref_block_num`, `ref_block_prefix`) and will automatically be broadcast onto the chain.
 
 ```js
