@@ -1,43 +1,31 @@
-## Prerequisite
+### Prerequisite
 
-### Instal curl
-```
-sudo apt-get install curl
-```
+- [NodeJS](https://nodejs.org/en/)
 
-### NodeJS & NPM
-- [Windows](https://nodejs.org/en/download/) Included NPM packages
-- Linux:
-```
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
-```
+- NPM
 
 
 
-## How to run?
+### How to run
 
-**1. Change directory to `aprameth`**
+Change directory to ```hcytmz```
 
 ```shell
-cd ./aprameth
+cd ./hcytmz
 ```
 
 
-**2. Install dependencies**
+Install dependencies
 
 ```shell
 npm install
 ```
 
-**3. Create & edit `.env` file**
-```
-cp .env-sample .env
-```
 
 
-**4. Run the script**
+Run the script
 
 ```
 npm run solution
 ```
+
