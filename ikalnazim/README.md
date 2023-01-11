@@ -1,9 +1,9 @@
 ### How to run
 
-Change directory to directory Nama_Akun_Inery
+Change directory to directory Inery_Acc_Name
 
 ```shell
-cd ~/inery-testnet-faucet-tasks/nyeka
+cd ~/inery-testnet-faucet-tasks/ikalnazim
 ```
 
 Install dependencies
