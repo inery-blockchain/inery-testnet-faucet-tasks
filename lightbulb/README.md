@@ -1,28 +1,14 @@
-### Prerequisite
 
-- [NodeJS](https://nodejs.org/en/)
+### How to run RPC Push Transaction
 
-- NPM
+Change directory to ```Your name on Inery Blockchain```
 
-
-
-### How to run
-
-Change directory to ```lightbulb```
+Example :
 
 ```shell
 cd ./lightbulb
 ```
-
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
-
-```shell
-nano .env
-```
-
-Install dependencies
+Lightbulb is my name on Inery Blockchain and next Install dependencies
 
 ```shell
 npm install
