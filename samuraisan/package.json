@@ -1,0 +1,19 @@
+{
+  "name": "samuraisan",
+  "version": "1.0.0",
+  "description": "test rpc transaction",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "samuraisan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KazamiHazaki/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/KazamiHazaki/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
