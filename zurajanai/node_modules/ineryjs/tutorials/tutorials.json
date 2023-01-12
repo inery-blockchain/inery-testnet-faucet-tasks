@@ -1,0 +1,18 @@
+{
+    "module-in-browser":{
+        "title":"Module in browser"
+    },
+    "push-transaction":{
+        "title":"Push transaction"
+    },
+    "React":{
+        "title":"Using module with React"
+    }
+    ,
+    "Angular":{
+        "title":"Using module with Angular"
+    },
+    "Vue":{
+        "title":"Using module with Vue"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "zurajanai",
+    "version": "1.0.0",
+    "description": "poseng blok",
+    "main": "./solution-zura.mjs",
+    "scripts": {
+      "solution": "node ./solution-zura.mjs"
+    },
+    "author": "zurajanai",
+    "license": "ISN",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/0xzur4/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/0xzur4/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
