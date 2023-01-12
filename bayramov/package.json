@@ -1,0 +1,19 @@
+{
+  "name": "bayramov-rpc-pushtransaction",
+  "version": "1.0.0",
+  "description": "A sample rpc pushtransaction for inery blockchain task4",
+  "main": "./rpcpush.mjs",
+  "scripts": {
+    "solution": "node ./rpcpush.mjs"
+  },
+  "author": "bayramov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aslanbayramov/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/aslanbayramov/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
