@@ -70,7 +70,7 @@ const DestroyTrancsaction = async (id) => {
       { broadcast: true, sign: true }
     );
 
-    console.log("Record destroyed by nyeka\n\n");
+    console.log("Record destroyed by samhan\n\n");
     console.log(destroyTx, "\n");
     console.log("responses: \n", destroyTx.processed.action_traces[0].console);
   } catch (err) {
@@ -83,4 +83,4 @@ const PushTransaction = async (DataId, user, data) => {
   await DestroyTrancsaction(DataId);
 };
 
-PushTransaction(1020, account, "test push transaction by nyeka");
+PushTransaction(1020, account, "test push transaction by samhan");
