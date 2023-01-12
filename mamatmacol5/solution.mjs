@@ -1,11 +1,14 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-const url = "http://vmi1064243.contaboserver.net:8888"
+import * as dotenv from 'dotenv'
+dotenv.config()
+
+const url = "http://137.184.149.89:8888"
 
 const json_rpc = new JsonRpc(url) 
-const private_key = "5KLBthkvdpjQVFoRP9rLd4FnTVxXnezvsStG1otbzX4wne73KjD"; 
-const actor = "alter.serv1"
+const private_key = process.env.PRIVATE_KEY
+const actor = process.env.INERY_ACCOUNT
 
-const account = "alteregogi"
+const account = "mamatmacol5"
 const signature  = new JsSignatureProvider([private_key]); 
 
 const api = new Api({
@@ -36,69 +39,6 @@ async function create(id, user, data){
         
         console.log("=======================================================================")
         console.log("===================== CREATE transaction details ======================")
-        console.log("=======================================================================")
-        console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
-        console.log("\n")
-    }catch(error){
-        console.log(error)
-    }
-}
-
-async function read(id){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"read",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-        
-        console.log("=======================================================================")
-        console.log("===================== READ transaction details ========================")
-        console.log("=======================================================================")
-        console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
-        console.log("\n")
-    }catch(error){
-        console.log(error)
-    }
-}
-
-async function update(id, data){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"update",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id, data
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-
-        
-        console.log("=======================================================================")
-        console.log("===================== UPDATE transaction details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -143,8 +83,6 @@ async function destroy(id){
 
 async function main(id, user, data){
     await create(id, user, data)
-    await read(id)
-    await update(id, data)
     await destroy(id)
 }
 
