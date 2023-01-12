@@ -1,9 +1,8 @@
-### Prerequisite on your VPS
+### Prerequisite on your [VPS](https://en.wikipedia.org/wiki/Virtual_private_server)
 
 - [NodeJS](https://nodejs.org/en/)
 
-- NPM
-
+- NPM (Node Package Manager)
 
 
 ### How to run RPC API push transaction
