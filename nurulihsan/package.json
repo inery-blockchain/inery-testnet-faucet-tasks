@@ -1,0 +1,19 @@
+{
+  "name": "nurulihsan-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "nurulihsan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nurulihsan27/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/nurulihsan27/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
