@@ -1,0 +1,3 @@
+node_modules
+lampam/.env
+*package-lock.json
