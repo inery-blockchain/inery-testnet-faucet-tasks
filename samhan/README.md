@@ -32,8 +32,8 @@ Create & edit `.env` file**
 ```
 cp .env-sample .env
 
-Run the script
+Run the script**
 
 ```
-npm run push
+npm run solution
 ```
