@@ -33,3 +33,23 @@ Run the script
 ```
 npm run solution
 ```
+
+Run Create Token
+
+```
+npm run create
+```
+
+Run Issue Token
+
+```
+npm run issue
+```
+
+Run Transfer Token
+
+```
+npm run transfer
+```
+
+
