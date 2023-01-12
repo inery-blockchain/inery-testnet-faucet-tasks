@@ -8,19 +8,12 @@
 
 ### How to run
 
-Change directory to ```samuraisan```
+Change directory to ```alteregogi```
 
 ```shell
-cd ./samuraisan
+cd ./alteregogi
 ```
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
-
-```shell
-nano .env
-```
 
 Install dependencies
 
@@ -28,8 +21,11 @@ Install dependencies
 npm install
 ```
 
+
+
 Run the script
 
 ```
 npm run solution
 ```
+
