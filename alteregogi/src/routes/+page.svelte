@@ -15,62 +15,72 @@
     let destroy_id: number
 
     async function create(){
-        const response = await fetch("/api/create", {
-            method: "POST",
-            body: JSON.stringify({
-                id: create_id,
-                user: "alteregogi",
-                data: create_data
-            }),
-            headers:{
-                'content-type': 'application/json'
-            }
-        })
         
-        api_store.set(response.json())
+        api_store.set(
+            fetch("/api/create", {
+                method: "POST",
+                body: JSON.stringify({
+                    id: create_id,
+                    user: "alteregogi",
+                    data: create_data
+                }),
+                headers:{
+                    'content-type': 'application/json'
+                }
+            }).then((res) => {
+                return res.json()
+            })
+        )
     }
 
     async function read(){
-        const response = await fetch("/api/read", {
-            method: "POST",
-            body: JSON.stringify({
-                id: read_id,
-            }),
-            headers:{
-                'content-type': 'application/json'
-            }
-        })
-
-        api_store.set(response.json())
+        api_store.set(
+            fetch("/api/read", {
+                method: "POST",
+                body: JSON.stringify({
+                    id: read_id,
+                }),
+                headers:{
+                    'content-type': 'application/json'
+                }
+            }).then((res) => {
+                return res.json()
+            })
+        )
     }
 
     async function update(){
-        const response = await fetch("/api/update", {
-            method: "POST",
-            body: JSON.stringify({
-                id: update_id,
-                data: update_data
-            }),
-            headers:{
-                'content-type': 'application/json'
-            }
-        })
-
-        api_store.set(response.json())
+        api_store.set(
+            fetch("/api/update", {
+                method: "POST",
+                body: JSON.stringify({
+                    id: update_id,
+                    data: update_data
+                }),
+                headers:{
+                    'content-type': 'application/json'
+                }
+            }).then((res) => {
+                return res.json()
+            })
+        )
     }
 
     async function destroy(){
-        const response = await fetch("/api/destroy", {
-            method: "POST",
-            body: JSON.stringify({
-                id: destroy_id,
-            }),
-            headers:{
-                'content-type': 'application/json'
-            }
-        })
+        api_store.set(
+            fetch("/api/destroy", {
+                method: "POST",
+                body: JSON.stringify({
+                    id: destroy_id,
+                }),
+                headers:{
+                    'content-type': 'application/json'
+                }
+            }).then((res) => {
+                return res.json()
+            })
+        )
 
-        api_store.set(response.json())
     }
 
 </script>
