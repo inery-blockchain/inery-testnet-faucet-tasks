@@ -1,0 +1,20 @@
+{
+    "name": "mamatkun1_task4-transaction",
+    "version": "1.0.0",
+    "description": "Inery Transaction",
+    "main": "./run-rpc-task4.js",
+    "scripts": {
+      "solution": "node ./run-rpc-task4.js"
+    },
+    "author": "mamatkun1",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mamatkun1/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/mamatkun1/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
