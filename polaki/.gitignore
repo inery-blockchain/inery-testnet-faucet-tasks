@@ -1,0 +1,3 @@
+node_modules
+polaki/.env
+*package-lock.json
