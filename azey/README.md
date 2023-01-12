@@ -1,5 +1,5 @@
 # Inery CRUD
-A blockchain-based CRUD (Write, Read, Update, Delete) application. This application demonstrates how to interact with Inery blockchain using its API.
+A blockchain-based CRUD (Create, Read, Update, Delete) application. This application demonstrates how to interact with Inery blockchain using its API.
 
 # Requirements
 1. Node.js
