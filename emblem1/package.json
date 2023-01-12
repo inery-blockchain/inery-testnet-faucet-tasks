@@ -6,16 +6,9 @@
   "scripts": {
     "doc": "jsdoc -c jsdoc.json",
     "build-web": "webpack --config webpack.config.js",
-    "transfer": "node ./service_token/transfer.mjs",
-    "create-token": "node ./service_token/create.mjs",
-    "issue": "node ./service_token/issue.mjs",
-    "retire": "node ./service_token/retire.mjs",
-    "write-data": "node ./service_crud/create.mjs",
-    "delete-data": "node ./service_crud/delete.mjs",
-    "read-data": "node ./service_crud/read.mjs",
-    "update-data": "node ./service_crud/update.mjs"
+    "rpc-example": "node rpc_example.mjs"
   },
-  "author": "Inery",
+  "author": "emblem1",
   "license": "MIT",
   "repository": {
     "type": "git",
