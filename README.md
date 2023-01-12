@@ -1,7 +1,103 @@
-# Inery testnet faucet tasks
+## How to configuration
 
-This is the base branch for tasks related to the Inery faucet. For each task that requires revision using GitHub, we will create a new branch named with the number of that task, such as 'task4', 'task5', etc.
+- install NPM to this folder with the following command
+  > `npm install`
+- create new file to root folder and rename to .env and set environment
+  > `.env`
+- set your information
 
-## Getting Started
+  > `nano .env`
 
-To verify the quality of your code, you will need to clone the specific branch of the project and submit the required changes for that task. After making the necessary changes, you can create a pull request to submit your work for review. If the work is satisfactory, it will be approved. If there are any issues with the work, it may be labeled with specific comments indicating what needs to be improved or modified. It is important to carefully review and address any feedback provided in order to improve the quality of your work.
+- Check this command
+  **Create token**
+
+  > `npm run token_create`
+
+  **Issue token**
+
+  > `npm run token_issue`
+
+  **Transfer token**
+
+  > `npm run token_transfer`
+
+  **Retire token**
+
+  > `npm run token_retire`
+
+- Check this Command to run CONTRACT
+  **Create data**
+
+  > `npm run contract_create`
+
+  **delete data**
+
+  > `npm run contract_delete`
+
+  **update data**
+
+  > `npm run contract_update`
+
+  **read data**
+
+  > `npm run contract_read`
+
+## Basic Usage
+
+### Signature Provider
+
+The Signature Provider holds private keys and is responsible for signing transactions.
+
+**Using the JsSignatureProvider in the browser is not secure and should only be used for development purposes. Use a secure vault outside of the context of the webpage to ensure security when signing transactions in production**
+
+```js
+const user1PrivateKey = "5JRchd5OZaHl9DAuVPEMo0gEx5nYiGc0Tn2aB75ef96FjuOiq"; // user1 private key
+const signatureProvider = new JsSignatureProvider([user1PrivateKey]);
+```
+
+### JsonRpc
+
+Open a connection to JsonRpc.
+
+```js
+const url = "https://www.jsonRpcurl.com";
+const rpc = new JsonRpc(url);
+```
+
+### API
+
+You may exclude these when running in a browser since most modern browsers now natively support these. If your browser does not support these (https://caniuse.com/#feat=textencoder), then you can import them as a dependency through the following deprecated npm package: https://www.npmjs.com/package/text-encoding
+
+```js
+const api = new Api({ rpc, signatureProvider });
+```
+
+### Sending a transaction
+
+`transact()` is used to sign and push transactions onto the blockchain with an optional configuration object parameter. Given no configuration options, transactions are expected to be unpacked with TAPOS fields (`expiration`, `ref_block_num`, `ref_block_prefix`) and will automatically be broadcast onto the chain.
+
+```js
+(async () => {
+  const result = await api.transact({
+    actions: [
+      {
+        account: "inery.token",
+        name: "transfer",
+        authorization: [
+          {
+            actor: "akun1",
+            permission: "active",
+          },
+        ],
+        data: {
+          from: "akun1",
+          to: "akun2",
+          quantity: "0.0001 INR",
+          memo: "",
+        },
+      },
+    ],
+  });
+  console.log(result);
+})();
+```
