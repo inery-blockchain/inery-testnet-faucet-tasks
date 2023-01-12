@@ -11,7 +11,7 @@ A blockchain-based CRUD (Write, Read, Update, Delete) application. This applicat
 ```
 git clone https://github.com/0xAlvi/inery-testnet-faucet-tasks.git
 ```
-#Go to the project directory and install the dependencies
+## Go to the project directory and install the dependencies
 ```
 npm install
 ```
