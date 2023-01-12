@@ -1,0 +1,25 @@
+{
+  "name": "polkaviolabs-rpc-push",
+  "version": "1.0.0",
+  "description": "transaction rpc for inery blockchain",
+  "main": "push-transaction.mjs",
+  "scripts": {
+    "push": "node ./push-transaction.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolkaVio/inery-testnet-faucet-tasks.git"
+  },
+  "keywords": [
+    "task4"
+  ],
+  "author": "polkavio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolkaVio/inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com/PolkaVio/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
