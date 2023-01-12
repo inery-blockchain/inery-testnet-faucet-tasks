@@ -1,0 +1,15 @@
+{
+	"/": [],
+	"/api/create": [
+		"src/routes/api/create/+server.ts"
+	],
+	"/api/destroy": [
+		"src/routes/api/destroy/+server.ts"
+	],
+	"/api/read": [
+		"src/routes/api/read/+server.ts"
+	],
+	"/api/update": [
+		"src/routes/api/update/+server.ts"
+	]
+}
