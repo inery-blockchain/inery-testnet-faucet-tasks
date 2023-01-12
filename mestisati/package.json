@@ -1,0 +1,20 @@
+{
+    "name": "mestisati-rpc-transaction",
+    "version": "1.1.0",
+    "description": "an example rpc transaction for inery",
+    "main": "./example.mjs",
+    "scripts": {
+      "example": "node ./example.mjs"
+    },
+    "author": "mestisati",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/deviacantiq/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/deviacantiq/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
