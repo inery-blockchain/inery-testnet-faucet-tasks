@@ -28,12 +28,12 @@ Install dependencies
 npm install
 ```
 
-Create & edit `.env` file**
+Create & edit `.env` file
 ```
 cp .env-sample .env
 ```
 
-Run the script**
+Run the script
  
 ```
 npm run solution
