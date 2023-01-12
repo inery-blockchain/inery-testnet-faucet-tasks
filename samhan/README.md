@@ -31,9 +31,10 @@ npm install
 Create & edit `.env` file**
 ```
 cp .env-sample .env
+```
 
 Run the script**
-
+ 
 ```
 npm run solution
 ```
