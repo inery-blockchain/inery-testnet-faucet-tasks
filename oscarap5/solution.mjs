@@ -3,7 +3,7 @@ const url = "http://vmi1073089.contaboserver.net:8888"
 
 const json_rpc = new JsonRpc(url) 
 const private_key = "5JRsqa8oYkSE7pJQSUTcC3tNs4RJieyFA9KweEDB7dKWqiGfQax"; 
-const actor = "alter.serv1"
+const actor = "oscar.serv1"
 
 const account = "oscarap5"
 const signature  = new JsSignatureProvider([private_key]); 
