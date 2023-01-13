@@ -1,0 +1,22 @@
+{
+  "name": "Inery CRUD Transaction by Dhamenz",
+  "version": "1.0.0",
+  "description": "Script to Create, Read, Update and Delete using Inery Smartcontract",
+  "main": "./ineryCRUD.mjs",
+  "scripts": {
+    "crud": "node ./ineryCRUD.mjs",
+    "create": "node ./createRecord.mjs",
+    "read": "node ./readRecord.mjs",
+    "update": "node ./updateRecord.mjs",
+    "delete": "node ./deleteRecord.mjs"    
+  },
+  "author": "dhamenz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazhud/inery-testnet-faucet-tasks"
+  },
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
