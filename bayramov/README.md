@@ -20,5 +20,6 @@ npm install
 
 Run the script
 
-```npm run rpcpush
+```
+npm run rpcpush
 ```
