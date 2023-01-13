@@ -13,7 +13,7 @@ const api = new Api({
     signatureProvider: signature
 })
 
-async function create(id, user, data){
+async function create(uid, uname, udata){
     try{
         const tx = await api.transact({
             actions:[
@@ -27,7 +27,7 @@ async function create(id, user, data){
                         }
                     ],
                     data:{
-                        id, user, data
+                        id: uid, user: uname, data: udata
                     }
                 }
             ]
@@ -45,7 +45,7 @@ async function create(id, user, data){
     }
 }
 
-async function read(id){
+async function read(uid){
     try{
         const tx = await api.transact({
             actions:[
@@ -59,7 +59,7 @@ async function read(id){
                         }
                     ],
                     data:{
-                        id
+                        id: uid
                     }
                 }
             ]
@@ -76,7 +76,7 @@ async function read(id){
     }
 }
 
-async function update(id, data){
+async function update(uid, udata){
     try{
         const tx = await api.transact({
             actions:[
@@ -90,7 +90,7 @@ async function update(id, data){
                         }
                     ],
                     data:{
-                        id, data
+                        id: uid, data: udata
                     }
                 }
             ]
@@ -108,7 +108,7 @@ async function update(id, data){
     }
 }
 
-async function destroy(id){
+async function destroy(uid){
     try{
         const tx = await api.transact({
             actions:[
@@ -122,7 +122,7 @@ async function destroy(id){
                         }
                     ],
                     data:{
-                        id
+                        id: uid
                     }
                 }
             ]
@@ -141,11 +141,11 @@ async function destroy(id){
 }
 
 
-async function main(id, user, data){
-    await create(id, user, data)
-    await read(id)
-    await update(id, data)
-    await destroy(id)
+async function main(uid, uname, udata){
+    await create(uid, uname, udata)
+    await read(uid)
+    await update(uid, udata)
+    await destroy(uid)
 }
 
-main(1, account, "CRUD Transaction via JSON RPC")
+main(1, account, "CRUD Transaction")
