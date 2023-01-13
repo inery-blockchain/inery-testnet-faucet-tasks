@@ -20,6 +20,11 @@ cd nyeka/
 
 ```
 
+### before running the script, make sure to create .env file first
+
+.env file includes private_key, inery_url and api github user
+
+
 ## Available Scripts
 
 In the project directory, you can run:
