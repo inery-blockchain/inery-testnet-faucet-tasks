@@ -37,7 +37,7 @@ npm run rpccreate
 Run Create Token
 
 ```
-npm run create
+npm run rpccreate
 ```
 
 Run Issue Token
