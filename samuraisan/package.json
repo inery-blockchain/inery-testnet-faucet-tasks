@@ -1,0 +1,17 @@
+{
+  "name": "ineryAPI",
+  "version": "1.0.0",
+  "description": "A sample project that uses the fetch API to make HTTP requests",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
