@@ -1,6 +1,6 @@
- ### How to run
+ ### How to run / Bagaimana Untuk Menjalankan
 
-Change directory samhan
+Change directory to "Your Directory"
 cd ~/inery-testnet-faucet-tasks/samhan
 
 ```shell
@@ -18,3 +18,4 @@ Run the script
 ```
 npm run push
 ```
+SELESAI
