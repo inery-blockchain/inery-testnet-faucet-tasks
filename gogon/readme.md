@@ -31,7 +31,7 @@ npm install
 Run the script
 
 ```
-npm run rpccreate
+npm run rpccrate
 ```
 
 Run Create Token
