@@ -6,7 +6,7 @@
    sudo apt-get install -y nodejs
 
 2. Change directory
-   cd ~/inery-testnet-faucet-tasks/awan
+   cd ~/inery-testnet-faucet-tasks/emblem1
 
 3. Install dependencie
    npm installs
