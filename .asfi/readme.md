@@ -33,3 +33,21 @@ Run the script
 ```
 npm run solution
 ```
+
+Run Contract Create , Update , Read & Delete
+
+```
+npm run contract_create
+```
+
+```
+npm run contract_update
+```
+
+```
+npm run contract_read
+```
+
+```
+npm run contract_delete
+```
