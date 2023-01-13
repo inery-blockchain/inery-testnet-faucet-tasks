@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "push": "node ./rpc_inery.js"
   },
-  "homepage": "https://github.com/nodemual/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/evairo176/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
