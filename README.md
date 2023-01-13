@@ -1,11 +1,84 @@
-# Task 4 RPC API push transaction
+### Inery Task 4 : Json RPC Sample ###
 
-To complete task 4, you will need to follow the instructions provided:
+##### Instal Curl
 
-  1. Clone the Git repository for the project.
-  2. Add a new directory using your blockchain account name as the directory name.
-  3. Inside the new directory, add your software solution for task 4, which should be a solution for pushing transactions with the RPC API on the Inery testnet blockchain.
-  4. Create a merge request to submit your work for review.
-  5. If your solution is successful, it will be accepted and you will complete task 4.
+sudo apt-get install curl
 
-It's important to carefully follow the instructions provided and make sure that your solution meets the requirements for the task. Be sure to thoroughly test your code to ensure that it is working correctly before submitting it for review.
+# Install NodeJS
+
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+# Install NPM
+
+sudo apt install npm
+
+### Instalation
+
+# Clone Repo
+
+git clone https://github.com/inery-blockchain/ineryjs.git
+
+# Change directory to cloned repo
+
+cd ineryjs
+
+# Install NPM packages
+
+npm install
+
+# Copy .env-sample and rename it to .env
+
+cp .env-sample .env
+
+# Edit .env file with your information
+
+nano .env
+
+# Run RPC Example:
+
+npm run rpc-example
+
+### Create a Task Project
+  Copy the link below:
+  
+https://github.com/inery-blockchain/inery-testnet-faucet-tasks
+
+## Your Repo Cloning
+
+cd
+git clone <link_clone_your>
+
+### Create a new directory with your name
+
+cd ~/inery-testnet-faucet-tasks
+mkdir <YourIneryName>
+
+## 3. Run the Build-Web command below
+
+cd ~/ineryjs
+npm run build-web
+
+## 4. Copy the folder on-web to the project
+
+cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
+
+## 5. After that what you do is enter the project directory and create an HTML file
+
+cd ~/inery-testnet-faucet-tasks/$IneryAccname
+nano index.html
+
+### 6. Enter the text below to fill in the HTML file that you created
+
+<script src="./dist-web/inery-jsonrpc.min.js"></script>
+<script src="./dist-web/inery-api.min.js"></script>
+<script src="./dist-web/inery-jssig.min.js"></script>
+<script>
+    (async()=>{
+        const rpc=new ineryjs_jsonrpc.JsonRpc("https://<YourIPInery>:8888");
+        console.log(await rpc.get_info());
+    })();
+</script>
+
+#  Hope it can help your assignment
+#  Made by: kangrama
