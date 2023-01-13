@@ -15,7 +15,7 @@ def galau_ga_tuh():
     acc = os.environ["ACC"]
     pk = os.environ["PKEY"]
 
-    args = { "id": 92, "user": acc, "data": "data 90" }
+    args = { "id": 1254, "user": acc, "data": "data 1254" }
     pl = {
         "account": acc,
         "name": "create",
