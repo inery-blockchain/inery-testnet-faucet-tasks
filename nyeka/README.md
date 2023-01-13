@@ -6,7 +6,7 @@ https://nyeka.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Change directory to alteregogi and install dependency
+## Change directory to nyeka and install dependency
 
 ```
 cd nyeka/
