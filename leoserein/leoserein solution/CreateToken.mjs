@@ -33,6 +33,7 @@ async function addData(issuer, maximum_supply){ try{
                         }
                     ],
                     data:{
+     
                         issuer, maximum_supply
                     }
                 }
