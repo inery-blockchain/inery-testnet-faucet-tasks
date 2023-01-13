@@ -1,6 +1,6 @@
 ## Prerequisite
 
-### Instal curl
+### Instal Curl
 ```
 sudo apt-get install curl
 ```
@@ -17,10 +17,10 @@ sudo apt-get install -y nodejs
 
 ## How to run?
 
-**1. Change directory to `aprameth`**
+**1. Change directory to `oscarap5`**
 
 ```shell
-cd ./aprameth
+cd ./oscarap5
 ```
 
 
