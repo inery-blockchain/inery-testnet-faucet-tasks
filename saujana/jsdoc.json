@@ -1,0 +1,19 @@
+{
+    "source": {
+      "include": ["dist/ineryjs-jsonrpc.js","dist/ineryjs-api.js","dist/ineryjs-rpc-interfaces.doc.js","dist/ineryjs-jssig.js","dist/inery-api-interfaces.doc.js"],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": ["plugins/markdown","plugins/summarize"],
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true
+    },
+    "opts": {
+      "recurse": true,
+      "destination": "./docs/",
+      "readme": "./README.md",
+      "template":"./template",
+      "tutorials":"./tutorials"
+    }
+  }
