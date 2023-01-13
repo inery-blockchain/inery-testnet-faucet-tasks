@@ -1,31 +1,33 @@
-### Prerequisite
+# Inery API
 
-- [NodeJS](https://nodejs.org/en/)
+A sample project that uses the fetch API to make HTTP requests to interact with the Inery blockchain network.
 
-- NPM
+## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+### Prerequisites
 
-### How to run
+- Node.js (https://nodejs.org/en/)
+- npm (Node Package Manager)
 
-Change directory to ```alteregogi```
+### Installing
 
-```shell
-cd ./alteregogi
-```
+1. Clone the repository or download the project files.
+2. Run npm install in the project folder to install the dependencies.
+3. Create a file called .env in the root of the project and add the following line, replacing YOUR_PRIVATE_KEY with your actual private key.
+4. Run npm start to run the script.
 
+## Built With
 
-Install dependencies
+- [Node.js](https://nodejs.org/en/) - JavaScript runtime
+- [dotenv](https://www.npmjs.com/package/dotenv) - Zero-dependency module that loads environment variables from a .env file
+- [node-fetch](https://www.npmjs.com/package/node-fetch) - A light-weight module that brings fetch to Node.js
 
-```shell
-npm install
-```
+## Authors
 
+- [KazamiHazaki]([https://github.com/yourusername](https://github.com/KazamiHazaki)) - *Initial work*
 
+## License
 
-Run the script
-
-```
-npm run solution
-```
-
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details
