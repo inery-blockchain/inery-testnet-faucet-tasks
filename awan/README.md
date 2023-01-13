@@ -5,7 +5,7 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
 2. Change directory
-cd ~/inery-testnet-faucet-tasks/zurajanai
+cd ~/inery-testnet-faucet-tasks/awan
 
 3. Install dependencie
 npm installs
