@@ -15,7 +15,7 @@ npm install
 Run the script
 
 ```
-npm run create
+npm run RPC-Create_mixagrib
 ```
 
 to create
@@ -23,7 +23,7 @@ to create
 run script
 
 ```
-npm run destroy
+npm run RPC-Destroy_mixagrib
 
 ```
 
@@ -32,7 +32,7 @@ to destroy transaction
 run script
 
 ```
-npm run transfer
+npm run RPC-Transfer_mixagrib
 
 ```
 
