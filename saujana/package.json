@@ -1,0 +1,46 @@
+{
+  "name": "ineryjs",
+  "version": "1.0.0",
+  "description": "Inery API",
+  "main": "dist/index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json",
+    "build-web": "webpack --config webpack.config.js",
+    "transfer": "node ./service_token/transfer.mjs",
+    "create-token": "node ./service_token/create.mjs",
+    "issue": "node ./service_token/issue.mjs",
+    "retire": "node ./service_token/retire.mjs",
+    "write-data": "node ./service_crud/create.mjs",
+    "delete-data": "node ./service_crud/delete.mjs",
+    "read-data": "node ./service_crud/read.mjs",
+    "update-data": "node ./service_crud/update.mjs"
+  },
+  "author": "Inery",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.webservice-host.net/ljubomirm/inery_module"
+  },
+  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
+  "dependencies": {
+    "bn.js": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "elliptic": "^6.5.4",
+    "hash.js": "^1.1.7",
+    "node-fetch": "^2.6.7",
+    "pako": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-fs-access": "^0.31.0",
+    "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "jsdoc": "^3.5.5",
+    "node-util": "^0.0.1",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
