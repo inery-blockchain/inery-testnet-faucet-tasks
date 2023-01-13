@@ -27,3 +27,10 @@ Install dependencies
 ```shell
 npm install
 ```
+## Running the script
+
+1. Open a terminal and navigate to the directory where the script is located.
+2. Run the script with the following command: `node ineryCreate.mjs` or `node ineryTransaction.mjs`
+```
+npm run solution
+```
