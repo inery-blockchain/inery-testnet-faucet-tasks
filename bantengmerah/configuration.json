@@ -1,0 +1,20 @@
+{
+    "name": "bantengmerah-push_transaction",
+    "version": "1.0.0",
+    "description": "RPC Inery Transaction",
+    "main": "./run-rpc-task4.js",
+    "scripts": {
+      "solution": "node ./run-rpc-task4.js"
+    },
+    "author": "bantengmerah",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bantengmerah02/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/bantengmerah02/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
