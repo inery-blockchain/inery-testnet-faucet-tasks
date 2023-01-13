@@ -50,6 +50,10 @@ async function create(id, user, data){
 
 async function destroy(id){
     try{
+	if(id === ""){
+            console.log("Please fill in the required field")
+            return
+        }
         const tx = await api.transact({
             actions:[
                 {
@@ -80,10 +84,29 @@ async function destroy(id){
     }
 }
 
+async function getData(id){
+    try{
+        const data = await api.rpc.get_table_rows({
+            json: true,
+            code: account,
+            scope: account,
+            table: "data",
+            lower_bound: id,
+            upper_bound: id,
+            limit: 1
+        })
+        console.log("Data with id ", id, " : ", data)
+    }catch(error){
+        console.log(error)
+    }
+}
+
 
 async function main(id, user, data){
     await create(id, user, data)
+    await getData(id)
     await destroy(id)
 }
+
 
 main(1, account, "CRUD Transaction via JSON RPC")
