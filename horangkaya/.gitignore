@@ -1,0 +1,7 @@
+
+sudo tee /root/inery-testnet-faucet-tasks/horangkaya/.gitignore >/dev/null <<EOF
+
+
+node_modules
+horangkaya/.env
+*package-lock.json
