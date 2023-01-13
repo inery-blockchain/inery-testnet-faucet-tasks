@@ -1,0 +1,20 @@
+{
+    "name": "dantecrz-rpc-transaction",
+    "version": "1.0.0",
+    "description": "Rpc transcation sample by dantecrz",
+    "main": "./solution.mjs",
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+    "author": "dantecrz",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dantecrz123/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/dantecrz123/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
