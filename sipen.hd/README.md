@@ -1,4 +1,4 @@
-### Prerequisite ###
+##  PREREQUISITE ---
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -6,11 +6,12 @@
 
 
 
-### How to run
+### How to run ---
 
-Change directory to directory sipen.hd
+ - Change directory to directory sipen.hd
 
 ```shell
+
 cd ~/inery-testnet-faucet-tasks/sipen.hd
 ```
 
@@ -18,10 +19,10 @@ cd ~/inery-testnet-faucet-tasks/sipen.hd
 Install dependencies
 
 ```shell
+
 npm install
-```
 
-
+ -------------
 
 Run the script
 
