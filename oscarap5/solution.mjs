@@ -1,12 +1,12 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-const url = process.env.NODE_URL
+const url = "http://vmi1073089.contaboserver.net:8888"
 
-const json_rpc = new JsonRpc(url)
-const private_key = process.env.PRIVATE_KEY;
+const json_rpc = new JsonRpc(url) 
+const private_key = "5JRsqa8oYkSE7pJQSUTcC3tNs4RJieyFA9KweEDB7dKWqiGfQax"; 
+const actor = "alter.serv1"
 
-const account = process.env.INERY_ACCOUNT
-const actor = process.env.INERY_ACCOUNT
-const signature  = new JsSignatureProvider([private_key]);
+const account = "oscarap5"
+const signature  = new JsSignatureProvider([private_key]); 
 
 const api = new Api({
     rpc: json_rpc,
@@ -35,7 +35,7 @@ async function create(id, user, data){
 
         
         console.log("=======================================================================")
-        console.log("===================== CREATE transaction details ======================")
+        console.log("===================== Make Transaction Details ========================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -66,7 +66,7 @@ async function read(id){
         },{broadcast:true,sign:true})
         
         console.log("=======================================================================")
-        console.log("===================== READ transaction details ========================")
+        console.log("===================== Read Transaction Details ========================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -98,7 +98,7 @@ async function update(id, data){
 
         
         console.log("=======================================================================")
-        console.log("===================== UPDATE transaction details ======================")
+        console.log("===================== Update Transaction Details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -130,7 +130,7 @@ async function destroy(id){
 
         
         console.log("=======================================================================")
-        console.log("===================== DESTROY transaction details =====================")
+        console.log("===================== Delete Transaction Details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
