@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const url = 'http://154.26.155.62:8888';
-const private_key = 5JhAoguLMDaaouSPrQrvv5htH1DEgaX2kN8J4TXnSSuXk73ry2S; // DUMMY PK
+const private_key = process.env.PRIVATE_KEY; // DUMMY PK
 
 const create = async (id, user, data) => {
     try {
