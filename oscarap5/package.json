@@ -1,20 +1,19 @@
 {
-    "name": "oscarap5-rpc-transaction",
-    "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
-    "scripts": {
-      "solution": "node ./solution.mjs"
-    },
-    "author": "oscarap5",
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/Oscarkuy/inery-testnet-faucet-tasks"
-    },
-    "homepage": "https://github.com/Oscarkuy/inery-testnet-faucet-tasks",
-    "dependencies": {
-      "ineryjs": "github:inery-blockchain/ineryjs",
-      "dotenv": "^16.0.3"
-    }
+  "name": "oscarap5-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "oscarap5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oscarkuy/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Oscarkuy/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
 }
