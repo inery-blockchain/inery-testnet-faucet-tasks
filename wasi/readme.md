@@ -1,35 +1,10 @@
-### Prerequisite
+## Usage
 
-- [NodeJS](https://nodejs.org/en/)
+1. update
+sudo apt update 
+sudo apt upgrade
 
-- NPM
-
-
-
-### How to run
-
-Change directory to ```wasi```
-
-```shell
-cd ./wasi
+2. Update data via api
 ```
-
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
-
-```shell
-nano .env
-```
-
-Install dependencies
-
-```shell
-npm install
-```
-
-Run the script
-
-```
-npm run solution
+node rpc/rpc_update.mjs
 ```
