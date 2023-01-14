@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inery RPC Push Transaction</title>
+</head>
+<body>
+    <script src="./dist/bundle.js"></script>
+    <script src="./dist/ineryjs-jsonrpc.min.js"></script>
+    <script src="./dist/ineryjs-api.min.js"></script>
+    <script src="./dist/ineryjs-jssig.min.js"></script>
+    
+    <pre style="width: 100%; height: 100%; margin:0px; "></pre>
+    
+    <script>
+        let pre = document.getElementsByTagName('pre')[0];
+        const defaultPrivateKey = "<Private_Key>";
+        const rpc = new ineryjs_jsonrpc.JsonRpc('http://165.232.98.219:8888');
+        const signatureProvider = new ineryjs_jssig.JsSignatureProvider([defaultPrivateKey]);
+        const api = new ineryjs_api.Api({ rpc, signatureProvider });
+      
+        (async () => {
+          try {
+            const result = await api.transact({
+              actions: [{
+                  account: 'inery.token',
+                  name: 'transfer',
+                  authorization: [{
+                      actor: 'farzadkb',
+                      permission: 'active',
+                  }],
+                  data: {
+                      from: 'farzadkb',
+                      to: 'inery',
+                      quantity: '1 FBAR',
+                      memo: 'RPC Push',
+                  },
+              }]
+            }, {
+              blocksBehind: 3,
+              expireSeconds: 30,
+            });
+            pre.textContent += '\n\nTransaction pushed!\n\n' + JSON.stringify(result, null, 2);
+          } catch (e) {
+            pre.textContent = '\nCaught exception: ' + e;
+            if (e instanceof ineryjs_jsonrpc.RpcError)
+              pre.textContent += '\n\n' + JSON.stringify(e.json, null, 2);
+          }
+        })();
+    </script>
+
+</body>
+</html>
