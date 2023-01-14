@@ -18,7 +18,7 @@ const api = new Api({
 })
 
 
-async function destroy(id, user, data){
+async function destroy(id){
     try{
         
         const tx = await api.transact({
@@ -33,7 +33,7 @@ async function destroy(id, user, data){
                         }
                     ],
                     data:{
-                        id, user, data
+                        id
                     }
                 }
             ]
