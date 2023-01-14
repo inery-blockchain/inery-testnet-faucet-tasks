@@ -1,0 +1,19 @@
+{
+  "name": "wardy-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./wardy.mjs",
+  "scripts": {
+    "solution": "node ./wardy.mjs"
+  },
+  "author": "wardy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warlovna/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/warlovna/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
