@@ -7,8 +7,7 @@
     "doc": "jsdoc -c jsdoc.json",
     "build-web": "webpack --config webpack.config.js",
     "rpc-example": "node /api/api_create.mjs"
-	"rpc-example": "node /api/api_destroy.mjs"
-	"rpc-example": "node /api/api_update.mjs"
+    "rpc-example": "node /api/api_destroy.mjs"
   },
   "author": "angelina",
   "license": "MIT",
