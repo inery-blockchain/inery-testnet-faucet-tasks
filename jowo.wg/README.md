@@ -22,10 +22,7 @@ cd jowo.wg
 npm install
 ```
 
-Create .env and edit the variable
-
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+Create .env example and edit the variable ```.env
 
 ```
 nano .env
