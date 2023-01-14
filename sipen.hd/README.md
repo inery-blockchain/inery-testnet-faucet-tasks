@@ -16,15 +16,13 @@ npm install -g npm
 
 ### How to run ---
 
- - Change directory to directory ```sipen.hd
+ -Change directory to directory ```sipen.hd```
 
 ```shell
 
 cd ~/inery-testnet-faucet-tasks/sipen.hd
 ```
-Create .env and edit the variable ```.env
-```
-```
+Create .env and edit the variable ```.env```
 Submit your details 
 Account Name  And Private key , etc 
 
