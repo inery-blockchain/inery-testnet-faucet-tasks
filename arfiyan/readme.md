@@ -111,3 +111,12 @@ Run the script
 ```
 npm run pushsolution
 ```
+### Brief Explanation 
+
+This will run the script specified as the "main" in the package.json file, which is "./pushsolution.mjs" in this case.
+
+The function first provided is used to create new data in a smart contract on the Inery blockchain. It does this by calling the "create" function on the smart contract with the provided parameters. The script imports the necessary modules, sets up the API and signature provider, and then defines an async function called "create" that takes three parameters: id, user, and data. This function creates a new transaction and signs it, calling the "create" function on the smart contract with the provided parameters. The transaction is then broadcast to the network and the result is logged to the console.
+
+The funtion second provided is used to update data in a smart contract on the Inery blockchain. It does this by calling the "update" function on the smart contract with the provided parameters. The script follows a similar structure to the first three scripts, with the exception of calling the "update" function instead and providing different parameters.
+
+The third funtion provided is used to delete data in smart contracts on the Inery blockchain. This is done by calling the "delete" function on the smart contract with the provided parameters. The script will completely delete the available data according to the read id
