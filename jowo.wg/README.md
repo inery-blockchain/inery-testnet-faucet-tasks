@@ -29,8 +29,9 @@ INERY_ACCOUNT=YOUR INERY ACCOUNT
 
 ```
 nano .env
-
-Run the script
+``` 
+Run the script 
 ```
 npm run solution
+```
 
