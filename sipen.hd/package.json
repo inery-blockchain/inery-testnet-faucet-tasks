@@ -1,7 +1,7 @@
 {
-  "name": "sipen.hd-rpc-transaction",
+  "name": "sipen.hd",
   "version": "1.0.0",
-  "description": "A sample rpc transaction for inery blockchain",
+  "description": "A sample rpc transaction for inery blockchain via JSON",
   "main": "./solution.mjs",
   "scripts": {
     "solution": "node ./solution.mjs"
@@ -10,9 +10,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com//inery-testnet-faucet-tasks"
+    "url": "https://github.com/sipen.hd/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://github.com//inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/sipen.hd/inery-testnet-faucet-tasks",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
