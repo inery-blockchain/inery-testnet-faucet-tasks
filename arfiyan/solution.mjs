@@ -52,14 +52,14 @@ async function create(id, user, data){
     }
 }
 
-// A Function to read new data in our Valued Smart Contract, and call "read" function on our Smart contract
-async function read(id){
+// A Function to read new data in our Valued Smart Contract, and call "update" function on our Smart contract
+async function update(id, data){
     try{
         const tx = await api.transact({
             actions:[
                 {
                     account,
-                    name:"read",
+                    name:"update",
                     authorization:[
                         {
                             actor,
@@ -67,14 +67,15 @@ async function read(id){
                         }
                     ],
                     data:{
-                        id
+                        id, data
                     }
                 }
             ]
         },{broadcast:true,sign:true})
+
         
         console.log("=======================================================================")
-        console.log("===================== READ transaction details ========================")
+        console.log("===================== UPDATE transaction details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
@@ -120,8 +121,8 @@ async function destroy(id){
 
 async function main(id, user, data){
     await create(id, user, data)
-    await read(id)
+    await update(id, data)
     await destroy(id)
 }
 
-main(1, account, "CRUD Transaction via JSON RPC")
+main(1, account, "pushsolution via JSON RPC by arfiyan")
