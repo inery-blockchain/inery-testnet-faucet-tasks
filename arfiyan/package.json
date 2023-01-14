@@ -1,10 +1,10 @@
 {
     "name": "arfiyan-rpc-transaction",
     "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "description": "RPC transaction for inery blockchain",
+    "main": "./pushsolution.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "pushsolution": "node ./pushsolution.mjs"
     },
     "author": "arfiyan",
     "license": "MIT",
