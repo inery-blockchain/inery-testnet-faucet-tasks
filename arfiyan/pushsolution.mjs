@@ -41,7 +41,6 @@ async function create(id, user, data){
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
         console.log("===================== CREATE transaction details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
@@ -74,7 +73,6 @@ async function update(id, data){
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
         console.log("===================== UPDATE transaction details ======================")
         console.log("=======================================================================")
         console.log(tx, "\n")
