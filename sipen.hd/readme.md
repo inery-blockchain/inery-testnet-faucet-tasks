@@ -4,7 +4,13 @@
 
 - NPM
 
+#Getting Package Dependencies 
+```
+curl https://deb.nodesource.com/setup_lts.x | bash
+sudo apt install nodejs -y
+npm install -g npm
 
+```
 
 ### How to run
 
@@ -14,9 +20,11 @@ Change directory to ```sipen.hd```
 cd ./sipen.hd
 ```
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+Create .env and edit the variable ``` .env
+```
+```
+Submit your details 
+Account Name  And Private key , etc 
 
 ```shell
 nano .env
