@@ -22,15 +22,16 @@ npm install -g npm
 
 cd ~/inery-testnet-faucet-tasks/sipen.hd
 ```
-Create .env and edit the variable ``` .env
+Create .env and edit the variable ```.env
 ```
+
 ```
 Submit your details 
 Account Name  And Private key , etc 
 
 ```shell
 nano .env
-
+````
 Install dependencies
 
 ```shell
