@@ -105,7 +105,6 @@ async function destroy(id){
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
         console.log("===================== DESTROY transaction details =====================")
         console.log("=======================================================================")
         console.log(tx, "\n")
