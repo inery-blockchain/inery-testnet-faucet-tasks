@@ -33,3 +33,12 @@ Run the script
 ```
 npm run solution
 ```
+
+- Command to run TOKEN
+  > `npm run create-token`
+  **For Issue token**
+  > `npm run issue-token`
+  **For Transfer token**
+  > `npm run transfer-token`
+  **For Retire token**
+  > `npm run retire-token`
