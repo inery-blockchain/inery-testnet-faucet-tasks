@@ -1,3 +1,10 @@
+Always first step
+
+```shell
+apt update && apt upgrade -y
+```
+
+
 ### Prerequisite for VPS
 
 - [NodeJS](https://nodejs.org/en/)
