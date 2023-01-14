@@ -1,0 +1,22 @@
+{
+  "name": "transaction-by-awan",
+  "version": "1.0.0",
+  "description": "simple push rpc transaction for inery blockchain",
+  "main": "./awan.mjs",
+  "scripts": {
+    "solution": "node ./awan.mjs"
+  },
+  "license": "MIT",
+  "author": "awan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodemual/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/nodemual/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "scripts": {
+     "text": "echo \"done tod\" " 
+  }
+}
