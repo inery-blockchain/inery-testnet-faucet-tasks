@@ -1,6 +1,6 @@
 # The first step before we do is we need to test and minimize errors
-# Inery Task 4 : Json RPC Sample
-A Sample code to call JSON RPC on Inery Blockchain
+# Inery Task 4 : Json RPC example
+A example code to call JSON RPC on Inery Blockchain
 
 ## Persiapan
 ##### Remove Previous Nodejs
