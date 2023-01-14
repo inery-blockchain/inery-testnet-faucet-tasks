@@ -1,4 +1,4 @@
-### Prerequisite
+### Prerequisite for VPS
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -14,10 +14,10 @@ cd ./padang.12
 ```
 
 Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+PRIVATE_KEY=YOUR PRIVATE KEY from your INERY_ACCOUNT
+INERY_ACCOUNT=Username of YOUR INERY ACCOUNT
 
-You can find YOUR PRIVATE KEY & YOUR INERY ACCOUNT from your Inery website [https://testnet.inery.io/]
+You can find YOUR PRIVATE KEY & YOUR INERY ACCOUNT from log in go to Inery website [https://testnet.inery.io/]
 
 ```shell
 nano .env
@@ -32,5 +32,5 @@ npm install
 Run the script
 
 ```
-npm run solution
+npm run explication
 ```

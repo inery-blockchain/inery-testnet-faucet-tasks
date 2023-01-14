@@ -1,10 +1,10 @@
 {
     "name": "padang.12-rpc-transaction",
     "version": "1.0.0",
-    "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "description": "A sample rpc transaction for [inery blockchain](https://explorer.inery.io)",
+    "main": "./explication.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "explication": "node ./explication.mjs"
     },
     "author": "padang.12",
     "license": "MIT",
