@@ -7,7 +7,7 @@ import {
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const url = "http://84.54.23.49"
+const url = "http://84.54.23.49:8888"
 const jsonRpc = new JsonRpc(url)
 const privateKey = process.env.PRIVATE_KEY;
 
