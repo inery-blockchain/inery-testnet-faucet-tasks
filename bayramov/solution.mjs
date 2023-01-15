@@ -16,9 +16,9 @@ const api = new Api({
     signatureProvider: signature
 })
 
-async function create(id, user, data){
+async function sendtoken(id, user, data){
     try{
-        const tx = await api.transact({
+        const data = await api.transact({
             actions:[
                 {
                     account,
