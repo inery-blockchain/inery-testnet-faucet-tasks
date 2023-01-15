@@ -20,6 +20,8 @@ cd nyeka/
 
 ```
 
+# make sure include .env file, see at .env-sample to make .env file first
+
 ### before running the script, make sure to create .env file first
 
 .env file includes private_key, inery_url and api github user
