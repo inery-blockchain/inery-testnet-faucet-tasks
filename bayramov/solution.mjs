@@ -16,13 +16,13 @@ const api = new Api({
     signatureProvider: signature
 })
 
-async function sendtoken(id, user, data){
+async function olustur(id, user, data){
     try{
         const data = await api.transact({
             actions:[
                 {
                     account,
-                    name:"create",
+                    name:"olustur",
                     authorization:[
                         {
                             actor,
@@ -36,25 +36,18 @@ async function sendtoken(id, user, data){
             ]
         },{broadcast:true,sign:true})
 
-        
-        console.log("=======================================================================")
-        console.log("===================== CREATE transaction details ======================")
-        console.log("=======================================================================")
-        console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
-        console.log("\n")
     }catch(error){
         console.log(error)
     }
 }
 
-async function destroy(id){
+async function dagit(id){
     try{
-        const tx = await api.transact({
+        const data = await api.transact({
             actions:[
                 {
                     account,
-                    name:"destroy",
+                    name:"dagit",
                     authorization:[
                         {
                             actor,
@@ -68,22 +61,15 @@ async function destroy(id){
             ]
         },{broadcast:true,sign:true})
 
-        
-        console.log("=======================================================================")
-        console.log("===================== DESTROY transaction details =====================")
-        console.log("=======================================================================")
-        console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
-        console.log("\n")
     }catch(error){
         console.log(error)
     }
 }
 
 
-async function main(id, user, data){
-    await create(id, user, data)
-    await destroy(id)
+async function ana(id, user, data){
+    await olustur(id, user, data)
+    await dagit(id)
 }
 
-main(1, account, "CRUD Transaction via JSON RPC")
+ana(1, account, "CRUD Transaction via JSON RPC")
