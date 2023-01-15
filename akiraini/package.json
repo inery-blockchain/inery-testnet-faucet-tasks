@@ -1,0 +1,21 @@
+{
+  "name": "akiraini",
+  "version": "1.0.0",
+  "description": "A sample RPC transaction for Inery Faucet Task",
+  "main": "dist/index.js",
+  "scripts": {
+    "rpc": "node ./rpc.mjs"
+  },
+  "author": "akiraini",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akiraini/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/akiraini/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
