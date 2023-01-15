@@ -1,0 +1,20 @@
+{
+  "name": "push-transaction-zurajanai",
+  "version": "1.0.0",
+  "description": "rpc transaction for inery blockchain",
+  "main": "./push.mjs",
+  "scripts": {
+    "zurajanai": "node ./push.mjs"
+  },
+  "license": "ISC",
+  "author": "zurajanai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xzur4/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/0xzur4/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
