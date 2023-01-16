@@ -1,18 +1,18 @@
 {
-    "name": "iphone-rpc-transaction",
+    "name": "tokyoforx-rpc-transaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
     "main": "./solution.mjs",
     "scripts": {
       "solution": "node ./solution.mjs"
     },
-    "author": "iphone",
+    "author": "tokyoforx",
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/rudalbekas/inery-testnet-faucet-tasks"
+      "url": "https://github.com/tokyoforx/inery-testnet-faucet-tasks"
     },
-    "homepage": "https://github.com/rudalbekas/inery-testnet-faucet-tasks",
+    "homepage": "https://github.com/tokyoforx/inery-testnet-faucet-tasks",
     "dependencies": {
       "ineryjs": "github:inery-blockchain/ineryjs",
       "dotenv": "^16.0.3"

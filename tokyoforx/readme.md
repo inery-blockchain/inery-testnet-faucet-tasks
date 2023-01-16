@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to ```iphone```
+Change directory to ```tokyoforx```
 
 ```shell
-cd ./iphone
+cd ./tokyoforx
 ```
 
 Create .env and edit the variable
