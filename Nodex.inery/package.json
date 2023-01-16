@@ -4,21 +4,20 @@
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "dist/index.js",
   "scripts": {
-    "create-crud": "node ./contract/create.mjs",
-    "read-crud": "node ./contract/read.mjs",
-    "update-crud": "node ./contract/update.mjs",
-    "destroy-crud": "node ./contract/destroy.mjs",
-    
+    "create": "node ./contract/create.mjs",
+    "read": "node ./contract/read.mjs",
+    "update": "node ./contract/update.mjs",
+    "destroy": "node ./contract/destroy.mjs",   
   },
   "author": "Whalealert",
-  "license": "MIT",
+  "license": "ICS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Whalealert/inery-testnet-faucet-tasks"
+    "url": "github.com/Whalealert/inery-testnet-faucet-tasks"
   },
   "homepage": "https://github.com/Whalealert/inery-testnet-faucet-tasks",
   "dependencies": {
-    "dotenv": "latest",
+    "dotenv": "^16.0.3",
     "dotenv-expand": "latest",
     "ineryjs": "https://github:inery-blockchain/ineryjs"
   }
