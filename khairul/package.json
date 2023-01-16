@@ -2,7 +2,7 @@
     "name": "khairul",
     "version": "1.0.0",
     "description": "A sample rpc transaction",
-    "main": "./pushTransaction.js",
+    "main": "./pushTransaction.mjs",
     "scripts": {
       "solution": "node ./pushTransaction.mjs"
     },
