@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const account = process.env.USER_ACC_NAME
-const actor = "nodex.inery"
 const json_rpc = new JsonRpc(process.env.INERY_NODE_RPC)
 const signature  = new JsSignatureProvider([process.env.INERY_PRIV_KEY]);
 
