@@ -15,7 +15,7 @@ const pushTransaction = async (action) => {
         const response = await api.transact({
             actions: [{
                 account: account,
-                name: "your_action_name",
+                name: "kevin1",
                 authorization: [{
                     actor: actor,
                     permission: "active"
@@ -34,7 +34,7 @@ const pushTransaction = async (action) => {
 
 const actionData = {
     id: "10543230",
-    user: "your_account_name",
+    user: "kevin1",
     data: "inery task4"
 };
 
