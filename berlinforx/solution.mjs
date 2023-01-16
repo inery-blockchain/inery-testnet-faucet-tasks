@@ -1,10 +1,10 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-const url = process.env.NODE_URL
+const url = "http://128.199.194.7:8888"
 
 const json_rpc = new JsonRpc(url)
 const private_key = process.env.PRIVATE_KEY;
 
-const account = process.env.INERY_ACCOUNT
+const account = "berlinforx"
 const actor = process.env.INERY_ACCOUNT
 const signature  = new JsSignatureProvider([private_key]);
 
@@ -13,7 +13,7 @@ const api = new Api({
     signatureProvider: signature
 })
 
-async function create(id, user, data){
+async function create(nomortamu, tamu, datatamu){
     try{
         const tx = await api.transact({
             actions:[
@@ -27,16 +27,14 @@ async function create(id, user, data){
                         }
                     ],
                     data:{
-                        id, user, data
+                        nomortamu, tamu, datatamu
                     }
                 }
             ]
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
-        console.log("===================== CREATE transaction details ======================")
-        console.log("=======================================================================")
+        console.log("===================== CREATE trx details ======================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
         console.log("\n")
@@ -45,7 +43,8 @@ async function create(id, user, data){
     }
 }
 
-async function read(id){
+
+async function read(nomortamu){
     try{
         const tx = await api.transact({
             actions:[
@@ -59,15 +58,13 @@ async function read(id){
                         }
                     ],
                     data:{
-                        id
+                        nomortamu
                     }
                 }
             ]
         },{broadcast:true,sign:true})
         
-        console.log("=======================================================================")
-        console.log("===================== READ transaction details ========================")
-        console.log("=======================================================================")
+        console.log("===================== READ trx details ========================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
         console.log("\n")
@@ -76,7 +73,7 @@ async function read(id){
     }
 }
 
-async function update(id, data){
+async function update(nomortamu, datatamu){
     try{
         const tx = await api.transact({
             actions:[
@@ -90,16 +87,14 @@ async function update(id, data){
                         }
                     ],
                     data:{
-                        id, data
+                        nomortamu, datatamu
                     }
                 }
             ]
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
         console.log("===================== UPDATE transaction details ======================")
-        console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
         console.log("\n")
@@ -108,7 +103,7 @@ async function update(id, data){
     }
 }
 
-async function destroy(id){
+async function destroy(nomortamu){
     try{
         const tx = await api.transact({
             actions:[
@@ -122,16 +117,14 @@ async function destroy(id){
                         }
                     ],
                     data:{
-                        id
+                        nomortamu
                     }
                 }
             ]
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
         console.log("===================== DESTROY transaction details =====================")
-        console.log("=======================================================================")
         console.log(tx, "\n")
         console.log("Response from contract :", tx.processed.action_traces[0].console)
         console.log("\n")
@@ -141,11 +134,11 @@ async function destroy(id){
 }
 
 
-async function main(id, user, data){
-    await create(id, user, data)
-    await read(id)
-    await update(id, data)
-    await destroy(id)
+async function main(nomortamu, tamu, datatamu){
+    await create(nomortamu, tamu, datatamu)
+    await read(nomortamu)
+    await update(nomortamu, datatamu)
+    await destroy(nomortamu)
 }
 
 main(1, account, "CRUD Transaction via JSON RPC")
