@@ -2,12 +2,9 @@
   "name": "nodex.inery task4",
   "version": "1.0.0",
   "description": "Sample RPC push transaction via JSON RPC",
-  "main": "index.js",
+  "main": "./nodex-inery.mjs",
   "scripts": {
-    "create-crud": "node ./contract/create.mjs",
-    "read-crud": "node ./contract/read.mjs",
-    "update-crud": "node ./contract/update.mjs",
-    "destroy-crud": "node ./contract/destroy.mjs",
+    "push": "node ./nodex-inery.mjs",
    },
   "author": "nodex.inery",
   "repository": {
