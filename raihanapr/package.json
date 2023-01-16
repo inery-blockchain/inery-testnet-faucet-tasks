@@ -1,19 +1,19 @@
 {
-  "name": "raihanapr-rpc-transaction",
-  "version": "1.0.0",
-  "description": "A sample rpc transaction for inery blockchain",
-  "main": "./solution.mjs",
-  "scripts": {
-    "solution": "node ./solution.mjs"
-  },
-  "author": "raihanapr",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/raihanapr/inery-testnet-faucet-tasks"
-  },
-  "homepage": "https://github.com/raihanapr/inery-testnet-faucet-tasks",
-  "dependencies": {
-    "ineryjs": "github:inery-blockchain/ineryjs"
-  }
+    "name": "raihanapr-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./solution.py",
+    "scripts": {
+        "solution": "python3 ./solution.py"
+    },
+    "author": "raihanapr",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/raihanapr/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/raihanapr/inery-testnet-faucet-tasks",
+    "dependencies": {
+        "jsonrpcclient": "^4.1.0"
+    }
 }
