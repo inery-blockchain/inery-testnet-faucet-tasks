@@ -4,7 +4,7 @@
     "description": "A sample rpc transaction",
     "main": "./pushTransaction.js",
     "scripts": {
-      "solution": "node ./pushTransaction.js"
+      "solution": "node ./pushTransaction.mjs"
     },
     "author": "khairul",
     "license": "MIT",
