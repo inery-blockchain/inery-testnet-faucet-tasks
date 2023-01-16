@@ -1,0 +1,22 @@
+{
+  "name": "Hello This Inery CRUD Transaction by norfausa",
+  "version": "1.0.0",
+  "description": "Script to Create, Read, Update and Delete using Inery Smartcontract",
+  "main": "./ineryCRUD.mjs",
+  "scripts": {
+    "crud": "node ./ineryCRUD.mjs",
+    "create": "node ./createRecord.mjs",
+    "read": "node ./readRecord.mjs",
+    "update": "node ./updateRecord.mjs",
+    "delete": "node ./deleteRecord.mjs"    
+  },
+  "author": "norfausa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Norfausa19/inery-testnet-faucet-tasks"
+  },
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
