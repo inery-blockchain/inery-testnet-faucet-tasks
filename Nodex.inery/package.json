@@ -4,9 +4,12 @@
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "index.js",
   "scripts": {
-    "push-crud": "node ./contract/push.mjs",
+    "create-crud": "node ./contract/create.mjs",
+    "read-crud": "node ./contract/read.mjs",
+    "update-crud": "node ./contract/update.mjs",
+    "destroy-crud": "node ./contract/destroy.mjs",
    },
-  "author": "Whalealert",
+  "author": "nodex.inery",
   "repository": {
     "type": "git",
     "url": "https://github.com/Whalealert/inery-testnet-faucet-tasks"
