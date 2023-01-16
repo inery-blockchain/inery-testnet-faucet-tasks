@@ -1,18 +1,18 @@
 {
   "name": "aprameth-rpc-transaction",
   "version": "1.0.0",
-  "description": "A sample RPC API push transaction on Inery blockchain",
+  "description": "A sample RPC API push transaction on Inery Blockchain",
   "main": "./solution.mjs",
   "scripts": {
     "solution": "node ./solution.mjs"
   },
-  "author": "DiscoverMyself",
+  "author": "daffaharyan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DiscoverMyself/inery-testnet-faucet-tasks"
+    "url": "https://github.com/daffaharyan/inery-testnet-task4"
   },
-  "homepage": "https://github.com/DiscoverMyself/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/daffaharyan/inery-testnet-task4",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
