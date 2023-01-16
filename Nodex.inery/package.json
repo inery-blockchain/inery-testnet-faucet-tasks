@@ -10,7 +10,7 @@
     "destroy-crud": "node ./contract/destroy.mjs",
     
   },
-  "author": "nodex.inery",
+  "author": "Whalealert",
   "license": "MIT",
   "repository": {
     "type": "git",
