@@ -35,17 +35,5 @@ nano .env
 yarn install
 ```
 ```
-yarn run create-crud
-```
-* READ data
-```
-yarn run read-crud
-```
-* UPDATE data
-```
-yarn run update-crud
-```
-* DESTROY data
-```
-yarn run destroy-crud
+yarn run nodex-inery
 ```
