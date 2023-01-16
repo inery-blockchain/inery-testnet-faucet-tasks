@@ -4,7 +4,7 @@
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "./nodex-inery.mjs",
   "scripts": {
-    "push": "node ./nodex-inery.mjs",
+    "nodex-inery": "node ./nodex-inery.mjs",
    },
   "author": "nodex.inery",
   "repository": {
