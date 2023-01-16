@@ -4,7 +4,7 @@ const { PrivateKey, PublicKey } = require('eosjs/dist/eosjs-keyconversions');
 
 const privateKey = "YOUR_PRIVATE_KEY";
 const signatureProvider = new JsSignatureProvider([privateKey]);
-const rpc = new JsonRpc("http://localhost:8888", { fetch });
+const rpc = new JsonRpc("http://165.232.82.180:8888", { fetch });
 const api = new Api({ rpc, signatureProvider });
 
 const account = "your_contract_account";
