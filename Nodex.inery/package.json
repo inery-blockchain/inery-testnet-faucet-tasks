@@ -1,6 +1,6 @@
 {
   "name": "nodex.inery task4",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "dist/index.js",
   "scripts": {
