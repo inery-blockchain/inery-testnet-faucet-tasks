@@ -1,129 +1,69 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-const url = "vmi1012580.contaboserver.net"
+import jsonrpcclient.exceptions
+from jsonrpcclient.clients.http_client import HTTPClient
 
-const json_rpc = new JsonRpc(url) 
-const private_key = "5KLBth5JvzAv8NFFukUPXYp9mEQYdv1VrTNELNp5aMb6Kd3AFQYomFxGu"; 
-const actor = "raihanapr"
+url = "vmi1012580.contaboserver.net"
+private_key = "5KLBth5JvzAv8NFFukUPXYp9mEQYdv1VrTNELNp5aMb6Kd3AFQYomFxGu"
+actor = "raihanapr"
+account = "raihanapr"
 
-const account = "raihanapr"
-const signature  = new JsSignatureProvider([private_key]); 
+rpc = HTTPClient(url)
 
-const api = new Api({
-    rpc: json_rpc,
-    signatureProvider: signature
-})
+def create(id, user, data):
+    try:
+        tx = rpc.send(
+            "push_transaction", 
+            [{
+                "signatures": [private_key],
+                "compression": 0,
+                "packed_context_free_data": "",
+                "packed_trx": f"{'0e0a7261696168616e6170720a1500000000000000ea3055000000000000'} {'00000000a8ed3232320a0000000000000004454f530000000000'} {hex(int(id))[2:].zfill(8)} {user.encode().hex()} {data.encode().hex()}"
+            }]
+        )
+        print("Transaction success: ", tx)
+    except jsonrpcclient.exceptions.ReceivedErrorResponseError as e:
+        print("Error: ", e.message)
 
-async function create(id, user, data){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"create",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id, user, data
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
+def read(id):
+    try:
+        tx = rpc.send(
+            "push_transaction",
+            [{
+                "signatures": [private_key],
+                "compression": 0,
+                "packed_context_free_data": "",
+                "packed_trx": f"{'0e0a7261696168616e6170720a1500000000000000ea3055000000000000'} {'00000000a8ed3232320a0000000000000004454f530000000000'} {hex(int(id))[2:].zfill(8)}"
+            }]
+        )
+        print("Transaction success: ", tx)
+    except jsonrpcclient.exceptions.ReceivedErrorResponseError as e:
+        print("Error: ", e.message)
 
-        
-       
-    }catch(error){
-        console.log(error)
-    }
-}
+def update(id, data):
+    try:
+        tx = rpc.send(
+            "push_transaction",
+            [{
+                "signatures": [private_key],
+                "compression": 0,
+                "packed_context_free_data": "",
+                "packed_trx": f"{'0e0a7261696168616e6170720a1500000000000000ea3055000000000000'} {'00000000a8ed3232320a0000000000000004454f530000000000'} {hex(int(id))[2:].zfill(8)} {data.encode().hex()}"
+            }]
+        )
+        print("Transaction success: ", tx)
+    except jsonrpcclient.exceptions.ReceivedErrorResponseError as e:
+        print("Error: ", e.message)
 
-async function read(id){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"read",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-        
-    }catch(error){
-        console.log(error)
-    }
-}
-
-async function update(id, data){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"update",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id, data
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-
-        
-       
-    }catch(error){
-        console.log(error)
-    }
-}
-
-async function destroy(id){
-    try{
-        const tx = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"destroy",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-
-        
-    }catch(error){
-        console.log(error)
-    }
-}
-
-
-async function main(id, user, data){
-    await create(id, user, data)
-    await read(id)
-    await update(id, data)
-    await destroy(id)
-}
-
-main(1, account, "CRUD Transaction via JSON RPC")
+def destroy(id):
+    try:
+        tx = rpc.send(
+            "push_transaction",
+            [{
+                "signatures": [private_key],
+"compression": 0,
+"packed_context_free_data": "",
+"packed_trx": f"{'0e0a7261696168616e6170720a1500000000000000ea3055000000000000'} {'00000000a8ed3232320a0000000000000004454f530000000000'} {hex(int(id))[2:].zfill(8)}"
+}]
+)
+print("Transaction success: ", tx)
+except jsonrpcclient.exceptions.ReceivedErrorResponseError as e:
+print("Error: ", e.message)
