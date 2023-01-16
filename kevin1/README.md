@@ -1,6 +1,6 @@
 ### How to run
 
-Change directory to ikbal.nodex
+Change directory to kevin1
 
 ```shell
 npm install
