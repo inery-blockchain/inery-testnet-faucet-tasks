@@ -18,6 +18,7 @@ sudo apt-get install -y nodejs
 its example use task 3
 ```
 git clone https://github.com/Whalealert/inery-testnet-faucet-tasks/
+cd inery-testnet-faucet-tasks/
 git checkout task4
 ```
  * change directory
