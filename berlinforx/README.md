@@ -17,10 +17,10 @@ sudo apt-get install -y nodejs
 
 ## How to run?
 
-**1. Change directory to `aprameth`**
+**1. Change directory to `berlinforx`**
 
 ```shell
-cd ./aprameth
+cd ./berlinforx
 ```
 
 
