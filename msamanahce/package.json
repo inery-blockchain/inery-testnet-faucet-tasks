@@ -1,0 +1,19 @@
+{
+  "name": "msamanahce",
+  "version": "1.5.0",
+  "description": "Rpc transaction for inery blockchain",
+  "main": "./RunSol.mjs",
+  "scripts": {
+    "solution": "node ./RunSol.mjs"
+  },
+  "author": "msamanahce",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MsAmanahce/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/MsAmanahce/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
