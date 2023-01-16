@@ -1,35 +1,39 @@
-### Prerequisite
+# Recipe we need
 
-- [NodeJS](https://nodejs.org/en/)
+- NodeJS (https://nodejs.org/en/)
 
 - NPM
 
 
 
-### How to run
+# Read properly to run this
 
 Change directory to ```khairul```
 
-```shell
+# 
 cd ./khairul
-```
+#
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
-
-```shell
+#
 nano .env
-```
+#
 
-Install dependencies
+#
+edit the this variable
+YOUR_PRIVATE_KEY="PRIVATE KEY"
+YOUR_INERY_ACCOUNT="INERY ACCOUNT"
+#
 
-```shell
+
+First we should do at node.js is installing module.
+
+//
 npm install
-```
+//
 
-Run the script
+last command we just need to run
 
-```
+//
 npm run solution
-```
+// 
+

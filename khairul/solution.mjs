@@ -2,19 +2,19 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const url = "http://149.102.159.105:8888"
+const urlConfig = "http://149.102.159.105:8888";
 
-const json_rpc = new JsonRpc(url) 
-const private_key = process.env.PRIVATE_KEY
-const actor = process.env.INERY_ACCOUNT
+const json_rpc = new JsonRpc(urlConfig);
+const privateKey = process.env.YOUR_PRIVATE_KEY;
+const myAccount = process.env.YOUR_INERY_ACCOUNT;
 
-const account = "khairul"
-const signature  = new JsSignatureProvider([private_key]); 
+const account = "khairul";
+const signature  = new JsSignatureProvider([privateKey]); 
 
 const api = new Api({
     rpc: json_rpc,
     signatureProvider: signature
-})
+});
 
 async function create(id, user, data){
     try{
@@ -25,7 +25,7 @@ async function create(id, user, data){
                     name:"create",
                     authorization:[
                         {
-                            actor,
+                            myAccount,
                             permission:"active"
                         }
                     ],
@@ -37,11 +37,10 @@ async function create(id, user, data){
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
-        console.log("===================== CREATE transaction details ======================")
-        console.log("=======================================================================")
+
+        console.log(" ! CREATE transaction details")
         console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("Response :", tx.processed.action_traces[0].console)
         console.log("\n")
     }catch(error){
         console.log(error)
@@ -57,7 +56,7 @@ async function destroy(id){
                     name:"destroy",
                     authorization:[
                         {
-                            actor,
+                            myAccount,
                             permission:"active"
                         }
                     ],
@@ -69,11 +68,10 @@ async function destroy(id){
         },{broadcast:true,sign:true})
 
         
-        console.log("=======================================================================")
-        console.log("===================== DESTROY transaction details =====================")
-        console.log("=======================================================================")
+
+        console.log(" ! DESTROY transaction details")
         console.log(tx, "\n")
-        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("Response :", tx.processed.action_traces[0].console)
         console.log("\n")
     }catch(error){
         console.log(error)
