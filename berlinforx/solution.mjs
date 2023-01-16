@@ -134,11 +134,11 @@ async function destroy(nomortamu){
 }
 
 
-async function main(id, user, data){
-    await create(id, user, data)
-    await read(id)
-    await update(id, data)
-    await destroy(id)
+async function main(nomortamu, tamu, datatamu){
+    await create(nomortamu, tamu, datatamu)
+    await read(nomortamu)
+    await update(nomortamu, datatamu)
+    await destroy(nomortamu)
 }
 
-main(123, account, "CRUD Transaction via JSON RPC")
+main(1, account, "CRUD Transaction via JSON RPC")
