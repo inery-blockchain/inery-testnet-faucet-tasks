@@ -1,4 +1,3 @@
-# nodex.inery
 
 ### INERY blockchain sample RPC push transaction via JSON-RPC by whalealert with inery account `nodex.inery`
 
@@ -10,18 +9,20 @@ sudo apt-get update && sudo apt-get install yarn
 ```
 ### Install NodeJS
 `inery using NodeJs v14xx and above`
-
 ```
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ### How to works?
 
-its example use task 3 
-
+its example use task 3
+```
+git clone https://github.com/Whalealert/inery-testnet-faucet-tasks/
+git checkout task4
+```
  * change directory
 ```
-cd Whalealert
+cd Nodex.inery
 ```
  * set variable on .env
 ```
@@ -30,6 +31,9 @@ nano .env
 ### How to use?
 
  * CREATE data 
+```
+yarn install
+```
 ```
 yarn run create-crud
 ```
