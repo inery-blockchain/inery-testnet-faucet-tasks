@@ -1,0 +1,26 @@
+{
+  "name": "mrpurnomo",
+  "description": "RPC push transaction via JSON RPC by mrpurnomo",
+  "main": "dist/index.js",
+  "scripts": {
+    "create-crud": "node ./value-contract/createCon.mjs",
+    "read-crud": "node ./value-contract/readCon.mjs",
+    "update-crud": "node ./value-contract/updateCon.mjs",
+    "destroy-crud": "node ./value-contract/deleteCon.mjs",
+    "create-token": "node ./token-contract/createTok.mjs",
+    "issue-token": "node ./token-contract/issueTok.mjs",
+    "transfer-token": "node ./token-contract/transferTok.mjs"
+  },
+  "author": "mrpurnomo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ajipur-Oprekers/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Ajipur-Oprekers/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
