@@ -37,6 +37,6 @@ npm install
 last command we just need to run
 
 //
-npm run pushTransaction
+npm run solution
 // 
 
