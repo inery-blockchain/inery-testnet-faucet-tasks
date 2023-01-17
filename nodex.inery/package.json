@@ -4,7 +4,7 @@
   "description": "A sample rpc transaction for inery blockchain",
   "main": "dist/index.js",
   "scripts": {
-    "inery-push": "node ./inery/inery-push.mjs",
+    "inery-push": "node ./inery/inery-push.mjs"
   },
   "author": "whalealert",
   "license": "MIT",
