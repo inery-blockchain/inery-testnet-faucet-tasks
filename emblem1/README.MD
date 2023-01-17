@@ -1,15 +1,13 @@
 ============ How to Run ============
 
-1. make install curl , Node js and NPM
-   sudo apt-get install curl \
-   curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-   sudo apt-get install -y nodejs
+1. make clone github and install npm
+   - git clone https://github.com/evairo176/inery-testnet-faucet-tasks.git
 
 2. Change directory
-   cd ~/inery-testnet-faucet-tasks/evairo176
+   cd ~/inery-testnet-faucet-tasks/emblem1
 
 3. Install dependencie
-   npm installs
+   npm install
 
 4. Create & edit .env file
    cp .env-sample .env
