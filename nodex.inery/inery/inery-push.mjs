@@ -4,7 +4,6 @@ dotenv.config()
 
 const account = process.env.USER_ACC_NAME
 const actor = account
-const id = process.env.DATA_ID
 const create_data = process.env.CREATE_CRUD_DATA
 
 const json_rpc = new JsonRpc(process.env.INERY_NODE_RPC)
