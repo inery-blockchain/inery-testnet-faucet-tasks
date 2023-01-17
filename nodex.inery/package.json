@@ -1,0 +1,20 @@
+{
+  "name": "task4-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "dist/index.js",
+  "scripts": {
+    "create": "node ./contract/create.mjs",
+    "read": "node ./contract/read.mjs"
+  },
+  "author": "whalealert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Whalealert/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Whalealert/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
