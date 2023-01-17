@@ -36,6 +36,11 @@ nano .env
 ```
 yarn
 ```
+ * add dotenev
+Yarn need add manualy dotenv
+```
+yarn add dotenv
+```
  * run transaction
 ```
 yarn run inery-push
