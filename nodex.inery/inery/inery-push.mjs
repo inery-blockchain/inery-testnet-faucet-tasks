@@ -2,11 +2,12 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const url = "http://74.208.87.152:8888"
-const json_rpc = new JsonRpc(url)
+const account = process.env.USER_ACC_NAME
+const actor = account
+const id = process.env.DATA_ID
+const create_data = process.env.CREATE_CRUD_DATA
 
-const account = "nodex.inery"
-const actor = "nodex.inery"
+const json_rpc = new JsonRpc(process.env.INERY_NODE_RPC)
 const signature  = new JsSignatureProvider([process.env.INERY_PRIV_KEY]);
 
 const api = new Api({
