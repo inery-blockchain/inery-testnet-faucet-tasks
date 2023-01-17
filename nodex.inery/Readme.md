@@ -37,6 +37,7 @@ nano .env
 yarn
 ```
  * add dotenev
+
 Yarn need add manualy dotenv
 ```
 yarn add dotenv
