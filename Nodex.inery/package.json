@@ -1,12 +1,12 @@
 {
-  "name": "nodex.inery task4",
+  "name": "nodexinery task4",
   "version": "1.0.0",
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "./nodex-inery.mjs",
   "scripts": {
     "nodex-inery": "node ./nodex-inery.mjs",
    },
-  "author": "nodex-inery",
+  "author": "nodex.inery",
   "repository": {
     "type": "git",
     "url": "https://github.com/Whalealert/inery-testnet-faucet-tasks"
