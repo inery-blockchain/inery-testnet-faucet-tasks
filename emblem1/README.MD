@@ -1,6 +1,7 @@
 ============ How to Run ============
 
 1. make clone github and install npm
+
    - git clone https://github.com/evairo176/inery-testnet-faucet-tasks.git
 
 2. Change directory
@@ -9,8 +10,9 @@
 3. Install dependencie
    npm install
 
-4. Create & edit .env file
-   cp .env-sample .env
+4. edit .env copy file
+
+   - example PRIVATE_KEY=your private key
 
 5. Run script
    npm run push
