@@ -166,11 +166,11 @@ async function destroyContract(id){
         console.log("\x1b[0m")
     }
 }
-async function main(id, user, data){
+async function inerypush(id, user, data){
     await createCrud(id, account, create_data)
     await readContract(id)
     await updateContract(id, update_data)
     await destroyContract(id)
 }
 
-inery-push(1, account, "push push ")
+inerypush(1, account, "push transaction")
