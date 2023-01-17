@@ -167,9 +167,9 @@ async function destroyContract(id){
     }
 }
 async function inerypush(id, user, data){
-    await createCrud(id, account, create_data)
+    await createCrud(id, account, data)
     await readContract(id)
-    await updateContract(id, update_data)
+    await updateContract(id, data)
     await destroyContract(id)
 }
 
