@@ -6,7 +6,7 @@
   "scripts": {
     "nodex-inery": "node ./nodex-inery.mjs",
    },
-  "author": "nodex.inery",
+  "author": "nodex-inery",
   "repository": {
     "type": "git",
     "url": "https://github.com/Whalealert/inery-testnet-faucet-tasks"
