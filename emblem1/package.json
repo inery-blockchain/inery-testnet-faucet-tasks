@@ -1,19 +1,20 @@
 {
   "name": "emblem1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
+  "description": "sample rpc transaction inery blockchain",
+  "main": "./rpc_inery.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "node ./rpc_inery.js"
+    "push": "node ./rpc_inery.mjs"
   },
-  "homepage": "https://github.com/nodemual/inery-testnet-faucet-tasks",
+  "author": "evairo176",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evairo176/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/evairo176/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  }
 }

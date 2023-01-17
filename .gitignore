@@ -1,0 +1,6 @@
+.DS_Store
+secrets.txt
+.env
+
+#This is comments(# used for comments)
+*.txt  #this means all files with .txt extention will be ignored.env
