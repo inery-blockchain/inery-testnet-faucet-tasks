@@ -38,7 +38,7 @@ yarn
 ```
  * add dotenev
 
-Yarn need add manualy dotenv
+`yarn need add manualy dotenv`
 ```
 yarn add dotenv
 ```
