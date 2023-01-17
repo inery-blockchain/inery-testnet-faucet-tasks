@@ -2,6 +2,7 @@
 secrets.txt
 .env
 node_modules
+aprameth
 
 #This is comments(# used for comments)
 *.txt  #this means all files with .txt extention will be ignored.env
