@@ -1,9 +1,3 @@
-// import {
-//   Api,
-//   JsonRpc,
-//   RpcError,
-//   JsSignatureProvider,
-// } from "./node_modules/ineryjs/dist/index.js";
 import { ineryApiController } from "./utils/MasterInery.mjs";
 
 const actor = "emblem1";
