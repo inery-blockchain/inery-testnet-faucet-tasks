@@ -2,11 +2,11 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 const url = process.env.NODE_URL
 
 const json_rpc = new JsonRpc(url)
-const private_key = process.env.5KFph3WUW4DRRQGnC6z1ARidG5RFJtAyCJWp3YuHpAyCHekpurr;
+const private_key = process.env.PRIVATE_KEY;
 
-const account = process.env.daffaharyan
-const actor = process.env.daffaharyan
-const signature  = new JsSignatureProvider([5KFph3WUW4DRRQGnC6z1ARidG5RFJtAyCJWp3YuHpAyCHekpurr]);
+const account = process.env.INERY_ACCOUNT
+const actor = process.env.INERY_ACCOUNT
+const signature  = new JsSignatureProvider([private_key]);
 
 const api = new Api({
     rpc: json_rpc,
