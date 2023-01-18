@@ -1,0 +1,41 @@
+{
+  "name": "revolt",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "push": "node ./pushTransaction.js"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "keywords": [],
+  "author": "revolt",
+  "license": "RVT"
+  },
+  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
+  "dependencies": {
+    "bn.js": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "elliptic": "^6.5.4",
+    "hash.js": "^1.1.7",
+    "node-fetch": "^2.6.7",
+    "pako": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-fs-access": "^0.31.0",
+    "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "jsdoc": "^3.5.5",
+    "node-util": "^0.0.1",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
+
