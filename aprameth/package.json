@@ -1,5 +1,5 @@
 {
-  "name": "aprameth-rpc-transaction",
+  "name": "dfhrinery-rpc-transaction",
   "version": "1.0.0",
   "description": "A sample RPC API push transaction on Inery Blockchain",
   "main": "./solution.mjs",
