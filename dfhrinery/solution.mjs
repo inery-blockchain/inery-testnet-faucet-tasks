@@ -1,6 +1,4 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-import dotenv from "dotenv";
-dotenv.config();
 
 const url = "http://162.222.203.246:8888";
 
