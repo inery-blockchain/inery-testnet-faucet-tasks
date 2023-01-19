@@ -1,7 +1,9 @@
 
+
 .DS_Store
 secrets.txt
 .env
+
 node_modules
 aprameth
 
