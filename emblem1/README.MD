@@ -15,6 +15,6 @@
    - example PRIVATE_KEY=your private key
 
 5. Run script
-   npm run push
+   npm run index
 
 ============ Finish ============
