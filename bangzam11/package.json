@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com//inery-testnet-faucet-tasks.git"
+    "url": "git+https://github.com/azamlabib01/inery-testnet-faucet-tasks.git"
   },
   "keywords": [
     "INERY"
   ],
-  "author": "",
+  "author": "azamlabib01",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//inery-testnet-faucet-tasks/issues"
+    "url": "https://github.com/azamlabib01/inery-testnet-faucet-tasks/issues"
   },
-  "homepage": "https://github.com//inery-testnet-faucet-tasks#readme"
+  "homepage": "https://github.com/azamlabib01/inery-testnet-faucet-tasks#readme",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs",
     "dotenv": "^16.0.3"
