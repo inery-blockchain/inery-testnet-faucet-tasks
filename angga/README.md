@@ -1,9 +1,9 @@
-### This is task4 solution by angganode with inery account 'angga'
+### This is task4 solution by angganode with inery account `angga`
 
 
- ### HOW TO RUN 
+## HOW TO RUN 
 
-## Change directory to 'angga'
+## Change directory to `angga`
 
 ```shell
 cd ~/inery-testnet-faucet-tasks/angga
