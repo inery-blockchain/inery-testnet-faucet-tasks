@@ -1,0 +1,18 @@
+{
+    "name": "inery-scripts-bukanli4r",
+    "version": "1.0.0",
+    "description": "Script to create new data and transfer tokens using the Inery smart contract",
+    "scripts": {
+      "create": "node create.mjs",
+      "transfer": "node transaction.mjs"
+    },
+    "dependencies": {
+      "eosjs": "^22.1.0",
+      "dotenv": "^9.0.0",
+      "ineryjs": "github:inery-blockchain/ineryjs"
+    },
+    "devDependencies": {},
+    "keywords": [],
+    "author": "bukanli4r",
+    "license": "ISC"
+  }
