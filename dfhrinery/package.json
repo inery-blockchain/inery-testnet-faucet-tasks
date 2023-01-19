@@ -10,9 +10,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daffaharyan/inery-testnet-faucet-tasks"
+    "url": "https://github.com/daffaharyan/inery-testnet-faucet-taskss"
   },
-  "homepage": "https://github.com/daffaharyan/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/daffaharyan/inery-testnet-faucet-taskss",
   "dependencies": {
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
