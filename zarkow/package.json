@@ -1,0 +1,19 @@
+{
+  "name": "zarkow-task-4",
+  "version": "1.0.0",
+  "description": "transaction using inery blockchain",
+  "main": "./CreateNewData.mjs",
+  "scripts": {
+    "CreateNewData": "node ./CreateNewData.mjs"
+  },
+  "author": "zarkow",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zarkow29/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/zarkow29/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
