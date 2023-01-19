@@ -1,0 +1,19 @@
+{
+  "name": "antabayanaka",
+  "version": "1.0.0",
+  "description": "transaction using inery blockchain",
+  "main": "./performTransfer.mjs",
+  "scripts": {
+    "solution": "node ./performTransfer.mjs"
+  },
+  "author": "antabayanaka",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antabayanaka/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/antabayanaka/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
