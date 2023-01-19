@@ -5,7 +5,7 @@ dotenv.config();
 const url = "http:/162.222.203.246:8888";
 
 const json_rpc = new JsonRpc(url);
-const private_key = "5KFph3WUW4DRRQGnC6z1ARidG5RFJtAyCJWp3YuHpAyCHekpurr";
+const private_key = process.env.PRIVATE_KEY;
 
 
 const account = "daffaharyan";
