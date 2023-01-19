@@ -1,0 +1,18 @@
+{
+  "name": "asvifams-scripts",
+  "version": "1.0.0",
+  "description": "Script new DATA",
+  "scripts": {
+    "create": "node create.mjs",
+    "transfer": "node trans.mjs"
+  },
+  "dependencies": {
+    "eosjs": "^22.1.0",
+    "dotenv": "^9.0.0",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "asvifams",
+  "license": "ISC"
+}
