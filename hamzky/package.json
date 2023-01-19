@@ -1,0 +1,21 @@
+{
+  "name": "hamzky",
+  "version": "1.0.0",
+  "description": "An example RPC API inery blockchain push transaction",
+  "main": "./hamzkysolution.mjs",
+  "scripts": {
+    "hamzkysolution": "node ./hamzkysolution.mjs"
+  },
+  "author": "hamzky",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilhamzky/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/ilhamzky/inery-testnet-faucet-tasks.git",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "joi": "^17.7.0"
+  }
+}
