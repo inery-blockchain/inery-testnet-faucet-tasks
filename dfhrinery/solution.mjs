@@ -1,4 +1,7 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
+import dotenv from "dotenv";
+dotenv.config();
+
 const url = process.env.NODE_URL
 
 const json_rpc = new JsonRpc(url)
