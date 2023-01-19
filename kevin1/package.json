@@ -1,0 +1,16 @@
+{
+    "name": "inery-testnet-task4",
+    "version": "1.0.0",
+    "description": "Inery testnet Task 4 solution using IneryJS library",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "push": "node ./pushTransaction.js"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "ineryjs": "^0.1.0"
+    },
+    "author": "kevin1",
+    "license": "MIT"
+}
