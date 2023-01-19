@@ -1,0 +1,26 @@
+{
+  "name": "inery-push-transaction",
+  "version": "1.0.0",
+  "description": "Sample test INERY blockchain RPC push transaction for account bangzam11",
+  "main": "rpc-push-tx.mjs",
+  "scripts": {
+    "push-tx": "node rpc-push-tx.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com//inery-testnet-faucet-tasks.git"
+  },
+  "keywords": [
+    "INERY"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com//inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com//inery-testnet-faucet-tasks#readme"
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "^16.0.3"
+  }
+}
