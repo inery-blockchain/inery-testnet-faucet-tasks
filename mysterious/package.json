@@ -1,0 +1,19 @@
+{
+  "name": "mysterious",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"node ./pushTransaction.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mysterious098/inery-testnet-faucet-tasks.git"
+  },
+  "author": "mysterious",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mysterious098/inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com/Mysterious098/inery-testnet-faucet-tasks#readme"
+}
