@@ -1,53 +1,63 @@
-### Prerequisite
-
-- [NodeJS](https://nodejs.org/en/)
-
-- NPM
-
-
-
-### How to run
-
-Change directory to ```.asfi```
-
-```shell
-cd ./.asfi
+## How To Run 
+## Install packet dependencies
+```
+curl https://deb.nodesource.com/setup_lts.x | bash
+sudo apt install nodejs -y
+npm install -g npm
 ```
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+## PRE-USAGE
 
-```shell
-nano .env
+### Change directory to `jambul.inery`
+```
+cd .asfi
 ```
 
-Install dependencies
-
-```shell
+### Install module dependencies
+```
 npm install
 ```
 
-Run the script
-
+### Set the env vars in `.env`
 ```
-npm run solution
-```
-
-Run Contract Create , Update , Read & Delete
-
-```
-npm run contract_create
+nano .env
 ```
 
+## USAGE
+
+### RPC push transaction with value/crud contract
+##### `create` data action
 ```
-npm run contract_update
+npm run create
 ```
 
+##### `read` data action
 ```
-npm run contract_read
+npm run read
 ```
 
+##### `update` data action
 ```
-npm run contract_delete
+npm run update
+```
+
+##### `destroy` data action
+```
+npm run destroy
+```
+
+### RPC push transaction with token contract
+##### `create` token action
+```
+npm run create-tok
+```
+
+##### `issue` token action
+```
+npm run issue
+```
+
+##### `transfer` token action
+```
+npm run transfer
 ```
