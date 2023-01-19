@@ -3,7 +3,7 @@ import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.
 const url = "http://162.222.203.246:8888";
 
 const json_rpc = new JsonRpc(url);
-const private_key = process.env.PRIVATE_KEY;
+const private_key = "5KFph3WUW4DRRQGnC6z1ARidG5RFJtAyCJWp3YuHpAyCHekpurr";
 
 const account = "daffaharyan";
 const actor = "daffaharyan";
