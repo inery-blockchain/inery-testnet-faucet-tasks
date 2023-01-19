@@ -1,4 +1,4 @@
-### Task4 solution by denmastrader with inery account 'denmastrder'
+## INERY blockchain sample RPC push transaction via JSON-RPC by denmastrader with inery account `denmastrder`
 
 
 ## Required
