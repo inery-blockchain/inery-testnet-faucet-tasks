@@ -1,19 +1,19 @@
 {
-  "name": "dfhrinery-rpc-transaction",
+  "name": "daffaharyan",
   "version": "1.0.0",
-  "description": "A sample RPC API push transaction on Inery Blockchain",
-  "main": "./solution.mjs",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "solution": "node ./solution.mjs"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "node ./solution.mjs"
   },
-  "author": "daffaharyan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/daffaharyan/inery-testnet-faucet-taskss"
-  },
-  "homepage": "https://github.com/daffaharyan/inery-testnet-faucet-taskss",
+  "homepage": "https://github.com/nyeka/inery-testnet-faucet-tasks-4",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
