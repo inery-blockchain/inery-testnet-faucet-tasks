@@ -2,9 +2,10 @@
   "name": "emblem1",
   "version": "1.0.0",
   "description": "sample rpc transaction inery blockchain",
-  "main": "./rpc_inery.mjs",
+  "main": "./index.mjs",
   "scripts": {
-    "push": "node ./rpc_inery.mjs"
+    "index": "node ./index.mjs",
+    "test": "node ./ineryController.mjs"
   },
   "author": "evairo176",
   "license": "MIT",
