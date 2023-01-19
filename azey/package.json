@@ -1,0 +1,18 @@
+{
+  "name": "inery-scripts",
+  "version": "1.0.0",
+  "description": "Script to create new data in the Inery smart contract and to transfer tokens using the Inery smart contract",
+  "scripts": {
+    "create": "node ineryCreate.mjs",
+    "transfer": "node ineryTransaction.mjs"
+  },
+  "dependencies": {
+    "eosjs": "^22.1.0",
+    "dotenv": "^9.0.0",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "azey",
+  "license": "ISC"
+}
