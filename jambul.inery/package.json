@@ -1,0 +1,27 @@
+{
+  "name": "jambul.inery task4",
+  "version": "0.1.0",
+  "description": "Sample RPC push transaction via JSON RPC by JambulMerah",
+  "main": "dist/index.js",
+  "scripts": {
+    "create-crud": "node ./value-contract/create.mjs",
+    "read-crud": "node ./value-contract/read.mjs",
+    "update-crud": "node ./value-contract/update.mjs",
+    "destroy-crud": "node ./value-contract/destroy.mjs",
+    "create-token": "node ./token-contract/create.mjs",
+    "issue-token": "node ./token-contract/issue.mjs",
+    "transfer-token": "node ./token-contract/transfer.mjs"
+  },
+  "author": "jambulmerah",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jambulmerah/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/jambulmerah/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
