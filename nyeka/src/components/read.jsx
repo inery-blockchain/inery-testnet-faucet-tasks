@@ -3,11 +3,19 @@ import { api, account, actor } from "../config-inery";
 import FormDialog from "./modal/DIalog";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import CryptoJS from "crypto-js";
 
 const Read = ({ setMessage, setBodyres }) => {
   const [id, setId] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const secretPass = process.env.REACT_APP_SECRET_PASS;
+
+  const decryptData = (text) => {
+    const bytes = CryptoJS.AES.decrypt(text, secretPass);
+    const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    return data;
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -42,10 +50,8 @@ const Read = ({ setMessage, setBodyres }) => {
         },
         { broadcast: true, sign: true }
       );
-
-      console.log(tx, "\n");
       const respose = tx.processed.action_traces[0].console;
-      setMessage(respose);
+      setMessage(decryptData(respose.slice(6)));
       setBodyres(tx);
     } catch (err) {
       setMessage("Error please check your id");
