@@ -3,7 +3,7 @@ import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import dotenv from "dotenv";
 dotenv.config();
 
-// Use env file to save your data, but right now i just keep my private key only
+// Use .env file to keep your data, but right now i keep my private key only
 const url = "http://109.123.244.217:8888";
 const json_rpc = new JsonRpc(url);
 const private_key = process.env.YOUR_OWN_PRIVATE_KEY; // Your private key in Env file will imported here
@@ -23,30 +23,15 @@ const Make_Transaction = async (id, user, data) => {
   const Customer_Data = { id, user, data };
   try {
     const Transaction = await api.transact(
-      {
-        actions: [
-          {
-            account,
-            name: "create",
-            authorization: [
-              {
-                actor,
-                permission: "active",
-              },
-            ],
-            data: {
-              ...Customer_Data,
-            },
-          },
-        ],
-      },
-      { broadcast: true, sign: true }
+      { actions: [{ account, name: "create", authorization: [{actor,permission: "active"},], data: {...Customer_Data},},],},
+      { broadcast: true, sign: true },
     );
 
+    console.log("#######  TRANSACTION DETAILS ####### \n")
     console.log(Transaction, "\n");
-    console.log(" The Response :", Transaction.processed.action_traces[0].console);
+    console.log(" The Result", Transaction.processed.action_traces[0].console);
   } catch (error) {
-    console.log(ErrorSorry);
+    console.log(error);
   }
 };
 
