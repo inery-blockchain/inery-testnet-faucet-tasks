@@ -8,7 +8,7 @@ npm install -g npm
 
 ## PRE-USAGE
 
-### Change directory to `jambul.inery`
+### Change directory to `.asfi`
 ```
 cd .asfi
 ```
