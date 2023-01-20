@@ -1,0 +1,18 @@
+{
+    "name": "Zscruleazy",
+    "version": "1.0.0",
+    "description": "RPC Push test",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "push": "node index.js"
+    },
+    "homepage": "https://github.com/Zscruleazy/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "dotenv": "^16.0.3",
+      "ineryjs": "github:inery-blockchain/ineryjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
