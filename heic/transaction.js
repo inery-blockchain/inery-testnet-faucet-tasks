@@ -5,7 +5,7 @@ dotenv.config();
 const node_url = "http://node_url";
 
 const JsonRPC = new JsonRpc(node_url);
-const PrivateKey = process.env.PRIVATE_KEY;
+const PrivateKey = process.env.PRIVATEKEY;
 
 const main_acc = "heic";
 const actor = "heic";
