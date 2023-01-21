@@ -1,0 +1,21 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "push": "node ./push.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gubal-gabel/inery-testnet-faucet-tasks.git"
+  },
+  "author": "gubal-gabel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gubal-gabel/inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com/gubal-gabel/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "^16.0.3"
+  }
+}
