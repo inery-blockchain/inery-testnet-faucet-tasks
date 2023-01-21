@@ -2,10 +2,10 @@
   "name": "inery-task4",
   "version": "1.0.0",
   "scripts": {
-    "create": "node ./create.mjs"
-    "read": "node ./read.mjs"
-    "update": "node ./update.mjs"
-    "destroy": "node ./destroy"
+    "create": "node ./create.mjs",
+    "read": "node ./read.mjs",
+    "update": "node ./update.mjs",
+    "destroy": "node ./destroy.mjs"
   },
   "repository": {
     "type": "git",
