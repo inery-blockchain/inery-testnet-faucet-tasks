@@ -1,0 +1,18 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "create-token": "node ./create-token.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalomang88/inery-testnet-faucet-tasks.git"
+  },
+  "author": "Kalomang88",
+  "license": "ISC",
+  "homepage": "https://github.com/Kalomang88/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
