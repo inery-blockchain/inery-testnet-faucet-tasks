@@ -1,0 +1,19 @@
+{
+  "name": "mbokde-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample RPC API push transaction on Inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "Mbokde",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mbokde/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Mbokde/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
