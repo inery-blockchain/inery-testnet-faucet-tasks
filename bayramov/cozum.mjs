@@ -1,75 +1,28 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-import * as dotenv from 'dotenv'
-dotenv.config()
+const Inery = require('ineryjs');
+const inery = new Inery();
 
-const url = "http://5.75.228.144:8888"
+const account = inery.createAccount();
+console.log(`New Account: ${account.address}`);
 
-const json_rpc = new JsonRpc(url) 
-const private_key = process.env.PRIVATE_KEY
-const actor = process.env.INERY_ACCOUNT
+const balance = await inery.getBalance(account.address);
+console.log(`Balance: ${balance}`);
 
-const account = "bayramov"
-const signature  = new JsSignatureProvider([private_key]); 
+const gasPrice = await inery.getGasPrice();
+console.log(`Gas Price: ${gasPrice}`);
 
-const api = new Api({
-    rpc: json_rpc,
-    signatureProvider: signature
-})
+const nonce = await inery.getTransactionCount(account.address);
+console.log(`Nonce: ${nonce}`);
 
-async function olustur(id, user, data){
-    try{
-        const data = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"olustur",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id, user, data
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
+const txParams = {
+  nonce,
+  gasPrice,
+  gasLimit: 21000,
+  to: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e',
+  value: '1000000000000000000'
+};
 
-    }catch(error){
-        console.log(error)
-    }
-}
+const signedTx = await inery.signTransaction(txParams, account.privateKey);
+console.log(`Signed Transaction: ${signedTx.rawTransaction}`);
 
-async function dagit(id){
-    try{
-        const data = await api.transact({
-            actions:[
-                {
-                    account,
-                    name:"dagit",
-                    authorization:[
-                        {
-                            actor,
-                            permission:"active"
-                        }
-                    ],
-                    data:{
-                        id
-                    }
-                }
-            ]
-        },{broadcast:true,sign:true})
-
-    }catch(error){
-        console.log(error)
-    }
-}
-
-
-async function ana(id, user, data){
-    await olustur(id, user, data)
-    await dagit(id)
-}
-
-ana(1, account, "CRUD Transaction via JSON RPC")
+const receipt = await inery.sendSignedTransaction(signedTx.rawTransaction);
+console.log(`Transaction Hash: ${receipt.transactionHash}`);
