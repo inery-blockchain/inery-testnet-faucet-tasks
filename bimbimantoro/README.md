@@ -80,8 +80,6 @@ ctrl +X  Yes
 
 ```
 ```
-export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
-```
 ### 2. Fork Inery testnet faucet task repository
 Go to Page :
 https://github.com/inery-blockchain/inery-testnet-faucet-tasks
