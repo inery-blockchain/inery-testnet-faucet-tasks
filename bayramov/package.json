@@ -1,20 +1,19 @@
 {
-    "name": "bayramov",
-    "version": "1.0.0",
-    "description": "Rpc push transaction",
-    "main": "./cozum.mjs",
-    "scripts": {
-      "solution": "node ./cozum.mjs"
-    },
-    "author": "bayramov",
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/aslanbayramov/inery-testnet-faucet-tasks"
-    },
-    "homepage": "https://github.com/aslanbayramov/inery-testnet-faucet-tasks",
-    "dependencies": {
-      "ineryjs": "github:inery-blockchain/ineryjs",
-      "dotenv": "^16.0.3"
-    }
+  "name": "bayramov",
+  "version": "1.0.0",
+  "description": "Task 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }
