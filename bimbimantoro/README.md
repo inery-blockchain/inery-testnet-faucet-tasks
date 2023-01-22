@@ -20,9 +20,6 @@ Install Curl
 
 ```shell
 sudo apt-get install curl
-``
-
-```shell
 curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 ```
