@@ -1,0 +1,21 @@
+{
+  "name": "arsayya",
+  "version": "0.1.0",
+  "description": "Sample RPC push transaction via JSON RPC",
+  "main": "dist/index.js",
+  "scripts": {
+    "moveTokens": "node ./moveTokens.mjs",
+  },
+  "author": "arsayya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arsayya/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/arsayya/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
