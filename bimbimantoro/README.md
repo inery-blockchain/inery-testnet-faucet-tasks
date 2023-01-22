@@ -1,6 +1,77 @@
-The continuation of Task 4 Inery Blockchain
+Lanjutan dari Task 4 Inery Blockchain
 ### 1. Ganti Nama Inery_Account dengan Nama Akun Inery Anda sendiri
 ```
+## Sebelum memulai
+Hapus Nodejs lama
+<br>
+
+```shell
+sudo apt-get remove nodejs
+```
+
+Install Curl
+
+```shell
+sudo apt-get install curl
+``
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
+
+## Install NPM
+```shell
+sudo apt install npm
+```
+
+
+## Persiapkan
+
+ Cloning Repo
+
+   ```
+   git clone https://github.com/inery-blockchain/ineryjs.git
+   ```
+
+ Change Directory
+
+   ```
+   cd ineryjs
+   ```
+
+ Install NPM Package
+
+   ```
+   npm install
+   ```
+
+ Rename  env-sample file to .env 
+
+   ```
+   cp .env-sample .env
+   ```
+
+  ```.env``` edit with your information
+
+  ```
+   nano .env
+   ```
+
+
+Kamu dapat cek informasi yang dibutuhkkan untuk mengedit script diatass di Dashboard akun Inery kamu inery.<br><br>
+
+INERY_ACCOUNT="YOUR_INERY-ACCOUNT" <br>
+PRIVATE_KEY="PRIVATE_KEY"<br>
+NODE_URL="http://YOUR_IP_VPS:8888" 
+<br><br>
+
+and then
+ctrl +X  Yes
+
+
+
 cd
 IneryAccname=Inery_Account Name
 ```
