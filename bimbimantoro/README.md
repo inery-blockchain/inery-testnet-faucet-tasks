@@ -1,6 +1,13 @@
 Lanjutan dari Task 4 Inery Blockchain
 ### 1. Ganti Nama Inery_Account dengan Nama Akun Inery Anda sendiri
 ```
+cd
+IneryAccname=Inery_Account Name
+```
+```
+export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
+```
+
 ## Sebelum memulai
 Hapus Nodejs lama
 <br>
@@ -71,9 +78,6 @@ and then
 ctrl +X  Yes
 
 
-
-cd
-IneryAccname=Inery_Account Name
 ```
 ```
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
