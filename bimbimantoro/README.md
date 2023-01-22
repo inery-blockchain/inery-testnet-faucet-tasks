@@ -2,7 +2,7 @@ Lanjutan dari Task 4 Inery Blockchain
 ### 1. Ganti Nama Inery_Account dengan Nama Akun Inery Anda sendiri
 ```
 cd
-IneryAccname=Inery_Account Name
+IneryAccname=$IneryAccname
 ```
 ```
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
@@ -66,9 +66,9 @@ sudo apt install npm
 
 Kamu dapat cek informasi yang dibutuhkkan untuk mengedit script diatass di Dashboard akun Inery kamu inery.<br><br>
 
-INERY_ACCOUNT="YOUR_INERY-ACCOUNT" <br>
+INERY_ACCOUNT="$IneryAccname" <br>
 PRIVATE_KEY="PRIVATE_KEY"<br>
-NODE_URL="http://YOUR_IP_VPS:8888" 
+NODE_URL="http://ip-vps-kamu:8888" 
 <br><br>
 
 and then
