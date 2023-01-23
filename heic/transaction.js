@@ -7,8 +7,8 @@ const node_url = "http://node_url";
 const JsonRPC = new JsonRpc(node_url);
 const PrivateKey = process.env.PRIVATEKEY;
 
-const main_acc = "heic";
-const actor = "heic";
+const main_acc = process.env.INR_ACC;
+const actor = process.env.INR_ACC;
 const signature = new JsSignatureProvider([PrivateKey]);
 
 const api = new Api({
