@@ -75,5 +75,5 @@ async function main(id, user, data) {
   }
 }
 
-main(1, process.env.INERY_ACCOUNT, "CRUD Transaction via JSON RPC")
+main(1, process.env.INERY_ACCOUNT)
 
