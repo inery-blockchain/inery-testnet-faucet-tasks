@@ -1,0 +1,22 @@
+{
+  "name": "Inery task 4 by leoserein",
+  "version": "1.0.0",
+  "description": "Inery Blockchain RPC Transactions Example by leoserein",
+  "main": "dist/index.js",
+  "scripts": {
+    "createToken": "node ./leoserein-solution/createToken.mjs"
+    "issueToken": "node ./leoserein-solution/issueToken.mjs",
+    "transferToken": "node ./leoserein-solution/transferToken.mjs"
+    "retireToken": "node ./leoserein-solution/retireToken.mjs",
+  },
+  "author": "leoserein",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leoserein/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/leoserein/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
