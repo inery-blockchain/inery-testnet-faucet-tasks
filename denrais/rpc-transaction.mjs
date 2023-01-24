@@ -18,8 +18,8 @@ const api = new Api({ rpc: json_rpc, signatureProvider: signature })
 const mathCaptcha = async () => {
   const num1 = Math.floor(Math.random() * 5);
   const num2 = Math.floor(Math.random() * 5);
-  const operator = Math.random() > 0.5 ? "+" : "+";
-  const correctAnswer = operator === "+" ? (num1 + num2) : (num1 + num2);
+  const operator = Math.random() > 0.5 ? "+" : "-";
+  const correctAnswer = operator === "+" ? (num1 + num2) : (num1 - num2);
 
   const userAnswer = await new Promise((resolve) => {
     rl.question(`You're not a robot?, Solve this math problem: ${num1} ${operator} ${num2} = `, resolve);
