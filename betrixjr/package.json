@@ -1,0 +1,28 @@
+{
+  "name": "betrixjr",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./push.js",
+  "scripts": {
+    "push": "node ./push_betrix.js"
+  },
+  "author": "betrixjr",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awee12333/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/awee1233/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "bugs": {
+    "url": "https://github.com/awee12333/inery-testnet-faucet-tasks/issues"
+  },
+  "keywords": [
+    "node",
+    ".*betrix.js"
+  ]
+}
