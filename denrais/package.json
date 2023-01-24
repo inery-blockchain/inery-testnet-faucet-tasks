@@ -2,9 +2,9 @@
     "name": "denrais-rpc-transaction",
     "version": "1.0.0",
     "description": "A sample rpc transaction for inery blockchain",
-    "main": "./solution.mjs",
+    "main": "./rpc-transaction.mjs",
     "scripts": {
-      "solution": "node ./solution.mjs"
+      "solution": "node ./rpc-transaction.mjs"
     },
     "author": "denrais",
     "license": "MIT",
