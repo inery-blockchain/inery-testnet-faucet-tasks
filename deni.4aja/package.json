@@ -1,0 +1,27 @@
+{
+    "name": "alhadid127-rpc-transaction",
+    "version": "1.0.0",
+    "description": "Contoh transaksi push RPC API di Inery blockchain",
+    "main": "./solution.mjs",
+
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+
+
+    "homepage": "https://github.com/alhadid127/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs"
+    },
+    
+
+    "author": "alhadid127",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/alhadid127/inery-testnet-faucet-tasks"
+    },
+
+
+
+  }
