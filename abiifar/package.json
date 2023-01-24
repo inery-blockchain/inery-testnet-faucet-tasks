@@ -1,0 +1,27 @@
+{
+  "name": "abiifar",
+  "version": "0.1.0",
+  "description": " RPC sample push transaction via JSON RPC",
+  "main": "dist/index.js",
+  "scripts": {
+    "create-crud": "node ./value-contract/solutioncreatevalue.mjs",
+    "read-crud": "node ./value-contract/readcontract.mjs",
+    "update-crud": "node ./value-contract/solutionupdatevalue.mjs",
+    "destroy-crud": "node ./value-contract/solutiondestroyvalue.mjs",
+    "create-token": "node ./token-contract/solutioncreatetoken.mjs",
+    "issue-token": "node ./token-contract/solutionissuetoken.mjs",
+    "transfer-token": "node ./token-contract/solutiontransfertoken.mjs"
+  },
+  "author": "abiifar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abiifar/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/abiifar/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
