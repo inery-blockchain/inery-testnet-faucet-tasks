@@ -1,0 +1,21 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "create": "node ./create.mjs",
+    "read": "node ./read.mjs",
+    "update": "node ./update.mjs",
+    "destroy": "node ./destroy.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KomengNode/inery-testnet-faucet-tasks.git"
+  },
+  "author": "KomengNode",
+  "license": "ISC",
+  "homepage": "https://github.com/KomengNode/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
