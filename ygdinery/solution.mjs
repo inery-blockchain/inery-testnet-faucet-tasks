@@ -1,28 +1,20 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from '../dist/index.js'
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config()
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
+const url = "http://vmi1064243.contaboserver.net:8888"
 
-// our Node URL, when we first setup our node, inery has created our RPC in port :8888
-// check it on your node, /inery-node/inery.setup/tools/config.json HTTP_ADDRESS key
-const url = process.env.NODE_URL
+const json_rpc = new JsonRpc(url) 
+const private_key = "5HrUdnAQApxE17VNiD6wFD5E8c5nx9krrTCrdVsVxJ7j6vQRrnV"; 
+const actor = "ygd.serv1"
 
-const json_rpc = new JsonRpc(url) // create new JsonRPC using our node url
-const private_key = process.env.PRIVATE_KEY; // private key
+const account = "ygdinery"
+const signature  = new JsSignatureProvider([private_key]); 
 
-const account = process.env.INERY_ACCOUNT // Inery Smart Contract Account to Call
-const actor = process.env.INERY_ACCOUNT // The Signer, should match with your provided Private Key
-const signature  = new JsSignatureProvider([private_key]); // creating Signer from private key
-
-// calling API
 const api = new Api({
     rpc: json_rpc,
     signatureProvider: signature
 })
 
-// A Function to create new data in our Valued Smart Contract, and call "create" function on our Smart contract
 async function create(id, user, data){
     try{
-        // create new transaction and sign it
         const tx = await api.transact({
             actions:[
                 {
@@ -41,12 +33,119 @@ async function create(id, user, data){
             ]
         },{broadcast:true,sign:true})
 
-        console.log(tx) // output the tx to terminal, it's Json Object
-        console.log(tx.processed.action_traces[0].console)
+        
+        console.log("=======================================================================")
+        console.log("===================== CREATE transaction details ======================")
+        console.log("=======================================================================")
+        console.log(tx, "\n")
+        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("\n")
     }catch(error){
         console.log(error)
     }
 }
 
-// call RPC that we created in create function
-create(5, account, "Create new Data via JSON RPC")
+async function read(id){
+    try{
+        const tx = await api.transact({
+            actions:[
+                {
+                    account,
+                    name:"read",
+                    authorization:[
+                        {
+                            actor,
+                            permission:"active"
+                        }
+                    ],
+                    data:{
+                        id
+                    }
+                }
+            ]
+        },{broadcast:true,sign:true})
+        
+        console.log("=======================================================================")
+        console.log("===================== READ transaction details ========================")
+        console.log("=======================================================================")
+        console.log(tx, "\n")
+        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("\n")
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function update(id, data){
+    try{
+        const tx = await api.transact({
+            actions:[
+                {
+                    account,
+                    name:"update",
+                    authorization:[
+                        {
+                            actor,
+                            permission:"active"
+                        }
+                    ],
+                    data:{
+                        id, data
+                    }
+                }
+            ]
+        },{broadcast:true,sign:true})
+
+        
+        console.log("=======================================================================")
+        console.log("===================== UPDATE transaction details ======================")
+        console.log("=======================================================================")
+        console.log(tx, "\n")
+        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("\n")
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function destroy(id){
+    try{
+        const tx = await api.transact({
+            actions:[
+                {
+                    account,
+                    name:"destroy",
+                    authorization:[
+                        {
+                            actor,
+                            permission:"active"
+                        }
+                    ],
+                    data:{
+                        id
+                    }
+                }
+            ]
+        },{broadcast:true,sign:true})
+
+        
+        console.log("=======================================================================")
+        console.log("===================== DESTROY transaction details =====================")
+        console.log("=======================================================================")
+        console.log(tx, "\n")
+        console.log("Response from contract :", tx.processed.action_traces[0].console)
+        console.log("\n")
+    }catch(error){
+        console.log(error)
+    }
+}
+
+
+async function main(id, user, data){
+    await create(id, user, data)
+    await read(id)
+    await update(id, data)
+    await destroy(id)
+}
+
+main(1, account, "CRUD Transaction via JSON RPC")
