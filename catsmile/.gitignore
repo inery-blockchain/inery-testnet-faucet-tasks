@@ -1,0 +1,3 @@
+node_modules
+catsmile/.env
+*package-lock.json
