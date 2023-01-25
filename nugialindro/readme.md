@@ -15,7 +15,9 @@ cd ./nugialindro
 Copy & paste .env-example , then rename .env-example to .env
 
 PRIVATE_KEY="INERY_PRIVATE_KEY" // your inery private key
+
 ACCOUNT_ADDRESS="INERY_ACCOUNT" // your inery account
+
 NODE_URL="IP:8888" // your IP
 
 Install dependencies
