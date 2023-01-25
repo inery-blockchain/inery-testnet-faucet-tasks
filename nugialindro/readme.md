@@ -9,7 +9,7 @@
 Change directory to `nugialindro`
 
 ```shell
-cd ./betrixjr
+cd ./nugialindro
 ```
 
 Copy & paste .env-example , then rename .env-example to .env
