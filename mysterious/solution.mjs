@@ -1,11 +1,11 @@
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
 
-const rpc = new JsonRpc("http://vmi1064243.contaboserver.net:8888");
+const rpc = new JsonRpc("http://185.169.252.86:8888");
 const signatureProvider = new JsSignatureProvider(["5KLBthkvdpjQVFoRP9rLd4FnTVxXnezvsStG1otbzX4wne73KjD"]);
 const api = new Api({ rpc, signatureProvider });
 
-const actor = "alter.serv1";
-const account = "alteregogi";
+const actor = "mysterious";
+const account = "mysterious";
 
 async function create(id, user, data) {
     try {
