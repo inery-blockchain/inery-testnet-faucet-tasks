@@ -1,0 +1,19 @@
+{
+  "name": "meoownya",
+  "version": "1.0.0",
+  "description": "inery task 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "ts-node ./pushFunc.ts"
+  },
+  "homepage": "https://github.com/meoownya/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "ts-node": "^10.9.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
