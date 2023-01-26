@@ -112,7 +112,7 @@ cd
 ```
 cd task-inery/ineryjs
 ```
-Excetue:
+Execute:
 ```
 node transaction/call.mjs
 ```
@@ -125,6 +125,3 @@ GO TO EXPLORER https://explorer.inery.io/  INPUT BLOCK TRANSACTION "4780366"
 
 
 Credit : catsmile100
-
-
-
