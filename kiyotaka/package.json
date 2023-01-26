@@ -7,7 +7,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "push": "node ./actionUser.js",
-    "destroy": "node ./destroyAction.js"
   },
   "homepage": "https://github.com/kiyo19/inery-testnet-faucet-tasks",
   "dependencies": {
