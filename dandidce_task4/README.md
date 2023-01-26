@@ -4,7 +4,7 @@ To run this script, you need to have python installed on your computer. You can 
 python is already installed by opening a terminal or command prompt and typing python. If it's installed, you should see something like Python 3.x.x.
 
 # 1. 
-Save the script to a file with a ```.py``` extension, for example ```rpc_transaction.py```.
+Save the script to a file with a ```.py``` extension, for example ```dandidce_task4.py```.
 
 # 2.
 Open a terminal or command prompt and navigate to the directory where the script is saved.
