@@ -17,9 +17,23 @@ var Serialize = require("./ineryjs-serialize");
 exports.Serialize = Serialize;
 var {JsSignatureProvider}=require("./ineryjs-jssig");
 exports.JsSignatureProvider=JsSignatureProvider;
+var {PublicKey}=require('./PublicKey');
+exports.PublicKey=PublicKey;
+var {PrivateKey}=require('./PrivateKey');
+exports.PrivateKey=PrivateKey;
+var {ecc}=require('./ineryjs-ecc-migration');
+exports.ecc=ecc;
+var KeyConversion=require('./ineryjs-key-conversions');
+exports.KeyConversion=KeyConversion;
+var WebAuth=require('./ineryjs-webauthn-sig');
+exports.WebAuth=WebAuth;
+var Signature=require('./Signature');
+exports.Signature=Signature;
 exports.default={
     JsSignatureProvider,
     Api:ineryjs_api_1.Api,
     JsonRpc:ineryjs_jsonrpc_1.JsonRpc,
-    RpcError:ineryjs_rpcerror_1.RpcError
+    RpcError:ineryjs_rpcerror_1.RpcError,
+    PublicKey,
+    PrivateKey
 };
