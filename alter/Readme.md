@@ -1,34 +1,21 @@
 ### How to run
 
-Change directory to directory Nama_Akun_Inery
+
+
+#change the directory to inery user
 
 ```shell
 cd ~/inery-testnet-faucet-tasks/alter
 ```
 
-Install dependencies
+Install the node modules dependencies for running ineryjs
 
 ```shell
 npm install
 ```
 
-make sure to make .env file first
-env file include private_key and node url
-
-Run the script
-to create transaction
+run script for transaction
 
 ```
-npm run create
+npm run push
 ```
-
-
-run script
-
-```
-npm run destroy
-
-```
-
-to destroy transaction
-

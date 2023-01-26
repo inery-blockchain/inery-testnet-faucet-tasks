@@ -1,13 +1,12 @@
 {
   "name": "alter",
   "version": "1.0.0",
-  "description": "",
+  "description": "inery task for testnet faucet",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "node ./Action.js",
-    "destroy": "node ./destroyAction.js"
+    "push": "node ./pushAction.js"
   },
   "homepage": "https://github.com/alterkun/inery-testnet-faucet-tasks",
   "dependencies": {
@@ -16,15 +15,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.8.2"
-  }
+  "license": "ISC"
 }
