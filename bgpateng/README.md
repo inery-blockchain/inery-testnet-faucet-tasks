@@ -9,12 +9,13 @@ cd ~/inery-testnet-faucet-tasks/bgpateng
 Install dependencies
 
 ```shell
-npm install
+pip install inery
+pip install python-dotenv
 ```
 
 Run the script
 
 ```
-npm run push
+python3 push.py
 ```
 DONE
