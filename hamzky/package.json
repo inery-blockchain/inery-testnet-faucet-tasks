@@ -1,0 +1,20 @@
+{
+    "name": "hamzky",
+    "version": "1.0.0",
+    "description": "Inery RPC API Transaction",
+    "main": "./hamzkysolution.mjs",
+    "scripts": {
+      "hamzkysolution": "node ./hamzkysolution.mjs"
+    },
+    "author": "hamzky",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ilhamzky/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/ilhamzky/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "dotenv": "^16.0.3",
+      "ineryjs": "github:inery-blockchain/ineryjs"
+    }
+  }
