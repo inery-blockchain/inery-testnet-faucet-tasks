@@ -4,8 +4,8 @@ import requests
 
 url = "http://node_url"
 private_key = os.environ.get("PRIVATE_KEY")
-account = "heic"
-actor = "heic"
+account = "dandidce"
+actor = "dandidce"
 
 def perform_transaction(name, data):
     payload = {
