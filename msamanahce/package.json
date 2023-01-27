@@ -1,0 +1,20 @@
+{
+    "name": "msamanahce",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./Call_Contract.mjs",
+    "scripts": {
+      "Call_Contract": "node ./Call_Contract.mjs"
+    },
+    "author": "msamanahce",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/MsAmanahce/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/MsAmanahce/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
