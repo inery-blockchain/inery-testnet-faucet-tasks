@@ -39,9 +39,8 @@ KEY="[Input eith Your Private Key]"
 IP="http://[Input Your IP node]:8888"
 ```
 CTRL x Yes
-```
+
 Open Port
-```
 ```
 ufw allow 8888
 ```
