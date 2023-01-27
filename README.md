@@ -40,6 +40,15 @@ IP="http://[Input Your IP node]:8888"
 ```
 CTRL x Yes
 ```
+Open Port
+```
+```
+ufw allow 8888
+```
+```
+ufw enable
+```
+```
 mkdir transaction
 ```
 ```
