@@ -28,7 +28,7 @@ async function deleting(id){
                   name:"dbdestroy", // check your name function at contact for delete
                   authorization:[
                         {
-                            actor,
+                            actor:"wardy"
                             permission:"active"
                         }
                     ],
