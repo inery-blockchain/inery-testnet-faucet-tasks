@@ -35,7 +35,7 @@ nano .env
 Paste Code
 ```
 ACCOUNT="catsmile" // Replace Your Account Inery
-KEY="[Input eith Your Private Key]"
+KEY="[Input with Your Private Key]"
 IP="http://[Input Your IP node]:8888"
 ```
 CTRL x Yes
