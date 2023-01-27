@@ -13,6 +13,6 @@ Open a terminal or command prompt and navigate to the directory where the script
 Set the value of the private_key variable with the environment variable
 
 # 4.
-Type python rpc_transaction.py and press enter.
+Type python dandidce_task4.py and press enter.
 If everything is set correctly, the script should run and perform the transaction specified in the script.
 Note that you need to set the url variable with a url that is reachable and have the private_key variable set with a private key that have permissions to perform the transaction.
