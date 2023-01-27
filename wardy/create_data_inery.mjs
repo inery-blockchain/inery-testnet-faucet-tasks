@@ -9,9 +9,7 @@ const private_key = process.env.PRIVATE_KEY;
 const account = process.env.INERY_ACCOUNT
 const actor = process.env.INERY_ACCOUNT
 const signature  = new JsSignatureProvider([private_key]);
-const api = new Api({
-    rpc: json_rpc,
-    signatureProvider: signature
+const api = new Api({ rpc: jsonRpc, signatureProvider });
 
 async function create(id, user, data){
     try{
