@@ -1,36 +1,74 @@
-# EOSIO API Wrapper
+# EOSIO Smart Contract Script
 
-This script is a simple wrapper for the EOSIO API using the `ineryjs` library. It allows for the creation and destruction of transactions on the EOSIO blockchain. 
+This script is written in JavaScript and utilizes the inery.js library to interact with the EOSIO blockchain. It includes two main functions: `CreateTransaction` and `DestroyTransaction`. 
 
-## Dependencies
+## CreateTransaction
 
-- `dotenv` for loading environment variables
+The `CreateTransaction` function allows the user to create a new transaction on the EOSIO blockchain with a given ID, user, and data. The transaction is broadcasted and signed with the provided private key.
 
-- `ineryjs` for interacting with the EOSIO API
+## DestroyTransaction
+
+The `DestroyTransaction` function allows the user to destroy a previously created transaction on the EOSIO blockchain by its ID. The transaction is broadcasted and signed with the provided private key.
+
+## PushTransaction
+
+The `PushTransaction` function allows the user to create and then destroy a transaction on the EOSIO blockchain in one step. It takes in three parameters - DataId, user, and data.
+
+## Prerequisites
+
+- Node.js and npm should be installed
+
+- EOSIO Private key
+
+- EOSIO Account name
+
+- URL to the EOSIO endpoint
 
 ## Usage
 
-The script exports two functions:
+1. Clone the repository to your local machine
 
-- `CreateTransaction(id, user, data)`: creates a new transaction on the blockchain with the given `id`, `user`, and `data`
+2. Run `npm install` to install the required dependencies
 
-- `DestroyTrancsaction(id)`: destroys the transaction with the given `id`
+3. Create a .env file and add your EOSIO private key as `PRIVATE_KEY`
 
-It also exports a `PushTransaction(DataId, user, data)` function that calls CreateTransaction and DestroyTrancsaction sequentially.
+4. Update the URL and account name in the script
 
-## Environment Variables
+5. Run the script with `node script.js`
 
-- `PRIVATE_KEY`: the private key used to sign the transactions
 
-- `url` is the endpoint of the EOSIO API
 
-## Example
 
-This will create a transaction with id 1020, user `account` and data "test push transaction by yayang12" and then destroy it.
 
-This will create a transaction with id 1020, user `account` and data "test push transaction by yayang12" and then destroy it.
 
-This `README.md` file provides a brief overview of what the code does, the dependencies it requires and how to use it. It also notes that the script is a simple example and not intended for production use without further modification and testing.
 
-It also describes the environment variables that should be set before using the script, in this case the private key and the endpoint of the EOSIO API.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
