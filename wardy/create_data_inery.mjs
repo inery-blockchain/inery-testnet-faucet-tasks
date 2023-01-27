@@ -1,31 +1,25 @@
 import { Api, JsonRpc, JsSignatureProvider } from '../dist/index.js'
 import * as dotenv from 'dotenv' 
+
 dotenv.config()
 
 const url = process.env.NODE_URL
-
 const json_rpc = new JsonRpc(url)
 const private_key = process.env.PRIVATE_KEY;
-
 const account = process.env.INERY_ACCOUNT
 const actor = process.env.INERY_ACCOUNT
 const signature  = new JsSignatureProvider([private_key]);
-
-// calling API
 const api = new Api({
     rpc: json_rpc,
     signatureProvider: signature
-})
 
-// A Function to create new data in our Valued Smart Contract, and call "dbcreate" function on our Smart contract
 async function create(id, user, data){
     try{
-        // create new transaction and sign it
         const tx = await api.transact({
             actions:[
                 {
                   account,
-                  name:"dbcreate", // check your name function at contact for create
+                  name:"create", 
                   authorization:[
                         {
                             actor:"wardy" 
@@ -46,5 +40,4 @@ async function create(id, user, data){
     }
 }
 
-// call RPC that we created in create function
 create(10, account, "Create new Data via JSON RPC")
