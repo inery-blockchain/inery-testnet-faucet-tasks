@@ -28,7 +28,7 @@ async function create(id, user, data){
                   name:"dbcreate", // check your name function at contact for create
                   authorization:[
                         {
-                            actor,
+                            actor:"wardy" 
                             permission:"active"
                         }
                     ],
