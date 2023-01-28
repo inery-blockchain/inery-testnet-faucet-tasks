@@ -1,0 +1,20 @@
+{
+    "name": "crud_msastiputri",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./CRUD_Call.mjs",
+    "scripts": {
+      "CRUD_Call": "node ./CRUD_Call.mjs"
+    },
+    "author": "msastiputri",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/MsAstiputri/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/MsAstiputri/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
