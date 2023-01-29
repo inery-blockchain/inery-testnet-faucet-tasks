@@ -23,6 +23,7 @@ nano .env
 ```
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
+NODE_URL="http://YOUR_IP_NODE:8888"
 ```
 
 Install dependencies
