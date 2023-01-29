@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "name": "farzadkb-rpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "farzadkb#5896",
+  "license": "MIT",
+  "description": "Inery testnet task"
+}
