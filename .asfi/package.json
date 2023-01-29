@@ -1,0 +1,27 @@
+{
+  "name": ".asfi",
+  "version": "0.1.0",
+  "description": "Sample RPC push transaction via JSON RPC by .asfi",
+  "main": "dist/index.js",
+  "scripts": {
+    "create-crud": "node ./create.mjs",
+    "read-crud": "node ./read.mjs",
+    "update-crud": "node ./update.mjs",
+    "destroy-crud": "node ./destroy.mjs",
+    "create-token": "node ./create-tok.mjs",
+    "issue-token": "node ./issue.mjs",
+    "transfer-token": "node ./transfer.mjs"
+  },
+  "author": ".asfi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wistaulah/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/wistaulah/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
