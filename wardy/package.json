@@ -13,9 +13,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://git.webservice-host.net/ljubomirm/inery_module"
+    "url": "https://github.com/warlovna/inery-testnet-faucet-tasks"
   },
-  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
+  "homepage": "https://github.com/warlovna/inery-testnet-faucet-tasks",
   "dependencies": {
     "bn.js": "^5.2.0",
     "dotenv": "^16.0.3",
