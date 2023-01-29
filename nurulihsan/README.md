@@ -1,28 +1,28 @@
-### Persiapan/Prerequisite
+### Prerequisite
 
-### Install NodeJS [NodeJS](https://nodejs.org/en/)
-```
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
-```
-### Install Curl
-```
-sudo apt-get install curl
-```
-### Install  NPM
-```
-sudo apt install npm
-```
+- [NodeJS](https://nodejs.org/en/)
+
+- NPM
+
 
 
 ### How to run
 
-Change directory to directory nurulihsan
+Change directory to ```nurulihsan```
 
 ```shell
-cd ~/inery-testnet-faucet-tasks/nurulihsan
+cd ./nurulihsan
 ```
 
+Create .env with varriables
+```
+PRIVATE_KEY=YOUR PRIVATE KEY
+INERY_ACCOUNT=YOUR INERY ACCOUNT
+```
+
+```shell
+nano .env
+```
 
 Install dependencies
 
@@ -30,15 +30,17 @@ Install dependencies
 npm install
 ```
 
-Create & edit `.env` file
-
-```
-cp .env-sample .env
-```
-
-
 Run the script
 
+Run Create
+
 ```
-npm run solution
+npm run create
 ```
+
+Run Transfer
+
+```
+npm run transfer
+```
+
