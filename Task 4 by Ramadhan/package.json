@@ -1,0 +1,19 @@
+{
+  "name": "ramadhan-rpc-transaction-task4",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain by ramadhan",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "ramadhan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kangandthods/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/kangandthods/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
