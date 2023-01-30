@@ -1,0 +1,11 @@
+<!-- add script to run program  -->
+<script src="./cocok1/cocok1-jsonrpc.min.js"></script>
+<script src="./cocok1/cocok1-api.min.js"></script>
+<script src="./cocok1/cocok1-jssig.min.js"></script>
+<!-- get info acccount by call function get info -->
+<script>
+  (async () => {
+    const rpc = new ineryjs_jsonrpc.JsonRpc("https://209.126.3.185:8888");
+    console.log(await rpc.get_info());
+  })();
+</script>
