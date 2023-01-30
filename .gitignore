@@ -1,4 +1,13 @@
-__pycache__
+
+
+.DS_Store
+secrets.txt
+.env
+
 node_modules
-alteregogi/.env
-*package-lock.json
+aprameth
+
+#This is comments(# used for comments)
+*.txt  #this means all files with .txt extention will be ignored.env
+
+
