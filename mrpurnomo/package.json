@@ -1,0 +1,20 @@
+{
+    "name": "call_test_mrpurnomo",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./Call_Transaction.mjs",
+    "scripts": {
+      "Call_Transaction": "node ./Call_Transaction.mjs"
+    },
+    "author": "mrpurnomo",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mrpurnomo/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/mrpurnomo/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
