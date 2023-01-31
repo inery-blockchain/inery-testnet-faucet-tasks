@@ -1,0 +1,17 @@
+{
+  "name": "wardy",
+  "version": "1.0.0",
+  "description": "push transactions on inery block-chain via token transfers",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push_trx": "send_token.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
