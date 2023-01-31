@@ -1,0 +1,19 @@
+{
+  "name": "alter",
+  "version": "1.0.0",
+  "description": "inery task for testnet faucet",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "node ./pushAction.js"
+  },
+  "homepage": "https://github.com/alterkun/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
