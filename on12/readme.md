@@ -1,5 +1,11 @@
 ## A soliton for the inery task4 
 
+### Instal curl
+
+```
+sudo apt-get install curl
+```
+
 ### Prerequisite
 
 - [NodeJS](https://nodejs.org/en/)
@@ -13,7 +19,7 @@
 create a directory with account name
 
 ```shell
-cd ./account_name
+cd ./on12
 ```
 
 Create .env and edit the variable
