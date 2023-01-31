@@ -1,0 +1,35 @@
+const Eos = require('eosjs')
+const { JsonRpc } = Eos.JsonRpc;
+const { Api } = Eos.Api;
+const { JsSignatureProvider } = Eos.JsSignatureProvider;
+require('dotenv').config();
+
+const rpc = new JsonRpc(process.env.NODE_URL);
+const signatureProvider = new JsSignatureProvider([process.env.PRIVATE_KEY]);
+const api = new Api({ rpc, signatureProvider });
+
+async function createTransaction(id, user, data) {
+    const tx = await api.transact({
+        actions: [{
+            account: process.env.INERY_ACCOUNT,
+            name: 'create',
+            authorization: [{
+                actor: process.env.INERY_ACCOUNT,
+                permission: 'active',
+            }],
+            data: {
+                id,
+                user,
+                data
+            }
+        }]
+    }, {
+        blocksBehind: 3,
+        expireSeconds: 30,
+    });
+
+    console.log(tx)
+    console.log(tx.processed.action_traces[0].console)
+}
+
+createTransaction(5, process.env.INERY_ACCOUNT, "Create new Data via JSON RPC");
