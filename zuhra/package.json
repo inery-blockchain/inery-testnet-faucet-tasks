@@ -1,0 +1,20 @@
+{
+    "name": "zuhra-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./solution.mjs",
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+    "author": "zuhra",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ZuhraIndrawari/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/ZuhraIndrawari/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
