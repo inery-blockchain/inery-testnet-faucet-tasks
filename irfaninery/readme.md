@@ -1,4 +1,4 @@
-### Prerequisite
+### HOW TO RUN
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -6,12 +6,12 @@
 
 
 
-### How to run
+
 
 Change directory to ```irfaninery```
 
 ```shell
-cd ./akusiapa
+cd ./irfaninery
 ```
 
 Create .env and edit the variable
