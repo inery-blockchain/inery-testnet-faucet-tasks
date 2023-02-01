@@ -1,22 +1,20 @@
-require 'httparty'
-require 'dotenv'
+require 'net/http'
+require 'json'
 
-Dotenv.load
-
-url = "url"
-private_key = ENV['PRIVATE_KEY']
-account = "kuroz"
-actor = "kuroz"
+node_url = "url"
+private_key = ENV["PRIVATE_KEY"]
+contract_account = "kuroz"
+sender_account = "kuroz"
 
 def perform_transaction(name, data)
   payload = {
     "actions" => [
       {
-        "account" => account,
+        "account" => contract_account,
         "name" => name,
         "authorization" => [
           {
-            "actor" => actor,
+            "actor" => sender_account,
             "permission" => "active"
           }
         ],
@@ -29,29 +27,38 @@ def perform_transaction(name, data)
     "Content-Type" => "application/json"
   }
 
-  response = HTTParty.post(url, :body => payload.to_json, :headers => headers)
-  return JSON.parse(response.body)
+  uri = URI(node_url)
+  http = Net::HTTP.new(uri.host, uri.port)
+  request = Net::HTTP::Post.new(uri.path, headers)
+  request.body = payload.to_json
+  response = http.request(request)
+  JSON.parse(response.body)
 end
 
-def create_transaction(id, user, data)
-  data = { "id" => id, "user" => user, "data" => data }
-  return perform_transaction("create", data)
+def create_record(record_id, user, data)
+  response = read_record(record_id)
+  if response["message"] == "No such ID"
+    data = { "id" => record_id, "user" => user, "data" => data }
+    perform_transaction("create", data)
+  else
+    puts "Record with ID #{record_id} already exists"
+  end
 end
 
-def read_transaction(id)
-  data = { "id" => id }
-  return perform_transaction("read", data)
+def read_record(record_id)
+  data = { "id" => record_id }
+  perform_transaction("read", data)
 end
 
-def destroy_transaction(id)
-  data = { "id" => id }
-  return perform_transaction("destroy", data)
+def destroy_record(record_id)
+  data = { "id" => record_id }
+  perform_transaction("destroy", data)
 end
 
-def push_transaction(data_id, user, data)
-  create_transaction(data_id, user, data)
-  read_transaction(data_id)
-  destroy_transaction(data_id)
+def push_record(record_id, user, data)
+  create_record(record_id, user, data)
+  read_record(record_id)
+  destroy_record(record_id)
 end
 
-push_transaction(80, account, "RPC Push Transaction by kuroz99")
+push_record(69, sender_account, "RPC Push Transaction")
