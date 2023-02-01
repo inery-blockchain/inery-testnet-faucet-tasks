@@ -4,10 +4,14 @@
 
 ```
 gem install httparty
-gem install dotenv
+```
+2. Go to library
+
+```
+cd ./kuroz
 ```
 
-2. Run the script from the command line:
+3. Run the script from the command line:
 
 ```
 ruby transaction.rb
