@@ -1,0 +1,7 @@
+2023-02-01T00:37:30.426Z - debug: Listening on port 4000
+2023-02-01T00:38:45.187Z - info: Response:[object Object]
+2023-02-01T00:38:45.195Z - info: ::1 - GET /inery/transfer HTTP/1.1 200 3138 - 1410.888 ms
+
+2023-02-01T00:43:57.972Z - info: Response:[object Object]
+2023-02-01T00:43:57.974Z - info: ::ffff:127.0.0.1 - GET /inery/transfer HTTP/1.1 200 3139 - 2286.436 ms
+
