@@ -1,0 +1,11 @@
+Many Sample for .env inery Task 4
+
+TOKEN_CONTRACT= "set your token contract"
+SENDER_ACCOUNT= "fill with ur inery account"
+RECIPIENT_ACCOUNT= "fill with recipient account" 
+TOKEN_SYMBOL= "fill with your token simbol"
+TRANSFER_AMOUNT= "transfer amount"
+TRANSFER_MEMO= "memo"
+INERY_NODE_RPC= "node url or IP address"
+PRIVATE_KEY= "fill with your private key account"
+PUBLIC_KEY= "fill with your public key account"
