@@ -1,39 +1,9 @@
-### How to run
+# how to run code
 
-#change the directory to inery user
+### first install package
 
-```shell
-cd ~/inery-testnet-faucet-tasks/marccel
-```
+`npm install`
 
-make sure install the package first before running the script, use command:
+### run the script
 
-```
-npm install
-```
-
-run script for pushing new transaction
-
-```
-npm run push
-
-```
-
-or run this script for reading transaction id
-
-```
-npm run read
-```
-
-or type command for creating new transaction
-
-```ts-node ./pushFunc.ts
-
-```
-
-to read transaction id use this command:
-
-```
-ts-node ./readFunc.ts
-
-```
+`ts-node Create.ts`

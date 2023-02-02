@@ -1,19 +1,17 @@
 {
   "name": "marccel",
   "version": "1.0.0",
-  "description": "inery task 4",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "push": "ts-node ./pushFunc.ts",
-    "read": "ts-node ./readFunc.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/orenkun/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs",
     "ts-node": "^10.9.1"
   },
-  "keywords": [],
   "author": "",
+  "keywords": [],
   "license": "ISC"
 }
