@@ -1,0 +1,20 @@
+{
+    "name": "denrais-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./rpc-transaction.mjs",
+    "scripts": {
+      "solution": "node ./rpc-transaction.mjs"
+    },
+    "author": "denrais",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/denrais7/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/denrais7/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}

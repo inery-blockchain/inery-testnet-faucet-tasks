@@ -1,0 +1,24 @@
+{
+  "name": "arraylast-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A sample rpc transaction for inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "arraylast",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arraylas/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/arraylas/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "^16.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/arraylas/inery-testnet-faucet-tasks/issues"
+  },
+  "devDependencies": {}
+}

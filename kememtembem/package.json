@@ -1,0 +1,19 @@
+{
+  "name": "kememtembem",
+  "version": "1.0.0",
+  "description": "RPC transaction inery blockchain",
+  "main": "push.mjs",
+  "scripts": {
+    "push": "node ./push.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichadhr/inery-testnet-faucet-tasks.git"
+  },
+  "author": "kememtembem",
+  "homepage": "https://github.com/ichadhr/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
