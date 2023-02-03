@@ -1,0 +1,19 @@
+{
+  "name": "kiyotaka",
+  "version": "1.0.0",
+  "description": "inery task 4 by kiyotaka",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "node ./actionUser.js",
+  },
+  "homepage": "https://github.com/kiyo19/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
