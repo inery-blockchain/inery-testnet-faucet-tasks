@@ -1,0 +1,5 @@
+TOKEN_CONTRACT=<account-name>
+ISSUER_ACCOUNT=<account-name>
+TOKEN_SYMBOL=<symbol>
+TOTAL_SUPPLY=<total-supply>
+PRIVATE_KEY=<private-key>
