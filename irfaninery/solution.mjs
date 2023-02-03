@@ -1,11 +1,12 @@
-import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
+import { Api, JsonRpc, JsSignatureProvider } 
+from "ineryjs";
 import dotenv from "dotenv";
 dotenv.config();
 
 const url = "vmi1065246.contaboserver.net";
 const json_rpc = new JsonRpc(url);
 const private_key = process.env.PRIVATE_KEY; // your private key 
-const account = "irfaninery";
+const account = "irfaninery"; // yuor account name
 const actor = "irfaninery";
 const signature = new JsSignatureProvider([private_key]);
 
@@ -14,6 +15,7 @@ const api = new Api({
   signatureProvider: signature,
 });
 
+// create 
 async function create(id, user, data){
     try{
         const tx = await api.transact({
@@ -46,6 +48,7 @@ async function create(id, user, data){
     }
 }
 
+// update
 async function update(id, data){
     try{
         const tx = await api.transact({
@@ -83,4 +86,4 @@ async function main(id, user, data){
     await update(id, data)
 }
 
-main(1, account, "CRUD Transaction via JSON RPC")
+main(1, account, "CU Transaction via JSON RPC irfaninery")
