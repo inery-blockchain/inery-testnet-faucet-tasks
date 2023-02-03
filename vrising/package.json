@@ -1,0 +1,21 @@
+{
+  "name": "vrising",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node transactions.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ineryjs": "^1.1.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "EOS",
+    "contract",
+    "application"
+  ],
+  "author": "vrising",
+  "license": "MIT"
+}
