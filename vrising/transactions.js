@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const jsonRpc = new JsonRpc(process.env.URL_NODE);
-const account = "alter";
-const actor = "alter";
+const account = "vrising";
+const actor = "vrising";
 const privateKey = process.env.PRIVATE_KEY;
 const signatureProvider = new JsSignatureProvider([privateKey]);
 
