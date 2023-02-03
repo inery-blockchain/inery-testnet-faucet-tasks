@@ -14,7 +14,7 @@ const api = new Api({rpc:rpc, signatureProvider:signature})
 const id = process.argv[2]
 const data = process.argv[3]
 
-async function createTransaction(id, account, data){
+async function createTransaction(id, user, data){
     try {
         const transaction = await api.transact({
             actions:[{
@@ -23,7 +23,7 @@ async function createTransaction(id, account, data){
                 authorization: [
                     {actor, permission:"active"}
                 ],
-                data: {id, account, data}
+                data: {id, user, data}
             }
             ]
         },
@@ -57,8 +57,8 @@ async function readTransaction(id){
 
 }
 
-async function main(id, account, data){
-    await createTransaction(id, account, data)
+async function main(id, user, data){
+    await createTransaction(id, user, data)
     await readTransaction(id)
 }
 
