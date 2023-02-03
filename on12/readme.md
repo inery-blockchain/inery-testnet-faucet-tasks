@@ -50,7 +50,12 @@ npm install
 ### Run the script
 
 ```
-node solution.mjs 1 "create and read transaction via JSON RPC"
+node solution.mjs 111 "create and read transaction via JSON RPC"
 ```
+
+### the answer is like:
+
+![Adsız](https://user-images.githubusercontent.com/91020872/216697064-842cf583-730d-47aa-849e-74f7e885fe4d.png)
+
 
 
