@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Inery testnet faucet tasks
 
 This is the base branch for tasks related to the Inery faucet. For each task that requires revision using GitHub, we will create a new branch named with the number of that task, such as 'task4', 'task5', etc.
@@ -18,4 +17,3 @@ To complete task 4, you will need to follow the instructions provided:
   5. If your solution is successful, it will be accepted and you will complete task 4.
 
 It's important to carefully follow the instructions provided and make sure that your solution meets the requirements for the task. Be sure to thoroughly test your code to ensure that it is working correctly before submitting it for review.
->>>>>>> upstream/task4
