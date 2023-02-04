@@ -14,7 +14,12 @@ npm install
 ```
 
 3. Create a `.env` file in the root directory and set the environment variables `NODE_URL`, `PRIVATE_KEY`, `INERY_ACCOUNT`, and `TOKEN`
-4. Run the code using `npm start`
+4. Run the code using 
+
+```shell
+npm start
+```
+
 
 ## 🟢 Environment Variables
 
