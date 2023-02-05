@@ -1,0 +1,12 @@
+{
+  "name": "koltigin",
+  "version": "1.0.0",
+  "description": "A script for creating, reading, and pushing records to a blockchain network using Inery.js.",
+  "main": "blockchain-data-management.js",
+  "scripts": {
+    "start": "node blockchain-data-management.js"
+  },
+  "dependencies": {
+    "ineryjs": "^0.2.1"
+  }
+}
