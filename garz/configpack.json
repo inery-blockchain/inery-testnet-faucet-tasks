@@ -1,0 +1,20 @@
+{
+  "name": "garz",
+  "version": "1.0.0",
+  "description": "Inery Transaction Task4",
+  "main": "./run-rpc-task4.js",
+  "scripts": {
+    "solution": "node ./run-rpc-task4.js"
+  },
+  "author": "garz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garz026/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/garz026/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "^16.0.3"
+  }
+}
