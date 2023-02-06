@@ -8,9 +8,15 @@
 cd ./blackswan
 ```
 
-3. Run the following command to compile the code: go build rpc_push_transaction.go
+3. Run the following command to compile the code: 
+```unix
+go build rpc_push_transaction.go
+```
 
-4. Run the compiled binary file by executing: ./rpc_push_transaction
+4. Run the compiled binary file by executing: 
+```unix
+./rpc_push_transaction
+```
 
 5. The script will perform the push_transaction function, creating a transaction with ID 1, the user $account, and the data "This is RPC Push Transaction using Go".
 
