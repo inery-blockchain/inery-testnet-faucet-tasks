@@ -7,6 +7,8 @@
   box-sizing: border-box;
 }
 
+@import "../css/responsive.css";
+
 :root {
   --white: #fff;
   --orange: #ff9416;
@@ -24,12 +26,36 @@ body {
 
 .container-custom {
   padding: 75px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
 .box-main {
   padding: 50px;
   background: var(--white);
   border-radius: 10px;
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+.box-data-hash {
+  width: 100%;
+  padding: 50px;
+  background: var(--white);
+  border-radius: 10px;
+  position: relative;
+  min-height: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+.input-costum {
+  position: relative;
+}
+.input-costum span {
+  background: var(--green-black);
+  padding: 3px 6px;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  right: 8px;
+  top: 8px;
+  font-size: 11px;
 }
