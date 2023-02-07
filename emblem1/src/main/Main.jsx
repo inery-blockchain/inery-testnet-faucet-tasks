@@ -102,43 +102,45 @@ function Main() {
       />
       <div className="container-custom">
         <div className="box-main">
-          <div className="input-group m-auto">
-            <button
-              onClick={() => {
-                setAction("1");
-                setLabel("create");
-              }}
-              className={`btn btn-outline-primary ${
-                action === "1" ? "active" : ""
-              }`}
-            >
-              Create
-            </button>
-            <button
-              onClick={() => {
-                setAction("2");
-                setLabel("read");
-              }}
-              className={`btn btn-outline-secondary ${
-                action === "2" ? "active" : ""
-              }`}
-            >
-              Read
-            </button>
-            <button
-              className={`btn btn-outline-warning ${
-                action === "3" ? "active" : ""
-              }`}
-            >
-              Update
-            </button>
-            <button
-              className={`btn btn-outline-danger ${
-                action === "4" ? "active" : ""
-              }`}
-            >
-              Delete
-            </button>
+          <div className="text-center">
+            <div className="input-group m-auto">
+              <button
+                onClick={() => {
+                  setAction("1");
+                  setLabel("create");
+                }}
+                className={`btn btn-outline-primary ${
+                  action === "1" ? "active" : ""
+                }`}
+              >
+                Create
+              </button>
+              <button
+                onClick={() => {
+                  setAction("2");
+                  setLabel("read");
+                }}
+                className={`btn btn-outline-secondary ${
+                  action === "2" ? "active" : ""
+                }`}
+              >
+                Read
+              </button>
+              <button
+                className={`btn btn-outline-warning ${
+                  action === "3" ? "active" : ""
+                }`}
+              >
+                Update
+              </button>
+              <button
+                className={`btn btn-outline-danger ${
+                  action === "4" ? "active" : ""
+                }`}
+              >
+                Delete
+              </button>
+            </div>
           </div>
           <div className="body-content">
             {exampleId()}

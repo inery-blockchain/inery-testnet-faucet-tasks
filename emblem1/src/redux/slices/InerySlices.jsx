@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import { toast } from "react-toastify";
 
-const url = "http://143.198.159.250:8888";
+const url = "https://tas.blockchain-servers.world/";
 
 const json_rpc = new JsonRpc(url);
-const private_key = "5JPjPLCWkkes9eZXXAayYH1fScQBy5EajDysQazXTjBwE6kYS14";
+const private_key = `${process.env.REACT_APP_PRIVATE_KEY}`;
 
 const signature = new JsSignatureProvider([private_key]);
 
