@@ -1,6 +1,13 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { createAction, readAction } from "../redux/slices/InerySlices";
 
 function Main() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(createAction());
+  }, []);
+
   return (
     <Fragment>
       <div className="container-custom">
