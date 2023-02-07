@@ -4,8 +4,19 @@ import { createAction, readAction } from "../redux/slices/InerySlices";
 
 function Main() {
   const dispatch = useDispatch();
+  const user = "emblem1";
+  const myAcoount = "emblem1";
+  const actor = "emblem1";
+  const id = Math.floor(Math.random() * 10000);
+  const values = {
+    id: id,
+    user: user,
+    account: myAcoount,
+    actor: actor,
+    data: "Create Transaction via JSON RPC Successfully",
+  };
   useEffect(() => {
-    dispatch(createAction());
+    dispatch(createAction(values));
   }, []);
 
   return (

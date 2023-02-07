@@ -1,9 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 
-const id = 128128;
-const account = "emblem1";
-const actor = "emblem1";
 const url = "http://143.198.159.250:8888";
 
 const json_rpc = new JsonRpc(url);
@@ -20,23 +17,24 @@ const api = new Api({
 export const createAction = createAsyncThunk(
   "inery/create",
   async (values, { rejectWithValue, getState, dispatch }) => {
+    const { id, user, data } = values;
     try {
       const tx = await api.transact(
         {
           actions: [
             {
-              account,
+              account: values.account,
               name: "create",
               authorization: [
                 {
-                  actor,
+                  actor: values.actor,
                   permission: "active",
                 },
               ],
               data: {
-                id: "12",
-                user: "dwadawdd",
-                data: "dawdawdjbjb",
+                id,
+                user,
+                data,
               },
             },
           ],
@@ -44,6 +42,7 @@ export const createAction = createAsyncThunk(
         { broadcast: true, sign: true }
       );
       const respose = tx.processed.action_traces[0].console;
+      console.log(tx);
       return respose;
     } catch (error) {
       if (!error?.response) {
@@ -63,11 +62,11 @@ export const readAction = createAsyncThunk(
         {
           actions: [
             {
-              account,
+              //   account,
               name: "read",
               authorization: [
                 {
-                  actor,
+                  //   actor,
                   permission: "active",
                 },
               ],
@@ -106,6 +105,7 @@ const inerySlices = createSlice({
     });
     builder.addCase(createAction.rejected, (state, action) => {
       state.loading = false;
+      console.log(action.payload);
     });
     // read action
     builder.addCase(readAction.pending, (state, action) => {
