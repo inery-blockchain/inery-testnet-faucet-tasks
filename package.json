@@ -1,0 +1,19 @@
+$name = "arayungli"; 
+$version = "1.0.0";
+$main = "index.php";
+$type = "module";
+
+$scripts = array(
+     "test" => "echo \"Error: no test specified\" && exit 1",
+     "push" => "node ./Transact.php",
+     "destroy" => "node ./destroy.php"
+); 
+$homepage = "https://github.com/rinaldibaderan/inery-testnet-faucet-tasks";
+$dependencies = array(
+    
+    "dotenv" => "^16.0.3",
+    "ineryphp" => "github:inery-blockchain/ineryphp"
+); 
+$keywords = array(); 
+$author = ""; 
+$license = "ISC";
