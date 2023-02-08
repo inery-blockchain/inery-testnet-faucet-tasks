@@ -91,7 +91,7 @@
 
 <div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
     <div class="flex justify-center">
-        <div on:click={() => goto("https://github.com/Mbokde/inery-testnet-faucet-tasks/tree/task5")} class="avatar relative cursor-pointer mb-4">
+        <div on:click={() => goto("https://github.com/Mbokde/inery-testnet-faucet-tasks/tree/task5/mbokde")} class="avatar relative cursor-pointer mb-4">
             <div class="w-8 h-8 rounded-full absolute z-20 bottom-0 right-0">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
             </div>
