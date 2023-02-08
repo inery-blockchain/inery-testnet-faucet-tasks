@@ -4,7 +4,7 @@
   "description": "A sample rpc transaction for inery blockchain by diefky1212",
   "main": "./solutionRPC.mjs",
   "scripts": {
-    "solution": "node ./solutionRPC.mjs.mjs"
+    "solution": "node ./solutionRPC.mjs"
   },
   "author": "diefky1212",
   "license": "MIT",
