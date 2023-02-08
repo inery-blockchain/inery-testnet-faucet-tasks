@@ -1,0 +1,17 @@
+# .gitignore
+
+# Logs
+logs
+*.log
+
+# Environment variable files
+.env
+.env.*
+
+# npm
+node_modules/
+npm-debug.log
+
+# Miscellaneous
+*.swp
+.DS_Store
