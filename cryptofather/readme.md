@@ -1,35 +1,16 @@
-### Prerequisite
+Welcome to the example of remote procedure calls (RPC) Task-4 to the inery network. 
+Example of connecting and interacting with the Inery network using the Inery JSON-RPC API.
+www.nodesrun.com
+#CryptoFather
 
-- [NodeJS](https://nodejs.org/en/)
+Change to: cryptofather 
 
-- NPM
-
-
-
-### How to run
-
-Change directory to ```cryptofather```
-
-```shell
-cd ./cryptofather
-```
+* shell: cd ./cryptofather  
 
 Create .env and edit the variable
 PRIVATE_KEY=YOUR PRIVATE KEY
 INERY_ACCOUNT=YOUR INERY ACCOUNT
 
-```shell
-nano .env
-```
-
-Install dependencies
-
-```shell
-npm install
-```
-
-Run the script
-
-```
-npm run solution
-```
+shell: nano .env
+Install shell: npm install 
+Run: npm run solution
