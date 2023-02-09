@@ -1,11 +1,15 @@
-# Inery testnet faucet task 5
+# Inery Testnet Faucet - Task 5
 
-## Create Decentralized Application on Inery Blockchain
+The goal of this task is to create a DApp that uses Inery Blockchain as a Data layer for the application. The DApp needs to have at least a simple front-end that will enable the user of your application to interact with the blockchain DB. Additionally, you will need to create a README.md file in which you will provide detailed instructions on how to run and test the application, specify account and contract name on what your DApp is based on.
 
-  1. Clone the Git repository for the project.
-  2. Add a new directory using your blockchain account name as the directory name.
-  3. Inside the new folder, put your solution for task 5, which should be a full stack web, desktop, or mobile application using IneryDB as the database.
-  4. Create a merge request to submit your work for review.
-  5. If your solution is valid it will be accepted and you will complete task 5.
+## Instructions
 
-It's important to carefully follow the instructions provided and make sure that your solution meets the requirements for the task. Be sure to thoroughly test your code to ensure that it is working correctly before submitting it for review.
+1. Clone this repository: `https://github.com/inery-blockchain/inery-testnet-faucet-tasks`
+2. Create a new directory with your account name on the blockchain and add your code solution
+3. Create a `README.md` file in the solution directory, and provide detailed instructions on how to run and test the application.
+4. Publish your app online and provide us with a link of your project(you may use free web hosting or host on your own server)
+5. Create a merge/pull request to the `task5` branch
+
+## Evaluation 
+
+If your solution is valid and tested, you will be approved for completion of task 5 of the Inery testnet faucet.
