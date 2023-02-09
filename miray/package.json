@@ -1,0 +1,16 @@
+{
+  "name": "miray",
+  "version": "1.0.0",
+  "description": "is a sample project for ineryjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^8.2.0",
+    "ineryjs": "^0.2.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
