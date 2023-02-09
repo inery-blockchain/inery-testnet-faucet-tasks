@@ -1,0 +1,18 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "push-transaction": "node ./master_tx_solution.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocknrolls/inery-testnet-faucet-tasks.git"
+  },
+  "author": "istiqomah",
+  "license": "ISC",
+  "homepage": "https://dietdiaries.site/",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
