@@ -72,8 +72,8 @@ async function sendToken(to) {
         data: {
           from: account,
           to,
-          quantity: `0.0003 ${token}`,
-          memo: `Here 0.0003 ${token}`,
+          quantity: `0.0001 ${token}`,
+          memo: `0.0001 ${token}`,
         },
       }],
     });
