@@ -1,0 +1,22 @@
+{
+  "name": "task4-by-miqbalk",
+  "version": "1.0.0",
+  "description": "inery task 4 by miqbalk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizkim2/inery-testnet-faucet-tasks.git"
+  },
+  "author": "rizkim2 aka miqbalk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizkim2/inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com/rizkim2/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
