@@ -20,7 +20,7 @@ sudo apt-get install -y nodejs
 **1. Change directory to `stanbr`**
 
 ```shell
-cd ./jitesh
+cd ./stanbr
 ```
 
 
