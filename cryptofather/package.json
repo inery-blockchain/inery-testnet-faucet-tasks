@@ -1,0 +1,12 @@
+{
+    "name": "cryptofather - RPC API",
+    "version": "1.2.0",
+    "description": "inery blockchain - rpc transaction",
+    "main": "./solution.mjs",
+    "scripts": {"solution": "node ./solution.mjs"},
+    "author": "cryptofather",
+    "license": "nodesrun",
+    "repository": {"type": "git", "url": "https://github.com/Asvilya/inery-testnet-faucet-tasks" },
+    "homepage": "https://github.com/Asvilya/inery-testnet-faucet-tasks",
+    "dependencies": { "ineryjs": "github:inery-blockchain/ineryjs", "dotenv": "^16.0.3" }
+}
