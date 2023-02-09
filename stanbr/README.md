@@ -17,10 +17,10 @@ sudo apt-get install -y nodejs
 
 ## How to run?
 
-**1. Change directory to `stanbr`**
+**1. Change directory to `jitesh`**
 
 ```shell
-cd ./stanbr
+cd ./jitesh
 ```
 
 
@@ -39,5 +39,5 @@ cp .env.example .env
 **4. Run the script**
 
 ```
-npm start
+npm run push
 ```
