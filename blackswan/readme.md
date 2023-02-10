@@ -3,8 +3,9 @@
 - [NodeJS](https://nodejs.org/en/)
 
 - NPM
-
-
+``
+npm install ineryjs dotenv
+``
 
 ### How to run
 
