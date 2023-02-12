@@ -1,0 +1,16 @@
+{
+  "name": "bayramov",
+  "version": "1.0.0",
+  "description": "push transaction"
+  "main": "push.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+"keywords": [],
+"author": "",
+"license": "ISC",
+"dependencies": {
+  "dotenv": "^8.2.0",
+  "ineryjs": "^0.11.1"
+  }
+}
