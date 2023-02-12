@@ -24,12 +24,15 @@ nano .env
 
 Install dependencies
 
-```shell
+```
 npm install
 ```
 
 Run script
 
-```shell
+```
  node ./rpc-transaction.mjs
 ```
+
+NOTES:
+Follow the math captcha prompt to prove you're not a robot. If you pass the math captcha, the transaction will be executed. The details of the transaction, including the response from the contract, will be logged to the console.
