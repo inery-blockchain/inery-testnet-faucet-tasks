@@ -1,0 +1,19 @@
+{
+  "name": "bayramov",
+  "version": "1.0.0",
+  "description": "Task 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
