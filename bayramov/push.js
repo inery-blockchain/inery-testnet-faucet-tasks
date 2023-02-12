@@ -50,8 +50,8 @@ async function performTransfer(id) {
   }
 
 async function main(id, user, data) {
-  await createRecord(id, user, data)
-  await deleteRecord(id)
+  await performAction(id, user, data)
+  await performTransfer(id)
   }
 
 main(1, process.env.INERY_ACCOUNT, 'CRUD Transaction via JSON RPC')
