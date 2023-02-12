@@ -1,0 +1,27 @@
+{
+  "name": "diefky1212 task4 inery",
+  "version": "0.1.0",
+  "description": "The Sample for RPC push transaction via JSON RPC by diefky1212",
+  "main": "dist/index.js",
+  "scripts": {
+    "create-crud": "node ./VALUE_CONTRACTS/create.mjs",
+    "read-crud": "node ./VALUE_CONTRACTS/read.mjs",
+    "update-crud": "node ./VALUE_CONTRACTS/update.mjs",
+    "destroy-crud": "node ./VALUE_CONTRACTS/destroy.mjs",
+    "create-token": "node ./TOKEN_CONTRACTS/create.mjs",
+    "issue-token": "node ./TOKEN_CONTRACTS/issue.mjs",
+    "transfer-token": "node ./TOKEN_CONTRACTS/transfer.mjs"
+  },
+  "author": "diefky1212",
+  "license": "TC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diefky/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Diefky/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
