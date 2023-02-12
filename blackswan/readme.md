@@ -38,3 +38,5 @@ Notes:
 
 Follow the math captcha prompt to prove you're not a robot. If you pass the math captcha, the transaction will be executed. The details of the transaction, including the response from the contract, will be logged to the console.
 
+Example a transaction:
+<img width="522" alt="Proof of transaction" src="https://user-images.githubusercontent.com/82766588/218314692-40c522cd-436c-4141-aad3-d4e4a31d434e.png">
