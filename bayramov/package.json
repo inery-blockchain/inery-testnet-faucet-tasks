@@ -1,7 +1,7 @@
 {
   "name": "bayramov",
   "version": "1.0.0",
-  "description": "push transaction"
+  "description": "push transaction",
   "main": "push.js",
   "scripts": {
     "start": "node index.js"
