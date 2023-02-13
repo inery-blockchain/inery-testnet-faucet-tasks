@@ -1,0 +1,3 @@
+node_modules
+zaraki/.env
+*package-lock.json
