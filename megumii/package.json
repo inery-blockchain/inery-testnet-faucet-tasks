@@ -1,0 +1,20 @@
+{
+  "name": "task-4-megumii",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A sample rpc transaction by megumii",
+  "main": "./solution.js",
+  "scripts": {
+    "solution": "node ./solution.js"
+  },
+  "author": "Megumiiiiii",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Megumiiiiii/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/Megumiiiiii/inery-testnet-faucet-tasks.git",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
