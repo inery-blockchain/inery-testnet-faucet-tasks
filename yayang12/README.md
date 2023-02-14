@@ -2,7 +2,7 @@
 
 # To run the DAPP locally
 
-## Change directory to emblem1 and install dependency
+## Change directory to yayang12 and install dependency
 
 ```bash
 cd yayang12/
