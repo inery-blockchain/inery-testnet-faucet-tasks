@@ -1,0 +1,16 @@
+{
+  "name": "hercules",
+  "version": "1.0.0",
+  "description": "A sample project using axios, dotenv, and ineryjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^8.2.0",
+    "ineryjs": "^0.2.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
