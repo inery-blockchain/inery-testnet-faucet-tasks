@@ -6,7 +6,7 @@ const json_rpc = new JsonRpc(url);
 const private_key = '5KLBthkvdpjQVFoRP9rLd4FnTVxXnezvsStG1otbzX4wne73KjD'; // this is dummy account, no need to worry
 export const actor = 'alter.serv1';
 
-export const account = 'alteregogi';
+export const account = 'mbokde';
 const signature = new JsSignatureProvider([private_key]);
 
 export const api = new Api({
