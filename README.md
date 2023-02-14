@@ -49,8 +49,8 @@ npm run solution
 
 ### if runs correctly you can see the block number 
 
-![result1](2)
-![result2](3)
-![explorer](1)
+![result1](2.png)
+![result2](3.png)
+![explorer](1.png)
 
 
