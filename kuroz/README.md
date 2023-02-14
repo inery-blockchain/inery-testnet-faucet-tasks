@@ -13,6 +13,15 @@ cd ./kuroz
 
 3. Run the script from the command line:
 
+- create
 ```
-ruby transaction.rb
+ruby create.rb
+```
+- read
+```
+ruby read.rb
+```
+- destroy
+```
+ruby destroy.rb
 ```
