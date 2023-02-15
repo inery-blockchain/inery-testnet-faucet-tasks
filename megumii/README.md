@@ -3,3 +3,10 @@
 3. Also fill with any number for each button you want to try.
 
   
+### To run this Dapp locally
+
+```md
+yarn install```
+
+```md
+yarn run dev```
