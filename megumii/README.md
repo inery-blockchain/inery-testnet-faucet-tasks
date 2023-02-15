@@ -6,7 +6,10 @@
 ### To run this Dapp locally
 
 ```md
-yarn install```
+yarn install
+```
+
 
 ```md
-yarn run dev```
+yarn run dev
+```
