@@ -30,7 +30,8 @@ npm install dotenv
 ```
 
 ```md
-sudo cp .env.example .env```
+sudo cp .env.example .env
+```
 
 Run the script
 
