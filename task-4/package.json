@@ -1,0 +1,23 @@
+{
+  "name": "rpc-push-taks4-whendy12",
+  "version": "1.0.0",
+  "description": " rpc transaction for inery blockchain - task 4 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whend12/task-4.git"
+  },
+  "author": "whendy12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whend12/task-4/issues"
+  },
+  "homepage": "https://github.com/whend12/task-4#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
