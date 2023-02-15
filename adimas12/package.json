@@ -1,0 +1,19 @@
+{
+  "name": "adimas12-rpc-transaction",
+  "version": "1.0.0",
+  "description": "complete task 4 inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "modaromas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modaromas/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/modaromas/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
