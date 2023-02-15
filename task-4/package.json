@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/whend12/task-4#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
   }
 }
