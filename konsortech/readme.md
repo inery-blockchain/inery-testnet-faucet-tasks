@@ -1,43 +1,55 @@
-# The code tutorial you have provided explains how to set up and run a project that uses NodeJS, NPM, and Git.
-The project is located on Github and can be cloned by using the command git
- ```
-clone https://github.com/ilhamnur/inery-testnet-faucet-tasks -b task4.
+# Install Dependencies
+
+The following dependencies need to be installed before proceeding with the setup:
+
+- [NodeJS](https://nodejs.org/en/): a JavaScript runtime environment that allows you to run server-side code
+- NPM: a package manager for JavaScript libraries and tools
+- GIT: a version control system for tracking changes in source code
+
+To install these dependencies, you can use the following commands:
+
 ```
-
-Before running the project, the following dependencies need to be installed on your system:
-
-```NodeJS: A JavaScript runtime environment that enables you to run server-side code.
-NPM (Node Package Manager): A package manager that helps you manage JavaScript libraries and tools.
-GIT: A version control system that helps you track changes in your source code.
-To install these dependencies, you can run the following commands in your terminal:
-
-javascript
-Copy code
 curl http://deb.nodesource.com/setup_lts.x | sudo bash -
 sudo apt install git nodejs -y
-The first command adds the NodeJS package repository to your system, while the second command installs Git and NodeJS.
+```
 
-After cloning the repository, you need to set the environment variables in the .env file. These variables are:
+# Clone the repository
 
-NODE_IP_INERY="http://your_ip:8888": The URL of your node.
-PRIVATE_KEY: Your private key.
-ACCOUNT_INERY: Your Inery account.
-DATA_TX_PUSH: Your data ID (numeric only).
-You can edit the file by running the following commands in your terminal:
+The repository can be cloned using the following command:
 
-bash
-Copy code
-cd inery-testnet-faucet-tasks/ilhamnur
+```
+git clone https://github.com/ilhamnurizha/inery-testnet-faucet-tasks -b task4
+```
+
+# Configure environment variables
+
+Before you run the script, you need to configure the environment variables. The following variables need to be set:
+
+- `NODE_IP`: your node URL
+- `PRIVATE_KEY`: your private key
+- `ACCOUNT_ID`: your Inery account
+- `DATA_ID_PUSH`: your data ID (number only)
+
+You can set these variables in the `.env` file in the `komeng` directory. You can edit the file using the following command:
+
+```
+cd inery-testnet-faucet-tasks/(your_folder_name)
 nano .env
-To install the required modules for the project, you need to run the following commands in your terminal:
+```
 
-Copy code
+# Install module dependencies
+
+To install the required module dependencies, run the following commands:
+
+```
 npm install -g npm
 npm install
-The first command upgrades your NPM version to the latest, while the second command installs the dependencies specified in the package.json file.
+```
 
-Finally, to run the script, you can use the following command in your terminal:
+# Run the script
 
-perl
-Copy code
-npm run push-transaction```
+Finally, you can run the script using the following command:
+
+```
+npm run push-transaction
+```
