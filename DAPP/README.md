@@ -6,7 +6,7 @@ I have completed task 5, please check here ()
 ## Change directory to emblem1 and install dependency
 
 ```bash
-cd emblem1/
+cd DAPP/
 ```
 
 ```bash
