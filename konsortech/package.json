@@ -1,0 +1,19 @@
+{
+  "name": "inery-testnet-faucet-task4",
+  "version": "1.0.0",
+  "description": "konsortech sample RPC API push transaction on Inery blockchain",
+  "main": "./solution-task4.mjs",
+  "scripts": {
+    "solution": "node ./solution-task4.mjs"
+  },
+  "author": "konsortech",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilhamnurizha/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://konsortech.xyz",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
