@@ -4,7 +4,7 @@
   "description": "konsortech sample RPC API push transaction on Inery blockchain",
   "main": "./solution-task4.mjs",
   "scripts": {
-    "solution": "node ./solution-task4.mjs"
+    "solution": "node ./konsortech-task4.mjs"
   },
   "author": "konsortech",
   "license": "ISC",
