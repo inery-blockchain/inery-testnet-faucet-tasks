@@ -7,7 +7,8 @@ dotenvExpand.expand(dotenv.config())
 const account = process.env.TOKEN_ACCOUNT
 const actor = process.env.USER_ACC_NAME
 const symbol = process.env.SYMBOL
-const amount = process.env.AMOUNT
+const amount = process.env.TRANSFER_AMOUNT
+const memo = process.env.TRANSFER_MEMO
 
 const json_rpc = new JsonRpc(process.env.INERY_NODE_RPC)
 const signature  = new JsSignatureProvider([process.env.INERY_PRIV_KEY]);
@@ -17,13 +18,13 @@ const api = new Api({
     signatureProvider: signature
 })
 
-async function createToken(issuer, maximum_supply){
+async function transferToken(from, to, quantity, memo){
     try{
         const tx = await api.transact({
             actions:[
                 {
                     account,
-                    name:"create",
+                    name:"issue",
                     authorization:[
                         {
                             actor,
@@ -31,27 +32,26 @@ async function createToken(issuer, maximum_supply){
                         }
                     ],
                     data:{
-                        issuer, maximum_supply
+                        from, to, quantity, memo
                     }
                 }
             ]
         },{broadcast:true,sign:true})
 	console.log("\x1b[1;7;92m")
-        console.log("CREATE transaction details")
+        console.log("TRANSFER transaction details")
         console.log("\x1b[0m")
         console.log(tx.processed)
         console.log("\x1b[1;7;92m")
-        console.log("RPC Push transaction action CREATE details")
+        console.log("RPC Push transaction action TRANSFER details")
         console.log("\x1b[0m")
         console.log(tx.processed.action_traces[0].act)
     }catch(error){
         console.log(error)
         console.log("\x1b[1;7;91m")
-        console.log("ERROR : Can't CREATE token symbol", symbol)
+        console.log("ERROR : Can't TRANSFER token symbol", symbol)
         console.log("DETAILS :", error.details[0].message)
         console.log("\x1b[0m")
     }
 }
 
-createToken(actor, amount)
-
+transferToken(account, actor, amount, memo)
