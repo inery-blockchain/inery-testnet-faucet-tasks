@@ -49,8 +49,8 @@ npm run solution
 
 ### if runs correctly you can see the block number 
 
-![2.png](https://raw.githubusercontent.com/ondersabahat/inery-testnet-faucet-tasks/main/2.png)
-![(3.png](https://raw.githubusercontent.com/ondersabahat/inery-testnet-faucet-tasks/main/3.png)
-![1.png](https://raw.githubusercontent.com/ondersabahat/inery-testnet-faucet-tasks/main/1.png)
+![2](https://user-images.githubusercontent.com/91020872/219712549-715c6d35-2d90-42de-943f-2f359bbd85a1.png)
 
+![3](https://user-images.githubusercontent.com/91020872/219712687-94dedbc2-61ae-43e5-9c28-71b8604f37cb.png)
 
+![1](https://user-images.githubusercontent.com/91020872/219712761-6214eec6-35fc-40d8-9e01-4c99806d27e7.png)
