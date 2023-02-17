@@ -5,9 +5,9 @@ import subprocess
 os.chdir('./Task4')
 
 # Install requirements
-"""
+""
 subprocess.run(["pip", "install", "-r", "requirements.txt"])
-"""
+""
 # Create .env and change its value
 if not os.path.exists('.env'):
     subprocess.run(["cp", ".env-sample", ".env"])
