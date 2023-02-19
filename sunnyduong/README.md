@@ -3,7 +3,7 @@
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 # Demo app
-http://115.73.213.74:8084/
+['Demo app'](http://115.73.213.74:8084/)
 
 ## Change directory to sunnyduong and install dependency
 
