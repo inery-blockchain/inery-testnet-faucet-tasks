@@ -1,95 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <title>Contacts dApp</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-  <style>
-    body {
-      margin: 30px;
-    }
-    #status_portion {
-      display: none;
-    }
-    #input_portion {
-      display: none;
-    }
-    #manage_contacts_portion {
-      display: none;
-    }
-
-  </style>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
-  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <meta charset="utf-8" />
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css"
+      integrity="sha384-GPfsI3TfTtW2ZvgrAdnFzHg1whE+n7V8ivv1uB7D2ycbIu+m7wZoocKysH7VZOKz"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.5.0/dist/daisyui.min.css"
+      integrity="sha384-GGChWyZ4Lq0KP26spND08gde/vjszCkS2QXKeX9nVEjA1J6F4RWq3p4eblPjFZx/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/build/bundle.css" />
   </head>
 
   <body>
-    <div class="ui container">
-      <div class="ui grid">
-        <div class="sixteen wide column">
-          <h1 class="ui header">Contacts dApp for INERY Blockchain Demo</h1>
-        </div>
+    <div id="svelte"></div>
 
-        <div id="hints_portion" class="sixteen wide column">
-          <div class="ui message">
-            <div class="header">
-              Manage Contacts Procedure
-            </div>
-            <ol class="ui ordered list">
-              <li>Input your Inery username and click submit</li>
-              <li>Add, update or delete your contact</li>
-              <li>Refresh the webpage if you want to enter another username</li>
-            </ol>
-          </div>
-        </div>
-
-        <div id="status_portion" class="sixteen wide column">
-          <div class="ui negative message">
-            <div class="header">
-              I'm sorry. The server has error and the program stopped
-            </div>
-            <p>
-              It maybe nodine has error or not running!
-            </p>
-          </div>
-        </div>
-
-        <div id="input_portion" class="sixteen wide column">
-          <form class="ui form">
-            <div class="field">
-              <label>Input your Inery username</label>
-              <input type="text" name="name" placeholder="Inery username" />
-            </div>
-            <button id="btn_inputname_submit" class="ui primary basic button">Submit</button>
-            <div class="ui error message"></div>
-          </form> 
-        </div> <!-- input_portion -->
-
-        <div id="manage_contacts_portion" class="sixteen wide column">
-          <div class="html ui top attached segment">
-            <form class="ui form">
-              <h4 class="ui dividing header">Contact List</h4>
-              <div class="field">
-                <div id="contactsList_cb">
-                  <div class="mylist">
-                    <table id="contactsList">
-                      <thead>
-                          <tr>
-                              <th>Name</th>
-                              <th>Family</th>
-                              <th>Phone</th>
-                              <th>Email</th>
-                              <th>Actions</th> 
-                          </tr>
-                      </thead>
-                      <tbody>
-                      </tbody>
-                    </table>                    
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <div class="six
+    <script src="/build/bundle.js"></script>
+  </body>
+</html>
