@@ -1,0 +1,167 @@
+{
+    "____comment": "This file was generated with inery-abigen. DO NOT EDIT ",
+    "version": "inery::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "dlt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "dltall",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "get",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "getbyindex2",
+            "base": "",
+            "fields": [
+                {
+                    "name": "index",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "insert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "cname",
+                    "type": "string"
+                },
+                {
+                    "name": "cfamily",
+                    "type": "string"
+                },
+                {
+                    "name": "cphone",
+                    "type": "string"
+                },
+                {
+                    "name": "cemail",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "mycontact_tbl",
+            "base": "",
+            "fields": [
+                {
+                    "name": "ID",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "cname",
+                    "type": "string"
+                },
+                {
+                    "name": "cfamily",
+                    "type": "string"
+                },
+                {
+                    "name": "cphone",
+                    "type": "string"
+                },
+                {
+                    "name": "cemail",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cname",
+                    "type": "string"
+                },
+                {
+                    "name": "cfamily",
+                    "type": "string"
+                },
+                {
+                    "name": "cphone",
+                    "type": "string"
+                },
+                {
+                    "name": "cemail",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "dlt",
+            "type": "dlt",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "dltall",
+            "type": "dltall",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "get",
+            "type": "get",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "getbyindex2",
+            "type": "getbyindex2",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "insert",
+            "type": "insert",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "mycontacts",
+            "type": "mycontact_tbl",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
