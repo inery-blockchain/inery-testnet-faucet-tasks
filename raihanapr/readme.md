@@ -40,4 +40,5 @@ Run the script to call the blockchain API and perform push_transaction:
 ```shell
 
 npm run solution
+
 **Make sure to fill in the .env file with the appropriate configuration before running the script, and ensure that you have an active internet connection and sufficient balance in your blockchain account.** 
