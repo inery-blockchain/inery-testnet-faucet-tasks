@@ -1,35 +1,44 @@
-### Prerequisite
+perl
+Copy code
+## Prerequisites
 
-- [NodeJS](https://nodejs.org/en/)
+Make sure you have `curl` and `NodeJS` with `NPM` installed on your system.
 
-- NPM
-
-
-
-### How to run
-
-Change directory to ```raihanapr```
+### Install curl
 
 ```shell
-cd ./raihanapr
-```
+sudo apt-get install curl
+Install NodeJS & NPM
+Download NodeJS & NPM for Windows - includes NPM package manager.
+For Linux, use this command:
+shell
+Copy code
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+How to Run
+Clone the repository and change directory to the project folder:
 
-Create .env and edit the variable
-PRIVATE_KEY=YOUR PRIVATE KEY
-INERY_ACCOUNT=YOUR INERY ACCOUNT
+shell
+Copy code
+git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
+cd inery-testnet-faucet-tasks/task4/your-account-name
+Replace your-account-name with your Inery testnet account name.
 
-```shell
-nano .env
-```
+Install all project dependencies using NPM:
 
-Install dependencies
-
-```shell
+shell
+Copy code
 npm install
-```
+Create and edit the .env file by duplicating the .env-sample file:
 
-Run the script
+shell
+Copy code
+cp .env-sample .env
+Update the .env file with your Inery testnet account details and other required configurations.
 
-```
+Run the script to call the blockchain API and perform push_transaction:
+
+shell
+Copy code
 npm run solution
-```
+Make sure to fill in the .env file with the appropriate configuration before running the script, and ensure that you have an active internet connection and sufficient balance in your blockchain account.
