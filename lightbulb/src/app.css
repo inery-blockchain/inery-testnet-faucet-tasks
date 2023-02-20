@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.body {
+background-color:#1abc9c;
+}
+.container {
+    
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
