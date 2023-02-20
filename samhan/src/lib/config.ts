@@ -6,7 +6,7 @@ const json_rpc = new JsonRpc(url);
 const private_key = '5J3PjskAHUzXL1d6kbxh7fwaEfG6g8mfQS8QdZUizGRKZXWsku3'; // this is my test account, don't worry
 export const actor = 'samhan';
 
-export const account = 'agustina';
+export const account = 'samhan';
 const signature = new JsSignatureProvider([private_key]);
 
 export const api = new Api({
