@@ -1,4 +1,4 @@
-## Prerequisite
+### Prerequisite
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -8,10 +8,10 @@
 
 ### How to run
 
-Change directory to directory adimas12
+Change directory to ```alteregogi```
 
 ```shell
-cd ~/inery-testnet-faucet-tasks/adimas12
+cd ./alteregogi
 ```
 
 
@@ -28,3 +28,4 @@ Run the script
 ```
 npm run solution
 ```
+
