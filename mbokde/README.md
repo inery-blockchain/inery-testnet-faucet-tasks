@@ -1,4 +1,4 @@
-# You can test my dapp https://inerydapp-dgbmclnxz-mbokde.vercel.app
+# You can test my dapp inerydapp-dgbmclnxz-mbokde.vercel.app
 
 # Run the DAPP locally
 
