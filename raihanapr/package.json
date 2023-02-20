@@ -1,10 +1,10 @@
 {
-  "name": "raihanapr-rpc-transaction",
+  "name": "Inery Blockchain - Sample RPC Transaction",
   "version": "1.0.0",
-  "description": "A sample rpc transaction for inery blockchain",
+  "description": "This JSON provides a sample RPC transaction for Inery Blockchain, demonstrating how to interact with the blockchain through an API.",
   "main": "./solution.js",
   "scripts": {
-    "solution": "node ./solution.js"
+    "start": "node ./solution.js"
   },
   "author": "raihanapr",
   "license": "MIT",
@@ -15,5 +15,16 @@
   "homepage": "https://github.com/raihanapr/inery-testnet-faucet-tasks",
   "dependencies": {
     "jsonrpcclient": "^4.1.0"
+  },
+  "keywords": [
+    "blockchain",
+    "Inery Blockchain",
+    "API",
+    "transaction",
+    "sample",
+    "RPC"
+  ],
+  "bugs": {
+    "url": "https://github.com/raihanapr/inery-testnet-faucet-tasks/issues"
   }
 }
