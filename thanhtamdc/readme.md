@@ -2,6 +2,10 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
+# Demo
+
+[Demo](http://115.79.196.38:8080/)
+
 ## Clone repository and change directory to thanhtamdc then install dependency
 
 ```bash
