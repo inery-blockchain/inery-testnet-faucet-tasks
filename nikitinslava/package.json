@@ -1,0 +1,26 @@
+{
+  "name": "inerytask4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "push": "node ./push-solution.mjs",
+    "update": "node ./inery-crud-services/update-data-on-chain.mjs",
+    "destroy": "node ./inery-crud-services/delete-on-chain-data.mjs",
+    "transfer": "node ./token-transfer-services/transfer-token.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irfanudin000/inerytask4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irfanudin000/inerytask4/issues"
+  },
+  "homepage": "https://github.com/irfanudin000/inerytask4#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
