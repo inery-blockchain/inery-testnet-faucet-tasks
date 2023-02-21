@@ -23,4 +23,4 @@ npm run dev
 http://localhost:5173
 ```
 ## Usage
-Demo 
+Demo [azeydapps.vercel.app](https://azeydapps.vercel.app/)
