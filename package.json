@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "package": "^1.0.1"
+  },
+  "name": "shibaku",
+  "version": "1.0.0",
+  "description": "Inery Task 4",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inery-blockchain/ineryjs.git"
+  },
+  "author": "Shibaku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inery-blockchain/ineryjs/issues"
+  },
+  "homepage": "https://github.com/inery-blockchain/ineryjs#readme"
+}
