@@ -91,7 +91,7 @@
 
 <div class="container bg-gradient-to-r from-neutral-800 via-slate-400 to-neutral-800 mx-auto min-h-screen px-12 pb-20 pt-20">
     <div class="flex justify-evenly">
-        <div on:click={() => goto("https://github.com/Diefky/inery-testnet-faucet-tasks/tree/task5/Diefky1212")} class="avatar relative cursor-pointer mb-4">
+        <div on:click={() => goto("https://github.com/Diefky/inery-testnet-faucet-tasks/tree/task5/diefky1212")} class="avatar relative cursor-pointer mb-4">
             <div class="w-8 h-8 rounded-full absolute z-20 bottom-0 right-0">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />	    
             </div>
