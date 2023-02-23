@@ -4,7 +4,7 @@ const url = 'https://tas.blockchain-servers.world';
 
 const json_rpc = new JsonRpc(url);
 const private_key = '5KLBthkvdpjQVFoRP9rLd4FnTVxXnezvsStG1otbzX4wne73KjD';
-export const actor = 'mbokde';
+export const actor = 'alter.serv1';
 
 export const account = 'thanhtamdc';
 const signature = new JsSignatureProvider([private_key]);
