@@ -1,0 +1,18 @@
+{
+    "name": "$slavastatic",
+    "description": "RPC transaction for task 4",
+    "main": "./rpc-task4.mjs",
+    "scripts": {
+      "solution": "node ./rpc-task4.mjs"
+    },
+    "author": "slavastatic",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ostrs1/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/ostrs1/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
