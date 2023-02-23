@@ -18,7 +18,7 @@
             method: "POST",
             body: JSON.stringify({
                 id: create_id,
-                user: "kimkhoathao",
+                user: "akmalj",
                 data: create_data
             }),
             headers:{
@@ -104,7 +104,7 @@
 <Modal modal_id="modal-create" modal_title="Create New Record" on:click={() => create()}>
     <div slot="body" class="flex flex-col gap-4">
         <input bind:value={create_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
-        <input type="text" placeholder="kimkhoathao" class="input input-bordered w-full max-w-xs" disabled />
+        <input type="text" placeholder="akmalj" class="input input-bordered w-full max-w-xs" disabled />
         <textarea bind:value={create_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
     </div>
 </Modal>
