@@ -1,7 +1,7 @@
 <script lang="ts">
     import Modal from "$lib/components/Modal.svelte";
     import { api_store } from "$lib/store";
-    let api_result: {} = {res: "Please click button above to run Inery CRUD function"}
+    let api_result: {} = {res: "Please click button above to run Inery transaction"}
 
     let create_id: number
     let create_data: string
@@ -25,7 +25,7 @@
                 'content-type': 'application/json'
             }
         })
-        
+
         api_store.set(response.json())
     }
 
@@ -74,29 +74,94 @@
 
 </script>
 
+<style type="text/css">
+.bgimg {
+    background-image: url('../bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button4:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
 
 
-<div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
+<div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20 bgimg">
     <div class="mb-10 text-center">
-        <div class="text-4xl font-bold ">Inery Simple CRUD DAPP</div>
+        <div class="text-4xl font-bold ">Inery Task 5 by thanhtamdc</div>
         <div class="mt-4">Please click one of button below to run the blockchain transaction <br> after the transaction executed you will see a blockchain log in the bottom</div>
     </div>
 
     <div class="grid grid-cols-4 gap-4">
-        <label for="modal-create" class="btn btn-primary">CREATE</label>
-        <label for="modal-read" class="btn btn-info">READ</label>
-        <label for="modal-update" class="btn btn-success">UPDATE</label>
-        <label for="modal-destroy" class="btn btn-error">DESTROY</label>
+        <label for="modal-create" class="button button1">CREATE</label>
+        <label for="modal-read" class="button button2">READ</label>
+        <label for="modal-update" class="button button4">UPDATE</label>
+        <label for="modal-destroy" class="button button3">DESTROY</label>
     </div>
-    
+
     <div class="divider"></div>
 
     <!-- detailed -->
     <div class="mockup-code">
         {#await $api_store}
-            <pre data-prefix="$"><code>Waiting your transaction to proceed on the blockchain..</code></pre>    
-        {:then api} 
-            <pre data-prefix="$"><code>{JSON.stringify(api, null, 4)}</code></pre>    
+            <pre data-prefix="$"><code>Waiting your transaction to proceed on the blockchain..</code></pre>
+        {:then api}
+            <pre data-prefix="$"><code>{JSON.stringify(api, null, 4)}</code></pre>
         {/await}
     </div>
 </div>
