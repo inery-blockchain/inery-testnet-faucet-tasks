@@ -6,7 +6,7 @@ import { readaction } from "./action/read.mjs";
 const user = "ttlnnt";
 const id = Math.floor(Math.random() * 10000);
 
-async function master(id, user, data) {
+async function main(id, user, data) {
 
   await createaction(
     id, user, `Transaction ${id} created successfully by ${user}.`
@@ -25,8 +25,5 @@ async function master(id, user, data) {
   );   
 }
 
-master(
-  id,
-  user,
-  " Create Transaction via JSON RPC Successfully"
+main(id, user, "Create Transaction via JSON RPC Successfully"
 );
