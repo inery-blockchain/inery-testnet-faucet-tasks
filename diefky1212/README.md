@@ -3,9 +3,9 @@
 ## Test the DApp online
 check here <a href="DEMO">https://diefky1212.vercel.app/</a>
 
-## Test the DApp locally
+## Test the Dapps locally
 
-## Change directory to alteregogi and install dependency
+## Change directory to diefky1212 and install dependency
 
 ```bash
 cd diefky1212/
