@@ -1,7 +1,7 @@
 ### How to run
 Change directory to ```slavastatic```
 ```shell
-cd ./slavastatic
+cd /slavastatic
 ```
 Install npm
 ```shell
