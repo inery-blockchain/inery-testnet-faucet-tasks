@@ -2,9 +2,9 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-# Demo
+# Demo app online
 
-[Demo](http://115.79.196.38:8080/)
+[Demo](https://inery-testnet-faucet-tasks-7wwbchk6r-thanhtamdc.vercel.app/)
 
 ## Clone repository and change directory to thanhtamdc then install dependency
 
