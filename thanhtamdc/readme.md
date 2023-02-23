@@ -4,7 +4,7 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 # Demo app online
 
-[Demo](https://inery-testnet-faucet-tasks-7wwbchk6r-thanhtamdc.vercel.app/)
+[Demo](https://thanhtamdc.vercel.app/)
 
 ## Clone repository and change directory to thanhtamdc then install dependency
 
