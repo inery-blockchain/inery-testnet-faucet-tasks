@@ -1,0 +1,18 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "push-transaction": "node ./value_contract_tx.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WuasuDoang/inery-testnet-faucet-tasks.git"
+  },
+  "author": "WuasuDoang",
+  "license": "ISC",
+  "homepage": "https://github.com/WuasuDoang/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
