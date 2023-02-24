@@ -1,0 +1,21 @@
+{
+    "name": "",
+    "version": "0.1.0",
+    "description": "Sample rpc transaction inery blokchain",
+    "main": "./solution.mjs",
+    "scripts": {
+      "solution": "node ./solution.mjs"
+    },
+    "author": "",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/saeful2704/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/saeful2704/",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+      "python": "v3.8.3"
+    }
+}

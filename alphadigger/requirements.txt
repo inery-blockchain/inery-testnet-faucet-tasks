@@ -1,0 +1,4 @@
+python-dotenv
+colander
+base58
+ecdsa
