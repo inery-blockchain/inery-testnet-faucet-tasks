@@ -1,0 +1,4 @@
+.header_navlink .nav-link a:focus,
+.header_navlink .nav-link a:hover {
+  color: white !important;
+}
