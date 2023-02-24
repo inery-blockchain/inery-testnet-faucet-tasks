@@ -1,4 +1,4 @@
-#How to run this script
+# How to run this script
 
 1. insert url, private key and inery account on `.env` file
 
