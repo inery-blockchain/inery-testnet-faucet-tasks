@@ -1,0 +1,20 @@
+{
+  "name": "rawrr",
+  "version": "1.0.0",
+  "description": "push transaction on Inery blockchain",
+  "main": "./sike.js",
+  "scripts": {
+    "transaction": "node ./sike.js"
+  },
+  "author": "rawrr",
+  "license": "senorita",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RowNode/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/RowNode/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}

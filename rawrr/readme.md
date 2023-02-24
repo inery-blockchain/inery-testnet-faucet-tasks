@@ -1,18 +1,15 @@
 ####===== Prerequisite =====####
 
-- python3
+- npm install
 
 
 ####===== Run =====####
 
-+++ Install dependencies
-
-apt install python3
-
-+++ edit the variable
-PRIVATE_KEY = YOUR PRIVATE KEY
-INERY_ACCOUNT = YOUR INERY ACCOUNT
++++ edit the variable at .env
+PRIV_KEY = YOUR PRIVATE KEY
+IN_ACCOUNT = YOUR INERY ACCOUNT
+NODE_URL= Ur URL
 
 +++ run the script
 
-python transaction.py
+npm run transaction
