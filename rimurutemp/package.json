@@ -2,21 +2,19 @@
   "name": "ineryjs",
   "version": "1.0.0",
   "description": "Inery API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "doc": "jsdoc -c jsdoc.json",
     "build-web": "webpack --config webpack.config.js",
-    "create": "node ./rimurutemp.mjs",
-    "transfer": "node ./transfer-token.mjs",
-    "createtoken": "node ./create-token.mjs",
+    "rpc-rumuru": "node ./rimurutemp/rimuru-rpc.mjs"
   },
-  "author": "rimurutemp",
+  "author": "Inery",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muiljepe/inery-testnet-faucet-tasks"
+    "url": "https://git.webservice-host.net/ljubomirm/inery_module"
   },
-  "homepage": "https://github.com/muiljepe/inery-testnet-faucet-tasks",
+  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
   "dependencies": {
     "bn.js": "^5.2.0",
     "dotenv": "^16.0.3",
@@ -39,4 +37,3 @@
     "webpack-cli": "^4.10.0"
   }
 }
-
