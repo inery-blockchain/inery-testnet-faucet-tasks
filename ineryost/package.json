@@ -1,0 +1,18 @@
+{
+    "name": "$ineryost",
+    "description": "RPC transaction for task 4",
+    "main": "./inery-task4.js",
+    "scripts": {
+      "solution": "node ./inery-task4.js"
+    },
+    "author": "ineryost",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/russoturisto1/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/russoturisto1/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
