@@ -12,7 +12,7 @@ npm install -g npm
 
 # HOW TO RUN ?
 
-### Change directory to `jowo.wg`
+### Change directory to `sipen.hd`
 ```
 cd jowo.wg
 ```
