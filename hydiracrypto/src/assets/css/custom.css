@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Baloo 2", cursive; */
+  font-family: "Inter";
+  box-sizing: border-box;
+}
+
+@import "../css/responsive.css";
+
+:root {
+  --white: #fff;
+  --orange: #ff9416;
+  --black: #000000;
+  --abu-abu: #b5b5b5;
+  --green-black: #287c1e;
+  --gold-black: #bf9a30;
+  --emas-gelap: #cba981;
+}
+
+body {
+  background: var(--black);
+  height: 100vh;
+}
+
+.container-custom {
+  padding: 75px;
+}
+.box-main {
+  padding: 50px;
+  background: var(--white);
+  border-radius: 10px;
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+.box-data-hash {
+  width: 100%;
+  padding: 50px;
+  background: var(--white);
+  border-radius: 10px;
+  position: relative;
+  min-height: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+.input-costum {
+  position: relative;
+}
+.input-costum span {
+  background: var(--green-black);
+  padding: 3px 6px;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  right: 8px;
+  top: 8px;
+  font-size: 11px;
+}
