@@ -1,0 +1,19 @@
+{
+  "name": "diefky1212-rpc-transaction",
+  "version": "1.0.0",
+  "description": "A Sample RPC Transaction For Inery Blockchain",
+  "main": "./diefky1212.mjs",
+  "scripts": {
+    "solution": "node ./diefky1212.mjs"
+  },
+  "author": "diefky1212",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diefky/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/Diefky/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
