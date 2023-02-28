@@ -1,0 +1,23 @@
+{
+  "name": "inery-task5",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@reduxjs/toolkit": "^1.9.2",
+    "bootstrap": "^5.2.3",
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.1"
+  }
+}
