@@ -1,5 +1,5 @@
 {
-  "name": "jowo.wg",
+  "name": "sipen.hd",
   "version": "1.0.0",
   "description": "A Sample RPC for transaction via JSON for inery blockchain ",
   "main": "dist/index.js",
@@ -8,13 +8,13 @@
     "generate-docs": "jsdoc --configure jsdoc.json --verbose",
     "build-web": "webpack --config webpack.config.js"
   },
-  "author": "jowo.wg",
+  "author": "sipen.hd",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jowo-wg/inery-testnet-faucet-tasks.git"
+    "url": "https://github.com/sipen.hd/inery-testnet-faucet-tasks.git"
   },
-  "homepage": "https://github.com/jowo-wg/inery-testnet-faucet-tasks.git",
+  "homepage": "https://github.com/sipen.hd/inery-testnet-faucet-tasks.git",
   "dependencies": {
     "bn.js": "^5.2.0",
     "elliptic": "^6.5.4",
