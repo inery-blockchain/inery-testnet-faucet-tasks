@@ -1,0 +1,114 @@
+{
+    "____comment": "This file was generated with inery-abigen. DO NOT EDIT ",
+    "version": "inery::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "body",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "edit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "post_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "body",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "like",
+            "base": "",
+            "fields": [
+                {
+                    "name": "post_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "post",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "body",
+                    "type": "string"
+                },
+                {
+                    "name": "likes",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "remove",
+            "base": "",
+            "fields": [
+                {
+                    "name": "post_id",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "edit",
+            "type": "edit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "like",
+            "type": "like",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "remove",
+            "type": "remove",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "posts",
+            "type": "post",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
