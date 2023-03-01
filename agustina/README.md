@@ -1,13 +1,13 @@
 # Steps to create with a Svelte app
 
-1. Create a new project
+1. Create project
 Create a new project using the NPM command 'npx degit sveltejs/your-folder-name template' (replace "your-folder-name" with the desired name for your project folder). Then, navigate to your project folder with the command 'cd your-folder-name'.
 
 ```
 2. Installing dependencies
 
 ```
-'yarn install' / 'npm install'
+'yarn install' / 'npm install' 
 (to install all required dependencies for your project)
 ```
 3. Run your project
