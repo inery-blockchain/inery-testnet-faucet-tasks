@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.line-5 {
+    height: 10px;
+    background: linear-gradient(
+      to bottom,
+      transparent 2px,
+      rgb(255, 255, 255) 2px,
+      rgb(255, 255, 255) 3px,
+      transparent 3px
+    );
+  }
