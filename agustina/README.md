@@ -1,6 +1,7 @@
 # Steps to create with a Svelte app
 
 1. Create project
+
 Create a new project using the NPM command 'npx degit sveltejs/your-folder-name template' (replace "your-folder-name" with the desired name for your project folder). Then, navigate to your project folder with the command 'cd your-folder-name'.
 
 ```
