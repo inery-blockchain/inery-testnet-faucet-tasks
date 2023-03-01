@@ -1,0 +1,25 @@
+{
+  "name": "inery-js-push-rpc-tx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "start": "ts-node push-transaction.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.3",
+    "@types/node-fetch": "^2.1.2",
+    "@types/text-encoding": "^0.0.34",
+    "prettier": "^1.15.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "node-fetch": "^2.2.1",
+    "text-encoding": "^0.7.0",
+    "dotenv": "^16.0.3"
+  }
+}
