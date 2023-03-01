@@ -31,5 +31,5 @@ npm install
 Run the script
 
 ```
-npm run rpc
+node ./rpc.mjs
 ```
