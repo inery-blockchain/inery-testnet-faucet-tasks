@@ -1,0 +1,14 @@
+{
+  "name": "ceritacrypto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "transfer.mjs",
+  "scripts": {
+    "transfer": "node ./transfer.mjs"
+  },
+  "author": "ceritac",
+  "license": "ISC",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
