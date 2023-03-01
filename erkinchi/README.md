@@ -1,37 +1,15 @@
-## RPC API Push Transaction Example (via `ineryjs`)
+## RPC API Push Transaction Example (via `IneryPy`)
 
-This repository sole purposes is to demonstrate you to setup `ineryjs` to push a 
-transaction through API endpoint.
+Make sure you have Python 3.x installed on your system. You can check your version by running `python3 --version`
 
-## Quick Start
+## Installing dependencies
+Install IneryPy liberery by using this command 
+```
+pip3 install IneryPy
+```
 
-You are going to follow a quick guide to send tokens from one account to another
-one using `push_transaction` method
-
-
-## How to run
-Config your transfer settings in `.env` file
+### How to run
 
 ```bash
-npm install
-
-npm install -g ts-node typescript '@types/node'
-```
-
-Create a `.env` file with the following content:
-
-```
-TRANSFER_FROM_ACCOUNT="<your account name>"
-SIGNING_PRIVATE_KEY="<your private key>"
-NODE_URL="<Inery node rpc url>"
-TRANSFER_TO_ACCOUNT="<the account that will receive token from your account>"
-TRANSFER_QUANTITY="<token quantity with symbol>"
-```
-
-Adapt the `push-transaction.ts` script to fit your need
-
-Launch the `push-transaction.ts` script:
-
-```bash
-ts-node push-transaction.ts
+python push-transaction.py
 ```
