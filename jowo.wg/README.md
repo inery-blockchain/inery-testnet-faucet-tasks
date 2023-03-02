@@ -62,7 +62,7 @@ npm run TheIssue
 
 **Token Action `transfer`**
 ```console
-npm run transfer-token
+npm run TestTransfer
 ```
 
 ### `LETS DONE :) THANK YOU `
