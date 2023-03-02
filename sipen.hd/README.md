@@ -1,4 +1,4 @@
-== Prerequisite ==
+## Prerequisite
 
 - [NodeJS](https://nodejs.org/en/)
 
@@ -6,51 +6,47 @@
 
 
 ### Install curl
-```
+```console 
 sudo apt-get install curl
 ```
 
 ### Install NodeJS
-```
+```console
 curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 ```
 
 ### Install NPM
 ```console
-sh
 sudo apt install npm
 ```
 
 
-## RUN
+### `HOW TO RUN ?`
 
-== **Change Directory To Your Account** 
+**Change Directory To Your Account**
 
 ```console
-sh
 cd ~/inery-testnet-faucet-tasks/sipen.hd
 ```
 
 
-== **Install Dependencies**
+**Install Dependencies**
 
 ```console
-sh
 npm install
-```
+``` 
 
-== ** Edit `.env` file**
+**Edit `.env` file** ( *input your data* )
 ```console
 cp .env-sample .env
 ```
 
 
-== **Run the script
+**Run the script**
 
 ```console
-sh
 npm run ordertx
 ```
 
-##### AND DONE :) #####
+#### `WELL DONE` :) ####
