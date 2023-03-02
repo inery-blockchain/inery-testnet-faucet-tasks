@@ -41,6 +41,11 @@ npm install
 nano .env
 ```
 
+**Run Script**
+``` 
+npm run MainTransaction 
+````
+
 
 #### RPC transaction with token contract
 **Token Action `make`**
