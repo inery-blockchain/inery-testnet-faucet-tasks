@@ -26,7 +26,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			{ broadcast: true, sign: true }
 		);
 
-		return json(tx);
+		return json(tx.processed.action_traces[0].console);
 	} catch (error) {
 		return json(error);
 	}
