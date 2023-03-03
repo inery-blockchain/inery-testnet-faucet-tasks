@@ -3,7 +3,7 @@ A Sample code to call JSON RPC on Inery Blockchain
 
 ## Getting Started
 
-JSON RPC Sample code are available at [herodius](lalala) directory, you can try to modify and understand how it works, you also need to have Valued Smart Contract ( Task 3 ) in your Account, to able run your code and call the valued contract function.
+JSON RPC Sample code are available at [herodius](https://github.com/novalution/inery-testnet-faucet-tasks/blob/main/herodius/json-rpc.mjs) directory, you can try to modify and understand how it works, you also need to have Valued Smart Contract ( Task 3 ) in your Account, to able run your code and call the valued contract function.
 
 
 ### Install Dependencies
@@ -105,9 +105,7 @@ EOF
 3. Compile
 
    ```
-   cd inrcrud
-cd; source .bashrc; cd -
-inery-cpp -abigen -o inrcrud.wasm inrcrud.cpp
+   cd inrcrud cd; source .bashrc; cd -inery-cpp -abigen -o inrcrud.wasm inrcrud.cpp
    ```
 
 4. Set Contract
