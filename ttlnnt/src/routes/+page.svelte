@@ -1,22 +1,24 @@
 <script lang="ts">
     import Modal from "$lib/components/Modal.svelte";
     import { api_store } from "$lib/store";
-    let api_result: {} = {res: "Please click button above to run Inery CRUD function"}
+    let api_result: {} = {res: "Please choose the action"}
 
-    let create_id: number
-    let create_data: string
+    let bname: name
+    let bauthor: string
+
     let read_id: number
+
     let update_id: number
     let update_data: string
+
     let destroy_id: number
 
-    async function create(){
-        const response = await fetch("/api/create", {
+    async function insert(){
+        const response = await fetch("/api/insert", {
             method: "POST",
             body: JSON.stringify({
-                id: create_id,
-                user: "ttlnnt",
-                data: create_data
+                bname: bname,
+                bauthor: bauthor
             }),
             headers:{
                 'content-type': 'application/json'
@@ -26,8 +28,8 @@
         api_store.set(response.json())
     }
 
-    async function read(){
-        const response = await fetch("/api/read", {
+    async function get(){
+        const response = await fetch("/api/get", {
             method: "POST",
             body: JSON.stringify({
                 id: read_id,
@@ -71,43 +73,18 @@
 
 </script>
 
-<style type="text/css">
-.backgroundimg {
-    background-image: url('../background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
 
-.button1:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}    
-</style>
 
-<div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20 backgroundimg">
+<div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20">
     <div class="mb-10 text-center">
-        <div class="text-4xl font-bold ">Inery Task 5</div>
+        <div class="text-4xl font-bold ">Simple Book Management.</div>
         <div class="mt-4">Please click one of button below to run the blockchain transaction <br> after the transaction executed you will see a blockchain log in the bottom</div>
     </div>
 
     <div class="grid grid-cols-4 gap-4">
-        <label for="modal-create" class="button button1">Create</label>
-        <label for="modal-read" class="button button1">Read</label>
-        <label for="modal-update" class="button button1">Update</label>
-        <label for="modal-destroy" class="button button1">Destroy</label>
+        <label for="modal-create" class="btn btn-primary">Insert New Book</label>
+        <label for="modal-read" class="btn btn-info">Get Book Info By ID</label>
+        <label for="modal-destroy" class="btn btn-error">Delete Book By ID</label>
     </div>
     
     <div class="divider"></div>
@@ -122,17 +99,17 @@
     </div>
 </div>
 
-<Modal modal_id="modal-create" modal_title="Create New Record on IneryDB" on:click={() => create()}>
-    <div slot="body" class="flex flex-col gap-4">
-        <input bind:value={create_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
-        <input type="text" placeholder="ttlnnt" class="input input-bordered w-full max-w-xs" disabled />
-        <textarea bind:value={create_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
+<Modal modal_id="modal-create" modal_title="Create New Book on IneryDB" on:click={() => insert()}>
+    <div slot="body" class="flex flex-col gap-4 modal-lg">
+Name only allow lower characters + number no space.
+        <input bind:value={bname} type="text" placeholder="bookname123" class="input input-bordered w-full max-w-xs" />
+        <textarea bind:value={bauthor} class="textarea textarea-bordered w-full" placeholder="Book Author..."></textarea>
     </div>
 </Modal>
 
-<Modal modal_id="modal-read" modal_title="Read Record on IneryDB by its ID" on:click={() => read()}>
-    <div slot="body" class="flex flex-col gap-4">
-        <input bind:value={read_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+<Modal modal_id="modal-read" modal_title="Get book info by ID" on:click={() => get()}>
+    <div slot="body" class="flex flex-col gap-4 modal-lg">
+        <input bind:value={read_id} type="text" placeholder="Type the book ID..." class="input input-bordered w-full max-w-xs" />
     </div>
 </Modal>
 

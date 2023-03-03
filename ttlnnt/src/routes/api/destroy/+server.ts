@@ -10,7 +10,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				actions: [
 					{
 						account,
-						name: 'destroy',
+						name: 'dlt',
 						authorization: [
 							{
 								actor,
