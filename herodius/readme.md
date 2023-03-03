@@ -107,16 +107,15 @@ EOF
    ```
    cd inrcrud cd; source .bashrc; cd -inery-cpp -abigen -o inrcrud.wasm inrcrud.cpp
    ```
-
 4. Set Contract
 
    ```
-cline set contract AccountName ./
+   cline set contract AccountName ./
    ```
 
 5. Unlock Wallet
    ```
-cline wallet unlock -n AccountName --password urpassword
+   cline wallet unlock -n AccountName --password urpassword
    ```
 if error like this
 https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FI3uyPQUnfzoZEU60Wqmq%2Fuploads%2FVyXkM7dwv8plllwRnZy7%2F344_1.png?alt=media&token=e5146d74-719f-4b61-9eae-ec180bf5ffce
@@ -126,6 +125,7 @@ image credit : BeritaCryptooimage credit : BeritaCryptoo
 
    ```
    cd ~/inery-node/inery.setup/master.node/blockchain/config
+   
    nano config.ini
    ```
 
