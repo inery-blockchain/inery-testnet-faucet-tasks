@@ -150,7 +150,7 @@
 }
 </style>
 
-
+<title>Inery App</title>
 <div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20 bgimg">
     <div class="mb-10 text-center">
         <div class="text-4xl font-bold ">Student Management System</div>
