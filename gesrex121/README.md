@@ -1,8 +1,12 @@
-# WEB APP TEST
+# Run the DAPP locally
+
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+# Demo online
 
 https://inery-task5-gesrex121.vercel.app/
 
-## Change directory to gesrex121 and install dependency
+## Change directory to kimkhoathao and install dependency
 
 ```bash
 cd gesrex121/
