@@ -3,14 +3,14 @@ import { json } from '@sveltejs/kit';
 import { api, account, actor } from '$lib/config';
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { id, user, data } = await request.json();
+	const { id } = await request.json();
 	try {
 		const tx = await api.transact(
 			{
 				actions: [
 					{
 						account,
-						name: 'create',
+						name: 'del',
 						authorization: [
 							{
 								actor,
@@ -18,9 +18,7 @@ export const POST: RequestHandler = async ({ request }) => {
 							}
 						],
 						data: {
-							id,
-							user,
-							data
+							id
 						}
 					}
 				]
@@ -28,7 +26,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			{ broadcast: true, sign: true }
 		);
 
-		return json(tx);
+		return json(tx.processed.action_traces[0].console);
 	} catch (error) {
 		return json(error);
 	}

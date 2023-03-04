@@ -2,24 +2,32 @@
     import Modal from "$lib/components/Modal.svelte";
     import { api_store } from "$lib/store";
     let api_result: {} = {res: "Please click button above to run Inery transaction"}
-
-    let create_id: number
-    let create_data: string
+    
+    let insert_id: number
+    let insert_stuid: number
+    let insert_stuname: string
+    let insert_ststate: string
+    let insert_marks: number
 
     let read_id: number
 
     let update_id: number
-    let update_data: string
+    let update_stuname: string
+    let update_ststate: string
+    let update_marks: number
 
-    let destroy_id: number
+    let del_id: number
 
     async function create(){
-        const response = await fetch("/api/create", {
+        const response = await fetch("/api/insert", {
             method: "POST",
             body: JSON.stringify({
-                id: create_id,
+                id: insert_id,
                 user: "thanhtamdc",
-                data: create_data
+                stuid: insert_stuid,
+		stuname: insert_stuname,
+		ststate: insert_ststate,
+		marks: insert_marks
             }),
             headers:{
                 'content-type': 'application/json'
@@ -48,7 +56,9 @@
             method: "POST",
             body: JSON.stringify({
                 id: update_id,
-                data: update_data
+                stuname: update_stuname,
+		ststate: update_ststate,
+		marks: update_marks
             }),
             headers:{
                 'content-type': 'application/json'
@@ -59,10 +69,10 @@
     }
 
     async function destroy(){
-        const response = await fetch("/api/destroy", {
+        const response = await fetch("/api/del", {
             method: "POST",
             body: JSON.stringify({
-                id: destroy_id,
+                id: del_id,
             }),
             headers:{
                 'content-type': 'application/json'
@@ -143,15 +153,15 @@
 
 <div class="container bg-base-200 mx-auto min-h-screen px-20 pb-20 pt-20 bgimg">
     <div class="mb-10 text-center">
-        <div class="text-4xl font-bold ">Inery Task 5 by thanhtamdc</div>
-        <div class="mt-4">Please click one of button below to run the blockchain transaction <br> after the transaction executed you will see a blockchain log in the bottom</div>
+        <div class="text-4xl font-bold ">Student Management System</div>
+        <div class="mt-4">This is a simple student management system using Inery database</div>
     </div>
 
     <div class="grid grid-cols-4 gap-4">
-        <label for="modal-create" class="button button1">CREATE</label>
-        <label for="modal-read" class="button button2">READ</label>
-        <label for="modal-update" class="button button4">UPDATE</label>
-        <label for="modal-destroy" class="button button3">DESTROY</label>
+        <label for="modal-create" class="button button1">CREATE NEW STUDENT PROFILE</label>
+        <label for="modal-read" class="button button2">GET STUDENT PROFILE</label>
+        <label for="modal-update" class="button button4">UPDATE STUDENT PROFILE</label>
+        <label for="modal-destroy" class="button button3">DELETE STUDENT PROFILE</label>
     </div>
 
     <div class="divider"></div>
@@ -164,31 +174,38 @@
             <pre data-prefix="$"><code>{JSON.stringify(api, null, 4)}</code></pre>
         {/await}
     </div>
+    <div class="divider"></div>
+
 </div>
 
-<Modal modal_id="modal-create" modal_title="Create New Record on IneryDB" on:click={() => create()}>
+<Modal modal_id="modal-create" modal_title="Create New Student Profile" on:click={() => create()}>
     <div slot="body" class="flex flex-col gap-4">
-        <input bind:value={create_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+        <input bind:value={insert_id} type="text" placeholder="ID..." class="input input-bordered w-full max-w-xs" />
         <input type="text" placeholder="thanhtamdc" class="input input-bordered w-full max-w-xs" disabled />
-        <textarea bind:value={create_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
+        <input bind:value={insert_stuid} type="text" placeholder="Student ID..." class="input input-bordered w-full max-w-xs" />
+	<input bind:value={insert_stuname} type="text" placeholder="Student Name..." class="input input-bordered w-full max-w-xs" />
+	<input bind:value={insert_ststate} type="text" placeholder="State..." class="input input-bordered w-full max-w-xs" />
+	<input bind:value={insert_marks} type="text" placeholder="Marks..." class="input input-bordered w-full max-w-xs" />
     </div>
 </Modal>
 
-<Modal modal_id="modal-read" modal_title="Read Record on IneryDB by its ID" on:click={() => read()}>
+<Modal modal_id="modal-read" modal_title="Get Student Info by ID" on:click={() => read()}>
     <div slot="body" class="flex flex-col gap-4">
         <input bind:value={read_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
     </div>
 </Modal>
 
-<Modal modal_id="modal-update" modal_title="Update Record on IneryDB by its ID" on:click={() => update()}>
+<Modal modal_id="modal-update" modal_title="Update Student Info by its ID" on:click={() => update()}>
     <div slot="body" class="flex flex-col gap-4">
         <input bind:value={update_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
-        <textarea bind:value={update_data} class="textarea textarea-bordered w-full" placeholder="Type the data..."></textarea>
+        <textarea bind:value={update_stuname} class="textarea textarea-bordered w-full" placeholder="Student Name..."></textarea>
+	<textarea bind:value={update_ststate} class="textarea textarea-bordered w-full" placeholder="State..."></textarea>
+	<textarea bind:value={update_marks} class="textarea textarea-bordered w-full" placeholder="Marks..."></textarea>
     </div>
 </Modal>
 
-<Modal modal_id="modal-destroy" modal_title="Destroy Record on IneryDB by its ID" on:click={() => destroy()}>
+<Modal modal_id="modal-destroy" modal_title="Delete Student Info by its ID" on:click={() => destroy()}>
     <div slot="body" class="flex flex-col gap-4">
-        <input bind:value={destroy_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
+        <input bind:value={del_id} type="text" placeholder="Type the ID..." class="input input-bordered w-full max-w-xs" />
     </div>
 </Modal>

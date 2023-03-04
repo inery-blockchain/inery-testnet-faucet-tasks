@@ -3,29 +3,27 @@ import { json } from '@sveltejs/kit';
 import { api, account, actor } from '$lib/config';
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { id } = await request.json();
+	const { id, user, stuid, stuname, ststate, marks } = await request.json();
 	try {
 		const tx = await api.transact(
 			{
 				actions: [
 					{
 						account,
-						name: 'destroy',
+						name: 'insert',
 						authorization: [
 							{
-								actor,
-								permission: 'active'
+								actor, permission: 'active'
 							}
 						],
 						data: {
-							id
+							id, user, stuid, stuname, ststate, marks
 						}
 					}
 				]
 			},
 			{ broadcast: true, sign: true }
 		);
-
 		return json(tx);
 	} catch (error) {
 		return json(error);
