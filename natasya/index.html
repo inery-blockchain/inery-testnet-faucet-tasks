@@ -1,0 +1,9 @@
+<script src="./dist-web/inery-jsonrpc.min.js"></script>
+<script src="./dist-web/inery-api.min.js"></script>
+<script src="./dist-web/inery-jssig.min.js"></script>
+<script>
+    (async()=>{
+        const rpc=new ineryjs_jsonrpc.JsonRpc("https://<IPmu>:8888");
+        console.log(await rpc.get_info());
+    })();
+</script>
