@@ -11,8 +11,8 @@ git clone https://github.com/inery-blockchain/ineryjs.git
 ## Create
 - Create Folder pushinery
 - crete file .env
-- create file pushinery.mjs in folder pushinery
-(sample file .env & file pushinery. mjs include in folder)
+- create file push.php in folder pushinery
+(sample file .env & file push.php include in folder)
 
 ### Run
 ```bash
