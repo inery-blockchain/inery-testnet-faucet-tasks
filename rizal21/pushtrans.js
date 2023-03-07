@@ -83,4 +83,4 @@ const pushTransaction = async (dataId, user, data) => {
   await destroyTransaction(dataId);
 };
 
-pushTransaction(1020, account, "push transaction by rizal21");
+pushTransaction(1021, account, "push transaction by rizal21");
