@@ -7,7 +7,7 @@
   "scripts": {
     "push": "node ./rizal22.js"
   },
-  "homepage": "https://github.com/sindiyagita/inery-testnet-faucet-tasks",
+  "homepage": "https://github.com/risodss/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ineryjs": "github:inery-blockchain/ineryjs"
