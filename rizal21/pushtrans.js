@@ -1,4 +1,4 @@
-import { Api, JsonRpc, JsSignatureProvider } from "eryjs";
+import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import dotenv from "dotenv";
 dotenv.config();
 
