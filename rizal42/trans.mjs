@@ -1,4 +1,4 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from '/root/ineryjs/dist/index.js'
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs'
 import dotenv from 'dotenv'
 
 dotenv.config()
