@@ -1,1 +1,89 @@
-.
+root@inery:~/inery-testnet-faucet-tasks/rizal52# npm run index
+
+> task 4 by rizal@1.0.0 index
+
+> node ./index.mjs
+
+=======================================================================
+
+=================== CREATE transaction information ====================
+
+=======================================================================
+
+{
+
+  transaction_id: '6788c1d80bbe769823f1b3b5026d9b9d87501409b7c8e7a66f31f93ef1e4faf2',
+
+  processed: {
+
+    id: '6788c1d80bbe769823f1b3b5026d9b9d87501409b7c8e7a66f31f93ef1e4faf2',
+
+    block_num: 7684384,
+
+    block_time: '2023-03-08T09:14:40.500',
+
+    producer_block_id: null,
+
+    receipt: { status: 'executed', cpu_usage_us: 286, net_usage_words: 18 },
+
+    elapsed: 286,
+
+    net_usage: 144,
+
+    scheduled: false,
+
+    action_traces: [ [Object] ],
+
+    account_mem_delta: null,
+
+    except: null,
+
+    error_code: null
+
+  }
+
+}
+
+Response from contract :
+
+=======================================================================
+
+================== DESTROY transaction information ====================
+
+=======================================================================
+
+{
+
+  transaction_id: '5f7fbf52176d53150ad7cfd401b9d5b72e22a5d28ffbb2856a510015436b7387',
+
+  processed: {
+
+    id: '5f7fbf52176d53150ad7cfd401b9d5b72e22a5d28ffbb2856a510015436b7387',
+
+    block_num: 7684385,
+
+    block_time: '2023-03-08T09:14:42.000',
+
+    producer_block_id: null,
+
+    receipt: { status: 'executed', cpu_usage_us: 100, net_usage_words: 13 },
+
+    elapsed: 100,
+
+    net_usage: 104,
+
+    scheduled: false,
+
+    action_traces: [ [Object] ],
+
+    account_mem_delta: null,
+
+    except: null,
+
+    error_code: null
+
+  }
+
+}
+
+Response from contract :
