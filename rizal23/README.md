@@ -10,7 +10,7 @@ cd ~/inery-testnet-faucet-tasks/rizal23
 edit pushinery.js sesuai akun kalian
 ```shell
 
-nano rizal23
+nano pushinery.js
 
 ```
 dan ubah file .env-sample
