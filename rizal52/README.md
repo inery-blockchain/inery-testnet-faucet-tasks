@@ -25,6 +25,6 @@ npm install
 Run the script
 
 ```
-npm run push
+npm run index
 ```
 selesai
