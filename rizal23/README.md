@@ -28,6 +28,6 @@ npm install
 Run the script
 
 ```
-npm run push_transaction
+npm run pushtransaction
 ```
 DONE
