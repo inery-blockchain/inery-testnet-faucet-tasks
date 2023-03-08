@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NFT Upload Inery</title>
+  </head>
+  <body>
+   <div style="border: 1px solid black; padding: 10px;">
+   <center>
+    <h1>NFT Upload Inery</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <label for="file">Select a file NFT to upload:</label>
+      <input type="file" id="file" name="file">
+      <label for="name">Name NFT:</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Upload</button>
+    </form>
+	</center>
+	</div>
+    <div id="file-display"></div>
+    <script src="App.js"></script>
+  </body>
+</html>
