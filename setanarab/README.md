@@ -2,7 +2,7 @@
 
 You can try my application : https://inery-dun.vercel.app
 
-## Change directory to cahyadi and install dependency
+## Change directory to setanarab and install dependency
 
 ```bash
 cd setanarab/
