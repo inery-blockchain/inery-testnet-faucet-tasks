@@ -1,6 +1,6 @@
 # Run the DAPP locally
 
-You can try my application : inery-dun.vercel.app
+You can try my application : https://inery-dun.vercel.app
 
 ## Change directory to cahyadi and install dependency
 
