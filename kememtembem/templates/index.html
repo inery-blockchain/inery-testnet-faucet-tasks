@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Dapp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body {
+        background: rgb(6,104,109);
+        background: radial-gradient(circle, rgba(6,104,109,1) 0%, rgba(0,27,55,1) 100%); 
+      }
+      p, h2, h3 {
+        color: #eee;
+      }
+      .btn-primary {
+        background: #09B5EC;
+        border-radius: 6px;
+        border: 0;
+      }
+      .btn-primary:hover {
+        background: #0793c2;
+        border-color: #055f7c;
+      }
+      .btn-primary:active {
+        background: #06779c !important;
+      }
+      .btn-primary:focus, .btn-primary.focus {
+        background-color: #059fd2;
+        border-color: #055f7c;
+        -webkit-box-shadow: 0 0 0 0.2rem rgba(5, 95, 124, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(5, 95, 124, 0.5) !important;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script  type = "text/javascript">
+      function redirect(link) {
+        window.location.href = link;
+     }
+    </script>
+</head>
+  <body>
+  <div class="container">
+    <h2 class="display-2 text-center mb-5">Dapp Todo</h2>
+      <div class="input-group mb-3">
+          <input type="text" name="text" class="form-control create" placeholder="Insert data" autocomplete="off">
+          <div class="input-group-append" id="button-addon">
+            <button class="btn btn-primary btn-create" type="submit">Submit</button>
+          </div>
+      </div>
+    <h2 class="display-3 text-center mt-4">List of data</h2>
+    <div class="wrapper">
+    </div>
+    <h2 class="display-3 text-center mt-4 log" style="display: none;">Transaction log</h2>
+    <pre class="json" style="background-color: white;"><code></code></pre>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
