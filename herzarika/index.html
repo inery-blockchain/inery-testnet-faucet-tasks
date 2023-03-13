@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/favicon.png" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- my CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Herzarika dApps</title>
+  </head>
+
+  <body id="home" class="scrollspy">
+
+    <!-- navbar -->
+    <div class="navbar-fixed">
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Tools</a></li>
+        <li><a href="#!">IneryDB</a></li>
+        <li><a href="#!">Explorer</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">GitHub</a></li>
+        <li><a href="#!">Whitepaper</a></li>
+        <li><a href="#!">Docs</a></li>
+      </ul>
+      <nav class="blue darken-2">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">HERZARIKA INERY</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#clients">Clients</a></li>
+              <li><a href="#dApps">dApps</a></li>
+              <li><a href="#portfolio">Blog</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Tools<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- sidenav -->
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <!-- slider -->
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="img/slider/6.png">
+          <div class="caption left-align">
+            <h3></h3>
+            <h5 class="light grey-text text-lighten-3"></h5>
+          </div>
+        </li>
+        <li>
+          <img src="img/slider/7.png">
+          <div class="caption right-align">
+            <h3></h3>
+            <h5 class="light grey-text text-lighten-3"></h5>
+          </div>
+        </li>
+        <li>
+          <img src="img/slider/8.png">
+          <div class="caption center-align">
+            <h3></h3>
+            <h5 class="light grey-text text-lighten-3"></h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- dApps -->
+<section id="services" class="services grey lighten-3 scrollspy">
+  <div class="container">
+    <h3 class="light center grey-text text-darken-3">Our dApps</h3>
+    <form action="https://master1.blockchain-servers.world/v1/chain/push_transaction" method="POST">
+      <label for="signatures">
+        <span style="color: blue;">Signatures:</span>
+      </label>
+      <br>
+      <input type="text" id="signatures" name="signatures" value="">
+      <br>
+      <br>
+      <label for="compression">
+        <span style="color: blue;">Compression:</span>
+      </label>
+      <br>
+<select id="compression" name="compression" class="select-style">
+  <option value="true">CREATE</option>
+  <option value="false">DESTROY</option>
+</select>
+
+      <br>
+      <br>
+      <label for="packed_context_free_data">
+        <span style="color: blue;">Packed Context Free Data:</span>
+      </label>
+      <br>
+      <input type="text" id="packed_context_free_data" name="packed_context_free_data" value="">
+      <br>
+      <br>
+      <label for="packed_trx">
+        <span style="color: blue;">Packed TRX:</span>
+      </label>
+      <br>
+      <input type="text" id="packed_trx" name="packed_trx" value="">
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</section>
+
+    
+
+
+
+    <!-- footer -->
+    <footer class="blue darken-2 white-text center">
+      <p class="flow-text">Herzarika dApps. Copyright 2023.</p>
+    </footer>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      const sideNav = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sideNav);
+
+      const slider = document.querySelectorAll('.slider');
+      M.Slider.init(slider, {
+        indicators: false,
+        height: 500,
+        transition: 600,
+        interval: 3000
+      });
+
+      const parallax = document.querySelectorAll('.parallax');
+      M.Parallax.init(parallax);
+
+      const materialbox = document.querySelectorAll('.materialboxed');
+      M.Materialbox.init(materialbox);
+
+      const scroll = document.querySelectorAll('.scrollspy');
+      M.ScrollSpy.init(scroll, {
+        scrollOffset: 50
+      });
+
+      const dropdown = document.querySelectorAll('.dropdown-trigger');
+      M.Dropdown.init(dropdown);
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
