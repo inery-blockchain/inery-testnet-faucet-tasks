@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url("https://user-images.githubusercontent.com/107887745/224569870-01c75d7a-1950-405b-b635-e55dd5a53213.jpg");
+    background-size: cover;
+  }
+
+  .grid-cols-4 > * {
+    background-color: #f1f1f1; /* ya da istediğiniz herhangi bir renk kodu */
+  }
+  
+  .btn-info {
+    background-color: pink; /* veya istediğiniz başka bir renk */
+  }
+
+  .btn-info {
+    background-color: #FF69B4 !important;
+    border-color: #FF69B4 !important;
+  }
+  
+  .btn-info:hover {
+    background-color: #FF1493 !important;
+    border-color: #FF1493 !important;
+  }
+  
+  .btn:hover {
+    background-color: #FF69B4; /* istediğiniz sabit arkaplan rengi */
+  }
+  
+  
+  
+  
+  
+  
+  
