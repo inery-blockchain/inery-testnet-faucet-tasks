@@ -13,3 +13,6 @@ Once you have these installed, you can follow these steps to get started:
 * Run the Dapp by running .`npm run dev`
 ## How it works
 This Dapp uses the IneryDB blockchain to store and retrieve data. When you create, read, update, or delete data using this Dapp, it interacts with the IneryDB blockchain through a set of REST API endpoints.
+
+## Test the DApp online
+[HERE](https://mysterious-inery-task-5.netlify.app/).
