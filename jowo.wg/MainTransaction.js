@@ -55,7 +55,7 @@ const ReadTransx = async (id) => {
 };
 
 const MainTransaction = async (id, user, data) => {
-  await CreateTransx (Id, user, data);
+  await CreateTransx (id, user, data);
   await ReadTransx (id);
 };
 
