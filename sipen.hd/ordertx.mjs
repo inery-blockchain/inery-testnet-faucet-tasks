@@ -18,7 +18,7 @@ const api = new Api({
 
 // Order Transaction ( input or create new data )
 
-const Order_Transaction = async (id, user, data) => {
+const orderTransaction = async (id, user, data) => {
     const Real_Data = { id, user, data };
     try{
         const tx = await api.transact({
@@ -46,4 +46,4 @@ const Order_Transaction = async (id, user, data) => {
                 }
             }
 
-OrderTransaction(10900, account, " Crud test transaction on JSON RPC by sipenhd ")
+orderTransaction(10900, account, " Crud test transaction on JSON RPC by sipenhd ")
