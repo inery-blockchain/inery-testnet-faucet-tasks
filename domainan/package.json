@@ -1,0 +1,20 @@
+{
+  "name": "domainan",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "push-crud": "node ./CRUD.transact.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aristanurkila/inery-testnet-faucet-tasks.git"
+  },
+  "author": "domainan",
+  "license": "ISC",
+  "homepage": "https://github.com/aristanurkila/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "readline": "^1.3.0"
+  }
+}
