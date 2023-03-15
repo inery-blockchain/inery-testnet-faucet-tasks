@@ -10,12 +10,12 @@ const signatureProvider = new JsSignatureProvider([user1PrivateKey]);
 // Calling API
 const api = new Api({ rpc: json_rpc,signatureProvider: signature})
 
-const go_transaction = async (id, user, data){
-    const go_data = { id, user, data }
+const goTransaction = async (id, user, data){
+    const goData = { id, user, data }
     try{
         const tx = await api.transact
         ({ actions:[{ account,name:"create",authorization:
-        [{ actor,permission:"active" }], data: {...go_data}}]
+        [{ actor,permission:"active" }], data: {...goData}}]
         },
         
         {broadcast:true,sign:true})
@@ -79,10 +79,11 @@ const destroy = async (id){
     }
 };
 
-async function go_transaction(id, user, data){
-    await go_data(id, user, data)
+async function goTransaction(id, user, data){
+    await goData(id, user, data)
     await read(id)
     await update(id, data)
     await destroy(id)
+}
 
-    go_transaction ( 27000, account, " Push Transaction RPC API on  Inery Blockchain by goon.dobel )
+    goTransaction ( 27000, account, " Push Transaction RPC API on  Inery Blockchain by goon.dobel " )
