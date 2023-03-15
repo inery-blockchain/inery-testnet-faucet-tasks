@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "file:../ineryjs"
+  },
+  "name": "sahanaya-rpc-push-transaction-inery",
+  "description": "Here's the instruction on how to create an RPC Push Transaction on a blockchain using the provided JavaScript code that runs on the terminal of an Ubuntu 20 VPS SSH:",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
