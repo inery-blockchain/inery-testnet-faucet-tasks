@@ -1,7 +1,7 @@
 {
-  "name": "kaelvin task4",
+  "name": "cepmek task4",
   "version": "0.1.0",
-  "description": "Sample RPC push transaction via JSON RPC by kaelvin",
+  "description": "Sample RPC push transaction via JSON RPC by cepmek",
   "main": "dist/index.js",
   "scripts": {
     "create-crud": "node ./value-contract/create.mjs",
@@ -12,7 +12,7 @@
     "issue-token": "node ./token-contract/issue.mjs",
     "transfer-token": "node ./token-contract/transfer.mjs"
   },
-  "author": "kaelvin",
+  "author": "cepmek",
   "license": "MIT",
   "repository": {
     "type": "git",
