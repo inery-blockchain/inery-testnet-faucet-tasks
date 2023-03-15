@@ -1,4 +1,4 @@
-## INERY blockchain sample RPC push transaction via JSON-RPC by kaelvin with inery account `kaelvin`
+## INERY blockchain sample RPC push transaction via JSON-RPC by cepmek with inery account `cepmek`
 
 ## Install packet dependencies
 ```
@@ -9,9 +9,9 @@ npm install -g npm
 
 ## PRE-USAGE
 
-### Change directory to `kaelvin`
+### Change directory to `cepmek`
 ```
-cd kaelvin
+cd cepmek
 ```
 
 ### Install module dependencies
