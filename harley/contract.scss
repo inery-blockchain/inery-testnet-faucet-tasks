@@ -1,0 +1,55 @@
+async function createData() {
+  try {
+    const result = await api.transact({
+      actions: [api.with(account).as(account).create(id, account, data)],
+    });
+
+    console.log(result.processed.action_traces[0].act.name);
+    console.log(result.processed.action_traces[0].console);
+    console.log(result.processed.action_traces[0]);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function readData() {
+  try {
+    const result = await api.transact({
+      actions: [api.with(account).as(account).read(id)],
+    });
+
+    console.log(result.processed.action_traces[0].act.name);
+    console.log(result.processed.action_traces[0].console);
+    console.log(result.processed.action_traces[0]);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function updateData() {
+  try {
+    const result = await api.transact({
+      actions: [api.with(account).as(account).update(id, data)],
+    });
+
+    console.log(result.processed.action_traces[0].act.name);
+    console.log(result.processed.action_traces[0].console);
+    console.log(result.processed.action_traces[0]);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function deleteData() {
+  try {
+    const result = await api.transact({
+      actions: [api.with(account).as(account).destroy(id)],
+    });
+
+    console.log(result.processed.action_traces[0].act.name);
+    console.log(result.processed.action_traces[0].console);
+    console.log(result.processed.action_traces[0]);
+  } catch (error) {
+    console.error(error);
+  }
+}
