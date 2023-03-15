@@ -1,0 +1,16 @@
+{
+  "name": "dekiyasama-rpc",
+  "version": "1.0.0",
+  "description": "To create an RPC push transaction using Corda on a VPS SSH Ubuntu 20, you will need to follow these steps:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "file:../ineryjs"
+  }
+}
