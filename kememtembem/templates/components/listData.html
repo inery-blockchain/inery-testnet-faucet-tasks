@@ -1,0 +1,26 @@
+{% if datas %}
+    {% if datas.rows %}
+        {% for data in datas.rows %}
+        <div class="input-group mb-3">
+
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="hidden" name="done" value="off">
+                <input type="checkbox" class="delete" data-target="{{data.id}}" name="done">
+            </div>
+            </div>
+
+            <input id="todo-text" type="text" data-id="{{data.id}}" value="{{data.data}}" name="text" class="form-control todo-text" autocomplete="off">
+
+            <div class="input-group-append" id="button-addon2">
+            <button id="update" class="btn btn-primary update" type="submit" value="{{data.data}}">Update</button>
+            </div>
+
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-center mt-4">{{datas}}</p>
+    {% endif %}
+{% else %}
+    <p class="text-center mt-4">No data available</p>
+{% endif %}

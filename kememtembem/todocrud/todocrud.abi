@@ -1,0 +1,95 @@
+{
+    "____comment": "This file was generated with inery-abigen. DO NOT EDIT ",
+    "version": "inery::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "crrecords",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "dlrecords",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "records",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "uprecords",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "crrecords",
+            "type": "crrecords",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "dlrecords",
+            "type": "dlrecords",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "uprecords",
+            "type": "uprecords",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "records",
+            "type": "records",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
