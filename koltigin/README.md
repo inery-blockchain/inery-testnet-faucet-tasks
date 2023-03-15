@@ -1,36 +1,26 @@
-# Record Management using EOSIO blockchain
-This code provides a basic implementation of creating and retrieving records in an EOSIO blockchain network using Inery.js library.
+## INERY JSON-RPC Transaction Example
+## This is a simple JavaScript code that demonstrates how to use the INERY JSON-RPC library to interact with a blockchain network. It defines a few sample transactions and executes them on the network.
 
-## Requirements
-* Node.js
-* Inery.js
-## Functions
-## createRecord
-This function creates a new record in the blockchain network.
-
-## Arguments
-* recordId: unique identifier for the record
-* userAccount: the account that is creating the record
-* data: the data to be stored in the record
-
-## retrieveRecord
-This function retrieves a record from the blockchain network.
-
-## Arguments
-* recordId: unique identifier for the record
-
-## pushRecord
-* This function creates a new record and then retrieves it.
-
-## Arguments
-* recordId: unique identifier for the record
-* userAccount: the account that is creating the record
-* data: the data to be stored in the record
+## Installation
+* Clone this repository or download the source code
+* Install the required dependencies using npm:
+```
+npm install
+```
+Create a  file in the project root directory with the following variables:.`env`
+```
+RPC_ENDPOINT=<endpoint URL for the JSON-RPC server>
+PRIVATE_KEY=<private key for signing transactions>
+ACCOUNT_NAME=<name of the blockchain account to use>
+```
+Replace the placeholder values with your own values.
 
 ## Usage
-Install the required packages using npm install.
-Provide the userAccount constant with a valid EOSIO account.
-Call the pushRecord function with the desired recordId, userAccount, and data arguments.
+To run the code, use the following command:
 
-## Logging
-The transaction hashes for creating and retrieving records are logged in the console. Any errors encountered during the process are also logged in the console.
+```
+node index.js
+```
+
+License
+This code is licensed under the MIT License. See the LICENSE file for details.
