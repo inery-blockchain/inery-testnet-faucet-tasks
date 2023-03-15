@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ineryjs-jssig.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ineryjs-jssig.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = op[0] &amp; 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) &amp;&amp; t.call(y), 0) : y.next) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] &amp; 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __values = (this &amp;&amp; this.__values) || function(o) {
+    var s = typeof Symbol === "function" &amp;&amp; Symbol.iterator, m = s &amp;&amp; o[s], i = 0;
+    if (m) return m.call(o);
+    if (o &amp;&amp; typeof o.length === "number") return {
+        next: function () {
+            if (o &amp;&amp; i >= o.length) o = void 0;
+            return { value: o &amp;&amp; o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JsSignatureProvider = exports.digestFromSerializedData = exports.Signature = exports.PublicKey = exports.PrivateKey = void 0;
+var elliptic_1 = require("elliptic");
+var ineryjs_key_conversions_1 = require("./ineryjs-key-conversions");
+Object.defineProperty(exports, "PrivateKey", { enumerable: true, get: function () { return ineryjs_key_conversions_1.PrivateKey; } });
+Object.defineProperty(exports, "PublicKey", { enumerable: true, get: function () { return ineryjs_key_conversions_1.PublicKey; } });
+Object.defineProperty(exports, "Signature", { enumerable: true, get: function () { return ineryjs_key_conversions_1.Signature; } });
+var ineryjs_numeric_1 = require("./ineryjs-numeric");
+var defaultEc = new elliptic_1.ec('secp256k1');
+var digestFromSerializedData = function (chainId, serializedTransaction, serializedContextFreeData, e) {
+    if (e === void 0) { e = defaultEc; }
+    var signBuf = Buffer.concat([
+        Buffer.from(chainId, 'hex'),
+        Buffer.from(serializedTransaction),
+        Buffer.from(serializedContextFreeData ?
+            new Uint8Array(e.hash().update(serializedContextFreeData).digest()) :
+            new Uint8Array(32)),
+    ]);
+    return e.hash().update(signBuf).digest();
+};
+exports.digestFromSerializedData = digestFromSerializedData;
+/**
+ * Signs transactions using in-process private keys
+ * @class
+ */ 
+class JsSignatureProvider{
+    /** @param {Array&lt;string>} privateKeys private keys to sign with */
+    constructor(privateKeys) {
+        var e_1, _a;
+        /** @summary map public to private keys */
+        this.keys = new Map();
+        /** @summary public keys */
+        this.availableKeys = [];
+        try {
+            for (var privateKeys_1 = __values(privateKeys), privateKeys_1_1 = privateKeys_1.next(); !privateKeys_1_1.done; privateKeys_1_1 = privateKeys_1.next()) {
+                var k = privateKeys_1_1.value;
+                var priv = ineryjs_key_conversions_1.PrivateKey.fromString(k);
+                var privElliptic = priv.toElliptic();
+                var pubStr = priv.getPublicKey().toString();
+                this.keys.set(pubStr, privElliptic);
+                this.availableKeys.push(pubStr);
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (privateKeys_1_1 &amp;&amp; !privateKeys_1_1.done &amp;&amp; (_a = privateKeys_1.return)) _a.call(privateKeys_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+    }
+    /** @summary Public keys associated with the private keys that the `SignatureProvider` holds */
+    getAvailableKeys() {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.availableKeys];
+            });
+        });
+    };
+    /** @summary Sign a transaction 
+     * @param {SignArgs} _a
+     * @returns {Promise&lt;SignResult>}
+    */
+    sign(_a) {
+        var chainId = _a.chainId, requiredKeys = _a.requiredKeys, serializedTransaction = _a.serializedTransaction, serializedContextFreeData = _a.serializedContextFreeData;
+        return __awaiter(this, void 0, void 0, function () {
+            var digest, signatures, requiredKeys_1, requiredKeys_1_1, key, publicKey, ellipticPrivateKey, privateKey, signature;
+            var e_2, _b;
+            return __generator(this, function (_c) {
+                digest = digestFromSerializedData(chainId, serializedTransaction, serializedContextFreeData, defaultEc);
+                signatures = [];
+                try {
+                    for (requiredKeys_1 = __values(requiredKeys), requiredKeys_1_1 = requiredKeys_1.next(); !requiredKeys_1_1.done; requiredKeys_1_1 = requiredKeys_1.next()) {
+                        key = requiredKeys_1_1.value;
+                        publicKey = ineryjs_key_conversions_1.PublicKey.fromString(key);
+                        ellipticPrivateKey = this.keys.get(ineryjs_numeric_1.convertLegacyPublicKey(key));
+                        privateKey = ineryjs_key_conversions_1.PrivateKey.fromElliptic(ellipticPrivateKey, publicKey.getType());
+                        signature = privateKey.sign(digest, false);
+                        signatures.push(signature.toString());
+                    }
+                }
+                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                finally {
+                    try {
+                        if (requiredKeys_1_1 &amp;&amp; !requiredKeys_1_1.done &amp;&amp; (_b = requiredKeys_1.return)) _b.call(requiredKeys_1);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                }
+                return [2 /*return*/, { signatures: signatures, serializedTransaction: serializedTransaction, serializedContextFreeData: serializedContextFreeData }];
+            });
+        });
+    };
+}
+exports.JsSignatureProvider = JsSignatureProvider;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ActionBuilder.html">ActionBuilder</a></li><li><a href="ActionSerializer.html">ActionSerializer</a></li><li><a href="Api.html">Api</a></li><li><a href="JsonRpc.html">JsonRpc</a></li><li><a href="JsSignatureProvider.html">JsSignatureProvider</a></li><li><a href="TransactionBuilder.html">TransactionBuilder</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-Angular.html">Using module with Angular</a></li><li><a href="tutorial-React.html">Using module with React</a></li><li><a href="tutorial-Vue.html">Using module with Vue</a></li><li><a href="tutorial-module-in-browser.html">Module in browser</a></li><li><a href="tutorial-push-transaction.html">Push transaction</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<!--
+<br class="clear">
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Mon Aug 01 2022 13:23:22 GMT+0200 (Central European Summer Time)
+</footer>
+-->
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
