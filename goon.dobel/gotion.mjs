@@ -79,7 +79,7 @@ const destroy = async (id){
     }
 };
 
-async function goTransaction(id, user, data){
+async function goTransaksi (id, user, data){
     await goData(id, user, data)
     await read(id)
     await update(id, data)
