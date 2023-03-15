@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "file:../ineryjs"
+  }
+}
