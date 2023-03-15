@@ -1,0 +1,22 @@
+{
+  "name": "task4-by-dhozil12",
+  "version": "1.0.0",
+  "description": "inery task 4 by dhozil12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhozil/inery-testnet-faucet-tasks"
+  },
+  "author": "dhozil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhozil/inery-testnet-faucet-tasks/issues"
+  },
+  "homepage": "https://github.com/dhozil/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}

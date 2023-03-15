@@ -1,0 +1,20 @@
+{
+  "name": "inery",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "push-crud": "node ./CRUD.transact.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodebrain/inery-testnet-faucet-tasks.git"
+  },
+  "author": "nodebrain",
+  "license": "ISC",
+  "homepage": "https://github.com/nodebrain/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "readline": "^1.3.0"
+  }
+}

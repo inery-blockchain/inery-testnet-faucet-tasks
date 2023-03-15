@@ -1,0 +1,19 @@
+{
+  "name": "garz",
+  "version": "1.0.0",
+  "description": "Sample transaction for Inery Blockchain",
+  "main": "push.mjs",
+  "scripts": {
+    "push": "node ./garzTXCall.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Garz026/inery-testnet-faucet-tasks"
+  },
+  "author": "garz",
+  "homepage": "https://github.com/Garz026/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
