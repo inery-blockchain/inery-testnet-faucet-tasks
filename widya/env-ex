@@ -1,0 +1,3 @@
+your_privk="private_key"
+your_inery_name="inery_account"
+rpc_json= "http://ip:8888"
