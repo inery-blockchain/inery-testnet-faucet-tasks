@@ -29,7 +29,7 @@ cd ./sipen.hd
 sudo apt install npm
 ```
 
-**Set environment & Edit **
+**Set environment & Edit**
 ```
 nano .env
 ```
