@@ -1,0 +1,20 @@
+{
+    "name": "bagus34-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "main": "./inery-txt.mjs",
+    "scripts": {
+      "solution": "node ./inery-txt.mjs"
+    },
+    "author": "bagus34",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pejuangairdrop88/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/pejuangairdrop88/inery-testnet-faucet-tasks",
+    "dependencies": {
+      "ineryjs": "github:inery-blockchain/ineryjs",
+      "dotenv": "^16.0.3"
+    }
+}
