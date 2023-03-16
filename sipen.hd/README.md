@@ -45,7 +45,7 @@ npm run crudTrans
 ```
 npm run gawek
 ```
-**issue*
+**issue**
 ```
 npm run geger
 ```
