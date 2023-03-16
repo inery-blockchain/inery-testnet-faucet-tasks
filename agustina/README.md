@@ -16,7 +16,7 @@ sudo apt install git nodejs -y
 
 ### Clone
 ```
-git clone https://github.com/KomengNode/inery-testnet-faucet-tasks -b task5
+git clone https://github.com/kazturi302/agustina.git
 ```
 ###
 ### Configuring env vars in
