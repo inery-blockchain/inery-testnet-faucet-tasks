@@ -1,0 +1,19 @@
+{
+  "name": "purnama transaction rpc",
+  "version": "1.0.0",
+  "description": "a sample rpc transaction for inery blockchain",
+  "main": "./purnama transaction rpc.mjs",
+  "scripts": {
+    "solution": "node ./purnama transaction rpc.mjs"
+  },
+  "author": "purnama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purnama92/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/purnama92/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
