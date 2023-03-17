@@ -22,7 +22,7 @@ interface ICreateContext {
   actor: string;
   account: string;
   Create: (props: IPropsCreate) => void;
-  Destroy: (props: (id: any) => void;
+  Destroy: (props: IPropsCreate) => void;
   setStatus: (status: any) => void;
   status: string;
 }
@@ -61,7 +61,7 @@ export const CreateProvider = ({ children }: Props) => {
     const hx = { user, data, id };
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const ctx = await pushapi.transact(
         {
           actions: [
             {
@@ -81,8 +81,8 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log(tx);
-      setOutput(tx);
+      console.log(ctx);
+      setOutput(ctx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -94,7 +94,7 @@ export const CreateProvider = ({ children }: Props) => {
     const hx = { id };
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const dtx = await pushapi.transact(
         {
           actions: [
             {
@@ -114,8 +114,8 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log(tx);
-      setOutput(tx);
+      console.log(dtx);
+      setOutput(dtx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -126,7 +126,7 @@ export const CreateProvider = ({ children }: Props) => {
   const ReadData = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const rtx = await pushapi.transact(
         {
           actions: [
             {
@@ -146,8 +146,8 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log(tx);
-      setOutput(tx);
+      console.log(rtx);
+      setOutput(rtx);
     } catch (error) {
       console.log(error);
       setOutput(error);
