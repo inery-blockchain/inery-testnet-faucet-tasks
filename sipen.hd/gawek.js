@@ -1,9 +1,4 @@
-import { api , account , actor , token  } from './config';
-import dotenv from "dotenv";
-dotenv.config();
-
-const symbol = "PEED"
-const amount = "50000 $(symbol)
+import { Api , account , actor } from './config'
 
 
 // create token 
@@ -32,4 +27,4 @@ const gaweToken = async ( issue, maximum_supply ) => {
 }
 }
 
-gaweToken ( account , amount )
+gaweToken ( account , )
