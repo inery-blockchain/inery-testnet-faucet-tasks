@@ -1,0 +1,20 @@
+{
+    "name": "amirmp",
+    "version": "1.0.0",
+    "description": "inery testnet",
+    "main": "./rpc.mjs",
+    "scripts": {
+        "rpc": "node ./rpc.mjs"
+    },
+    "author": "amirmp",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AmirMP12/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/AmirMP12/inery-testnet-faucet-tasks",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "ineryjs": "github:inery-blockchain/ineryjs"
+    }
+}

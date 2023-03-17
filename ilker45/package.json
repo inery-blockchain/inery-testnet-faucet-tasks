@@ -1,0 +1,13 @@
+{
+  "name": "ınery-task4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ineryjs": "^1.4.0"
+  }
+}
