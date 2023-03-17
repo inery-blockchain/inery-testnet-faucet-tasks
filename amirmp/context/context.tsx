@@ -1,4 +1,4 @@
-import { actor, pushapi } from "./config";
+import { acc, pushapi } from "./config";
 import { Api } from "ineryjs";
 import React, { createContext } from "react";
 
@@ -14,7 +14,7 @@ interface ICreateContext {
   loading: boolean;
   ReadData: (id: any) => void;
   pushapi: Api;
-  actor: string;
+  acc: string;
   Create: (props: IPropsCreate) => void;
   setStatus: (status: any) => void;
   status: string;
@@ -29,7 +29,7 @@ export const GlobalContext = createContext<ICreateContext>({
   loading: false,
   ReadData: () => {},
   pushapi: pushapi,
-  actor: actor,
+  acc: acc,
   Create: () => {},
   setStatus: () => {},
   status: "",
