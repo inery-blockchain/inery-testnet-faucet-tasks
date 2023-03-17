@@ -1,21 +1,8 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
-import * as dotenv from 'dotenv'
-dotenv.config()
-const url = process.env.NODE_URL // submit your IP VPS or NODE URL
+import { Api, account , actor } from './config.js'
 
 
-const account = process.env.ACCOUNT_NAME // submit your account name inery 
-const actor = account // change your name 
-const private_key = process.env.PRIVATE_KEY // submit your private key 
 
 
-const json_rpc = new JsonRpc(process.env.INERY_NODE_RPC)
-const signature  = new JsSignatureProvider([process.env.INERY_PRIV_KEY]);
-
-const api = new Api({
-    rpc: json_rpc,
-    signatureProvider: signature
-})
 // Create New transaction 
  const bikinCrud = async (id, user, data) => {
    cosnt bikData = { id, user, data }
