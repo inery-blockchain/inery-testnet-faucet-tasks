@@ -24,7 +24,7 @@ This code snippet shows you how you can leverage Vercel's Domains API to add and
 
 ## Demo
 
-https://domains-api.vercel.app/
+https://kaelvinery-domains-api.vercel.app/
 
 ## Features
 
