@@ -5,12 +5,12 @@ import React, { createContext } from "react";
 interface ICreateContext {
   output: any;
   loading: boolean;
-  ReadTx: (id: any) => void;
+  Read: (id: any) => void;
   pushapi: Api;
   actor: string;
   account: string;
-  CreateTx: (props: IPropsCreate) => void;
-  DestroyTx: (id: any) => void;
+  Create: (props: IPropsCreate) => void;
+  Destroy: (id: any) => void;
 }
 
 interface IPropsCreate {
@@ -30,8 +30,8 @@ export const GlobalContext = createContext<ICreateContext>({
   pushapi: pushapi,
   actor: actor,
   account: account,
-  CreateTx: () => {},
-  DestroyTx: () => {},
+  Create: () => {},
+  Destroy: () => {},
 });
 
 export const CreateProvider = ({ children }: Props) => {
@@ -40,7 +40,7 @@ export const CreateProvider = ({ children }: Props) => {
     "Inery Testnet"
   );
 
-  const CreateTx = async ({ user, data, id }: IPropsCreate) => {
+  const Create = async ({ user, data, id }: IPropsCreate) => {
     const hx = { user, data, id };
     try {
       setLoading(true);
@@ -75,7 +75,7 @@ export const CreateProvider = ({ children }: Props) => {
     setLoading(false);
   };
   
-  const DestroyTx = async ({ id }: IPropsCreate) => {
+  const Destroy = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
       const dtx = await pushapi.transact(
@@ -109,7 +109,7 @@ export const CreateProvider = ({ children }: Props) => {
     setLoading(false);
   };
 
-  const ReadTx = async ({ id }: IPropsCreate) => {
+  const Read = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
       const rtx = await pushapi.transact(
@@ -147,8 +147,8 @@ export const CreateProvider = ({ children }: Props) => {
         pushapi,
         actor,
         account,
-        CreateTx,
-        DestroyTx,
+        Create,
+        Destroy,
         output,
         loading,
         ReadTx,
