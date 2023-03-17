@@ -1,5 +1,5 @@
 How to run
-Change directory rizal22
+Change directory rizal21
 
 cd ~/inery-testnet-faucet-tasks/rizal21
 Install dependencies and edit file rizal21.js
