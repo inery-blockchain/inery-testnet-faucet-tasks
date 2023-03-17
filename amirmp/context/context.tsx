@@ -1,16 +1,18 @@
 import { account, actor, pushapi } from "./config";
-import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
+import { Api } from "ineryjs";
 import React, { createContext } from "react";
 
 interface ICreateContext {
   output: any;
   loading: boolean;
-  Read: (id: any) => void;
+  ReadData: (id: any) => void;
   pushapi: Api;
   actor: string;
   account: string;
   Create: (props: IPropsCreate) => void;
-  Destroy: (id: any) => void;
+  Destroy: (props: IPropsCreate) => void;
+  setStatus: (status: any) => void;
+  status: string;
 }
 
 interface IPropsCreate {
@@ -26,12 +28,14 @@ type Props = {
 export const GlobalContext = createContext<ICreateContext>({
   output: {},
   loading: false,
-  ReadTx: () => {},
+  ReadData: () => {},
   pushapi: pushapi,
   actor: actor,
   account: account,
   Create: () => {},
   Destroy: () => {},
+  setStatus: () => {},
+  status: "",
 });
 
 export const CreateProvider = ({ children }: Props) => {
@@ -39,17 +43,18 @@ export const CreateProvider = ({ children }: Props) => {
   const [output, setOutput] = React.useState<any>(
     "Inery Testnet"
   );
+  const [status, setStatus] = React.useState<any>("");
 
   const Create = async ({ user, data, id }: IPropsCreate) => {
     const hx = { user, data, id };
     try {
       setLoading(true);
-      const ctx = await pushapi.transact(
+      const tx = await pushapi.transact(
         {
           actions: [
             {
               account,
-              name: "Create",
+              name: status,
               authorization: [
                 {
                   actor,
@@ -63,11 +68,9 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-        
-        
-      console.log(ctx, "\n");
-      console.log("\nResponse data:", ctx.processed.action_traces[0].console);
-      setOutput(ctx);
+      );
+      console.log(tx);
+      setOutput(tx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -76,14 +79,15 @@ export const CreateProvider = ({ children }: Props) => {
   };
   
   const Destroy = async ({ id }: IPropsCreate) => {
+    const hx = { id };
     try {
       setLoading(true);
-      const dtx = await pushapi.transact(
+      const tx = await pushapi.transact(
         {
           actions: [
             {
               account,
-              name: "Destroy",
+              name: status,
               authorization: [
                 {
                   actor,
@@ -97,11 +101,9 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-        
-      console.log("Record destroyed by amirmp\n\n");
-      console.log(dtx, "\n");
-      console.log("responses: \n", dtx.processed.action_traces[0].console);
-      setOutput(dtx);
+      );
+      console.log(tx);
+      setOutput(tx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -109,15 +111,15 @@ export const CreateProvider = ({ children }: Props) => {
     setLoading(false);
   };
 
-  const Read = async ({ id }: IPropsCreate) => {
+  const ReadData = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
-      const rtx = await pushapi.transact(
+      const tx = await pushapi.transact(
         {
           actions: [
             {
               account,
-              name: "Read",
+              name: status,
               authorization: [
                 {
                   actor,
@@ -131,9 +133,9 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-        
-      console.log(rtx, "\n");
-      setOutput(rtx);
+      );
+      console.log(tx);
+      setOutput(tx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -151,7 +153,9 @@ export const CreateProvider = ({ children }: Props) => {
         Destroy,
         output,
         loading,
-        ReadTx,
+        ReadData,
+        setStatus,
+        status,
       }}
     >
       {children}
