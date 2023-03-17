@@ -1,23 +1,24 @@
-import { acc, pushapi } from "./config";
+import { account, actor, pushapi } from "./config";
 import { Api } from "ineryjs";
 import React, { createContext } from "react";
-
-
-interface IPropsCreate {
-  user: string;
-  data: string;
-  id: number;
-}
 
 interface ICreateContext {
   output: any;
   loading: boolean;
   ReadData: (id: any) => void;
   pushapi: Api;
-  acc: string;
+  actor: string;
+  account: string;
   Create: (props: IPropsCreate) => void;
+  Destroy: (props: IPropsCreate) => void;
   setStatus: (status: any) => void;
   status: string;
+}
+
+interface IPropsCreate {
+  user: string;
+  data: string;
+  id: number;
 }
 
 type Props = {
@@ -29,8 +30,10 @@ export const GlobalContext = createContext<ICreateContext>({
   loading: false,
   ReadData: () => {},
   pushapi: pushapi,
-  acc: acc,
+  actor: actor,
+  account: account,
   Create: () => {},
+  Destroy: () => {},
   setStatus: () => {},
   status: "",
 });
@@ -43,23 +46,56 @@ export const CreateProvider = ({ children }: Props) => {
   const [status, setStatus] = React.useState<any>("");
 
   const Create = async ({ user, data, id }: IPropsCreate) => {
-    const Hashdata = { user, data, id };
+    const hx = { user, data, id };
     try {
       setLoading(true);
       const tx = await pushapi.transact(
         {
           actions: [
             {
-              account: acc,
+              account,
               name: status,
               authorization: [
                 {
-                  acc,
+                  actor,
                   permission: "active",
                 },
               ],
               data: {
                 user, data, id,
+              },
+            },
+          ],
+        },
+        { broadcast: true, sign: true }
+      );
+      console.log(tx);
+      setOutput(tx);
+    } catch (error) {
+      console.log(error);
+      setOutput(error);
+    }
+    setLoading(false);
+  };
+  
+  const Destroy = async ({ id }: IPropsCreate) => {
+    const hx = { id };
+    try {
+      setLoading(true);
+      const tx = await pushapi.transact(
+        {
+          actions: [
+            {
+              account,
+              name: status,
+              authorization: [
+                {
+                  actor,
+                  permission: "active",
+                },
+              ],
+              data: {
+                id,
               },
             },
           ],
@@ -82,11 +118,11 @@ export const CreateProvider = ({ children }: Props) => {
         {
           actions: [
             {
-              account: acc,
+              account,
               name: status,
               authorization: [
                 {
-                  acc,
+                  actor,
                   permission: "active",
                 },
               ],
@@ -111,8 +147,10 @@ export const CreateProvider = ({ children }: Props) => {
     <GlobalContext.Provider
       value={{
         pushapi,
-        acc,
+        actor,
+        account,
         Create,
+        Destroy,
         output,
         loading,
         ReadData,
