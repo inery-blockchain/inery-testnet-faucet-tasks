@@ -4,7 +4,7 @@
     let api_result: {} = {res: "Please choose the action dude"}
 
     let ineryname: name
-    let inerybauthor: string
+    let ineryauthor: string
 
     let ineryread_id: number
 
