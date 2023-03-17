@@ -10,6 +10,7 @@ import time
 class TransactionRPC:
     def __init__(self, url):
         self.clinee = Cline(url)
+        self.id = int(time.time())
 
     def abi_json_to_bin(self, account, actionName, actionData):
         data = self.clinee.abi_json_to_bin(account, actionName, actionData)
@@ -22,9 +23,9 @@ class TransactionRPC:
     def transfer(self, fromAccount, privateKey):
 
         data = {
-            "id": int(time.time()),
+            "id": self.id,
             "user": fromAccount,
-            "data": f"data {id}"
+            "data": f"data {self.id}"
         }
 
         acc = {
