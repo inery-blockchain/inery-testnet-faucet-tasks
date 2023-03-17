@@ -1,12 +1,14 @@
 ### How to Run
 
-Create new file .env and edit the variable
-inery_url=ipnode:8888
-privateKey=yourprivatekey
-username_inery=yourusername
 
 ```shell
 nano .env
+```
+
+```shell
+inery_url=ipnode:8888
+privateKey=yourprivatekey
+username_inery=yourusername
 ```
 
 Install NPM 
