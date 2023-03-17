@@ -1,0 +1,13 @@
+﻿{
+  "name": "yosi123",
+  "version": "1.0.0",
+  "description": "",
+  "main": "yosi-rpc-transaction.js",
+  "scripts": {
+    "start": "node yosi-rpc-transaction.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ineryjs": "^1.4.0"
+  }
+}
