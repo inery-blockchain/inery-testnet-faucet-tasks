@@ -1,3 +1,8 @@
+
+## Check our example Dapps
+- https://saujana.netlify.com/
+
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
@@ -26,5 +31,3 @@ await create('my-new-app', {
 checkjs means your project will use TypeScript to typecheck JavaScript via JSDoc comments.
 ```
 
-## Check our Dapps
-- https://saujana.netlify.com/
