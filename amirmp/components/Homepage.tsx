@@ -22,7 +22,7 @@ const ButtonAction = ({ name, color, handle }: IPropsButton) => {
 
 const Homepage = () => {
   const [modal, setModal] = React.useState(false);
-  const { loading, setStatus, Create, ReadData } = useContext(GlobalContext);
+  const { loading, setStatus, Create, Destroy, ReadData } = useContext(GlobalContext);
   const [current, setCurrent] = React.useState<any>(false);
 
   const handleModal = () => {
