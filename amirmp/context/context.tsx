@@ -1,5 +1,4 @@
-import { account, actor, pushapi } from "./config";
-import { Api } from "ineryjs";
+import { Api, JsSignatureProvider, JsonRpc } from "ineryjs";
 import React, { createContext } from "react";
 
 const node_url = "https://tas.blockchain-servers.world";
