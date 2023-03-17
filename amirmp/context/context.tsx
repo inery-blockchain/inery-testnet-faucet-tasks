@@ -10,9 +10,7 @@ interface ICreateContext {
   actor: string;
   account: string;
   Create: (props: IPropsCreate) => void;
-  Destroy: (props: IPropsCreate) => void;
-  setStatus: (status: any) => void;
-  status: string;
+  Destroy: (id: any) => void;
 }
 
 interface IPropsCreate {
@@ -34,8 +32,6 @@ export const GlobalContext = createContext<ICreateContext>({
   account: account,
   Create: () => {},
   Destroy: () => {},
-  setStatus: () => {},
-  status: "",
 });
 
 export const CreateProvider = ({ children }: Props) => {
@@ -43,7 +39,6 @@ export const CreateProvider = ({ children }: Props) => {
   const [output, setOutput] = React.useState<any>(
     "Inery Testnet"
   );
-  const [status, setStatus] = React.useState<any>("");
 
   const Create = async ({ user, data, id }: IPropsCreate) => {
     const hx = { user, data, id };
@@ -54,7 +49,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: status,
+              name: "Create",
               authorization: [
                 {
                   actor,
@@ -68,7 +63,8 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-      );
+        
+        
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -79,7 +75,6 @@ export const CreateProvider = ({ children }: Props) => {
   };
   
   const Destroy = async ({ id }: IPropsCreate) => {
-    const hx = { id };
     try {
       setLoading(true);
       const tx = await pushapi.transact(
@@ -87,7 +82,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: status,
+              name: "Destroy",
               authorization: [
                 {
                   actor,
@@ -101,7 +96,7 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-      );
+        
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -119,7 +114,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: status,
+              name: "Read",
               authorization: [
                 {
                   actor,
@@ -133,7 +128,7 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-      );
+        
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -154,8 +149,6 @@ export const CreateProvider = ({ children }: Props) => {
         output,
         loading,
         ReadData,
-        setStatus,
-        status,
       }}
     >
       {children}
