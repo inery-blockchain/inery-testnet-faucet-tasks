@@ -53,6 +53,11 @@ const Homepage = () => {
       handle: handleModal,
     },
     {
+      name: "Read",
+      color: "bg-red-500 hover:bg-red-700",
+      handle: readHandler,
+    },
+    {
       name: "Destroy transaction",
       color: "bg-white-300 hover:bg-white-300",
       handle: destroyHandler,
