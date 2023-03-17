@@ -1,0 +1,16 @@
+{
+  "name": "task-4",
+  "version": "1.0.0",
+  "description": "- Make sure you have installed `Node.js` and `EOSIO` on your server. If you haven't, you can install them by running the following commands in the terminal: ``` sudo apt update sudo apt install nodejs npm sudo apt-get install -y eosio ``` - Next, create a new Node.js project by running the following command in the terminal: ``` mkdir myproject cd myproject npm init -y ``` - Install ineryjs and dotenv by running the following command: ``` npm install ineryjs dotenv ``` - Copy your contract code to the `rpcindex.mjs` file inside your project directory.",
+  "main": "rpcindex.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "file:.."
+  }
+}
