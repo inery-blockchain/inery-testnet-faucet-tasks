@@ -50,11 +50,11 @@ export const CreateProvider = ({ children }: Props) => {
         {
           actions: [
             {
-              account: actor,
+              account: acc,
               name: status,
               authorization: [
                 {
-                  actor,
+                  acc,
                   permission: "active",
                 },
               ],
@@ -82,11 +82,11 @@ export const CreateProvider = ({ children }: Props) => {
         {
           actions: [
             {
-              account: actor,
+              account: acc,
               name: status,
               authorization: [
                 {
-                  actor,
+                  acc,
                   permission: "active",
                 },
               ],
@@ -111,7 +111,7 @@ export const CreateProvider = ({ children }: Props) => {
     <GlobalContext.Provider
       value={{
         pushapi,
-        actor,
+        acc,
         Create,
         output,
         loading,
