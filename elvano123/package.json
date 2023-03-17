@@ -1,0 +1,16 @@
+{
+  "name": "elvano123",
+  "version": "1.0.0",
+  "description": "inery task 4",
+  "main": "trc elvano.js",
+  "scripts": {
+    "start": "node trc elvano.js"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^8.2.0",
+    "ineryjs": "^0.2.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
