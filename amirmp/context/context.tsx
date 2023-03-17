@@ -1,16 +1,16 @@
 import { account, actor, pushapi } from "./config";
-import { Api } from "ineryjs";
+import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import React, { createContext } from "react";
 
 interface ICreateContext {
   output: any;
   loading: boolean;
-  ReadData: (id: any) => void;
+  ReadTx: (id: any) => void;
   pushapi: Api;
   actor: string;
   account: string;
-  Create: (props: IPropsCreate) => void;
-  Destroy: (id: any) => void;
+  CreateTx: (props: IPropsCreate) => void;
+  DestroyTx: (id: any) => void;
 }
 
 interface IPropsCreate {
@@ -26,12 +26,12 @@ type Props = {
 export const GlobalContext = createContext<ICreateContext>({
   output: {},
   loading: false,
-  ReadData: () => {},
+  ReadTx: () => {},
   pushapi: pushapi,
   actor: actor,
   account: account,
-  Create: () => {},
-  Destroy: () => {},
+  CreateTx: () => {},
+  DestroyTx: () => {},
 });
 
 export const CreateProvider = ({ children }: Props) => {
@@ -40,11 +40,11 @@ export const CreateProvider = ({ children }: Props) => {
     "Inery Testnet"
   );
 
-  const Create = async ({ user, data, id }: IPropsCreate) => {
+  const CreateTx = async ({ user, data, id }: IPropsCreate) => {
     const hx = { user, data, id };
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const ctx = await pushapi.transact(
         {
           actions: [
             {
@@ -65,8 +65,9 @@ export const CreateProvider = ({ children }: Props) => {
         { broadcast: true, sign: true }
         
         
-      console.log(tx);
-      setOutput(tx);
+      console.log(ctx, "\n");
+      console.log("\nResponse data:", ctx.processed.action_traces[0].console);
+      setOutput(ctx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -74,10 +75,10 @@ export const CreateProvider = ({ children }: Props) => {
     setLoading(false);
   };
   
-  const Destroy = async ({ id }: IPropsCreate) => {
+  const DestroyTx = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const dtx = await pushapi.transact(
         {
           actions: [
             {
@@ -97,8 +98,10 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
         
-      console.log(tx);
-      setOutput(tx);
+      console.log("Record destroyed by amirmp\n\n");
+      console.log(dtx, "\n");
+      console.log("responses: \n", dtx.processed.action_traces[0].console);
+      setOutput(dtx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -106,10 +109,10 @@ export const CreateProvider = ({ children }: Props) => {
     setLoading(false);
   };
 
-  const ReadData = async ({ id }: IPropsCreate) => {
+  const ReadTx = async ({ id }: IPropsCreate) => {
     try {
       setLoading(true);
-      const tx = await pushapi.transact(
+      const rtx = await pushapi.transact(
         {
           actions: [
             {
@@ -129,8 +132,8 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
         
-      console.log(tx);
-      setOutput(tx);
+      console.log(rtx, "\n");
+      setOutput(rtx);
     } catch (error) {
       console.log(error);
       setOutput(error);
@@ -144,11 +147,11 @@ export const CreateProvider = ({ children }: Props) => {
         pushapi,
         actor,
         account,
-        Create,
-        Destroy,
+        CreateTx,
+        DestroyTx,
         output,
         loading,
-        ReadData,
+        ReadTx,
       }}
     >
       {children}
