@@ -23,6 +23,8 @@ interface ICreateContext {
   account: string;
   Create: (props: IPropsCreate) => void;
   Destroy: (props: IPropsCreate) => void;
+  setStatus: (status: any) => void;
+  status: string;
 }
 
 interface IPropsCreate {
@@ -38,6 +40,8 @@ type Props = {
 export const GlobalContext = createContext<ICreateContext>({
   output: {},
   loading: false,
+  setStatus: () => {},
+  status: "",
   ReadData: () => {},
   pushapi: pushapi,
   actor: actor,
@@ -62,7 +66,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: Create,
+              name: status,
               authorization: [
                 {
                   actor,
@@ -76,7 +80,7 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-        
+      );
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -95,7 +99,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: "Destroy",
+              name: status,
               authorization: [
                 {
                   actor,
@@ -109,7 +113,7 @@ export const CreateProvider = ({ children }: Props) => {
           ],
         },
         { broadcast: true, sign: true }
-        
+      );
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -127,7 +131,7 @@ export const CreateProvider = ({ children }: Props) => {
           actions: [
             {
               account,
-              name: "Read",
+              name: status,
               authorization: [
                 {
                   actor,
@@ -140,8 +144,8 @@ export const CreateProvider = ({ children }: Props) => {
             },
           ],
         },
-        { broadcast: true, sign: true } 
-        
+        { broadcast: true, sign: true }
+      );
       console.log(tx);
       setOutput(tx);
     } catch (error) {
@@ -154,6 +158,8 @@ export const CreateProvider = ({ children }: Props) => {
   return (
     <GlobalContext.Provider
       value={{
+        setStatus,
+        status,
         pushapi,
         actor,
         account,
