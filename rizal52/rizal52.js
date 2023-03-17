@@ -4,27 +4,27 @@ import ora from "ora";
 import chalk from "chalk";
 dotenv.config();
 
-const url = "http://your-ip:8888"; // ganti dengan alamat IP VPS node Anda
-const account = "rizal52"; // ganti dengan nama akun inery Anda
-const actor = "rizal52"; // ganti dengan nama inery Anda
-const private_key = "your-private-key"; // ganti dengan kunci privat Anda
+const ineryUrl = "http://your-ip:8888"; // ganti dengan alamat IP VPS node Anda
+const ineryAccount = "rizal52"; // ganti dengan nama akun inery Anda
+const ineryActor = "rizal52"; // ganti dengan nama inery Anda
+const ineryPrivateKey = "your-private-key"; // ganti dengan kunci privat Anda
 
-const signatureProvider = new JsSignatureProvider([private_key]);
-const rpc = new JsonRpc(url);
+const signatureProvider = new JsSignatureProvider([ineryPrivateKey]);
+const rpc = new JsonRpc(ineryUrl);
 const api = new Api({ rpc, signatureProvider });
 
-const CreateTransaction = async (id, user, data) => {
+const createTransaction = async (id, user, data) => {
   const Hashdata = { id, user, data };
   try {
     const tx = await api.transact(
       {
         actions: [
           {
-            account,
+            account: ineryAccount,
             name: "create",
             authorization: [
               {
-                actor,
+                actor: ineryActor,
                 permission: "active",
               },
             ],
@@ -44,17 +44,17 @@ const CreateTransaction = async (id, user, data) => {
   }
 };
 
-const DestroyTransaction = async (id) => {
+const destroyTransaction = async (id) => {
   try {
     const destroyTx = await api.transact(
       {
         actions: [
           {
-            account,
+            account: ineryAccount,
             name: "destroy",
             authorization: [
               {
-                actor,
+                actor: ineryActor,
                 permission: "active",
               },
             ],
@@ -75,7 +75,7 @@ const DestroyTransaction = async (id) => {
   }
 };
 
-const PushTransaction = async (DataId, user, data) => {
+const pushTransaction = async (dataId, user, data) => {
   const spinner = ora({
     text: "Processing transaction...",
     spinner: {
@@ -85,8 +85,8 @@ const PushTransaction = async (DataId, user, data) => {
   }).start();
 
   try {
-    await CreateTransaction(DataId, user, data);
-    await DestroyTransaction(DataId);
+    await createTransaction(dataId, user, data);
+    await destroyTransaction(dataId);
 
     spinner.stop();
     console.log(chalk.green("Transaction completed!"));
@@ -96,4 +96,4 @@ const PushTransaction = async (DataId, user, data) => {
   }
 };
 
-PushTransaction(619, account, "push done");
+pushTransaction(619, ineryAccount, "push done");
