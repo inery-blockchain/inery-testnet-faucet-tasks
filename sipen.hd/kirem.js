@@ -1,12 +1,5 @@
-import { api , account , actor , token  } from './config';
-import dotenv from "dotenv";
-dotenv.config();
+import { Api , account , actor } from './config';
 
-// you can change the data below 
-
-const symbol = "PEED"
-const amount = " 50000 $(symbol) "
-const memo = " Hi , you got $(amount) from (account)"
 
 // transfer token
 
@@ -34,4 +27,4 @@ const kiremToken = async ( from, to, quantity, memo ) => {
 }
 }
 
-kiremToken (,  actor , token  , amount , memo  )
+kiremToken (account , "inery" " from me for you bro"  )
