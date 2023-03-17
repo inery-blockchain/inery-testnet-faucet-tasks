@@ -1,10 +1,5 @@
 import { api , account , actor , token  } from './config';
-import dotenv from "dotenv";
-dotenv.config();
 
-const symbol = "PEED"
-const amount = "50000 $(symbol"
-const memo = "Issue ${amount} in circulating supply""
 
 
  // Issue token
@@ -33,4 +28,4 @@ const gegerToken = async ( to , quantity , memo ) => {
 }
 }
 
-gegerToken (account , amount , memo )
+gegerToken (account , " Task 4" )
