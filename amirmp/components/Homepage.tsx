@@ -54,7 +54,7 @@ const Homepage = () => {
     },
     {
       name: "Read",
-      color: "bg-purple-500 hover:bg-red-700",
+      color: "bg-purple-500 hover:bg-purple-700",
       handle: readHandler,
     },
     {
