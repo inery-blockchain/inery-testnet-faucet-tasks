@@ -1,4 +1,4 @@
-import { Api , account , actor } from './config';
+import { reqApi , account , actor } from './config';
 
 
 // transfer token
