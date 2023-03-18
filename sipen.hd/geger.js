@@ -1,4 +1,4 @@
-import { api , account , actor , token  } from './config';
+import { reqApi , account , actor  } from './config';
 
 
 
