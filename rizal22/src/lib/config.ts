@@ -1,6 +1,6 @@
 import { Api, JsonRpc, JsSignatureProvider } from 'ineryjs/dist/index.js';
 
-const url = 'http://:8888';
+const url = 'http://178.128.95.30:8888';
 
 const json_rpc = new JsonRpc(url);
 const private_key = 'privatekey your';
