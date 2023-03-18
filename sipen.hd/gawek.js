@@ -3,7 +3,7 @@ import { Api , account , actor } from './config'
 
 // create token 
 
-const gaweToken = async ( issue, maximum_supply ) => {
+const gawekToken = async ( issue, maximum_supply ) => {
   const gwData = { issue, maximum_supply }
   try {
   const result = await api.transact({
@@ -27,4 +27,4 @@ const gaweToken = async ( issue, maximum_supply ) => {
 }
 }
 
-gaweToken ( account , )
+gawekToken ( account , )
