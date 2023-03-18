@@ -22,12 +22,6 @@ This code snippet shows you how you can leverage Vercel's Domains API to add and
 - React Hot Toast (`npm install react-hot-toast`) (optional)
 - JS Cookie (`npm install js-cookie`) (optional)
 
-## Demo
-
-https://domains-api.vercel.app/
-or 
-https://kaelvinery-domain.vercel.app/
-
 ## Features
 
 ### 0. Configure Env Vars
@@ -75,12 +69,6 @@ To remove a domain, you can use the `/v8/projects/{idOrName}/domains` endpoint a
 
 You can choose from one of the following two methods to use this repository:
 
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=platforms-eap):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/domains-api&project-name=domains-api&repository-name=domains-api&env=AUTH_BEARER_TOKEN,PROJECT_ID_VERCEL,TEAM_ID_VERCEL)
-
 ### Clone and Deploy
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
@@ -94,5 +82,13 @@ Next, run Next.js in development mode:
 ```bash
 pnpm dev
 ```
+
+
+## Demo
+
+[Demo](https://domains-api.vercel.app/)
+
+
+[Demo](https://kaelvinery-domain.vercel.app/)
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=platforms-eap) ([Documentation](https://nextjs.org/docs/deployment)).
