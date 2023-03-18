@@ -3,7 +3,7 @@
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 # Demo online
-[Demo app](https://task5test.vercel.app/)
+[Demo app](http://178.128.95.30:5173/)
 
 ## Change directory to rizal22 and install dependency
 
