@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CRUD dApps inery blockchain</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>CRUD dApps INERY BLOCKCHAIN</h1>
+    </header>
+    <form id="form" method="post">
+      <label for="action-select">CRUD Actions : </label>
+      <select id="action-select" name="action" required>
+        <option value="create">Create</option>
+        <option value="read">Read</option>
+        <option value="update">Update</option>
+        <option value="destroy">Destroy</option>
+      </select>
+      <input type="number" name="dataId" placeholder="Record ID number..." required>
+      <textarea name="data" placeholder="Data..." required></textarea>
+      <button type="submit">PUSH</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $('#form').submit(function(event) {
+          event.preventDefault();
+          $.ajax({
+            url: '/',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(result) {
+              var success = `<h2 class="success">✅️ Transaction successfull ✅️ :</h2><pre>${JSON.stringify(result, null, 2)}</pre>`;
+              $('#result').html(success);
+            },
+            error: function(error) {
+              var failed = `<h2 class="failed">❌️ Transaction failed ❌️ :</h2><pre>${JSON.stringify(error.responseJSON, null, 2)}</pre>`;
+              $('#result').html(failed);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
