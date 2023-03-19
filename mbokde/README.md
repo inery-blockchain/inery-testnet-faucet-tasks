@@ -5,7 +5,7 @@ You can try my application : https://nestic-ispt.vercel.app/
 ## Change directory to cahyadi and install dependency
 
 ```bash
-cd setanarab/
+cd mbokde/
 ```
 
 ```bash
