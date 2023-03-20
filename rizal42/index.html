@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome TODO App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="title">My Awesome TODO App</h1>
+    </header>
+    <form id="todo-form" method="POST">
+      <label for="todo-action">Choose an action:</label>
+      <select id="todo-action" name="action" required>
+        <option value="create">Create</option>
+        <option value="read">Read</option>
+        <option value="update">Update</option>
+        <option value="destroy">Destroy</option>
+      </select>
+      <input type="number" name="id" placeholder="Record ID number..." required>
+      <textarea name="data" placeholder="Enter data..." required></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <div id="result-container"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+<script>
+  $(function() {
+    $('#todo-form').submit(function(event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(result) {
+          var successMessage = `<h2 class="success">✅️ Transaction successful ✅️ :</h2><pre>${JSON.stringify(result, null, 2)}</pre>`;
+          $('#result-container').html(successMessage);
+        },
+        error: function(error) {
+          var errorMessage = `<h2 class="failed">❌️ Transaction failed ❌️ :</h2><pre>${JSON.stringify(error.responseJSON, null, 2)}</pre>`;
+          $('#result-container').html(errorMessage);
+        }
+      });
+    });
+  });
+</script>
+  </body>
+</html> 
