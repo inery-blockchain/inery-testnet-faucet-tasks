@@ -5,7 +5,7 @@ const axios = require('axios')
 dotenv.config();
 
 const account ="";
-const port="your port";
+const PORT="";
 const Node_url ="http://:8888";
 const Private_key=""
 const api = new Api({
@@ -48,7 +48,7 @@ app.post('/', async (req, res) => {
 
 (async () => {
   const ip = await axios.get('https://api.ipify.org')
-  const port = port || 3000
+  const port = PORT || 3000
   app.listen(port, () => {
     console.log(`Server running on http://${ip.data}:${port}`)
   });
