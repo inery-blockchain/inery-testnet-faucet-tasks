@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-app.post('/submit-form', async (req, res) => {
+app.post('/', async (req, res) => {
   const action = req.body.action;
   const dataId = parseInt(req.body.dataId);
   const data = req.body.data;
