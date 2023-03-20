@@ -14,16 +14,16 @@ git clone https://github.com/risodss/inery-testnet-faucet-tasks -b task5
 ```
 cd inery-testnet-faucet-tasks/rizal22
 ```
+
+```
+nano .env
+```
 ###
 ### Configuring env vars in
 - `NODE_URL="NODE_URL"`
 - `ACCOUNT="YOUR_INERY_ACCOUNT_NAME"`
 - `PRIV_KEY="PRIVATE_KEY_OF_INERY_ACCOUNT_NAME"`
 - `PORT="5173"`
-
-```
-nano .env
-```
 
 Allow port 5173
 
