@@ -1,0 +1,6 @@
+python-dotenv
+requests
+base58
+ecdsa
+pytz
+datetime

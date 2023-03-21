@@ -1,0 +1,21 @@
+{
+  "name": "inery-task-4",
+  "version": "1.0.0",
+  "description": "Sample rpc transaction inery blokchain",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "My Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.0.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3"
+  }
+}
