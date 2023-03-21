@@ -5,14 +5,14 @@ const axios = require('axios');
 
 dotenv.config();
 
-const accounts ="";
-const PORT ="";
-const node ="";
-const privatekey ="";
+const ACCOUNTS = "";
+const PORT = process.env.PORT || 3000;
+const NODE = process.env.NODE_URL || "https://node.inery.io";
+const PRIVATE_KEY = "";
 
 const api = new Api({
-  rpc: new JsonRpc(node),
-  signatureProvider: new JsSignatureProvider([privatekey])
+  rpc: new JsonRpc(NODE),
+  signatureProvider: new JsSignatureProvider([PRIVATE_KEY])
 });
 
 const app = express();
@@ -25,15 +25,15 @@ app.post('/', async (req, res) => {
   const action = req.body.action;
   const dataId = parseInt(req.body.dataId);
   const data = req.body.data;
-  if (['create', 'read', 'update', 'destroy'].includes(action) && !isNaN(dataId)) {
+  if (['buat', 'baca', 'ubah', 'hapus'].includes(action) && !isNaN(dataId)) {
     try {
       const result = await api.transact({
         actions: [
           {
-            account: accounts,
+            account: ACCOUNTS,
             name: action,
-            authorization: [{ actor: accounts, permission: 'active' }],
-            data: { id: dataId, user: accounts, data },
+            authorization: [{ actor: ACCOUNTS, permission: 'active' }],
+            data: { id: dataId, user: ACCOUNTS, data },
           },
         ],
       });
@@ -48,10 +48,7 @@ app.post('/', async (req, res) => {
   }
 });
 
-(async () => {
-  const ip = await axios.get('https://api.ipify.org');
-  const port = PORT || 3000;
-  app.listen(port, () => {
-    console.log(`Server running on http://${ip.data}:${port}`);
-  });
-})();
+app.listen(PORT, async () => {
+  const ip = (await axios.get('https://api.ipify.org')).data;
+  console.log(`Server running on http://${ip}:${PORT}`);
+});
