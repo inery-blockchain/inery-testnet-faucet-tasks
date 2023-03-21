@@ -41,12 +41,14 @@ app.post('/', async (req, res) => {
       res.json(result);
     } catch (error) {
       console.error(error);
-      res.status(500).json(error);
+      console.trace();
+      res.status(500).json({ message: 'Internal Server Error' });
     }
   } else {
     res.status(400).json({ message: 'Invalid request' });
   }
 });
+
 
 app.listen(PORT, async () => {
   const ip = (await axios.get('https://api.ipify.org')).data;
