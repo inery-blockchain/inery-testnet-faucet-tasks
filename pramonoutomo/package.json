@@ -1,0 +1,25 @@
+{
+  "name": "haruhime-task-4",
+  "version": "1.0.0",
+  "description": "transaction using inery blockchain",
+  "main": "./Token_Create.mjs",
+  "scripts": {
+    "Token_Create": "node ./Token_Create.mjs",
+    "Token_Issue": "node ./Token_Issue.mjs",
+    "Token_Transfers": "node ./Token_Transfers.mjs",
+    "Data_Add": "node ./Data_Add.mjs",
+    "Data_Read": "node ./Data_Read.mjs",
+    "Data_Update": "node ./Data_Update.mjs",
+    "Data_Delete": "node ./Data_Delete.mjs"
+  },
+  "author": "haruhime",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/H4ruhime/inery-testnet-faucet-tasks"
+  },
+  "homepage": "https://github.com/H4ruhime/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
