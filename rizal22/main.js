@@ -25,7 +25,7 @@ app.post('/', async (req, res) => {
   const action = req.body.action;
   const dataId = parseInt(req.body.dataId);
   const data = req.body.data;
-  if (['buat', 'baca', 'ubah', 'hapus'].includes(action) && !isNaN(dataId)) {
+  if (['create', 'read', 'update', 'destroy'].includes(action) && !isNaN(dataId)) {
     try {
       const result = await api.transact({
         actions: [
