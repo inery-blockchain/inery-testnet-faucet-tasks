@@ -1,15 +1,22 @@
-const { Api, JsonRpc, RpcError, JsSignatureProvider } = require('ineryjs');
-const user1PrivateKey = "PRIVATE_KEY"; // user1 private key
-const signatureProvider = new JsSignatureProvider([user1PrivateKey]);
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs/dist/index.js'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-const account = "goon.dobel" // input your account name inery 
+
+const url = "http://YOUR.IP:8888" 
+const private_key = process.env.PRIVATE_KEY 
+
+const account = "goon.dobel" 
 const actor = "goondbb"
 
-const url= "https://IP:8888"; // input your IP NODE 
-const rpc = new JsonRpc(url);
+const json_rpc = new JsonRpc (process.env.INERY_NODE_RPC)
+const signature  = new JsSignatureProvider ([process.env.INERY_PRIV_KEY]);
 
-const api = new Api
-( { rpc, signatureProvider });
+// Request API 
+const api = new Api({
+    rpc: json_rpc,
+    signatureProvider: signature
+})
 
 
 
