@@ -4,7 +4,6 @@
   "description": "Sample RPC push transaction via JSON RPC",
   "main": "dist/index.js",
   "scripts": {
-    "crud-transaction" : "node ./crudTrans.js"
     "create-token" : "node./gawek.js"
     "issue-token" : "node ./geger.js"
     "transfer-token" : "node ./kirem.js"
