@@ -1,5 +1,5 @@
 {
-  "name": "haruhime-task-4",
+  "name": "pramonoutomo-ineryCRUD",
   "version": "1.0.0",
   "description": "transaction using inery blockchain",
   "main": "./Token_Create.mjs",
