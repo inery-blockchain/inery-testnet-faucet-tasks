@@ -1,4 +1,4 @@
-import { Api, JsonRpc,JsSignatureProvider } from 'ineryJS/index.js'
+import { Api, JsonRpc,JsSignatureProvider } from 'ineryjs/dist/index.js'
 
 const url = process.env.NODE_URL; //node url from env file
 const json_rpc = new JsonRpc(url); 
