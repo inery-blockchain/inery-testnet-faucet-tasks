@@ -1,63 +1,69 @@
-import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs';
-const url= "https://198.211.105.127:8888" // input your node url or ip
-
-
-const user1PrivateKey = "YOUR_PRIVATE_KEY"; // input your private key 
-const account = "goon.dobel"
-const actor = "goon.dobel"
-
-const rpc = new JsonRpc(url);
+const { Api, JsonRpc, RpcError, JsSignatureProvider } = require('ineryjs');
+const user1PrivateKey = "PRIVATE_KEY"; // user1 private key
 const signatureProvider = new JsSignatureProvider([user1PrivateKey]);
 
-// Calling API
-const api = new Api(
-{ rpc: json_rpc,signatureProvider: signature})
+const account = "goon.dobel" // input your account name inery 
+const actor = "goondbb"
+
+const url= "https://IP:8888"; // input your IP NODE 
+const rpc = new JsonRpc(url);
+
+const api = new Api
+( { rpc, signatureProvider });
 
 
-// New transact
 
- const goTransaksi = async (id, user, data) => {
-  const goData = { id, user, data };
+const krete = async (id, user, data) => {
   try {
-    const tx = await api.transact(
-      {actions: [ {account, name: "create",authorization: [
-      {actor, permission: "active", }, ],
-       data: {...goData, },
-          }, ], },
-      { broadcast: true, sign: true } );
-
-
-    console.log("=== GO TRANSAKSI Details===")
-    console.log(tx, "\n");
-    console.log( "The Response data:, ", tx.processed.action_traces[0].console);
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const readT = async (id) => {
-  try {
-    const destroyTx = await api.transact(
-      { actions:                              [ 
-      { account, name: "read", authorization: [
-      { actor, permission: "active", },       ],
-       data: { id, } },                       ] ,
-      },
+    const tax = await Userapi.transact(
+      {
+        actions: [
+          {
+            account,
+            name: "create",
+            authorization: [
+              {
+                actor,
+                permission: "active",
+              },  ],  data: 
+              { id, user,data },
+          }, ],    },
       { broadcast: true, sign: true }
+    );
 
-      );
-
-    console.log("=== Read Transaction Details===");
-    console.log(tx, "\n");
-    console.log( " The Responses data:, ", tx.processed.action_traces[0].console);
+    console.log(result);
   } catch (err) {
     console.log(err);
-  }
+  } };
+  
+  
+
+const readies = async (id) => {
+  try {
+    const tax = await Userapi.transact(
+      {
+        actions: [
+          {
+            account,
+            name: "read",
+            authorization: [
+              {
+                actor,
+                permission: "active",
+              },  ],  data: 
+              { id },
+          }, ],    },
+      { broadcast: true, sign: true }
+    );
+
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  } };
+
+ const maen = async (id, user, data) => {
+  await krete  (id, user, data);
+  await readies  (id);
 };
 
-const pushTrans = async (id, user, data) => {
-  await goTransaksi (id, user, data);
-  await readT (id);
-};
-
-pushTrans (10999, account, "Sample Push Transaction via JSON RPC " );
+maen ( 222000, account , " transaction with RPC JSON on Inery Blockchain" ) 
