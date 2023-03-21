@@ -1,0 +1,39 @@
+{
+  "name": "RPC Push Transaction",
+  "version": "1.0.0",
+  "description": "RPC Push Transaction with Inery API",
+  "main": "dist/index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json",
+    "build-web": "webpack --config webpack.config.js",
+    "domainan-rpc": "node ./domainan-rpc/json-rpc.mjs"
+  },
+  "author": "domainan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.webservice-host.net/ljubomirm/inery_module"
+  },
+  "homepage": "https://git.webservice-host.net/ljubomirm/inery_module",
+  "dependencies": {
+    "bn.js": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "elliptic": "^6.5.4",
+    "hash.js": "^1.1.7",
+    "node-fetch": "^2.6.7",
+    "pako": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-fs-access": "^0.31.0",
+    "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "jsdoc": "^4.0.2",
+    "node-util": "^0.0.1",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
