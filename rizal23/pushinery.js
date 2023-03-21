@@ -3,28 +3,23 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const url = "http://66.175.235.233:8888";
-const rpc = new JsonRpc(url);
-
-const privateKey = process.env.PRIVATE_KEY;
-const account = "rizal23";
-const actor = account;
+const blockchainUrl = "http://66.175.235.233:8888";
+const contractAccount = "rizal23";
+const actor = contractAccount;
+const privateKey = "privateKey";
 const signatureProvider = new JsSignatureProvider([privateKey]);
+const rpc = new JsonRpc(blockchainUrl);
+const api = new Api({ rpc, signatureProvider });
 
-const api = new Api({
-  rpc,
-  signatureProvider,
-});
-
-const createTransaction = async (id, user, data) => {
-  const hashData = { id, user, data };
+const createRecord = async (recordId, user, data) => {
+  const recordData = { id: recordId, user, data };
 
   try {
     const tx = await api.transact(
       {
         actions: [
           {
-            account,
+            account: contractAccount,
             name: "create",
             authorization: [
               {
@@ -32,27 +27,28 @@ const createTransaction = async (id, user, data) => {
                 permission: "active",
               },
             ],
-            data: hashData,
+            data: recordData,
           },
         ],
       },
       { broadcast: true, sign: true }
     );
 
+    console.log("Record created:");
     console.log(tx, "\n");
     console.log("Response data:", tx.processed.action_traces[0].console);
   } catch (error) {
-    console.log(error);
+    console.log("Error creating record:", error);
   }
 };
 
-const destroyTransaction = async (id) => {
+const deleteRecord = async (recordId) => {
   try {
     const tx = await api.transact(
       {
         actions: [
           {
-            account,
+            account: contractAccount,
             name: "destroy",
             authorization: [
               {
@@ -61,7 +57,7 @@ const destroyTransaction = async (id) => {
               },
             ],
             data: {
-              id,
+              id: recordId,
             },
           },
         ],
@@ -69,17 +65,16 @@ const destroyTransaction = async (id) => {
       { broadcast: true, sign: true }
     );
 
-    console.log(`Record with ID ${id} destroyed by ${account}\n\n`);
-    console.log(tx, "\n");
+    console.log(`Record with ID ${recordId} destroyed by ${contractAccount}\n\n`);
     console.log("Response data:", tx.processed.action_traces[0].console);
   } catch (error) {
-    console.log(error);
+    console.log("Error destroying record:", error);
   }
 };
 
-const pushTransaction = async (dataId, user, data) => {
-  await createTransaction(dataId, user, data);
-  await destroyTransaction(dataId);
+const pushRecord = async (recordId, user, data) => {
+  await createRecord(recordId, user, data);
+  await deleteRecord(recordId);
 };
 
-pushTransaction(1, account, "push transaction by rizal23");
+pushRecord(1234, contractAccount, "This is a test record");
