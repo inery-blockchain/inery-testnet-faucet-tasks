@@ -1,3 +1,6 @@
+This ineryCRUD tutorial are also available on my gitbook https://docs.codeblocklabs.com/testnet/inery/inerycrud
+Video Tutorial also available on 
+
 # Prerequisites
 
 To run these scripts, you'll need to have Node.js installed on your machine. You can download the latest version of Node.js from the official website: https://nodejs.org/.
@@ -24,6 +27,7 @@ INERY_ACCOUNT=<your_inery_account_name>
 ```
 Replace the placeholders in angle brackets with the appropriate values for your setup.
 
+This need your account to have deploy value contract on your account (use my example on https://docs.codeblocklabs.com/testnet/inery/value-contract if haven't check it yet)!
 
 ## Installation
 
@@ -60,12 +64,17 @@ npm run Data_Update
 ### Delete Data
 To delete data on the Inery blockchain, run the following command:
 ```
-npm run Data_Read
+npm run Data_Delete
 ```
 ### Create New Tokens
 To create new token on the Inery blockchain, run the following command:
 ```
 npm run Token_Create
+```
+### Issue Tokens
+To issue token on the Inery blockchain, run the following command:
+```
+npm run Token_Issue
 ```
 ### Transfer Tokens
 To read data on the Inery blockchain, run the following command:
