@@ -34,12 +34,7 @@ sudo apt install npm
 nano .env
 ```
 
-**Run the script**
-```
-npm run crudTrans
-```
-
-### RPC transactions with contract tokens 
+**Run the script** 
 
 **create**
 ```
