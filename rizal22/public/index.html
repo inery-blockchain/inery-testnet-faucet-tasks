@@ -11,26 +11,27 @@
       <h1 class="title">TODO INERY</h1>
     </header>
     <div id="actions">
-      <button type="button" data-action="buat">Create</button>
-      <button type="button" data-action="baca">Read</button>
-      <button type="button" data-action="ubah">Update</button>
-      <button type="button" data-action="hapus">Destroy</button>
+      <button type="button" data-action="create" onclick="selectAction(this)">Create</button>
+      <button type="button" data-action="read" onclick="selectAction(this)">Read</button>
+      <button type="button" data-action="update" onclick="selectAction(this)">Update</button>
+      <button type="button" data-action="destroy" onclick="selectAction(this)">Destroy</button>
     </div>
     <form id="crud-form" method="POST">
       <input type="number" name="dataId" placeholder="Record ID number..." required>
       <textarea name="data" placeholder="Data..." required></textarea>
       <button type="submit">KIRIM</button>
+      <input type="hidden" id="crud-action" name="crud-action">
     </form>
     <div id="result"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
     <script>
-      $(function() {
-        $('#actions button').click(function() {
-          $('#crud-action').val($(this).data('action'));
-        });
+      function selectAction(button) {
+        $('#crud-action').val($(button).data('action'));
+      }
 
+      $(function() {
         $('#crud-form').submit(function(event) {
           event.preventDefault();
           $.ajax({
