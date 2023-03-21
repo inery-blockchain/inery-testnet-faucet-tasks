@@ -20,6 +20,6 @@ npm install
 
 ## Run the server
 ```
-npm start
+npm rizal22
 ```
 Done dapp runing in your konsol
