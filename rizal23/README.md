@@ -7,15 +7,11 @@ git clone https://github.com/rizal270101/inery-testnet-faucet-tasks -b task4
 ```shell
 cd ~/inery-testnet-faucet-tasks/rizal23
 ```
-edit pushinery.js sesuai akun kalian
+edit rizal23.js sesuai akun kalian
 ```shell
 
-nano pushinery.js
+nano rizal23.js
 
-```
-dan ubah file rizal23.js
-```shell
-Nano rizal23.js
 ```
 
 Install dependencies
