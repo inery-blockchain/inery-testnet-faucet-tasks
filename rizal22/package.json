@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CRUD_inery",
   "scripts": {
-    "start": "node main.js",
+    "push": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
