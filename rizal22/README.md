@@ -9,7 +9,7 @@ cd inery-testnet-faucet-tasks/rizal22
 
 Edit mainjs
 ```
-nano main.js
+nano mainrizal22.js
 ```
 
 ### Install module dependencies
