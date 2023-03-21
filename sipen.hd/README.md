@@ -35,16 +35,6 @@ nano .env
 ```
 
 **Run the script** 
-
-**create**
 ```
-npm run gawek
-```
-**issue**
-```
-npm run geger
-```
-**transfer**
-```
-npm run kirem
+npm run sipenT
 ```
