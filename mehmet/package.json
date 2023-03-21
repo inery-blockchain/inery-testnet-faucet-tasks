@@ -1,0 +1,18 @@
+{
+  "name": "task_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "homepage": "",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": ""
+  },
+  "keywords": [],
+  "author": "rizal22",
+  "license": "MIT"
+}
