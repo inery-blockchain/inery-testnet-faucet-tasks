@@ -1,0 +1,22 @@
+{
+  "name": "arfiyan-task4",
+  "version": "1.0.0",
+  "description": "transaction for inery blockchain",
+  "main": "node ./createTransx.mjs",
+  "scripts": {
+    "create": "node ./createTransx.mjs",
+    "read":"node ./readTransx.mjs",
+    "destroy": "node ./destroyTransx.mjs"
+  },
+  "author": "arfiyan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arfiyan81/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/arfiyan81/inery-testnet-faucet-tasks.git",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
