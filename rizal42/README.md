@@ -11,7 +11,7 @@ cd inery-testnet-faucet-tasks/rizal42
 
 Ubah file main.js sesuai akun inery kalian
 
-nano main.js
+nano mainrizal42.js
 
 Install depencies 
 
@@ -19,7 +19,7 @@ npm install
 
 Terakhir
 
-npm start
+npm run rizal42
 
 
 Done dapp sudah bisa dibuka dibrowser kalian dengan mengetikan 
