@@ -3,29 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome TODO App</title>
+    <title>TODO App</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1 class="title">My Awesome TODO App</h1>
+      <h1 class="title">TODO App Inery Blockchain</h1>
     </header>
     <form id="crud-form" method="POST">
-      <label for="crud-action">Select Action:</label>
+      <label for="crud-action">Action:</label>
       <select id="crud-action" name="action" required>
-        <option value="create">Create</option>
-        <option value="read">Read</option>
-        <option value="update">Update</option>
-        <option value="destroy">Destroy</option>
+        <option value="create">Add</option>
+        <option value="read">View</option>
+        <option value="update">Edit</option>
+        <option value="destroy">Delete</option>
       </select>
-      <input type="number" name="dataId" placeholder="Record ID number..." required>
+      <input type="number" name="dataId" placeholder="ID number..." required>
       <textarea name="data" placeholder="Data..." required></textarea>
       <button type="submit">SUBMIT</button>
     </form>
     <div id="result"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="main.js"></script>
+<script src="mainrizal42.js"></script>
 <script>
   $(function() {
     $('#crud-form').submit(function(event) {
@@ -36,11 +36,11 @@
         data: $(this).serialize(),
         dataType: 'json',
         success: function(result) {
-          var successMessage = `<h2 class="success">✅️ Transaction successful ✅️ :</h2><pre>${JSON.stringify(result, null, 2)}</pre>`;
+          var successMessage = `<h2 class="success">Valid:</h2><pre>${JSON.stringify(result, null, 2)}</pre>`;
           $('#result').html(successMessage);
         },
         error: function(error) {
-          var errorMessage = `<h2 class="failed">❌️ Transaction failed ❌️ :</h2><pre>${JSON.stringify(error.responseJSON, null, 2)}</pre>`;
+          var errorMessage = `<h2 class="failed">Error:</h2><pre>${JSON.stringify(error.responseJSON, null, 2)}</pre>`;
           $('#result').html(errorMessage);
         }
       });
@@ -48,4 +48,4 @@
   });
 </script>
   </body>
-</html> 
+</html>
