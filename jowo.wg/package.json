@@ -1,0 +1,27 @@
+{
+  "name": "jowo.wg",
+  "version": "1.0.2",
+  "description": "Sample RPC push transaction via JSON RPC",
+  "main": "dist/index.js",
+  "scripts": {
+    "MainTransaction": "node ./MainTransaction.js",
+    "make-token" :"node ./contractToken/MakeToken.js" ,
+    "the-issue": "node ./contractToken/TheIssue.js" ,
+    "test-transfer": "node ./contractToken/TestTransfer.js" ,
+
+  },
+
+  "homepage": "https://github.com/jowo-wg/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "1.0.3",
+    "dotenv-expand": "1.0.3"
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+
+  "actor": "jowo.wg",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jowo-wg/inery-testnet-faucet-tasks"
+  }
+}

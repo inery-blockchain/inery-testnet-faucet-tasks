@@ -1,0 +1,18 @@
+{
+  "name": "task_4_by_rizal22",
+  "version": "1.0.0",
+  "description": "inery task4 by rizal22",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "push": "node ./rizal22.js"
+  },
+  "homepage": "https://github.com/risodss/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "keywords": [],
+  "author": "rizal22",
+  "license": "ISC"
+}

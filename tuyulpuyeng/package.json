@@ -1,0 +1,14 @@
+{
+  "name": "inery_task4",
+  "version": "1.0.0",
+  "description": "Inery testnet task 4",
+  "main": "index.mjs",
+  "scripts": {
+    "inery-rpc": "node ./index.mjs"
+  },
+  "author": "tuyulpuyeng",
+  "license": "MIT",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}

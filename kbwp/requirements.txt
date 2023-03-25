@@ -1,0 +1,14 @@
+ansiwrap==0.8.4
+base58==2.1.1
+colander==2.0
+console-menu==0.8.0
+ecdsa==0.18.0
+IneryPy==0.1
+iso8601==1.1.0
+ordereddict==1.1
+pytz==2022.7.1
+regex==2022.10.31
+simple-term-menu==1.6.1
+six==1.16.0
+textwrap3==0.9.2
+translationstring==1.4

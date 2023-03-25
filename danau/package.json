@@ -1,0 +1,22 @@
+{
+  "name": "inery-rpc-transaction",
+  "version": "1.0.0",
+  "description": "tes rpc transaction for inery blockchain",
+  "main": "./solution.mjs",
+  "scripts": {
+    "solution": "node ./solution.mjs"
+  },
+  "author": "arcofb",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcofb/inery-testnet-faucet-tasks.git"
+  },
+  "homepage": "https://github.com/arcofb/inery-testnet-faucet-tasks",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  },
+  "bugs": {
+    "url": "https://github.com/arcofb/inery-testnet-faucet-tasks/issues"
+  }
+}
