@@ -1,0 +1,19 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "push-tx": "node ./mithoster.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mithoster/inery-testnet-faucet-tasks.git"
+  },
+  "author": "mithoster",
+  "license": "ISC",
+  "homepage": "https://github.com/mithoster/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
