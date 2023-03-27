@@ -1,0 +1,19 @@
+{
+    "name": "vadilena-rpc-transaction",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "solution": "node ./solution.js"
+    },
+    "author": "vadilena",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vadilenaz/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/vadilenaz/inery-testnet-faucet-tasks",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "ineryjs": "github:inery-blockchain/ineryjs"
+    }
+}
