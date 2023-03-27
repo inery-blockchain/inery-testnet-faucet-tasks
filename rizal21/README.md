@@ -15,6 +15,6 @@ npm install
 Run the script
 
 ```
-npm run rizal21.js
+npm run starttrans
 ```
 DONE
