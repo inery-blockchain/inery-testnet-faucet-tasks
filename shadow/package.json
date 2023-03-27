@@ -1,0 +1,19 @@
+{
+  "name": "shadow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ineryjs": "^1.0.0",
+    "dotenv": "^10.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "inery",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT"
+}
