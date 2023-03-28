@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Note CRUD</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Simple Note CRUD with Inery Blockchain</h1>
+    </header>
+    <form id="nform" method="POST">
+      <label for="crud-action">Choose Action:</label>
+      <select id="crud-action" name="action" required>
+        <option value="create">Create a note</option>
+        <option value="read">Read a note</option>
+        <option value="update">Update a note</option>
+        <option value="destroy">Delete a note</option>
+      </select>
+      <input type="number" name="dataId" placeholder="Note ID..." required>
+      <textarea name="data" placeholder="Data of note..." required>Data</textarea>
+      <button type="submit" class="button button1">Excute</button>    
+    </form>
+    <div id="result"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="mainapp.js"></script>
+<script>
+  $(function() {
+    $('#nform').submit(function(event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(result) {
+          var successMessage = `<h2 class="success">Data:</h2><pre>${JSON.stringify(result, null, 1)}</pre>`;
+          $('#result').html(successMessage);
+        },
+        error: function(error) {
+          var errorMessage = `<h2 class="failed">Error:</h2><pre>${JSON.stringify(error.responseJSON, null, 1)}</pre>`;
+          $('#result').html(errorMessage);
+        }
+      });
+    });
+  });
+</script>
+  </body>
+</html>
