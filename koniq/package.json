@@ -1,0 +1,16 @@
+{
+  "name": "koniq",
+  "version": "1.0.0",
+  "description": "inery task 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^8.2.0",
+    "ineryjs": "^0.2.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
