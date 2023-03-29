@@ -1,0 +1,19 @@
+{
+  "name": "lumitaharo",
+  "version": "1.0.0",
+  "description": "RPC transaction inery blockchain",
+  "main": "push.mjs",
+  "scripts": {
+    "push": "node ./push.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LumitaLumita/inery-testnet-faucet-tasks.git"
+  },
+  "author": "lumitaharo",
+  "homepage": "https://github.com/LumitaLumita/inery-testnet-faucet-tasks#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
