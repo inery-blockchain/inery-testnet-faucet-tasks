@@ -21,4 +21,4 @@ npm run main
 
 ## Demo
 
-Link: http://115.79.196.38:8088/
+Link: http://115.79.196.38:8088/ or https://inery.onrender.com/
