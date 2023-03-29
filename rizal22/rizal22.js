@@ -1,86 +1,37 @@
-import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
-import dotenv from "dotenv";
+import { Api, JsonRpc, JsSignatureProvider } from 'ineryjs';
+import dotenv from 'dotenv';
 dotenv.config();
 
-const url = "http://your ip:8888"; //your ip vps node
-
-const json_rpc = new JsonRpc(url);
-const private_key = "your key"; // iyour private key 
-
-const account = "rizal22"; // your name inery
-const actor = "rizal22"; //your name inery 
-const signature = new JsSignatureProvider([private_key]);
+const account = process.env.ACCOUNT;
+const actions = [
+  { action: 'create', data: { id: 123, account, data: 'CREATE transaction' } },
+  { action: 'read', data: { id: 123, account, data: 'READ transaction' } },
+  { action: 'update', data: { id: 123, data: 'UPDATE transaction' } },
+  { action: 'destroy', data: { id: 123, data: 'DESTROY transaction' } }
+];
 
 const api = new Api({
-  rpc: json_rpc,
-  signatureProvider: signature,
+  rpc: new JsonRpc(process.env.NODE_URL),
+  signatureProvider: new JsSignatureProvider([process.env.PRIV_KEY])
 });
 
-const CreateTransaction = async (id, user, data) => {
-  const Hashdata = { id, user, data };
+async function pushTransaction(action, data = {}) {
   try {
-    const tx = await api.transact(
-      {
-        actions: [
-          {
-            account,
-            name: "create",
-            authorization: [
-              {
-                actor,
-                permission: "active",
-              },
-            ],
-            data: {
-              ...Hashdata,
-            },
-          },
-        ],
-      },
-      { broadcast: true, sign: true }
-    );
-
-    console.log(tx, "\n");
-    console.log("\nResponsed data:", tx.processed.action_traces[0].console);
-  } catch (err) {
-    console.log(err);
+    await api.getAbi(account); // memastikan bahwa ABI sudah dicache sebelum menggunakan ActionBuilder
+    const result = await api.transact({
+      actions: [api.with(account).as(account)[action](...Object.values(data))]
+    });
+    console.log(result.processed.action_traces[0])
+  } catch (error) {
+    console.error(error);
   }
-};
+}
 
-const DestroyTrancsaction = async (id) => {
-  try {
-    const destroyTx = await api.transact(
-      {
-        actions: [
-          {
-            account,
-            name: "destroy",
-            authorization: [
-              {
-                actor,
-                permission: "active",
-              },
-            ],
-            data: {
-              id,
-            },
-          },
-        ],
-      },
-      { broadcast: true, sign: true }
-    );
-
-    console.log("Record destroyede by rizal22\n\n");
-    console.log(destroyTx, "\n");
-    console.log("responses: \n", destroyTx.processed.action_traces[0].console);
-  } catch (err) {
-    console.log(err);
+async function run() {
+  await api.getAbi(account); // memastikan bahwa ABI sudah dicache sebelum melakukan iterasi pada actions
+  for (const { action, data } of actions) {
+    await pushTransaction(action, data);
   }
-};
+}
 
-const PushTransaction = async (DataId, user, data) => {
-  await CreateTransaction(DataId, user, data);
-  await DestroyTrancsaction(DataId);
-};
-
-PushTransaction(2701, account, "pust done");
+run();
