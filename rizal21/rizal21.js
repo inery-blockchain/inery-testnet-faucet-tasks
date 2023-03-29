@@ -6,17 +6,17 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Get node URL from environment variables
-const nodeUrl = process.env.NODE_URL;
+const nodeUrl = 'NODE_URL';
 
 // Create a new RPC instance
 const rpc = new JsonRpc(nodeUrl);
 
 // Get private key from environment variables and create signature provider
-const privateKey = process.env.PRIVATE_KEY;
+const privateKey = 'privatekey';
 const signatureProvider  = new JsSignatureProvider([privateKey]);
 
 // Get account name from environment variables
-const accountName = process.env.ACCOUNT_NAME;
+const accountName = 'ACCOUNT_NAME';
 
 // Get actor name from environment variables
 const actorName = process.env.ACTOR_NAME;
