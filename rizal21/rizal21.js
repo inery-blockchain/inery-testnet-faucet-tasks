@@ -1,86 +1,66 @@
-import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
-import dotenv from "dotenv";
+// Import dependencies
+import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'ineryjs';
+import * as dotenv from 'dotenv';
+
+// Load environment variables
 dotenv.config();
 
-const url = "http://your ip:8888"; //your ip vps node
+// Get node URL from environment variables
+const nodeUrl = process.env.NODE_URL;
 
-const json_rpc = new JsonRpc(url);
-const private_key = "your key"; // iyour private key 
+// Create a new RPC instance
+const rpc = new JsonRpc(nodeUrl);
 
-const account = "rizal21"; // your name inery
-const actor = "rizal21"; //your name inery 
-const signature = new JsSignatureProvider([private_key]);
+// Get private key from environment variables and create signature provider
+const privateKey = process.env.PRIVATE_KEY;
+const signatureProvider  = new JsSignatureProvider([privateKey]);
 
+// Get account name from environment variables
+const accountName = process.env.ACCOUNT_NAME;
+
+// Get actor name from environment variables
+const actorName = process.env.ACTOR_NAME;
+
+// Create a new API instance
 const api = new Api({
-  rpc: json_rpc,
-  signatureProvider: signature,
+    rpc,
+    signatureProvider,
 });
 
-const createTransaction = async (id, user, data) => {
-  const Hashdata = { id, user, data };
+// Send a transaction to the blockchain
+async function sendTransaction(actionName, data) {
   try {
-    const tx = await api.transact(
-      {
-        actions: [
-          {
-            account,
-            name: "create",
-            authorization: [
-              {
-                actor,
-                permission: "active",
-              },
-            ],
-            data: {
-              ...Hashdata,
-            },
-          },
-        ],
-      },
-      { broadcast: true, sign: true }
-    );
+    const transaction = await api.transact({
+      actions: [
+        {
+          account: accountName,
+          name: actionName,
+          authorization: [{ actor: actorName, permission: 'active' }],
+          data: data,
+        },
+      ],
+    }, { broadcast: true, sign: true });
 
-    console.log(tx, "\n");
-    console.log("\nResponsed data:", tx.processed.action_traces[0].console);
-  } catch (err) {
-    console.log(err);
+    console.log(transaction);
+    console.log(transaction.processed.action_traces[0].console);
+  } catch (error) {
+    console.log(error);
   }
-};
+}
 
-const destroyTransaction = async (id) => {
-  try {
-    const destroyTx = await api.transact(
-      {
-        actions: [
-          {
-            account,
-            name: "destroy",
-            authorization: [
-              {
-                actor,
-                permission: "active",
-              },
-            ],
-            data: {
-              id,
-            },
-          },
-        ],
-      },
-      { broadcast: true, sign: true }
-    );
+// Create a new record
+async function createRecord(id, user, data) {
+  const actionName = 'create';
+  const actionData = { id, user, data };
+  await sendTransaction(actionName, actionData);
+}
 
-    console.log("Record destroyede done successfull\n\n");
-    console.log(destroyTx, "\n");
-    console.log("responses: \n", destroyTx.processed.action_traces[0].console);
-  } catch (err) {
-    console.log(err);
-  }
-};
+// Send a notification
+async function sendNotification(id, user, data){
+  const actionName = 'notify';
+  const actionData = { id, user, data };
+  await sendTransaction(actionName, actionData);
+}
 
-const pushTransaction = async (DataId, user, data) => {
-  await createTransaction(DataId, user, data);
-  await destroyTransaction(DataId);
-};
-
-pushTransaction(7191, account, "done done successfull");
+// Example usage
+sendNotification(3541, accountName, "RPC PUSH API NOTIFICATION");
