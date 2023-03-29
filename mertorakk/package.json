@@ -1,0 +1,18 @@
+{
+  "name": "inery-task4",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samsunsporfedaisi/inery-testnet-faucet-tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "dotenv": "latest"
+  }
+}
