@@ -6,15 +6,19 @@ Change directory rizal21
 cd ~/inery-testnet-faucet-tasks/rizal21
 ```
 
-Install dependencies and edit file rizal21.mjs 
+Install dependencies and edit file index.mjs 
 
 ```shell
 npm install
 ```
 
+```shell
+nano index.js 
+```
+
 Run the script
 
 ```
-npm run starttrans
+npm run push
 ```
 DONE
