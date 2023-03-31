@@ -20,18 +20,16 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-
 app.post('/', async (req, res) => {
   const dataId = parseInt(req.body.dataId);
-  const data = (req.body.data);
     try {
       const result = await api.transact({
         actions: [
           {
             account: ACCOUNT,
-            name: "create",
+            name: "read",
             authorization: [{ actor: ACTOR, permission: 'active' }],
-            data: { id: dataId, user: ACCOUNT, data },
+            data: { id: dataId },
           },
         ],
       });
