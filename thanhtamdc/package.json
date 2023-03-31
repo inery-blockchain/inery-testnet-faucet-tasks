@@ -1,0 +1,15 @@
+{
+  "name": "inery_quote_random",
+  "version": "1.0.0",
+  "description": "Simple random quote with inery database",
+  "scripts": {
+    "main": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thanhtamdc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+	"ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}

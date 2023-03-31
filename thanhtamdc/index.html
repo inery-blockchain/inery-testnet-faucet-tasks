@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Simple random quote with Inery Database</h1>
+    </header>
+    <form id="nform" method="POST">
+	  <input type="text" placeholder="Quote ID" name="dataId" id="ran">
+	  <button onclick="document.getElementById('ran').value = getRndInteger(1,10)" type="submit" name="rid">Random quote</button>
+      <button type="submit">Show quote by ID</button>
+    </form>
+    <div id="result"></div>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="server.js"></script>
+<script>
+  $(function() {
+    $('#nform').submit(function(event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(result) {
+          var successMessage = `<h2>Random quote:</h2><pre>${JSON.stringify(result, null, 1)}</pre>`;
+          $('#result').html(successMessage);
+        },
+        error: function(error) {
+          var errorMessage = `<h2>Error:</h2><pre>${JSON.stringify(error.responseJSON, null, 1)}</pre>`;
+          $('#result').html(errorMessage);
+        }
+      });
+    });
+  });
+</script>
+  </body>
+</html>
