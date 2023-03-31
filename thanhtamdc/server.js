@@ -23,8 +23,6 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   const dataId = parseInt(req.body.dataId);
   const data = (req.body.data);
-  const ipvalue = req.body.butn;
-  if (ipvalue == 'create') {
     try {
       const result = await api.transact({
         actions: [
@@ -42,27 +40,6 @@ app.post('/', async (req, res) => {
       console.error(error);
       res.status(500).json(error);
     }
-  }
-  else
-  {
-	  try {
-      const result = await api.transact({
-        actions: [
-          {
-            account: ACCOUNT,
-            name: "read",
-            authorization: [{ actor: ACTOR, permission: 'active' }],
-            data: { id: dataId, user: ACCOUNT, data },
-          },
-        ],
-      });
-      console.log(result);
-      res.json(result.processed.action_traces[0].console);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json(error);
-    }
-  }
 });
 
 (async () => {
