@@ -12,7 +12,7 @@ https://github.com/samsunsporfedaisi/inery-testnet-faucet-tasks.git
 ### nano .env
 Configuring env vars in
 ```
-inery-testnet-faucet-tasks\mertorakk
+inery-testnet-faucet-tasks\shadow
 ```
 ```
 nano .env
