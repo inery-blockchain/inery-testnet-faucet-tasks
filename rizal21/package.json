@@ -10,7 +10,8 @@
   "homepage": "https://github.com/rizaltjr/inery-testnet-faucet-tasks",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "ineryjs": "github:inery-blockchain/ineryjs"
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "readline": "^1.3.0"
   },
   "keywords": [],
   "author": "rizal21",
