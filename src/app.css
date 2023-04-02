@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    
+    margin: 0 auto;
+    
+    background-image: url("flame.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
