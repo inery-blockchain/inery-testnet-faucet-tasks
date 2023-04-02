@@ -3,13 +3,12 @@ const dotenv = require('dotenv')
 const readline = require('readline')
 
 dotenv.config()
-const envVars = process.env
 
-const rpc = new JsonRpc(envVars.NODE_URL)
-const signatureProvider = new JsSignatureProvider([envVars.PRIV_KEY])
+const rpc = new JsonRpc(NODE_URL)
+const signatureProvider = new JsSignatureProvider([PRIV_KEY])
 
 const api = new Api({ rpc, signatureProvider })
-const account = envVars.ACCOUNT
+const account = ACCOUNT
 const authorization = [{ actor: account, permission: 'active' }]
 
 const rl = readline.createInterface({
