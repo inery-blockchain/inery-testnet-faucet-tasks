@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Inery Blockchain</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>INERY BLOCKCHAIN</h1>
+    </header>
+    <form id="form" method="post">
+      <img src="https://avatars.githubusercontent.com/u/97181725?v=4" />
+      <label for="action-select">Select the menu you want to execute</label>
+      <select id="action-select" name="action" required>
+        <option value="create">Create</option>
+        <option value="update">Update</option>
+        <option value="destroy">Destroy</option>
+      </select>
+      <input type="number" name="dataId" placeholder="Record ID number..." required>
+      <button type="submit">Execute</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $('#form').submit(function(event) {
+          event.preventDefault();
+          $.ajax({
+            url: '/',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(result) {
+              var success = `<h2 class="success">Transaction Execute</h2><pre>${JSON.stringify(result, null, 2)}</pre>`;
+              $('#result').html(success);
+            },
+            error: function(error) {
+              var failed = `<h2 class="failed">Change with another ID</h2><pre>${JSON.stringify(error.responseJSON, null, 2)}</pre>`;
+              $('#result').html(failed);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

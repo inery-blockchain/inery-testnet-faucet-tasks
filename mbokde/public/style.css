@@ -1,0 +1,102 @@
+/* Font family */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* Body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: cyan;
+  background-color: #00FFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+header h1 {
+  font-family: 'Poppins';
+  color: #0C0741;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #0C0741;
+  border-radius: 30px;
+}
+
+form label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form select, input, textarea, button {
+  width: 100%;
+  max-width: 130px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #00FFFF;
+  color: #0C0741;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 5px 10px ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form input, textarea {
+  max-width: 500px;
+}
+
+form textarea {
+  height: 200px;
+}
+
+
+/* Result styles */
+.success {
+  color: #0C0741	;
+}
+
+.failed { 
+  color: #0C0741;
+}
+
+#result h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#result {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+#result pre {
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #0C0741;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 10px 20px ;
+  overflow-y: scroll;
+}
+
