@@ -7,7 +7,7 @@ const rpc = new JsonRpc('NODE_URL')
 const signatureProvider = new JsSignatureProvider(['PRIV_KEY'])
 
 const api = new Api({ rpc, signatureProvider })
-const account = ACCOUNT
+const account = 'ACCOUNT';
 const authorization = [{ actor: account, permission: 'active' }]
 
 const rl = readline.createInterface({
