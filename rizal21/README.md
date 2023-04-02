@@ -1,5 +1,11 @@
  ### How to run
 
+Clone repo
+
+```shell
+git clone https://github.com/rizaltjr/inery-testnet-faucet-tasks -b task4
+```
+
 Change directory rizal21
 
 ```shell
