@@ -3,11 +3,11 @@ const dotenv = require('dotenv')
 const readline = require('readline')
 dotenv.config()
 
-const rpc = new JsonRpc('NODE_URL')
-const signatureProvider = new JsSignatureProvider(['PRIV_KEY'])
+const rpc = new JsonRpc('http://your-ipvps:8888')
+const signatureProvider = new JsSignatureProvider(['your private key'])
 
 const api = new Api({ rpc, signatureProvider })
-const account = 'ACCOUNT';
+const account = 'your account inery';
 const authorization = [{ actor: account, permission: 'active' }]
 
 const rl = readline.createInterface({
