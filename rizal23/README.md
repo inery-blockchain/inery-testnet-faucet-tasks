@@ -23,6 +23,6 @@ npm install
 Run the script
 
 ```
-npm run pushtransaction
+npm run rizal23
 ```
 DONE
