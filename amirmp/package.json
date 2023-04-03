@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "ineryjs": "git+https://github.com/inery-blockchain/ineryjs",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "autoprefixer": "^10.4.14",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "5.0.2",
+    "next-ssl-redirect-middleware": "0.1.4"
+  }
+}
