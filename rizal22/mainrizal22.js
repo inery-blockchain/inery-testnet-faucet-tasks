@@ -13,7 +13,7 @@ const private_key ="";
 const signature = new JsSignatureProvider([private_key]);
 
 const api = new Api({
-  rpc: new json_rpc,
+  rpc: json_rpc,
   signatureProvider: signature,
 });
 
