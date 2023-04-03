@@ -2,18 +2,18 @@ import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import dotenv from "dotenv";
 dotenv.config();
 
-const url-inery = "http://your-ip:8888"; //your VPS node IP
+const urlinery = "http://your-ip:8888"; //your VPS node IP
 
-const jsonRpcInery = new JsonRpc(url-inery);
+const jsonRpcInery = new JsonRpc(urlinery);
 const privateKeyInery = "your-private-key"; // your private key
 
-const account = "rizal42"; // your account name inery
-const actor = "rizal42"; // your actor name inery
-const signatureProviderInery = new JsSignatureProvider([privateKey]);
+const account = "rizal23"; // your account name inery
+const actor = "rizal23"; // your actor name inery
+const signatureProviderInery = new JsSignatureProvider([privateKeyInery]);
 
 const api = new Api({
   rpc: jsonRpcInery,
-  signatureProviderInery: signatureProviderInery,
+  signatureProvider: signatureProviderInery,
 });
 
 const createTransactionInery = async (id, user, data) => {
@@ -83,4 +83,4 @@ const pushTransactionInery = async (dataId, user, data) => {
   await destroyTransactionInery(dataId);
 };
 
-pushTransactionInery(260101, account, "successfull kon");
+pushTransactionInery(260101, rizal23, "successfull kon");
