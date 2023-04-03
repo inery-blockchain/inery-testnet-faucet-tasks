@@ -1,25 +1,29 @@
 import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 import dotenv from "dotenv";
-
 dotenv.config();
 
-const blockchainUrl = "http://66.175.235.233:8888";
-const contractAccount = "rizal23";
-const actor = contractAccount;
-const privateKey = "privateKey";
-const signatureProvider = new JsSignatureProvider([privateKey]);
-const rpc = new JsonRpc(blockchainUrl);
-const api = new Api({ rpc, signatureProvider });
+const url-inery = "http://your-ip:8888"; //your VPS node IP
 
-const createRecord = async (recordId, user, data) => {
-  const recordData = { id: recordId, user, data };
+const jsonRpcInery = new JsonRpc(url-inery);
+const privateKeyInery = "your-private-key"; // your private key
 
+const account = "rizal42"; // your account name inery
+const actor = "rizal42"; // your actor name inery
+const signatureProviderInery = new JsSignatureProvider([privateKey]);
+
+const api = new Api({
+  rpc: jsonRpcInery,
+  signatureProviderInery: signatureProviderInery,
+});
+
+const createTransactionInery = async (id, user, data) => {
+  const hashDataInery = { id, user, data };
   try {
     const tx = await api.transact(
       {
         actions: [
           {
-            account: contractAccount,
+            account,
             name: "create",
             authorization: [
               {
@@ -27,28 +31,29 @@ const createRecord = async (recordId, user, data) => {
                 permission: "active",
               },
             ],
-            data: recordData,
+            data: {
+              ...hashDataInery,
+            },
           },
         ],
       },
       { broadcast: true, sign: true }
     );
 
-    console.log("Record created:");
     console.log(tx, "\n");
-    console.log("Response data:", tx.processed.action_traces[0].console);
-  } catch (error) {
-    console.log("Error creating record:", error);
+    console.log("\nResponse data:", tx.processed.action_traces[0].console);
+  } catch (err) {
+    console.log(err);
   }
 };
 
-const deleteRecord = async (recordId) => {
+const destroyTransactionInery = async (id) => {
   try {
-    const tx = await api.transact(
+    const destroyTx = await api.transact(
       {
         actions: [
           {
-            account: contractAccount,
+            account,
             name: "destroy",
             authorization: [
               {
@@ -57,7 +62,7 @@ const deleteRecord = async (recordId) => {
               },
             ],
             data: {
-              id: recordId,
+              id,
             },
           },
         ],
@@ -65,16 +70,17 @@ const deleteRecord = async (recordId) => {
       { broadcast: true, sign: true }
     );
 
-    console.log(`Record with ID ${recordId} destroyed by ${contractAccount}\n\n`);
-    console.log("Response data:", tx.processed.action_traces[0].console);
-  } catch (error) {
-    console.log("Error destroying record:", error);
+    console.log("Record destroyed\n\n");
+    console.log(destroyTx, "\n");
+    console.log("Responses: \n", destroyTx.processed.action_traces[0].console);
+  } catch (err) {
+    console.log(err);
   }
 };
 
-const pushRecord = async (recordId, user, data) => {
-  await createRecord(recordId, user, data);
-  await deleteRecord(recordId);
+const pushTransactionInery = async (dataId, user, data) => {
+  await createTransactionInery(dataId, user, data);
+  await destroyTransactionInery(dataId);
 };
 
-pushRecord(1234, contractAccount, "This is a test record");
+pushTransactionInery(260101, account, "successfull kon");
