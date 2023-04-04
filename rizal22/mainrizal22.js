@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static());
 
-app.post('/', async (req, res) => {
+app.post('dapp22', async (req, res) => {
   const actioninery = req.body.actioninery;
   const dataIdinery = parseInt(req.body.dataIdinery);
   const data = req.body.data;
