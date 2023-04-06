@@ -1,23 +1,17 @@
 {
-  "name": "inerytask4",
+  "name": "ty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "read": "node ./read-data-on-chain.mjs",    
+    "start":"ts-node ty.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WandaAnggara/inerytask4.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WandaAnggara/inerytask4/issues"
-  },
-  "homepage": "https://github.com/WandaAnggara/inerytask4#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "ineryjs": "github:inery-blockchain/ineryjs"
+    "ineryjs": "github:inery-blockchain/ineryjs",
+    "ts-node": "^10.9.1"
   }
 }
