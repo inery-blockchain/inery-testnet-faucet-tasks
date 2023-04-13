@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "push": "node ./index.js"
+    "push": "node ./index.mjs"
   },
   "homepage": "https://github.com/rizaltjr/inery-testnet-faucet-tasks",
   "dependencies": {
