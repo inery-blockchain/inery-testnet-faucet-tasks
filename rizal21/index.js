@@ -1,70 +1,99 @@
-const { Api, JsonRpc, JsSignatureProvider } = require('ineryjs')
-const dotenv = require('dotenv')
-const readline = require('readline')
-dotenv.config()
+import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
+import dotenv from "dotenv";
+import ora from "ora";
+import chalk from "chalk";
+dotenv.config();
 
-const rpc = new JsonRpc('http://your-ipvps:8888')
-const signatureProvider = new JsSignatureProvider(['your private key'])
+const ineryUrl = "http://your-ip:8888"; // ganti dengan alamat IP VPS node Anda
+const ineryAccount = "rizal"; // ganti dengan nama akun inery Anda
+const ineryActor = "rizal"; // ganti dengan nama inery Anda
+const ineryPrivateKey = "your-private-key"; // ganti dengan kunci privat Anda
 
-const api = new Api({ rpc, signatureProvider })
-const account = 'your account inery';
-const authorization = [{ actor: account, permission: 'active' }]
+const signatureProvider = new JsSignatureProvider([ineryPrivateKey]);
+const rpc = new JsonRpc(ineryUrl);
+const api = new Api({ rpc, signatureProvider });
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-
-rl.question('Masukkan aksi yang ingin dilakukan (create/read/update/destroy): ', async (action) => {
-  if (['create', 'read', 'update', 'destroy'].includes(action)) {
-    const dataId = await askDataId()
-    const data = await askData()
-    await pushTransaction(action, { id: dataId, user: account, data })
-  } else {
-    console.error('Aksi yang dimasukkan tidak valid.')
-    rl.close()
-  }
-})
-
-async function askDataId() {
-  return new Promise((resolve) => {
-    rl.question('Masukkan DATA_ID (hanya angka >= 1): ', (dataId) => {
-      if (!isNaN(parseInt(dataId)) && parseInt(dataId) >= 1) {
-        resolve(parseInt(dataId))
-      } else {
-        console.error('DATA_ID harus berupa angka dan lebih besar dari atau sama dengan 1.')
-        rl.close()
-      }
-    })
-  })
-}
-
-async function askData() {
-  return new Promise((resolve) => {
-    rl.question('Masukkan data: ', (data) => {
-      resolve(data)
-    })
-  })
-}
-
-async function pushTransaction(name, data) {
+const createHashTransaction = async (id, user, data) => {
+  const Hashdata = { id, user, data };
   try {
-    const result = await api.transact({
-      actions: [
-        {
-          account,
-          name,
-          authorization,
-          data
-        }
-      ]
-    });
+    const tx = await api.transact(
+      {
+        actions: [
+          {
+            account: ineryAccount,
+            name: "create",
+            authorization: [
+              {
+                actor: ineryActor,
+                permission: "active",
+              },
+            ],
+            data: {
+              ...Hashdata,
+            },
+          },
+        ],
+      },
+      { broadcast: true, sign: true }
+    );
 
-    console.log(`Action detail:\n`, result.processed.action_traces[0])
-
-  } catch (error) {
-    console.error(`Error executing ${name.toUpperCase()} transaction: ${error.details[0].message}`)
-  } finally {
-    rl.close()
+    console.log(tx, "\n");
+    console.log("\nResponsed data:", tx.processed.action_traces[0].console);
+  } catch (err) {
+    console.log(err);
   }
-}
+};
+
+const destroyHashTransaction = async (id) => {
+  try {
+    const destroyTx = await api.transact(
+      {
+        actions: [
+          {
+            account: ineryAccount,
+            name: "destroy",
+            authorization: [
+              {
+                actor: ineryActor,
+                permission: "active",
+              },
+            ],
+            data: {
+              id,
+            },
+          },
+        ],
+      },
+      { broadcast: true, sign: true }
+    );
+
+    console.log(chalk.red("Record destroyed\n\n"));
+    console.log(destroyTx, "\n");
+    console.log("responses: \n", destroyTx.processed.action_traces[0].console);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const pushHashTransaction = async (dataId, user, data) => {
+  const spinner = ora({
+    text: "Processing transaction...",
+    spinner: {
+      interval: 150,
+      frames: ["◐", "◓", "◑", "◒"],
+    },
+  }).start();
+
+  try {
+    await createHashTransaction(dataId, user, data);
+    await destroyHashTransaction(dataId);
+
+    spinner.stop();
+    console.log(chalk.green("Transaction completed!"));
+  } catch (err) {
+    spinner.stop();
+    console.log(chalk.red(err));
+  }
+};
+
+pushHashTransaction(1282, ineryAccount, "Thank You");
