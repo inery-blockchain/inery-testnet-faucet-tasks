@@ -19,7 +19,7 @@ npm install
 ```
 
 ```shell
-nano index.js 
+nano index.mjs 
 ```
 
 Run the script
