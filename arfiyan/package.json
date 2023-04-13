@@ -1,0 +1,20 @@
+{
+    "name": "call_arfiyan",
+    "version": "1.0.0",
+    "description": "rpc transaction for inery blockchain",
+    "main": "./TxMy.mjs",
+    "scripts": {
+        "Call": "node ./TxMy.mjs"
+    },
+    "author": "arfiyan",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/arfiyan81/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/arfiyan81/inery-testnet-faucet-tasks",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "ineryjs": "github:inery-blockchain/ineryjs"
+    }
+}
