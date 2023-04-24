@@ -5,15 +5,15 @@ import chalk from "chalk";
 dotenv.config();
 
 const ineryUrl = "http://your-ip:8888"; // ganti dengan alamat IP VPS node Anda
-const ineryAccount = "rizal52"; // ganti dengan nama akun inery Anda
-const ineryActor = "rizal52"; // ganti dengan nama inery Anda
+const ineryAccount = "rizal"; // ganti dengan nama akun inery Anda
+const ineryActor = "rizal"; // ganti dengan nama inery Anda
 const ineryPrivateKey = "your-private-key"; // ganti dengan kunci privat Anda
 
 const signatureProvider = new JsSignatureProvider([ineryPrivateKey]);
 const rpc = new JsonRpc(ineryUrl);
 const api = new Api({ rpc, signatureProvider });
 
-const createTransaction = async (id, user, data) => {
+const createHashTransaction = async (id, user, data) => {
   const Hashdata = { id, user, data };
   try {
     const tx = await api.transact(
@@ -44,7 +44,7 @@ const createTransaction = async (id, user, data) => {
   }
 };
 
-const destroyTransaction = async (id) => {
+const destroyHashTransaction = async (id) => {
   try {
     const destroyTx = await api.transact(
       {
@@ -75,7 +75,7 @@ const destroyTransaction = async (id) => {
   }
 };
 
-const pushTransaction = async (dataId, user, data) => {
+const pushHashTransaction = async (dataId, user, data) => {
   const spinner = ora({
     text: "Processing transaction...",
     spinner: {
@@ -85,8 +85,8 @@ const pushTransaction = async (dataId, user, data) => {
   }).start();
 
   try {
-    await createTransaction(dataId, user, data);
-    await destroyTransaction(dataId);
+    await createHashTransaction(dataId, user, data);
+    await destroyHashTransaction(dataId);
 
     spinner.stop();
     console.log(chalk.green("Transaction completed!"));
@@ -96,4 +96,4 @@ const pushTransaction = async (dataId, user, data) => {
   }
 };
 
-pushTransaction(619, ineryAccount, "push done");
+pushHashTransaction(1282, ineryAccount, "Thank You");
