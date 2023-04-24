@@ -1,20 +1,30 @@
-# Task 4 RPC API push transaction
+ ### How to run
 
-To complete task 4, you need to follow these instructions:
+Clone repo
 
-  FIRST
-   Clone the Git repository for the project.
-  
-  SECOND
-   Add a new directory using your account name as the directory name.
-  
-  THIRD
-   Inside  directory, add your software solution for task 4, which should be a solution for pushing transactions with the RPC API on the Inery testnet blockchain.
-  
-  FOURTH
-   Create a merge request to submit your work for review.
-  
-If your solution is successful and works correctly, it will be accepted and task 4 will be approved
+```shell
+git clone https://github.com/rizaltjr/inery-testnet-faucet-tasks -b task4
+```
 
-NOTE:
-  It is important to follow the instructions given above and make sure your solution meets the requirements. Also make sure you test your code before submitting it for review to ensure that it works correctly.
+Change directory rizal21
+
+```shell
+cd ~/inery-testnet-faucet-tasks/rizal21
+```
+
+Install dependencies and edit file index.mjs 
+
+```shell
+npm install
+```
+
+```shell
+nano index.mjs 
+```
+
+Run the script
+
+```
+npm run push
+```
+DONE
