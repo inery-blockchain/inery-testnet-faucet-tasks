@@ -1,0 +1,16 @@
+{
+  "name": "rinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rinalSol.js",
+  "scripts": {
+    "rinal": "node rinalSol.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ineryjs": "github:inery-blockchain/ineryjs"
+  }
+}
