@@ -1,0 +1,20 @@
+{
+    "name": "revo-rpc-transaction",
+    "version": "1.0.0",
+    "description": "A sample rpc transaction for inery blockchain",
+    "scripts": {
+        "create-token": "node ./create_token.mjs",
+        "send-token": "node ./send_token.mjs"
+    },
+    "author": "0xrevo",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0xrevo/inery-testnet-faucet-tasks"
+    },
+    "homepage": "https://github.com/0xrevo/inery-testnet-faucet-tasks",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "ineryjs": "github:inery-blockchain/ineryjs"
+    }
+}
